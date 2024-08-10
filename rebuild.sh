@@ -1,0 +1,1 @@
+emacs -Q --script ./rebuild.el
