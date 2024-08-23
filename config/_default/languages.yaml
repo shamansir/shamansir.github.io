@@ -2,3 +2,9 @@ en:
   weight: 1
   languageDirection: ltr
   languageName: English
+
+
+ru:
+  weight: 1
+  languageDirection: ltr
+  languageName: Russian

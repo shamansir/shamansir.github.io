@@ -31,6 +31,31 @@ main:                # sections in the website sidebar
     url: /contact/
     weight: 6
 
+  - identifier: poems
+    name: Poems
+    url: /poems/
+    weight: 7
+
+  - identifier: singles
+    name: Singles
+    url: /singles/
+    weight: 8
+
+  - identifier: tags
+    name: Tags
+    url: /tags/
+    weight: 9
+
+  - identifier: dramas
+    name: Dramas
+    url: /dramas/
+    weight: 10
+
+  - identifier: narratives
+    name: Narratives
+    url: /narratives/
+    weight: 11
+
   - identifier: github
     name: GitHub Project
     url: 'https://github.com/sergeyklay/gohugo-theme-ed/'
