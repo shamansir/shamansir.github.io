@@ -1,0 +1,108 @@
+#+title: "GWT + mvp4g Lecture Slides"
+#+datetime: 4 May 2011 19:17
+#+tags: gwt mvp4g java
+
+April 29, I've presented a lecture on Web-development with
+[[http://code.google.com/intl/ru/webtoolkit/][GWT]] and
+[[http://code.google.com/p/mvp4g/][mvp4g]] Framework, at
+[[http://addconf.ru][Application Developer Days]] 2011 Conference. Here
+are the slides.
+
+*** Slides
+:PROPERTIES:
+:CUSTOM_ID: slides
+:END:
+[[https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B9lKUPDNyz1vYzAzMzQxMzItYmQyMy00NjdhLWFiYzQtZDRjMjZkNTc2MDEy&hl=en][[[file:%7B%7B%20get_figure(slug,%20'gdocs.en.png')%20%7D%7D]]]]
+
+([[http://www.scribd.com/doc/54956722][Also on Scribd]])
+
+*** Schedule
+:PROPERTIES:
+:CUSTOM_ID: schedule
+:END:
+1. Briefly about GWT. A brief history and examples of GWT usage.
+2. GWT Conceptions
+   1. JSNI
+   2. Code Splitting
+   3. MVP, RMVP, EventBus
+   4. Deferred Binding
+   5. Dependency Injection
+   6. Remote Services
+3. mvp4g
+   1. What Helps? Differences and Dignity
+   2. Annotation System
+   3. RMVP, EventBus Realization
+   4. History, =#!=
+   5. Multimodularity
+   6. Remarks
+4. GWT UI Components
+   1. =UiBinder=, Standard Components
+   2. Developing Custom Components
+5. Our Development of Layouting-system with GWT+mvp4g
+6. Working with Non-Java Server-Side API
+7. i18n in GWT
+8. Conclusion. Examples links.
+
+*** Links from the slides
+:PROPERTIES:
+:CUSTOM_ID: links-from-the-slides
+:END:
+[[http://goo.gl/DKYzc][Slides in PDF]]
+
+1. Briefly оn GWT
+
+- [[http://quake2-gwt-port.appspot.com][Quake 2 in browser]]
+
+2. [@2] GWT Conception
+
+- [[http://geekswithblogs.net/kobush/archive/2006/01/09/65305.aspx][Article
+  on difference between MVC and MVP]]
+- [[http://www.youtube.com/watch?v=PDuhR18-EdM][Ray Ryan about
+  GWT-application architecture]]
+- [[http://tv.jetbrains.net/videocontent/gwt-event-bus-basics][Video
+  about EventBus]]
+- [[http://www.docstoc.com/docs/53396874/Deferred-Binding-The-Magic-of-GWT][Presentation
+  on Deferred Binding]]
+- [[http://code.google.com/p/google-guice/wiki/Motivation?tm=6][Guice
+  wiki-pages]]
+- [[http://developerlife.com/tutorials/?p=125][Tutorial on creating
+  Remote Services]]
+- [[http://www.linux.org.ru/forum/talks/4497412][Talks on GWT
+  drawbacks]] (ru)
+- [[http://galak-sandbox.blogspot.com/2010/10/gwt.html][GWT-code
+  optimization summary]] (ru)
+
+3. [@3] mvp4g
+
+- [[http://code.google.com/p/mvp4g/][mvp4g framework web-page]]
+- [[http://mvp4gshowcase.appspot.com][mvp4g framework showcase]]
+- [[http://code.google.com/p/mvp4g/wiki/Mvp4g_vs_GWTP][Comparison
+  between native GWT-code and a code written with mvp4g]]
+- [[http://cambiatablog.wordpress.com/2010/12/04/gwt-and-mvp4g-tutorial-1/][Short
+  tutorial on creating project with mvp4g]]
+
+4. [@4] UI components
+
+- [[http://code.google.com/webtoolkit/doc/latest/RefWidgetGallery.html][GWT
+  component library]]
+
+5. [@5] Layouting
+
+- [[http://github.com/shamansir/gwt-mvp4g-layouting-demo][Layouting
+  demonstration (in progress) with GWT+mvp4g]]
+
+6. [@6] Non-Java API
+
+- [[http://code.google.com/p/google-web-toolkit-doc-1-5/wiki/GettingStartedJSON][The
+  point]]
+- [[http://shamansir.tumblr.com/post/1728720550/deferred-api-gwt-rpc][Description,
+  including source code]] (ru)
+
+7. [@7] i18n
+8. Conclusion
+
+- [[http://experika.com][Experika site]]
+- [[http://twitter.com/vgashock][Vitaly Gashock twitter]]
+- [[http://www.vurt.ru][Mikhail Kashkin site]]
+- [[http://emdev.ru][EmDev company site]]
+- [[http://profiles.google.com/shaman.sir][My Google-profile]]

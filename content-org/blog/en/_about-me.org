@@ -1,0 +1,99 @@
+*** shaman.sir
+:PROPERTIES:
+:CUSTOM_ID: shaman.sir
+:END:
+(a.k.a. *Ulric Wilfred*)
+
+[ [[http://shamansir.tumblr.com][Blog]] ] [
+[[http://shamansir-ru.tumblr.com][Blog (ru)]] ] [
+[[http://shamansir.madfire.net/resume.html][Resume]] ]
+
+#+caption: shaman.sir aka Ulric Wilfred
+[[http://shamansir.madfire.net/shamansir_120.jpg]]
+
+**** Contacts
+:PROPERTIES:
+:CUSTOM_ID: contacts
+:END:
+- /site/: [[http://shamansir.madfire.net]]
+- /e-mail/: [[mailto:shaman.sir@gmail.com][shaman.sir@gmail.com]]
+- /jabber/: =ulric.wilfred@jabber.org=, =shaman.sir@gmail.com=
+- /skype/: =shaman.sir=
+- /twitter/: [[http://twitter.com/shaman_sir][shaman_sir]]
+- /LinkedIn/: [[http://www.linkedin.com/in/shamansir][shamansir]]
+- /googlecode/: [[http://code.google.com/u/shaman.sir/][shaman.sir]]
+- /launchpad/: [[https://launchpad.net/~shaman-sir][~shaman-sir]]
+- /vimeo/: [[http://vimeo.com/shamansir][shamansir]]
+- /picasa/: [[http://picasaweb.google.com/shaman.sir][shaman.sir]]
+
+**** Who I am
+:PROPERTIES:
+:CUSTOM_ID: who-i-am
+:END:
+At work, I am JavaEE/Web developer. I like to develop client side: UI
+controls, visual representation of the server data, server to client
+(and back) data transfer and everything connected with that. Because of
+this, I am also experienced in JavaScript (with JQuery usage or without)
+and AJAX technologies (XML/JSON included). I like Java for its
+considered strictness and serious, technological approach. I also pay
+respect to [[http://webstandards.org/][Web Standards]]. JavaScript in
+its current condition is the Web language with its own culture, now it
+is an easy language to do dynamic and fun things on the pages. Of
+course, my skills is not limited with described ones, but these
+enumerated are the best in me :).
+
+Here's my [[http://www.linkedin.com/in/shamansir][LinkedIn public
+profile]]. I've participated in many projects, they're described there,
+but to mention the huge ones, these are:
+[[http://mypicturetown.com/][MyPicturetown]] and
+[[http://unlockaustin.com/][UnlockAustin]]. I have a five-year
+experience as developer.
+
+At home, I like everything connected to CG. I like to use at most
+Free/Open Source software, so my OS is preferably Linux/Ubuntu. And
+that's because, I consider I must pay something to Open Source
+community. I have several small projects, most of them are just
+unfinished ideas, the notable ones are
+[[http://code.google.com/p/nijiato/][=nijiato=]] (/Fingers motion
+detection driven by Lisp/),
+[[http://code.google.com/p/sametimed/][=sametimed= project]] (/Google
+Wave/ Web Client) and
+[[http://code.google.com/p/showdown-blog/][=showdown blog=]] (/Blog
+engine written in just XML and JS/). I'm training my skills in Python,
+my favorite programming language, and in Web development at the same
+time. Also I have managed and participated in
+[[http://ru.wikibooks.org/wiki/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F_Python][translation
+of Python Documentation]] to Russian language. To see all the stuff I am
+doing, visit my [[http://code.google.com/u/shaman.sir/][googlecode
+profile]] and [[https://launchpad.net/~shaman-sir][profile at
+launchpad]].
+
+I am trying to write the articles [[http://shamansir.tumblr.com][in my
+blog]] about the new things I find and getting to know (they call it
+=knowledge transfer=). In past times I've written posts a little bit
+rarely, but I'm trying to fill it up. And I am writing more to my
+russian version of the blog and just putting the translation later here.
+
+**** vCard
+:PROPERTIES:
+:CUSTOM_ID: vcard
+:END:
+- [[http://shamansir.madfire.net/ulric.wilfred.vcf][=vCard=]]
+- [[http://shamansir.madfire.net/personal-data.xml][=vCard XML=]]
+- [[http://shamansir.madfire.net/personal-data-rdf.xml][=vCard RDF=]]
+
+**** More stuff
+:PROPERTIES:
+:CUSTOM_ID: more-stuff
+:END:
+- [[http://shaman-sir.by.ru/files/japan.pdf][Japanese Language
+  Reference]] (in Russian)
+- [[http://paste.pocoo.org/show/163442/][ProcessingJS code highlighting
+  for =gedit=]]
+
+**** QR
+:PROPERTIES:
+:CUSTOM_ID: qr
+:END:
+#+caption: QR-code
+[[http://shamansir.madfire.net/qrinfo01.png]]

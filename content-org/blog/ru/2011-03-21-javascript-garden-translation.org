@@ -1,0 +1,44 @@
+#+title: JavaScript Гарден на русском
+#+datetime: 21 Mar 2011 12:08
+#+tags: javascript
+
+Стараниями четырёх людей мы перевели
+[[http://bonsaiden.github.com/JavaScript-Garden/][JavaScript Garden]] на
+русский язык!
+
+/JavaScript Garden/ --- обновляющаяся (с учётом новых веяний и поправок)
+документация по трюкам и хитростям JavaScript, находящаяся в одном,
+постоянном, месте. В этой документации рассматриваются практически все
+распространённые и влияющие на производительность ошибки программистов,
+поясняются таинства спецификаций и премудрости работы движков
+JavaScript.
+
+[[http://shamansir.github.com/JavaScript-Garden/][[[file:%7B%7B%20get_figure(slug,%20'screenshot.png')%20%7D%7D]]]]
+
+Поскольку это слишком крупный перевод и нет смысла переносить один
+симпатичный маркдаун в другой менее симпатичный, просто даю вам ссылку:
+[[http://shamansir.github.com/JavaScript-Garden/][JavaScript Гарден на
+русском]].
+
+**** В переводе участвовали
+:PROPERTIES:
+:CUSTOM_ID: в-переводе-участвовали
+:END:
+- [[http://shamansir.madfire.net]['shaman.sir']]
+- [[http://anton.shevchuk.name/][Антон Шевчук]]
+- [[http://nixsolutions.com/][Максим Лозовой]]
+- [[http://nixsolutions.com/][Елена Пашкова]]
+
+Найденные ошибки и опечатки можно
+[[https://github.com/BonsaiDen/JavaScript-Garden/issues][вешать на
+авторов]], а они передадут их переводчикам.
+
+Весь перевод производится в
+[[https://github.com/shamansir/JavaScript-Garden][соответствующем
+github-репозитории]], так что если вы хотите помогать --- you're
+welcome.
+
+*P.S.* Когда авторы вольют перевод к себе на сайт, если примут, он будет
+также располагаться
+[[http://bonsaiden.github.com/JavaScript-Garden/ru][где-то здесь]], но
+всё равно обновлять его мы будем чаще по ссылке из поста.

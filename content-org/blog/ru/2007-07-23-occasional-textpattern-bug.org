@@ -1,0 +1,41 @@
+#+title: Неожиданный баг Textpattern
+#+datetime: 23 Jul 2007 02:14
+#+tags: php textpattern
+
+Пока игрался с [[http://textpattern.org/][textpattern]] на
+[[http://sharedcode.info/][шаредкоде]], обнаружил сей баг, который
+потенциально может затронуть тех, кто собственно
+[[http://textpattern.org/][textpattern]] пользует.
+
+Испугало то, что отключалось (правильнее сказать истекало)
+комментирование в статьях, с постинга которых прошло много времени.
+излазил все настройки -- нету ничего такого -- хотя видно, что должно
+ведь быть по разумению. И ведь хорошо что погуглил. наткнулся на
+[[http://hari.literaryforums.org/2007/04/22/textpattern-review/][пост]],
+а из него -- по комментам -- на
+[[http://textpattern.com/faq/257/comment-preferences-are-missing][статью
+FAQ]].
+
+Суть состоит в том, что если в /Admin/ -> /Preferences/ -> /Basic/ для
+раздела /Comments/ вы наблюдаете только два пункта (и у вас версия 4.0.4
+и нет желания/возможности пока апдейтить) -- эта заметка для вас.
+
+Сделать надо всего лишь два действия. Раз -- забрать с вашего хостинга
+файл =./textpattern/include/txp_prefs.php=, найти в нем строку 89:
+
+#+begin_src php
+$evt_list = safe_column('event', 'txp_prefs',
+     "type = 0 and prefs_id = 1 group by 'event' order by event desc");
+#+end_src
+
+и удалить из нее кавычки вокруг event (чтобы она совпадала с
+[[http://dev.textpattern.com/browser/development/4.0/textpattern/include/txp_prefs.php?rev=2156#L89][этим
+вариантом]]):
+
+#+begin_src php
+$evt_list = safe_column('event', 'txp_prefs',
+     "type = 0 and prefs_id = 1 group by event order by event desc");
+#+end_src
+
+два -- залить файл обратно. Финита ля комедия -- добро пожаловать в
+настройки, в пункт /Comments:Disabled after/.

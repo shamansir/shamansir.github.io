@@ -1,0 +1,36 @@
+#+title: "Sandwitch: Тема для Tumblr"
+#+datetime: 2 Dec 2010 19:31
+#+tags: tumblr
+
+Сделал [[http://www.tumblr.com/theme/18012][тему для Tumblr]] под
+названием [[http://uncyclopedia.wikia.com/wiki/Sandwitch][Sandwitch]].
+Хотел чтобы tumblr-блог был похож стилем на тот, который я сделал для
+движка [[http://code.google.com/p/showdown-blog/][showdown blog]], а
+получилось даже лучше!
+
+#+caption: Скриншот
+[[file:%7B%7B%20get_figure(slug,%20'screen.png')%20%7D%7D]]
+
+В настройках темы можно включить трансляцию последних твитов, прикрутить
+[[http://disqus.com][Disqus]] и даже организовать подсветку кода в
+постах.
+
+Для подсветки нужно чтобы первой строкой в блоках кода было что-нибудь
+вроде =!#xml=, поэтому советую создавать посты в =Markdown=-редакторе
+(включается в [[http://www.tumblr.com/preferences][настройках
+профиля]]). Для подсветки используется
+[[http://shjs.sourceforge.net/][SHJS]], выложенный на сервер
+=static.tumblr=. Кроме галочки "Highlight code" надо в поле "Supported
+langs" прописать список языков программирования, которые используются в
+блоге в виде =['html','css','xml','javascript','java','python','sh']=.
+Вот какие языки можно указать: =html= (HTML), =xml= (XML), =css= (CSS),
+=javascript= (JavaScript), =python= (Python), =java= (Java), =ruby=
+(Ruby), =sql= (SQL), =sh= (Unix Shell), =php= (PHP), =cpp= (C++),
+=csharp= (C#).
+
+Для трансляции твитов пропишите в
+[[http://www.tumblr.com/customize][настройках темы]] "Twitter username".
+
+Для того чтобы включить [[http://disqus.com][Disqus]], укажите в
+[[http://www.tumblr.com/customize][тех же настройках]] "Disqus
+shortname" вашего блога.
