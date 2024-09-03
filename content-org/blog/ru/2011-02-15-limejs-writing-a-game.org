@@ -1,6 +1,7 @@
 #+title: "LimeJS: Пишем кроссплатформенную игру на HTML5 с поддержкой прикосновений"
 #+datetime: 15 Feb 2011 22:10
 #+tags: html5 javascript limejs
+#+hugo_section: blog/ru
 
 [[http://www.limejs.com][LimeJS]] - 2D Open Source HTML5 движок для
 написания игр с поддержкой прикосновений и работающий (по описанию) на

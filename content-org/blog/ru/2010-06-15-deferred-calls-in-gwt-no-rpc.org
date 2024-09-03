@@ -1,6 +1,7 @@
-№+title: Deferred-вызовы серверного API в GWT (без RPC)
-№+datetime: 15 Jun 2010 09:32
-№+tags: gwt java json
+#+title: Deferred-вызовы серверного API в GWT (без RPC)
+#+datetime: 15 Jun 2010 09:32
+#+tags: gwt java json
+#+hugo_section: blog/ru
 
 *Deferred* - /зд./ термин, который применяется для описания *вложенных
 асинхронных вызовов*, см. например

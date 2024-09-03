@@ -1,6 +1,7 @@
 #+title: JavaScript — как не оступиться. Пара фокусов.
 #+datetime: 16 Nov 2011 11:55
 #+tags: javascript
+#+hugo_section: blog/drafts
 
 JavaScript --- How not to Stumble. Few Tricks.
 

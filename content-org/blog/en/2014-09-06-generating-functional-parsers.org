@@ -2,6 +2,7 @@
 #+datetime: 06 Sep 2014 23:17
 #+tags: javascript functional-programming parsers
 #+excerpt: Are you interested in a functional approach to parsers generation? Well, I'm sure you do, even if, at your side, you're not sure what it means exactly. It's just because anything that connects parsers and functional programming in practice can be nothing but joyful...
+#+hugo_section: blog/en
 
 /Disclaimer:/ The author of this text is still and eternally non-native
 English-writer, so please excuse him for his grammar errors, mistypes
@@ -154,7 +155,7 @@ approach.
 
 * Part 2. Code. Parsing operators.
 :PROPERTIES:
-:CUSTOM_ID: part-2.-code.-parsing-operators.
+:CUSTOM_ID: parsing-operators
 :END:
 The main fuel for parsing process in =peg.js-fn= is /partial function
 application/ -- this power is achieved with an ability of slightly
@@ -1019,7 +1020,7 @@ see which way it's implemented in my case, but the way actually has no
 matter here, only the result matters. This, however is the clockwork
 which makes everything tick /in functional way/.
 
-=cc()= and =ref()= functions mentioned in /[[#Operators][Operators]]/
+=cc()= and =ref()= functions mentioned in /[[#parsing-operators][Parsing Operators]]/
 chapter are also defined here.
 
 **** Internal Parser Variables
@@ -1036,7 +1037,7 @@ cycle.
   execution and if position matches, returns the result from cache.
   Caching may be disabled on parser generation;
 - =ctx= variable holds the vey root of context, the topmost level of it
-  (see above in /[[#User-Code][User Code]]/ section regarding prototype
+  (see above in /[[#user-code][User Code]]/ section regarding prototype
   chains for context levels);
 - =cctx= points to current context level;
 - =ctxl= holds current context level index, the deeper the level, the
@@ -1051,7 +1052,7 @@ cycle.
 :CUSTOM_ID: context-management-functions
 :END:
 Actually, everything about context structure was described in
-/[[#User-Code][User Code]]/ section. I'll just remind you that new,
+/[[#user-code][User Code]]/ section. I'll just remind you that new,
 deeper, context levels are just new JS objects which hold pointer to
 previous (higher) level of context in their =prototype=. And yeah,
 context is where labeled results are stored for =action=, =pre= and
@@ -1074,7 +1075,7 @@ parentheses.
 :END:
 It is the function called with evey new =input= to parse. It resets all
 the variables to their default values, clears the cache and does
-=$f = __user_blocks()= (see [[#User-Code][User Code]] section), for
+=$f = __user_blocks()= (see [[#user-code][User Code]] section), for
 example, then searches for the starting rule and executes it in a
 =try=-=catch= block. If =MatchFailed= exception was fired during the
 execution, it collects all the necessary information about the failure

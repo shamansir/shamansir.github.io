@@ -1,3 +1,7 @@
+#+title: JS Article Drafts
+#+hugo_section: blog/drafts
+
+#+BEGIN_SRC javascript
 function Y(f) { return ( (function (x) { return f(function (v) { return
 x(x)(v); }); }) (function (x) { return f(function (v) { return x(x)(v);
 }); }) ); }
@@ -14,7 +18,9 @@ yield(i); } }
 immutable lists and functions rule ( thrill.filter(s => s.length == 4)
 thrill.foreach(s => print(s)) thrill.foreach(print) thrill.map(s => s +
 "y") thrill.sort((s, t) => s.charAt(0).toLower < t.charAt(0).toLower) )
+#+END_SRC
 
+#+BEGIN_SRC text
 yield
 
 for_in
@@ -28,9 +34,11 @@ cons / car / cdr
 monads
 
 http://net.tutsplus.com/tutorials/javascript-ajax/digging-into-design-patterns-in-javascript/
+#+END_SRC
 
 --------------
 
+#+BEGIN_SRC scala
 val filename = if (!args.isEmpty) args(0) else "default.txt"
 
 for ( file <- filesHere if file.isFile if
@@ -96,6 +104,7 @@ def withPrintWriter(file: File)(op: PrintWriter => Unit) { val writer =
 new PrintWriter(file) try { op(writer) } finally { writer.close() } }
 val file = new File("date.txt") withPrintWriter(file) { writer =>
 writer.println(new java.util.Date) }
+#+END_SRC
 
 Listing 7.1 · Scala's idiom for conditional initialization.
 
@@ -116,7 +125,9 @@ effects. Thus, any time you are about to write the variable name, you
 could instead write the expression. Instead of println(filename), for
 example, you could just as well write this:
 
+#+BEGIN_SRC scala
 println(if (!args.isEmpty) args(0) else "default.txt")
+#+END_SRC
 
 The choice is yours. You can write it either way. Using vals helps you
 safely make this kind of refactoring as your code evolves over time.
@@ -133,8 +144,10 @@ Listing 3.9:
 
 --------------
 
+
 Mastering True JavaScript
 
+#+BEGIN_SRC text
 // Intro (this article continues previous articles) // Why JS? (about
 libraries, current version, client side, dynamic typing flexibility; no
 overloading / custom operators, types vs. classes) // Why Functional?
@@ -170,9 +183,11 @@ Typing // Interfaces // Mixing In, Traits (same-named methods?) //
 Overriding // Validation in Conctructors // Validation of Values in
 Methods (like require() in scala) // Multiple Constructors //
 [Combinators] // [Abstract Methods] // Literature (Scala helped)
+#+END_SRC
 
 --------------
 
+#+BEGIN_SRC javascript
 function /YieldValue(val) { this.val = val; } function yield(what) {
 throw new /YieldValue(what); } function /(gen) { var l = []; try {
 gen(); } catch(y) { l.push(y); } return l; } /(function() { yield(2);
@@ -186,13 +201,14 @@ executing console.log(vals); return vals; }
 
 function yield(val) { vals.push(val); } function range(st, f) { return
 function() { for (var i = st; i <= f; i++) yield(i); } } _(range(1, 5));
+#+END_SRC
 
 // Generator demo for JavaScript //
 http://nixtu.blogspot.it/2012/03/implementing-generators-in-javascript.html
 
+#+BEGIN_SRC javascript
 function generator(valueCb) { return function() { var i = 0;
 
-#+begin_example
 return {
   next: function() {
     var ret = valueCb(i);
@@ -201,7 +217,6 @@ return {
     return ret;
   }
 };
-#+end_example
 
 }(); }
 
@@ -231,6 +246,7 @@ function watcher() { if (state == -1) { console.log('finished'); } else
 setTimeout(watcher, 1); } setTimeout(watcher, 1);
 
 setTimeout(function() { state = -1 }, 5000);
+#+END_SRC
 
 http://ejohn.org/blog/how-javascript-timers-work/
 http://bjouhier.wordpress.com/2011/05/24/yield-resume-vs-asynchronous-callbacks/
@@ -244,6 +260,7 @@ http://balpha.de/2011/06/introducing-lyfe-yield-in-javascript/
 
 https://bitbucket.org/balpha/lyfe
 
+#+BEGIN_SRC text
 //! / Copyright (c) 2011, 2012 Benjamin Dumke-von der Ehe / / Permission
 is hereby granted, free of charge, to any person obtaining a copy * of
 this software and associated documentation files (the "Software"), to
@@ -260,10 +277,11 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE * AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER * LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, * OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE * SOFTWARE. */
+#+END_SRC
 
+#+BEGIN_SRC javascript
 (function () {
 
-#+begin_example
 var arrIndexOf;
 if (Array.prototype.indexOf) {
     arrIndexOf = function (arr, val) { return arr.indexOf(val); };
@@ -583,6 +601,6 @@ Generator.BreakIteration = BreakIteration;
 Generator.Count = Count;
 Generator.Range = Range;
 Generator.IterationError = IterationError;
-#+end_example
 
 })();
+#+END_SRC

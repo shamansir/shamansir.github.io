@@ -1,6 +1,7 @@
 #+title: PHP and UTF-8 (Unicode) - A funny thing for a half of a day
 #+datetime: <2006-22-12 12:48>
 #+tags: php unicode mysql
+#+hugo_section: blog/en
 
 It is [[http://live.julik.nl/2005/03/unicode-php][not the advice of
 mine]], but it helped me enormously.

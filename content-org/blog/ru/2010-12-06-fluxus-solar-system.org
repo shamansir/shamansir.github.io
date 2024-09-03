@@ -1,6 +1,7 @@
 #+title: Моделируем солнечную систему в fluxus
 #+datetime: 6 Dec 2010 21:38
 #+tags: fluxus opengl scheme racket functional-programming
+#+hugo_section: blog/ru
 
 Я [[file:?post-about-fluxus][уже писал]] про
 [[http://www.pawfal.org/fluxus/][fluxus]], систему livecoding и, по

@@ -1,6 +1,7 @@
 #+title: "Trac + Subversion + Ubuntu: интересная забава на день"
 #+datetime: 16 Dec 2006 01:47
 #+tags: trac subversion ubuntu
+#+hugo_section: blog/ru
 
 Приветствую всех заинтересованных. Ведь вас, наверняка, не очень много
 :).

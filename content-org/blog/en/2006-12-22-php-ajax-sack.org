@@ -1,6 +1,7 @@
 #+title: PHP + AJAX = SACK
 #+datetime: <2006-22-12 12:27>
 #+tags: php ajax sack javascript
+#+hugo_section: blog/en
 
 Occasionally, I've got a task to... But I was too lazy to write my own
 function, to check the browser and blah-blah-blah (the more, as I

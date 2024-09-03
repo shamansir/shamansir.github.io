@@ -1,6 +1,7 @@
 #+title: Слайды мастер-класса по GWT и mvp4g
 #+datetime: 4 May 2011 19:17
 #+tags: gwt mvp4g java
+#+hugo_section: blog/ru
 
 
 29 апреля я читал мастер-класс по веб-разработке на

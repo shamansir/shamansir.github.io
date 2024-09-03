@@ -1,6 +1,7 @@
 #+title: Неожиданный баг Textpattern
 #+datetime: 23 Jul 2007 02:14
 #+tags: php textpattern
+#+hugo_section: blog/ru
 
 Пока игрался с [[http://textpattern.org/][textpattern]] на
 [[http://sharedcode.info/][шаредкоде]], обнаружил сей баг, который

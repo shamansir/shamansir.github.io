@@ -1,3 +1,8 @@
+#+title: Append to Way of Samurai
+#+hugo_section: blog/drafts
+
+
+#+BEGIN_SRC javascript
 var __s = Array.prototype.slice; function deferrable_as(ctx, f) { return
 function() { return (function(args) { return function(result, next) {
 return f.apply(ctx, args.concat([result, next])); };
@@ -39,3 +44,4 @@ deferrable_as(null, _notify_success);
 
 queue(read_file('book_name_1'), read_file('book_name_2'),
 read_file('book_name_3'), notify_success()); ​
+#+END_SRC

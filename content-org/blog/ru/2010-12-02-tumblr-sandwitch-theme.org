@@ -1,6 +1,7 @@
 #+title: "Sandwitch: Тема для Tumblr"
 #+datetime: 2 Dec 2010 19:31
 #+tags: tumblr
+#+hugo_section: blog/ru
 
 Сделал [[http://www.tumblr.com/theme/18012][тему для Tumblr]] под
 названием [[http://uncyclopedia.wikia.com/wiki/Sandwitch][Sandwitch]].

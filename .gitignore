@@ -3,3 +3,6 @@ fake*.md
 public
 resources/_gen
 .packages
+copy-posts-from-blog.sh
+.dir-locals.el.2
+rebuild.log

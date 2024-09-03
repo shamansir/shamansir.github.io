@@ -1,8 +1,9 @@
 #+title: Modelling a Solar System in Fluxus
 #+datetime: 6 Dec 2010 21:38
 #+tags: fluxus opengl scheme racket functional-programming
+#+hugo_section: blog/en
 
-Some time ago I [[#post-about-fluxus][wrote a post]] about
+Some time ago I [fn:post-about-fluxus: wrote a post] about
 [[http://www.pawfal.org/fluxus/][fluxus]], livecoding and 3D-prototyping
 system. Now I want to demonstrate some of its features and describe how
 you may use them in pseudo(;))scientific needs. For example, you can
@@ -156,3 +157,5 @@ on Vimeo.
 #+begin_html
   </p>
 #+end_html
+
+[fn:post-about-fluxus] Located here: [[./post-about-fluxus]]

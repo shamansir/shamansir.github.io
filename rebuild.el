@@ -26,6 +26,7 @@
 (setq package-user-dir (expand-file-name "./.packages"))
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
                          ("elpa" . "https://elpa.gnu.org/packages/")))
+(setq org-id-extra-files (directory-files-recursively default-directory "\.org$"))
 
 ; Initialize the package system
 (package-initialize)

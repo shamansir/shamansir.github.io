@@ -1,3 +1,6 @@
+#+title: Plan
+#+hugo_section: blog/plan
+
 - pegjs / markdown.pegjs- mvp4g-layouting as a separate jar
 - Rhino in Android- JavaScript modules pattern
 - OpenCV processing- A-Frame

@@ -1,6 +1,7 @@
 #+title: "LimeJS: Writing a cross-platform game in HTML5 with touch support"
 #+datetime: 15 Feb 2011 22:10
 #+tags: html5 javascript limejs
+#+hugo_section: blog/en
 
 [[http://www.limejs.com][LimeJS]] is 2D Open Source HTML5-engine for
 game development with touch-events support and it works (following to
