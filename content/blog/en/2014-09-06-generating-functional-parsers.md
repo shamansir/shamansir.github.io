@@ -1,6 +1,6 @@
 ---
 title: "Generating Functional Parsers"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

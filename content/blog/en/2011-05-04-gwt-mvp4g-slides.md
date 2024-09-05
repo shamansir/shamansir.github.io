@@ -1,6 +1,6 @@
 ---
 title: "GWT + mvp4g Lecture Slides"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

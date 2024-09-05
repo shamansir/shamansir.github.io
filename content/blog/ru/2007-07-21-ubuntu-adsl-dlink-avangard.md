@@ -1,6 +1,6 @@
 ---
 title: "Ubuntu 7.04, Пыхтерский Авангард-ADSL, модем D-Link"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

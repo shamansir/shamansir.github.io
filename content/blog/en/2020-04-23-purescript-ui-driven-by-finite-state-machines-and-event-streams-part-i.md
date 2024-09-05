@@ -1,6 +1,6 @@
 ---
 title: "PureScript: UI driven by Finite State Machines and Event Streams"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

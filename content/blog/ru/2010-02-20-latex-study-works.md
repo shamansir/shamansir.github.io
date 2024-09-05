@@ -1,6 +1,6 @@
 ---
 title: "Подготовка учебных документов в LaTeX"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

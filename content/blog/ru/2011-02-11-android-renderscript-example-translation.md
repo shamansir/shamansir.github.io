@@ -1,6 +1,6 @@
 ---
 title: "Разбирая фонтан на Renderscript"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

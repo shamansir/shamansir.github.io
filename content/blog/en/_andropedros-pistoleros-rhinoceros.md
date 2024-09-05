@@ -1,6 +1,6 @@
 ---
 title: "Andropedros Pistoleros Rhinoceros"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "JavaScript — как не оступиться. Пара фокусов."
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

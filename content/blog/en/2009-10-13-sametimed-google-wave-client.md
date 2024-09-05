@@ -1,6 +1,6 @@
 ---
 title: "Google Wave Client as Java Web Application"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

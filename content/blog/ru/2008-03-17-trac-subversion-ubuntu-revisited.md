@@ -1,6 +1,6 @@
 ---
 title: "Trac + Subversion @ Ubuntu: Revisited"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

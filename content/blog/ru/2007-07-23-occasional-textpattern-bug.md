@@ -1,6 +1,6 @@
 ---
 title: "Неожиданный баг Textpattern"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

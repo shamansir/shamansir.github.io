@@ -1,6 +1,6 @@
 ---
 title: "HTML5 — не язык разметки, а мессиво"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

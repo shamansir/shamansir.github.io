@@ -1,6 +1,6 @@
 ---
 title: "Путь радуги: Алгоритм распознавания движений пальцев рук на основе цветовой диффференциации (Driven by LISP)"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "JavaScript Гарден на русском"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

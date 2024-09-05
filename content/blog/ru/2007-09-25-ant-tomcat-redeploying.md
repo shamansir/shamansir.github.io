@@ -1,6 +1,6 @@
 ---
 title: "Редеплойинг приложения на Tomcat средствами Ant"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

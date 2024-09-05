@@ -1,6 +1,6 @@
 ---
 title: "Do Androids Dream of Generating Art"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

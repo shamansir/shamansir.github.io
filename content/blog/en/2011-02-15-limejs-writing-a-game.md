@@ -1,6 +1,6 @@
 ---
 title: "LimeJS: Writing a cross-platform game in HTML5 with touch support"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

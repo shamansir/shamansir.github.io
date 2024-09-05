@@ -1,6 +1,6 @@
 ---
 title: "Ant JUnit Nice Output Formatter"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

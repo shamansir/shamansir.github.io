@@ -1,6 +1,6 @@
 ---
 title: "Путь асинхронного самурая"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

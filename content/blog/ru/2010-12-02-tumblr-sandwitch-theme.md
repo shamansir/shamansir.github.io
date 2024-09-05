@@ -1,6 +1,6 @@
 ---
 title: "Sandwitch: Тема для Tumblr"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Теория категорий — бессмысленная и беспощадная!"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

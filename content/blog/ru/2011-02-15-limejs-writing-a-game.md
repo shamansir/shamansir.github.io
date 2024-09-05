@@ -1,6 +1,6 @@
 ---
 title: "LimeJS: Пишем кроссплатформенную игру на HTML5 с поддержкой прикосновений"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

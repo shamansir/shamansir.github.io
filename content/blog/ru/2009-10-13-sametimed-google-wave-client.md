@@ -1,6 +1,6 @@
 ---
 title: "Клиент для Google Wave в виде Java Web Application"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

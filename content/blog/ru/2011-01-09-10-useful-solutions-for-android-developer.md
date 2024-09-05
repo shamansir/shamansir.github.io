@@ -1,6 +1,6 @@
 ---
 title: "10 полезных решений для разработчика под Android"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

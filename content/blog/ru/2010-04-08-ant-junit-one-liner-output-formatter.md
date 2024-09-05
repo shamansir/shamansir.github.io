@@ -1,6 +1,6 @@
 ---
 title: "Только полезная информация в выводе JUnit при запуске из ant"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

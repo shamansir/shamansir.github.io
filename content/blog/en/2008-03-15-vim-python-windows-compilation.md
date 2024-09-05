@@ -1,6 +1,6 @@
 ---
 title: "[g]Vim in Python mode : Recompilation in Windows"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

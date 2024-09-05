@@ -1,6 +1,6 @@
 ---
 title: "ООП и JavaScript"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

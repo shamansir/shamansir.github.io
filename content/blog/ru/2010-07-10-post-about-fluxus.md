@@ -1,6 +1,6 @@
 ---
 title: "Fluxus — Прототипирование OpenGL графики и игр on-the-fly (добавить Scheme по вкусу)"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

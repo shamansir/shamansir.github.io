@@ -1,6 +1,6 @@
 ---
 title: "JSP Custom tags"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

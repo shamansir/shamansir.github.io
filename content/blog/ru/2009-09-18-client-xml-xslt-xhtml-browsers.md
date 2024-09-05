@@ -1,6 +1,6 @@
 ---
 title: "На клиенте! Получить XML! Получить XSL! Сделать XHTML! Марш!"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

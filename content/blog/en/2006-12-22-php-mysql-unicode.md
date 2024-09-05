@@ -1,6 +1,6 @@
 ---
 title: "PHP and UTF-8 (Unicode) - A funny thing for a half of a day"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

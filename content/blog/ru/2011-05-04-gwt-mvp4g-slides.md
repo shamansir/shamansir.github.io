@@ -1,6 +1,6 @@
 ---
 title: "Слайды мастер-класса по GWT и mvp4g"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

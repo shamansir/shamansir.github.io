@@ -1,6 +1,6 @@
 ---
 title: "UI-Паттерн Validator, может так?"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

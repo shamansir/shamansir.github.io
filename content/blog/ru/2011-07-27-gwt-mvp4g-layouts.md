@@ -1,6 +1,6 @@
 ---
 title: "GWT + mvp4g: видео доклада + отзыв о ADDConf'11 + пример с портлетами"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

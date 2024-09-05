@@ -1,6 +1,6 @@
 ---
 title: "Monkey-Patching или Расширение Встроенных Типов: религия или осознанный выбор?"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

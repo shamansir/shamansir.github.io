@@ -1,6 +1,6 @@
 ---
 title: "Просто, как сэндвич: Движок блога на JavaScript и XML"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

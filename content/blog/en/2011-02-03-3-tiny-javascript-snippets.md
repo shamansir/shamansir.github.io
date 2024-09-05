@@ -1,6 +1,6 @@
 ---
 title: "3 Tiny JavaScript Snippets"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "10 Useful Solutions for Android Developer"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

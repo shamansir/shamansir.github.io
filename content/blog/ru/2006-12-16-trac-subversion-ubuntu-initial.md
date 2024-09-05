@@ -1,6 +1,6 @@
 ---
 title: "Trac + Subversion + Ubuntu: интересная забава на день"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

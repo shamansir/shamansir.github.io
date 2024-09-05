@@ -1,6 +1,6 @@
 ---
 title: "Redeploying an Application to Tomcat with Ant"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Easy as Sandwich: Blog Engine in JavaScript and XML"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

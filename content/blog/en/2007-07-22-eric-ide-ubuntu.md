@@ -1,6 +1,6 @@
 ---
 title: "Eric IDE 4.0.1 in Ubuntu 7.04"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

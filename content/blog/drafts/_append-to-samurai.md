@@ -1,6 +1,6 @@
 ---
 title: "Append to Way of Samurai"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

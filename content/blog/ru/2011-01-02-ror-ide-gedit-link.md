@@ -1,6 +1,6 @@
 ---
 title: "Ссылка: RoR IDE из gedit"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

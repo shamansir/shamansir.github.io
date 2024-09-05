@@ -1,6 +1,6 @@
 ---
 title: "3 Маленьких JS-Сниппета"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

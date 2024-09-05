@@ -1,6 +1,6 @@
 ---
 title: "Восстановление пароля в клиенте Psi (Python)"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

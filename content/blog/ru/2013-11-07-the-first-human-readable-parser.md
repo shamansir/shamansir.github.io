@@ -1,6 +1,6 @@
 ---
 title: "(возможно) Первый в мире генератор читабельных, хоть и чрезвычайно медленных, парсеров на JS"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 

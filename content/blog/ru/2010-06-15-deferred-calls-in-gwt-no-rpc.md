@@ -1,6 +1,6 @@
 ---
 title: "Deferred-вызовы серверного API в GWT (без RPC)"
-author: ["Anton Kotenko"]
+author: Anton Kotenko
 draft: false
 ---
 
