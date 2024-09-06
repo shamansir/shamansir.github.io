@@ -1,6 +1,7 @@
 ---
 title: "Google Wave Client as Java Web Application"
 author: Anton Kotenko
+publishDate: 2009-10-13T07:09:00
 draft: false
 ---
 

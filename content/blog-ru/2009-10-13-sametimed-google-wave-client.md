@@ -1,6 +1,7 @@
 ---
 title: "Клиент для Google Wave в виде Java Web Application"
 author: Anton Kotenko
+publishDate: 2009-10-13T07:09:00
 draft: false
 ---
 

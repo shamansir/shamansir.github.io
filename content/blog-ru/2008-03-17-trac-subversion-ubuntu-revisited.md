@@ -1,6 +1,7 @@
 ---
 title: "Trac + Subversion @ Ubuntu: Revisited"
 author: Anton Kotenko
+publishDate: 2008-03-17T03:12:00
 draft: false
 ---
 

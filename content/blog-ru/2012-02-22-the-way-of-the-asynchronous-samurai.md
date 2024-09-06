@@ -1,6 +1,7 @@
 ---
 title: "Путь асинхронного самурая"
 author: Anton Kotenko
+publishDate: 2011-11-16T11:55:00
 draft: false
 ---
 

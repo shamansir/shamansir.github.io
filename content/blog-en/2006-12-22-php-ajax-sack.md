@@ -1,6 +1,7 @@
 ---
 title: "PHP + AJAX = SACK"
 author: Anton Kotenko
+publishDate: 2006-12-22T12:27:00
 draft: false
 ---
 

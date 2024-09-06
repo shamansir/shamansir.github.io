@@ -1,6 +1,7 @@
 ---
 title: "Trac + Subversion + Ubuntu: интересная забава на день"
 author: Anton Kotenko
+publishDate: 2006-12-16T01:47:00
 draft: false
 ---
 

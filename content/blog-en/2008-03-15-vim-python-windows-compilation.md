@@ -1,6 +1,7 @@
 ---
 title: "[g]Vim in Python mode : Recompilation in Windows"
 author: Anton Kotenko
+publishDate: 2008-03-15T17:32:00
 draft: false
 ---
 

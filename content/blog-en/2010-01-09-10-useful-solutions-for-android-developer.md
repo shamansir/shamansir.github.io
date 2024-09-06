@@ -1,6 +1,7 @@
 ---
 title: "10 Useful Solutions for Android Developer"
 author: Anton Kotenko
+publishDate: 2010-01-09T11:42:00
 draft: false
 ---
 

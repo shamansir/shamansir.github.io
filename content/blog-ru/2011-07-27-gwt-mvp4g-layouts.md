@@ -1,6 +1,7 @@
 ---
 title: "GWT + mvp4g: видео доклада + отзыв о ADDConf'11 + пример с портлетами"
 author: Anton Kotenko
+publishDate: 2011-07-27T09:10:00
 draft: false
 ---
 

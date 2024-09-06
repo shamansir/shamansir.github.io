@@ -1,6 +1,7 @@
 ---
 title: "Way of the Rainbow: Fingers Motion Detection Algorythm Based on a Colors Differentiation (Driven by LISP)"
 author: Anton Kotenko
+publishDate: 2010-08-12T15:38:00
 draft: false
 ---
 

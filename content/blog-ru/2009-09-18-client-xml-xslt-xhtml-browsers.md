@@ -1,6 +1,7 @@
 ---
 title: "На клиенте! Получить XML! Получить XSL! Сделать XHTML! Марш!"
 author: Anton Kotenko
+publishDate: 2009-10-13T07:09:00
 draft: false
 ---
 

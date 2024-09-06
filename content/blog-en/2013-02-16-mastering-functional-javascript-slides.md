@@ -1,6 +1,7 @@
 ---
 title: "Mastering Functional JavaScript Lecture Slides"
 author: Anton Kotenko
+publishDate: 2013-02-16T22:23:00
 draft: false
 ---
 

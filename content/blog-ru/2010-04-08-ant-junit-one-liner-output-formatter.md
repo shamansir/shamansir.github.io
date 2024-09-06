@@ -1,6 +1,7 @@
 ---
 title: "Только полезная информация в выводе JUnit при запуске из ant"
 author: Anton Kotenko
+publishDate: 2010-04-08T19:32:00
 draft: false
 ---
 

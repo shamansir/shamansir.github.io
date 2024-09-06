@@ -1,6 +1,7 @@
 ---
 title: "3 Маленьких JS-Сниппета"
 author: Anton Kotenko
+publishDate: 2011-02-03T11:55:00
 draft: false
 ---
 

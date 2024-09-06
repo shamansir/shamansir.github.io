@@ -1,6 +1,7 @@
 ---
 title: "LimeJS: Writing a cross-platform game in HTML5 with touch support"
 author: Anton Kotenko
+publishDate: 2011-02-15T22:10:00
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Redeploying an Application to Tomcat with Ant"
 author: Anton Kotenko
+publishDate: 2007-09-15T12:38:00
 draft: false
 ---
 

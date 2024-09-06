@@ -1,6 +1,7 @@
 ---
 title: "Доклад «Правильный JavaScript» на WebStandardDays @ Киев"
 author: Anton Kotenko
+publishDate: 2011-10-07T10:00:00
 draft: false
 ---
 

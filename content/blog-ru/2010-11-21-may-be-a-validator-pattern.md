@@ -1,6 +1,7 @@
 ---
 title: "UI-Паттерн Validator, может так?"
 author: Anton Kotenko
+publishDate: 2010-11-23T00:03:00
 draft: false
 ---
 

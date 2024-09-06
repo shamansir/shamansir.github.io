@@ -1,6 +1,7 @@
 ---
 title: "JavaScript Гарден на русском"
 author: Anton Kotenko
+publishDate: 2011-03-21T12:08:00
 draft: false
 ---
 

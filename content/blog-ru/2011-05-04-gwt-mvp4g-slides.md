@@ -1,6 +1,7 @@
 ---
 title: "Слайды мастер-класса по GWT и mvp4g"
 author: Anton Kotenko
+publishDate: 2011-05-04T19:17:00
 draft: false
 ---
 

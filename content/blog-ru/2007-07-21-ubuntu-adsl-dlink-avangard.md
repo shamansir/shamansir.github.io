@@ -1,6 +1,7 @@
 ---
 title: "Ubuntu 7.04, Пыхтерский Авангард-ADSL, модем D-Link"
 author: Anton Kotenko
+publishDate: 2007-07-21T18:44:00
 draft: false
 ---
 

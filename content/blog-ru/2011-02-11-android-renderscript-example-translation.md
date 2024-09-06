@@ -1,5 +1,6 @@
 ---
 title: "Разбирая фонтан на Renderscript"
+publishDate: 2011-02-11T10:26:00
 author: Anton Kotenko
 draft: false
 ---

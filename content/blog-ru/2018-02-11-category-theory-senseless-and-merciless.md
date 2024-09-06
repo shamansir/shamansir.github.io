@@ -1,6 +1,7 @@
 ---
 title: "Теория категорий — бессмысленная и беспощадная!"
 author: Anton Kotenko
+publishDate: 2018-02-11T00:00:00
 draft: false
 ---
 

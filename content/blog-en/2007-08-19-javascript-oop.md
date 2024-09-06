@@ -1,6 +1,7 @@
 ---
 title: "OOP &amp; JavaScript"
 author: Anton Kotenko
+publishDate: 2007-08-19T02:29:00
 draft: false
 ---
 

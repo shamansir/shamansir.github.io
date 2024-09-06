@@ -1,6 +1,7 @@
 ---
 title: "Deferred-вызовы серверного API в GWT (без RPC)"
 author: Anton Kotenko
+publishDate: 2010-06-15T09:32:00
 draft: false
 ---
 

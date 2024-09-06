@@ -1,6 +1,7 @@
 ---
 title: "Occasional Textpattern Bug"
 author: Anton Kotenko
+publishDate: 2007-07-23T02:14:00
 draft: false
 ---
 

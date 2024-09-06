@@ -1,6 +1,7 @@
 ---
 title: "Моделируем солнечную систему в fluxus"
 author: Anton Kotenko
+publishDate: 2010-12-06T21:38:00
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "LimeJS: Пишем кроссплатформенную игру на HTML5 с поддержкой прикосновений"
 author: Anton Kotenko
+publishDate: 2011-02-15T22:10:00
 draft: false
 ---
 

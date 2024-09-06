@@ -56,20 +56,15 @@ main:                # sections in the website sidebar
     url: /narratives/
     weight: 11
 
-  - identifier: blog
-    name: Blog
-    url: /blog/
-    weight: 12
-
   - identifier: blog-ru
     name: 'Blog : ru'
     url: /blog-ru
-    weight: 13
+    weight: 12
 
   - identifier: blog-en
     name: 'Blog : en'
     url: /blog-en
-    weight: 14
+    weight: 13
 
   - identifier: github
     name: GitHub Project

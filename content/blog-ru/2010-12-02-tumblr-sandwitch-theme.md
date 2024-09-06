@@ -1,6 +1,7 @@
 ---
 title: "Sandwitch: Тема для Tumblr"
 author: Anton Kotenko
+publishDate: 2010-12-02T19:31:00
 draft: false
 ---
 

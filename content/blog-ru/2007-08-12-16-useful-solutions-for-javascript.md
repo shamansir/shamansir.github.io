@@ -1,6 +1,7 @@
 ---
 title: "16 полезных решений для Javascript"
 author: Anton Kotenko
+publishDate: 2007-08-12T17:55:00
 draft: false
 ---
 

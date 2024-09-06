@@ -1,6 +1,7 @@
 ---
 title: "SATA, DMA и странности Ubuntu"
 author: Anton Kotenko
+publishDate: 2007-01-24T19:52:00
 draft: false
 ---
 

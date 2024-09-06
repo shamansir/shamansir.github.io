@@ -1,6 +1,7 @@
 ---
 title: "Fluxus — Prototyping OpenGL graphics and games on-the-fly (add Scheme to taste)"
 author: Anton Kotenko
+publishDate: 2010-06-10T13:10:00
 draft: false
 ---
 

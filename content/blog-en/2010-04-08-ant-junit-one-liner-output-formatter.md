@@ -1,6 +1,7 @@
 ---
 title: "Ant JUnit Nice Output Formatter"
 author: Anton Kotenko
+publishDate: 2010-04-08T19:32:00
 draft: false
 ---
 

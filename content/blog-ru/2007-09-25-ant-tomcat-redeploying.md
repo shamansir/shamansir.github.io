@@ -1,6 +1,7 @@
 ---
 title: "Редеплойинг приложения на Tomcat средствами Ant"
 author: Anton Kotenko
+publishDate: 2007-09-15T12:38:00
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Eric IDE 4.0.1 in Ubuntu 7.04"
 author: Anton Kotenko
+publishDate: 2007-07-22T18:05:00
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Modern Binary Reverse-Engineering with node.js, for Elm, or Why We Really Need Elm Playgrounds"
 author: Anton Kotenko
+publishDate: 2017-04-07T14:32:00
 draft: false
 ---
 

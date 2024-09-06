@@ -1,6 +1,7 @@
 ---
 title: "Generating Functional Parsers"
 author: Anton Kotenko
+publishDate: 2014-09-06T23:17
 draft: false
 ---
 

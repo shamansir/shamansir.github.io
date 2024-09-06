@@ -1,6 +1,7 @@
 ---
 title: "GWT + mvp4g Lecture Slides"
 author: Anton Kotenko
+publishDate: 2011-05-04T19:17:00
 draft: false
 ---
 

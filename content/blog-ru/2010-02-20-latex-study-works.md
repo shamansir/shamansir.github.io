@@ -1,6 +1,7 @@
 ---
 title: "Подготовка учебных документов в LaTeX"
 author: Anton Kotenko
+publishDate: 2010-02-20T23:54:00
 draft: false
 ---
 

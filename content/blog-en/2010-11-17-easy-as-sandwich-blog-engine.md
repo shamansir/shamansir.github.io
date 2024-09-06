@@ -1,6 +1,7 @@
 ---
 title: "Easy as Sandwich: Blog Engine in JavaScript and XML"
 author: Anton Kotenko
+publishDate: 2010-11-17T22:06:00
 draft: false
 ---
 

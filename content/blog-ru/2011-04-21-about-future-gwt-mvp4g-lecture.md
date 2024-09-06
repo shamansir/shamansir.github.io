@@ -1,6 +1,7 @@
 ---
 title: "Лекция по GWT+mvp4g на ADDConf '11"
 author: Anton Kotenko
+publishDate: 2011-04-21T11:46:00
 draft: false
 ---
 

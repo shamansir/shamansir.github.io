@@ -1,6 +1,7 @@
 ---
 title: "HTML5 — не язык разметки, а мессиво"
 author: Anton Kotenko
+publishDate: 2011-08-16T20:05:00
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "10 полезных решений для разработчика под Android"
 author: Anton Kotenko
+publishDate: 2011-01-09T19:48:00
 draft: false
 ---
 

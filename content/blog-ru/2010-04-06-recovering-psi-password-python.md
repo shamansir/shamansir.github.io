@@ -1,6 +1,7 @@
 ---
 title: "Восстановление пароля в клиенте Psi (Python)"
 author: Anton Kotenko
+publishDate: 2010-04-06T02:14:00
 draft: false
 ---
 

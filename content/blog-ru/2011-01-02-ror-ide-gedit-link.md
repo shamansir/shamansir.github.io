@@ -1,6 +1,7 @@
 ---
 title: "Ссылка: RoR IDE из gedit"
 author: Anton Kotenko
+publishDate: 2011-01-01T21:44:00
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "PureScript: UI driven by Finite State Machines and Event Streams, Part II: The Example"
 author: Anton Kotenko
+publishDate: 2020-04-23T14:07:00
 draft: false
 ---
 
