@@ -1,7 +1,7 @@
 #+title: Ubuntu 7.04, Пыхтерский Авангард-ADSL, модем D-Link
 #+datetime: 21 Jul 2007 18:44
 #+tags: avangard d-link ubuntu
-#+hugo_section: blog/ru
+#+hugo_section: blog-ru
 
 Вот она, первая статья о невечном :)
 

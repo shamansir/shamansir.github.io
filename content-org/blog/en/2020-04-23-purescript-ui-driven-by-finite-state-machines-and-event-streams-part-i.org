@@ -2,7 +2,7 @@
 #+datetime: 07 Apr 2020 13:01
 #+tags: purescript functional-programming
 #+excerpt: Building UIs as state machines is not a new approach, and may appear common to a reader by some other names. Still, in PureScript, with it's freedom to choose any approach you like, it may seem not to come to head as a first thought, or even second one. Usually one may just use some framework. This post is about what could be behind your framework and for those who want to consider different ways to write UI by hand in PureScript. As the title says, plus accumulating errors and recovering to the latest successful state.
-#+hugo_section: blog/en
+#+hugo_section: blog-en
 
 I should've call the article /”The Elm Architecture in PureScript”/, but
 both the inner demons and the inner angels said "Oh, dear, no!". Still I

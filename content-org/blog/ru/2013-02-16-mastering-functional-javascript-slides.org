@@ -1,7 +1,7 @@
 #+title: Слайды «Постигаем функциональный JavaScript»
 #+datetime: 16 Feb 2013 22:23
 #+tags: javascript functional-programming
-#+hugo_section: blog/ru
+#+hugo_section: blog-ru
 
 В языке JavaScript, как и, к примеру, в Python, функции являются
 объектами. Эта немаловажное обстоятельство позволяет программистам

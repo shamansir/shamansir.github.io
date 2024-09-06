@@ -1,7 +1,7 @@
 #+title: 16 полезных решений для Javascript
 #+datetime: 12 Aug 2007 17:55
 #+tags: javascript
-#+hugo_section: blog/ru
+#+hugo_section: blog-ru
 
 Представляю вам набор функций, которые у меня лежат в отдельном файле
 =utils.js= - это функции, которые я использую чаще всего. Они стараются

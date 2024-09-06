@@ -1,7 +1,7 @@
 #+title: "Ссылка: RoR IDE из gedit"
 #+datetime: 2 Jan 2011 21:44
 #+tags: ruby gedit
-#+hugo_section: blog/ru
+#+hugo_section: blog-ru
 
 [[http://www.jackyfox.com][JackyFox]] написал
 [[http://www.jackyfox.com/2010/12/27/ruby-on-rails-ide-iz-gedit-a/][статью

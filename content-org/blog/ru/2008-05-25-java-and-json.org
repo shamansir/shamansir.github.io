@@ -1,7 +1,7 @@
 #+title: Java + JSON
 #+datetime: 25 May 2008
 #+tags: java json javascript
-#+hugo_section: blog/ru
+#+hugo_section: blog-ru
 
 *** Введение
 :PROPERTIES:

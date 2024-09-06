@@ -1,7 +1,7 @@
 #+title: Ant JUnit Nice Output Formatter
 #+datetime: 08 Apr 2010 19:32
 #+tags: ant java junit
-#+hugo_section: blog/en
+#+hugo_section: blog-en
 
 I've seached for nice Apache Ant formatter which do not writes full
 stack trace in console/file and just writes what methods are passed,

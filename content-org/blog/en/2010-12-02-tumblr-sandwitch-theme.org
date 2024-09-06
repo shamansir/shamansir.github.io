@@ -1,7 +1,7 @@
 #+title: Sandwitch Tumblr Theme
 #+datetime: 2 Dec 2010 19:31
 #+tags: tumblr
-#+hugo_section: blog/en
+#+hugo_section: blog-en
 
 Have created [[http://www.tumblr.com/theme/18012][Tumblr theme]] named
 [[http://uncyclopedia.wikia.com/wiki/Sandwitch][Sandwitch]]. I was going

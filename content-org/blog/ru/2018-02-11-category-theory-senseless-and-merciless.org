@@ -2,7 +2,7 @@
 #+datetime: 11 February 2018
 #+tags: javascript functional-programming parsers
 #+slug: category-theory-pointless-and-merciless
-#+hugo_section: blog/ru
+#+hugo_section: blog-ru
 
 * Теория категорий --- бессмысленная и беспощадная!
 :PROPERTIES:

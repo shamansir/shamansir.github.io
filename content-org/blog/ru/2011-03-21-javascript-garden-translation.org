@@ -1,7 +1,7 @@
 #+title: JavaScript Гарден на русском
 #+datetime: 21 Mar 2011 12:08
 #+tags: javascript
-#+hugo_section: blog/ru
+#+hugo_section: blog-ru
 
 Стараниями четырёх людей мы перевели
 [[http://bonsaiden.github.com/JavaScript-Garden/][JavaScript Garden]] на

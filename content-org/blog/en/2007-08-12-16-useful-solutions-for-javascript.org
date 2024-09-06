@@ -1,7 +1,7 @@
 #+title: 16 Practical Solutions for Javascript
 #+datetime: 12 Aug 2007 17:55
 #+tags: javascript
-#+hugo_section: blog/en
+#+hugo_section: blog-en
 
 Let me present you a set of functions that I keep in separate =utils.js=
 file - they are the most frequent functions I used. They do trying very

@@ -1,5 +1,5 @@
 #+title: About me
-#+hugo_section: blog/en
+#+hugo_section: blog-en
 
 *** shaman.sir
 :PROPERTIES:

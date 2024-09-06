@@ -1,7 +1,7 @@
 #+title: SATA, DMA and Ubuntu strange things
 #+datetime: <2007-24-01 19:52>
 #+tags: sata dma ubuntu
-#+hugo_section: blog/en
+#+hugo_section: blog-en
 
 Today we've made an installation of
 [[http://ubuntuguide.org/wiki/Ubuntu:Edgy][Ubuntu 6.06 LTS]] to =SATA=

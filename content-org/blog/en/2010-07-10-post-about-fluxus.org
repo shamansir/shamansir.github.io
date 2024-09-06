@@ -1,7 +1,7 @@
 #+title: Fluxus — Prototyping OpenGL graphics and games on-the-fly (add Scheme to taste)
 #+datetime: 10 Jul 2010 13:10
 #+tags: fluxus opengl scheme racket functional-programming
-#+hugo_section: blog/en
+#+hugo_section: blog-en
 
 
 The internet for a programmer who insterested in 3D-graphics for several

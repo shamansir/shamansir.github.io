@@ -1,7 +1,7 @@
 #+title: Occasional Textpattern Bug
 #+datetime: 23 Jul 2007 02:14
 #+tags: php textpattern
-#+hugo_section: blog/en
+#+hugo_section: blog-en
 
 While I've played with [[http://textpattern.org/][textpattern]] at
 [[http://sharedcode.info/][sharecode]], I faced this issue that may come

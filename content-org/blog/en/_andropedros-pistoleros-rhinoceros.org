@@ -1,2 +1,2 @@
 #+title: Andropedros Pistoleros Rhinoceros
-#+hugo_section: blog/en
+#+hugo_section: blog-en

@@ -1,7 +1,7 @@
 #+title: ООП и JavaScript
 #+datetime: 19 Aug 2007 02:29
 #+tags: javascript
-#+hugo_section: blog/ru
+#+hugo_section: blog-ru
 
 В [[../16-useful-solutions-for-javascript][предыдущей статье]] я
 представил на ваше рассмотрение небольшой кусок кода, который позволяет

@@ -1,7 +1,7 @@
 #+title: "Easy as Sandwich: Blog Engine in JavaScript and XML"
 #+datetime: 17 Nov 2010 22:06
 #+tags: javascript xml
-#+hugo_section: blog/en
+#+hugo_section: blog-en
 
 
 Say you suddenly needed a personal blog. I already have some puny free
