@@ -1,5 +1,5 @@
 #+title: (возможно) Первый в мире генератор читабельных, хоть и чрезвычайно медленных, парсеров на JS
-#+datetime: 07 Nov 2013 08:14
+#+publishDate: <2013-11-07T08:14>
 #+tags: javascript functional-programming parsers
 #+hugo_section: blog-ru
 

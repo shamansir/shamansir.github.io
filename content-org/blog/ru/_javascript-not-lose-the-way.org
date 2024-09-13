@@ -1,5 +1,5 @@
 #+title: JavaScript — как не оступиться. Пара фокусов.
-#+datetime: 16 Nov 2011 11:55
+#+publishDate: <2012-11-16T11:55>
 #+tags: javascript
 #+hugo_section: blog/drafts
 

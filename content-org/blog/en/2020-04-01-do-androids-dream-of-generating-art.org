@@ -1,5 +1,5 @@
 #+title: "Do Androids Dream of Generating Art"
-#+datetime: 04 January 2020 10:15
+#+publishDate: <2020-01-04T10:15>
 #+hugo_section: blog/drafts
 
 Indeed, it turned out that that is actually is one of their basic innate

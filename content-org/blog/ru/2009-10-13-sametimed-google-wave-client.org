@@ -1,5 +1,5 @@
 #+title: Клиент для Google Wave в виде Java Web Application
-#+datetime: 13 Oct 2009 07:09
+#+publishDate: <2009-10-13T07:09>
 #+tags: google-wave java javascript ajax dwr
 #+hugo_section: blog-ru
 

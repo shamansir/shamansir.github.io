@@ -1,5 +1,5 @@
 #+title: Только полезная информация в выводе JUnit при запуске из ant
-#+datetime: 08 Apr 2010 19:32
+#+publishDate: <2010-04-08T19:32>
 #+tags: ant java junit
 #+hugo_section: blog-ru
 

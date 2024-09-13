@@ -1,5 +1,5 @@
 #+title: 10 полезных решений для разработчика под Android
-#+datetime: 09 Jan 2011 19:48
+#+publishDate: <2011-01-09T19:48>
 #+tags: java android
 #+hugo_section: blog-ru
 

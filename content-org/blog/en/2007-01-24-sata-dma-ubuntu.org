@@ -1,5 +1,5 @@
 #+title: SATA, DMA and Ubuntu strange things
-#+datetime: <2007-24-01 19:52>
+#+publishDate: <2007-24-01T19:52>
 #+tags: sata dma ubuntu
 #+hugo_section: blog-en
 

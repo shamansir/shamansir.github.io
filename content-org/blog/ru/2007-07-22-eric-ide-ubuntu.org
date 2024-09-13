@@ -1,5 +1,5 @@
 #+title: Eric IDE 4.0.1 на Ubuntu 7.04
-#+datetime: 22 Jul 2007 18:05
+#+publishDate: <2007-07-22T18:05>
 #+tags: eric-ide python ubuntu
 #+hugo_section: blog-ru
 

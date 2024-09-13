@@ -1,5 +1,5 @@
 #+title: Разбирая фонтан на Renderscript
-#+datetime: 11 Feb 2011 10:26
+#+publishDate: <2011-02-11T10:26>
 #+tags: android renderscript
 #+hugo_section: blog-ru
 

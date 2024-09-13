@@ -1,5 +1,5 @@
 #+title: "Mastering Functional JavaScript Lecture Slides"
-#+datetime: 16 Feb 2013 22:23
+#+publishDate: <2013-02-16T22:23>
 #+tags: javascript functional-programming
 #+hugo_section: blog-en
 

@@ -1,5 +1,5 @@
 #+title: Modelling a Solar System in Fluxus
-#+datetime: 6 Dec 2010 21:38
+#+publishDate: <2010-12-6T21:38>
 #+tags: fluxus opengl scheme racket functional-programming
 #+hugo_section: blog-en
 

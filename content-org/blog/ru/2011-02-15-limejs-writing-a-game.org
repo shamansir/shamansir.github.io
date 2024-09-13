@@ -1,5 +1,5 @@
 #+title: "LimeJS: Пишем кроссплатформенную игру на HTML5 с поддержкой прикосновений"
-#+datetime: 15 Feb 2011 22:10
+#+publishDate: <2011-02-15T22:10>
 #+tags: html5 javascript limejs
 #+hugo_section: blog-ru
 

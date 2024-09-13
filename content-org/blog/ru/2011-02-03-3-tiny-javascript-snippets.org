@@ -1,5 +1,5 @@
 #+title: 3 Маленьких JS-Сниппета
-#+datetime: 03 Feb 2011 11:55
+#+publishDate: <2011-02-03T11:55>
 #+tags: javascript
 #+hugo_section: blog-ru
 

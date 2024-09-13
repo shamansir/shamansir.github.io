@@ -1,5 +1,5 @@
 #+title: HTML5 — не язык разметки, а мессиво
-#+datetime: Tue 16 Aug 2011 20:05
+#+publishDate: <2011-08-16T20:05>
 #+tags: html5
 #+hugo_section: blog-ru
 

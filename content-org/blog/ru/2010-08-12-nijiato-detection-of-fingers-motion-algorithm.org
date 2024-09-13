@@ -1,5 +1,5 @@
 #+title: "Путь радуги: Алгоритм распознавания движений пальцев рук на основе цветовой диффференциации (Driven by LISP)"
-#+datetime: 12 Aug 2010 15:38
+#+publishDate: <2010-08-12T15:38>
 #+tags: lisp computer-vision functional-programming
 #+hugo_section: blog-ru
 

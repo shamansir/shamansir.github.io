@@ -1,5 +1,5 @@
 #+title: "Trac + Subversion @ Ubuntu: Revisited"
-#+datetime: 17 Mar 2008 03:12
+#+publishDate: <2008-03-17T03:12>
 #+tags: trac subversion ubuntu
 #+hugo_section: blog-ru
 

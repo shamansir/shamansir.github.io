@@ -1,5 +1,5 @@
 #+title: Deferred-вызовы серверного API в GWT (без RPC)
-#+datetime: 15 Jun 2010 09:32
+#+publishDate: <2010-06-15T09:32>
 #+tags: gwt java json
 #+hugo_section: blog-ru
 

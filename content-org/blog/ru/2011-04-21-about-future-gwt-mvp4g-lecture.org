@@ -1,5 +1,5 @@
 #+title: Лекция по GWT+mvp4g на ADDConf '11
-#+datetime: 21 Apr 2011 11:46
+#+publishDate: <2011-04-21T11:46>
 #+tags: gwt mvp4g java
 #+hugo_section: blog-ru
 

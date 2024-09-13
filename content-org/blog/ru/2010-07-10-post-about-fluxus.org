@@ -1,5 +1,5 @@
 #+title: Fluxus — Прототипирование OpenGL графики и игр on-the-fly (добавить Scheme по вкусу)
-#+datetime: 10 Jul 2010 13:10
+#+publishDate: <2010-07-10T13:10>
 #+tags: fluxus opengl scheme racket functional-programming
 #+hugo_section: blog-ru
 

@@ -1,5 +1,5 @@
 #+title: JavaScript Гарден на русском
-#+datetime: 21 Mar 2011 12:08
+#+publishDate: <2011-03-21T12:08>
 #+tags: javascript
 #+hugo_section: blog-ru
 

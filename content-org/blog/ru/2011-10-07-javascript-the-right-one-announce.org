@@ -1,5 +1,5 @@
 #+title: Доклад «Правильный JavaScript» на WebStandardDays @ Киев
-#+datetime: Thu 07 Oct 2011 10:00
+#+publishDate: <2011-10-07T10:00>
 #+tags: javascript functional-programming
 #+hugo_section: blog-ru
 

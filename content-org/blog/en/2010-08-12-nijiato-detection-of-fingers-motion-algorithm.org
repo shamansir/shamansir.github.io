@@ -1,5 +1,5 @@
 #+title: "Way of the Rainbow: Fingers Motion Detection Algorythm Based on a Colors Differentiation (Driven by LISP)"
-#+datetime: 12 Aug 2010 15:38
+#+publishDate: <2010-08-12T15:38>
 #+tags: lisp computer-vision functional-programming
 #+hugo_section: blog-en
 

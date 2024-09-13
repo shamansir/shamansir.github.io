@@ -1,5 +1,5 @@
 #+title: Смесь андрода с носорогом
-#+datetime:
+#+publishDate:
 #+tags: android rhino javascript
 #+hugo_section: blog/drafts
 

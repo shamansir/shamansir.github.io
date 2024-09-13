@@ -1,5 +1,5 @@
 #+title: 16 полезных решений для Javascript
-#+datetime: 12 Aug 2007 17:55
+#+publishDate: <2007-08-12T17:55>
 #+tags: javascript
 #+hugo_section: blog-ru
 

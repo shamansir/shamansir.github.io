@@ -1,5 +1,5 @@
 #+title: 3 Tiny JavaScript Snippets
-#+datetime: 03 Feb 2011 11:55
+#+publishDate: <2011-12-03T11:55>
 #+tags: javascript
 #+hugo_section: blog-en
 

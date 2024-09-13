@@ -1,5 +1,5 @@
 #+title: PHP and UTF-8 (Unicode) - A funny thing for a half of a day
-#+datetime: <2006-22-12 12:48>
+#+publishDate: <2006-22-12T12:48>
 #+tags: php unicode mysql
 #+hugo_section: blog-en
 

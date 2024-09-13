@@ -1,5 +1,5 @@
 #+title: JSP Custom tags
-#+datetime: 15 May 2006 19:06
+#+publishDate: <2006-05-15T19:06>
 #+tags: java jsp
 #+hugo_section: blog-ru
 

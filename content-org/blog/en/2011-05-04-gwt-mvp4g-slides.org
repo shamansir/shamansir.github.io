@@ -1,5 +1,5 @@
 #+title: "GWT + mvp4g Lecture Slides"
-#+datetime: 4 May 2011 19:17
+#+publishDate: <2011-05-04T19:17>
 #+tags: gwt mvp4g java
 #+hugo_section: blog-en
 

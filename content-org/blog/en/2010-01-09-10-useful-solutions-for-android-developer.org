@@ -1,5 +1,5 @@
 #+title: 10 Useful Solutions for Android Developer
-#+datetime: 09 Jan 2010 11:42
+#+publishDate: <2010-01-09T11:42>
 #+tags: java android
 #+hugo_section: blog-en
 

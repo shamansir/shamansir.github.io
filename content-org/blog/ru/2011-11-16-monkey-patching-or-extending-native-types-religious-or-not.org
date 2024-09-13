@@ -1,5 +1,5 @@
 #+title: "Monkey-Patching или Расширение Встроенных Типов: религия или осознанный выбор?"
-#+datetime: 16 Nov 2011 11:55
+#+publishDate: <2011-11-16T11:55>
 #+tags: javascript
 #+hugo_section: blog-ru
 

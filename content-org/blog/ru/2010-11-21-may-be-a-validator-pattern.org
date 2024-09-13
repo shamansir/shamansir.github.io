@@ -1,5 +1,5 @@
 #+title: UI-Паттерн Validator, может так?
-#+datetime: 23 Nov 2010 00:03
+#+publishDate: <2010-11-23T00:03>
 #+tags: java
 #+hugo_section: blog-ru
 
