@@ -27,6 +27,8 @@
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
                          ("elpa" . "https://elpa.gnu.org/packages/")))
 (setq org-id-extra-files (directory-files-recursively default-directory "\.org$"))
+(setq org-export-with-author nil)
+;; https://ox-hugo.scripter.co/doc/author/ problem
 
 ; Initialize the package system
 (package-initialize)
