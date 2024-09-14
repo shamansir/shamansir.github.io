@@ -2,6 +2,7 @@
 #+publishDate: <2008-03-15T17:32>
 #+tags: gvim python
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 *** Введение
 :PROPERTIES:

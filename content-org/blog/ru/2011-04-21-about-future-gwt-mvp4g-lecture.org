@@ -2,6 +2,7 @@
 #+publishDate: <2011-04-21T11:46>
 #+tags: gwt mvp4g java
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 Буду читать мастер-класс на [[http://addconf.ru/][ADDConf 2011]] по
 разработке веб-приложений с помощью

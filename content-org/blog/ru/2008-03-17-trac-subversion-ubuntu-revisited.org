@@ -2,6 +2,7 @@
 #+publishDate: <2008-03-17T03:12>
 #+tags: trac subversion ubuntu
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 *** Задача
 :PROPERTIES:

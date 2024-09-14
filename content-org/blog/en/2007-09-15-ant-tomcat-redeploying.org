@@ -2,6 +2,7 @@
 #+publishDate: <2007-09-15T12:38>
 #+tags: tomcat ant java
 #+hugo_section: blog-en
+#+author: Anton Kotenko
 
 The process of out project development has one drawback, which is common
 to many serious J2EE-projects: after applying changes to the code code

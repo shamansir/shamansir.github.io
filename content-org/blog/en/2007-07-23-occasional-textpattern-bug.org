@@ -2,6 +2,7 @@
 #+publishDate: <2007-07-23T02:14>
 #+tags: php textpattern
 #+hugo_section: blog-en
+#+author: Anton Kotenko
 
 While I've played with [[http://textpattern.org/][textpattern]] at
 [[http://sharedcode.info/][sharecode]], I faced this issue that may come

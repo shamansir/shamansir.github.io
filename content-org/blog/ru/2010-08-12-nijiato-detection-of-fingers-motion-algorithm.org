@@ -2,6 +2,7 @@
 #+publishDate: <2010-08-12T15:38>
 #+tags: lisp computer-vision functional-programming
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 
 Я немного безумный и в свободное время занялся изучением LISP'а и, чтобы

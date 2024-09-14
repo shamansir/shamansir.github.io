@@ -2,6 +2,7 @@
 #+publishDate: <2011-02-11T10:26>
 #+tags: android renderscript
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 *Примечание*: Это не авторская статья, но мой вольный перевод
 [[http://www.inter-fuser.com/2009/11/android-renderscript-more-info-and.html][статьи

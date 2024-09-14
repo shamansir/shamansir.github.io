@@ -2,6 +2,7 @@
 #+publishDate: <2008-05-25T00:00>
 #+tags: java json javascript
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 *** Введение
 :PROPERTIES:

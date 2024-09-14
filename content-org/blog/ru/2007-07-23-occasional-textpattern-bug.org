@@ -2,6 +2,7 @@
 #+publishDate: <2007-07-23T02:14>
 #+tags: php textpattern
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 Пока игрался с [[http://textpattern.org/][textpattern]] на
 [[http://sharedcode.info/][шаредкоде]], обнаружил сей баг, который

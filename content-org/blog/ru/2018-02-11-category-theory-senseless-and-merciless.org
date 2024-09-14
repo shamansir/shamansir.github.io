@@ -3,6 +3,7 @@
 #+tags: javascript functional-programming parsers
 #+slug: category-theory-pointless-and-merciless
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 * Теория категорий --- бессмысленная и беспощадная!
 :PROPERTIES:

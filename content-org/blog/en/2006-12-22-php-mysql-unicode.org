@@ -2,6 +2,7 @@
 #+publishDate: <2006-22-12T12:48>
 #+tags: php unicode mysql
 #+hugo_section: blog-en
+#+author: Anton Kotenko
 
 It is [[http://live.julik.nl/2005/03/unicode-php][not the advice of
 mine]], but it helped me enormously.

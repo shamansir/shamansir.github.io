@@ -2,6 +2,7 @@
 #+publishDate: <2009-09-18T11:41>
 #+tags: xml xslt javascript
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 *(X-Task: "On your Client! Get XML! Get XSL! Do XHTML! Go!")*
 

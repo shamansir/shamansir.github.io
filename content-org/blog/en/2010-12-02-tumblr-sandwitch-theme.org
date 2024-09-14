@@ -2,6 +2,7 @@
 #+publishDate: <2010-12-02T19:31>
 #+tags: tumblr
 #+hugo_section: blog-en
+#+author: Anton Kotenko
 
 Have created [[http://www.tumblr.com/theme/18012][Tumblr theme]] named
 [[http://uncyclopedia.wikia.com/wiki/Sandwitch][Sandwitch]]. I was going

@@ -2,6 +2,7 @@
 #+publishDate: <2007-08-12T17:55>
 #+tags: javascript
 #+hugo_section: blog-en
+#+author: Anton Kotenko
 
 Let me present you a set of functions that I keep in separate =utils.js=
 file - they are the most frequent functions I used. They do trying very

@@ -2,6 +2,7 @@
 #+publishDate: <2010-07-10T13:10>
 #+tags: fluxus opengl scheme racket functional-programming
 #+hugo_section: blog-en
+#+author: Anton Kotenko
 
 
 The internet for a programmer who insterested in 3D-graphics for several

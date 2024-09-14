@@ -2,6 +2,7 @@
 #+publishDate: <2007-07-22T18:05>
 #+tags: eric-ide python ubuntu
 #+hugo_section: blog-en
+#+author: Anton Kotenko
 
 [[http://www.die-offenbachs.de/eric/index.html][Eric]] -- is very good
 IDE for [[http://www.python.org/][Python]]. And

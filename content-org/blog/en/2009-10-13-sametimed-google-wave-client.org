@@ -2,6 +2,7 @@
 #+publishDate: <2009-10-13T07:09>
 #+tags: google-wave java javascript ajax dwr
 #+hugo_section: blog-en
+#+author: Anton Kotenko
 
 Zdrawstwooyte.
 

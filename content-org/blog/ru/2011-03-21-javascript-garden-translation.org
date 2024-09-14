@@ -2,6 +2,7 @@
 #+publishDate: <2011-03-21T12:08>
 #+tags: javascript
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 Стараниями четырёх людей мы перевели
 [[http://bonsaiden.github.com/JavaScript-Garden/][JavaScript Garden]] на

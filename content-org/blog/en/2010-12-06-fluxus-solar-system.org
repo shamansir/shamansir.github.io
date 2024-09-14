@@ -2,6 +2,7 @@
 #+publishDate: <2010-12-6T21:38>
 #+tags: fluxus opengl scheme racket functional-programming
 #+hugo_section: blog-en
+#+author: Anton Kotenko
 
 Some time ago I [fn:post-about-fluxus: wrote a post] about
 [[http://www.pawfal.org/fluxus/][fluxus]], livecoding and 3D-prototyping

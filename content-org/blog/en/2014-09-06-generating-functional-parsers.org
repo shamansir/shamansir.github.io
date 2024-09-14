@@ -3,6 +3,7 @@
 #+tags: javascript functional-programming parsers
 #+excerpt: Are you interested in a functional approach to parsers generation? Well, I'm sure you do, even if, at your side, you're not sure what it means exactly. It's just because anything that connects parsers and functional programming in practice can be nothing but joyful...
 #+hugo_section: blog-en
+#+author: Anton Kotenko
 
 /Disclaimer:/ The author of this text is still and eternally non-native
 English-writer, so please excuse him for his grammar errors, mistypes

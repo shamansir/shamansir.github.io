@@ -2,6 +2,7 @@
 #+publishDate: <2010-01-09T11:42>
 #+tags: java android
 #+hugo_section: blog-en
+#+author: Anton Kotenko
 
 This post contains several useful solutions for Android developers. If
 you are starting to dive in it, I think the detailed description of the

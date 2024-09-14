@@ -2,6 +2,7 @@
 #+publishDate: <2007-01-24T19:52>
 #+tags: sata dma ubuntu
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 Сегодня ставили [[http://ubuntuguide.org/wiki/Ubuntu:Edgy][Ubuntu 6.06
 LTS]] на =SATA=-шный винт. Она, как ни странно, злобно свалилась.

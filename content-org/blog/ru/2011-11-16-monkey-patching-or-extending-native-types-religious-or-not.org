@@ -2,6 +2,7 @@
 #+publishDate: <2011-11-16T11:55>
 #+tags: javascript
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 Прошу прощения за «жёлтый» заголовок, но надо же как-то привлечь.
 

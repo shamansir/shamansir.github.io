@@ -2,6 +2,7 @@
 #+publishDate: <2011-07-27T09:10>
 #+tags: gwt mvp4g java
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 ***** Вступление
 :PROPERTIES:

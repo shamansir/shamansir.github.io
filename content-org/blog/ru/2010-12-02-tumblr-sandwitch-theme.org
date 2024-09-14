@@ -2,6 +2,7 @@
 #+publishDate: <2010-12-02T19:31>
 #+tags: tumblr
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 Сделал [[http://www.tumblr.com/theme/18012][тему для Tumblr]] под
 названием [[http://uncyclopedia.wikia.com/wiki/Sandwitch][Sandwitch]].

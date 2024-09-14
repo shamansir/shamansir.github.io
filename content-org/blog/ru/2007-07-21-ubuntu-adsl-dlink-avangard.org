@@ -2,6 +2,7 @@
 #+publishDate: <2007-07-21T18:44>
 #+tags: avangard d-link ubuntu
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 Вот она, первая статья о невечном :)
 

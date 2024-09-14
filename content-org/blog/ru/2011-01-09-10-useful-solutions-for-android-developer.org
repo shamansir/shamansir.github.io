@@ -2,6 +2,7 @@
 #+publishDate: <2011-01-09T19:48>
 #+tags: java android
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 *** Содержание
 :PROPERTIES:

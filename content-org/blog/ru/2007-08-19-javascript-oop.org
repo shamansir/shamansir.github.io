@@ -2,6 +2,7 @@
 #+publishDate: <2007-08-19T02:29>
 #+tags: javascript
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 В [[../16-useful-solutions-for-javascript][предыдущей статье]] я
 представил на ваше рассмотрение небольшой кусок кода, который позволяет

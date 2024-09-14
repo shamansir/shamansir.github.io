@@ -2,6 +2,7 @@
 #+publishDate: <2011-05-04T19:17>
 #+tags: gwt mvp4g java
 #+hugo_section: blog-en
+#+author: Anton Kotenko
 
 April 29, I've presented a lecture on Web-development with
 [[http://code.google.com/intl/ru/webtoolkit/][GWT]] and

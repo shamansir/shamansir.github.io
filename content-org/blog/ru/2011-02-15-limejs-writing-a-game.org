@@ -2,6 +2,7 @@
 #+publishDate: <2011-02-15T22:10>
 #+tags: html5 javascript limejs
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 [[http://www.limejs.com][LimeJS]] - 2D Open Source HTML5 движок для
 написания игр с поддержкой прикосновений и работающий (по описанию) на

@@ -2,6 +2,7 @@
 #+publishDate: <2011-11-16T11:55>
 #+tags: javascript functional-programming
 #+hugo_section: blog-ru
+#+author: Антон Котенко
 
 JavaScript --- очень необычный язык. Может это звучит немного странно,
 но по-моему в его истории есть некоторое сходство с судьбой японского
