@@ -1,6 +1,7 @@
 #+title: "Do Androids Dream of Generating Art"
 #+publishDate: <2020-01-04T10:15>
-#+hugo_section: blog/drafts
+#+hugo_section: blog-drafts
+#+draft: true
 
 Indeed, it turned out that that is actually is one of their basic innate
 core dreams. We have launched a huge and complex experiment on the topic

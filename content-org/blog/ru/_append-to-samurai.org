@@ -1,5 +1,6 @@
 #+title: Append to Way of Samurai
-#+hugo_section: blog/drafts
+#+hugo_section: blog-drafts
+#+draft: true
 
 
 #+BEGIN_SRC javascript
