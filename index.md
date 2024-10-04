@@ -77,3 +77,4 @@ And yesterday, by searching something for #PureScript or #Haskell, I discovered 
 [Emanote]: https://emanote.srid.ca/
 [Emanote author]: https://srid.ca/cv
 [Notion]: <https://notion.com>
+[Obsidian]: https://obsidian.md/

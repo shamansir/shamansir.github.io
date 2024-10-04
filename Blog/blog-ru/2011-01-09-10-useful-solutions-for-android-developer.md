@@ -26,7 +26,7 @@ tags: [ java, android ]
 
 Я задумывал [этот проект](http://code.google.com/p/vimeoid) для себя как учебный (в смысле, что учусь я), однако в результате получилось сделать вполне ощутимую часть (можно посмотреть [скриншоты того, что готово](http://code.google.com/p/vimeoid/wiki/Screenshots)), однако он пока что не закончен. Такой клиент делаю не я один, [свою версию](http://www.androlib.com/android.application.com-makotosan-vimeodroid-qmBCn.aspx) практически одновременно (он был первым) со мной начал делать [makotosan](http://vimeo.com/makotosan) и его версия пока что, похоже, тоже ещё делается).
 
-В любом случае, в процессе написания проекта я получил некоторую базу знаний, которой и спешу поделиться. Не все темы экслюзивны, но некоторые рассматриваемые тонкости не раскрыты в интернете или закопаны довольно глубоко в его недрах. _Я буду дополнительно приводить примеры из искходных кодов vimeoid, это позволит вам подcмотреть как рассматриваемая тема работает в реальном времени_ (*NB*: некоторые ссылки ведут на конкретные строки в коде).
+В любом случае, в процессе написания проекта я получил некоторую базу знаний, которой и спешу поделиться. Не все темы экслюзивны, но некоторые рассматриваемые тонкости не раскрыты в интернете или закопаны довольно глубоко в его недрах. _Я буду дополнительно приводить примеры из искходных кодов vimeoid, это позволит вам подcмотреть как рассматриваемая тема работает в реальном времени_ (_NB_: некоторые ссылки ведут на конкретные строки в коде).
 
 ### 2. Списки с подразделами
 
@@ -44,7 +44,7 @@ public class SectionedItemsAdapter extends BaseAdapter { . . .
 
 ```
 
- * Пример из vimeoid: [`SectionedActionsAdapter`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/SectionedActionsAdapter.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Пример из vimeoid: [`SectionedActionsAdapter`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/SectionedActionsAdapter.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 Прежде всего заводятся константы, которые однозначно идентифицируют тип элемента, одна для заголовка, вторая для пункта (то есть типов может быть и больше двух, однако в таком случае лучше использовать `enum` с набором идентификаторов):
 
@@ -84,14 +84,14 @@ public int getItemViewType(int position) {
 ``` java
 
 public View getView(int position, View convertView, ViewGroup parent) {
-	  final int viewType = getItemViewType(position);
-	  if (viewType == IGNORE_ITEM_VIEW_TYPE) throw new IllegalStateException("Failed to get object at position " + position);
-	  if (viewType == SECTION_VIEW_TYPE) {
-	      convertView = . . . // здесь можно через LayoutInflater получить Layout для заголовка раздела
-	  } else if (viewType == ITEM_VIEW_TYPE) {
-	      convertView = . . . // здесь можно через LayoutInflater получить Layout для пункта
-	  }
-	  return convertView;
+   final int viewType = getItemViewType(position);
+   if (viewType == IGNORE_ITEM_VIEW_TYPE) throw new IllegalStateException("Failed to get object at position " + position);
+   if (viewType == SECTION_VIEW_TYPE) {
+       convertView = . . . // здесь можно через LayoutInflater получить Layout для заголовка раздела
+   } else if (viewType == ITEM_VIEW_TYPE) {
+       convertView = . . . // здесь можно через LayoutInflater получить Layout для пункта
+   }
+   return convertView;
 }
 
 ```
@@ -119,7 +119,7 @@ public int getViewTypeCount() { return VIEW_TYPES_COUNT; }
 
 В примере я использую структуры для хранения данных о разделах и пунктах. В структуре раздела хранится идентификатор раздела, его заголовок и структуры пунктов, содержащихся в нём. Структура пункта хранит указатель на родительскую структуру раздела, заголовок пункта, путь к иконке и обработчик нажатия на пункт (о нём в следующей главе). Конструкторы обоих структур доступны только в адаптерах:
 
- * Пример из vimeoid: [`LActionItem`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/LActionItem.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Пример из vimeoid: [`LActionItem`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/LActionItem.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 Таким образом я упростил добавление групп и пунктов в список. Адаптер имеет методы:
 
@@ -150,9 +150,9 @@ adapter.addItem(figuresSection, R.drawable.queen, "Queen");
 
 Иногда нужно, чтобы при нажатии на элементе списка он изменил своё состояние и/или перешёл на другую активити. Например, элемент "зафолловить" в списке с действиями над аккаунтом в твиттере может содержать иконку с минусом, если вы ещё не фолловили этого человека и менять иконку на плюс после нажатия и пришедшего подтверждения о фолловинге. Можно обрабатывать выбранный элемент в текущей `ListActivity` и в зависимости от позиции предпринимать решение, но если список содержится где-то внутри обычной `Activity`, то возможно легче обрабатывать выбор в адаптере.
 
- * Пример из vimeoid: [`SectionedActionsAdapter`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/SectionedActionsAdapter.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Использует: [`LActionItem`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/LActionItem.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Используется в: [`SingleItemActivity_`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/base/SingleItemActivity_.java?r=85e18485bdda1c526141170f67e65f4e00202f34#49)
+* Пример из vimeoid: [`SectionedActionsAdapter`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/SectionedActionsAdapter.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Использует: [`LActionItem`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/LActionItem.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Используется в: [`SingleItemActivity_`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/base/SingleItemActivity_.java?r=85e18485bdda1c526141170f67e65f4e00202f34#49)
 
 Если вы согласны с этим, ваш адаптер может имплементировать интерфейс `OnItemClickListener`:
 
@@ -203,10 +203,10 @@ heartsItem.onClick = new OnClickListener() { public void onClick(View view) { . 
 ``` java
 
 public static View getItemViewIfVisible(AdapterView<?> holder, int itemPos) {
-	  int firstPosition = holder.getFirstVisiblePosition();
-	  int wantedChild = itemPos - firstPosition;
-	  if (wantedChild < 0 || wantedChild >= holder.getChildCount()) return null;
-	 return holder.getChildAt(wantedChild);
+   int firstPosition = holder.getFirstVisiblePosition();
+   int wantedChild = itemPos - firstPosition;
+   if (wantedChild < 0 || wantedChild >= holder.getChildCount()) return null;
+  return holder.getChildAt(wantedChild);
 }
 
 public static void invalidateByPos(AdapterView<?> parent, int position) {
@@ -218,7 +218,7 @@ public static void invalidateByPos(AdapterView<?> parent, int position) {
 
 `invalidateByPos` обновляет вид только если он видим на экране (насильно вызывая `getView` адаптера), а если элемент не видим - `getView` адаптера будет вызван автоматически когда этот вид появится в области видимости при прокрутке списка. Чтобы обновить некий дочерний вид элемента, вы можете использовать метод `getViewIsVisible`, он вернёт вид элемента из которого можно получить доступ к его дочерним видам и `null`, если вид не видим пользователю и в обновлении нет необходимости.
 
- * Методы описаны в классе: [`Utils`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/util/Utils.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Методы описаны в классе: [`Utils`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/util/Utils.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 ### 5. Про кэширование изображений для списков
 
@@ -228,20 +228,20 @@ public static void invalidateByPos(AdapterView<?> parent, int position) {
 
 Мой вариант оттуда же, это решение [Фёдора Власова](http://stackoverflow.com/questions/541966/android-how-do-i-do-a-lazy-load-of-images-in-listview/3068012#3068012), исправленное под мои нужды. Во-первых, я сделал каталог для хранения кэшированных изображений статическим - то есть он создаётся единожды за время жизни приложения и стабильно очищается при вызове `clearCache` (этот метод полезно вызывать в `onDestroy()` у активити, использующей `ImageLoader` или в `finalize()` у использующего его адаптера), немного изменил способ создания этого каталога (см. `Utils.createCacheDir()`). Во-вторых, в конструктор можно передать идентификаторы изображений, которые будут показаны на месте картинки в процессе её загрузки и/или если загрузить её не удалось. В-третьих ещё пара мелких изменений. Вообще, этот класс можно было бы и сделать синглтоном, изменяя настройки перед использованием, но это уже на ваше усмотрение. В моём случае по одному его экземпляру создаётся для каждой запущенной `ListActivity` и передаётся адаптерам каждого нуждающегося `ListView` (или создаётся в самих адаптерах, если `ListView` находится внутри обычной `Activity`). Основной метод - `displayImage(String url, ImageView view)`, его определение говорит само за себя.
 
- * Исходник из vimeoid: [`ImageLoader`](http://code.google.com/p/vimeoid/source/browse/apk/src/com/fedorvlasov/lazylist/ImageLoader.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Использует методы из: [`Utils`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/util/Utils.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Исходник из vimeoid: [`ImageLoader`](http://code.google.com/p/vimeoid/source/browse/apk/src/com/fedorvlasov/lazylist/ImageLoader.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Использует методы из: [`Utils`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/util/Utils.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 ### 6. Адаптеры, итерирующиеся по курсорам
 
 Эта глава касается постраничного вывода в `ListView`. То есть, пользователь видит первые `n` элементов, прокручивает список до `n`-ного элемента и только после этого выполняется запрос на следующие `n` элементов к базе данных или к серверу. Затем пользователь пролистывает список до элемента `2n` и мы запрашиваем следующую пачку размером `n` и т.д. В _vimeoid_ я делаю следующий запрос при клике по `footerView` с надписью "Загрузить ещё..." у списка: не автоматически, но техника примерно та же.
 
- * Загрузка по клику на `footerView`: [`ItemsListActivity_`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/base/ItemsListActivity_.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Реализация для гостя: [`ItemsListActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/guest/ItemsListActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Реализация для зарегистрированного пользователя: [`ItemsListActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/ItemsListActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Загрузка по клику на `footerView`: [`ItemsListActivity_`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/base/ItemsListActivity_.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Реализация для гостя: [`ItemsListActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/guest/ItemsListActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Реализация для зарегистрированного пользователя: [`ItemsListActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/ItemsListActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 Здесь более сложная иерархия классов, загрузка каждой страницы осуществляется через специальный `AsyncTask`, который после фонового вызова Vimeo API сообщает вызвавшему активити, остались ли ещё элементы и не последняя ли это страница, а активити обновляет свои виды в соответствии с этими данными.
 
- * Адаптер, содержащий набор курсоров: [`EasyCursorsAdapter`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/EasyCursorsAdapter.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Адаптер, содержащий набор курсоров: [`EasyCursorsAdapter`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/EasyCursorsAdapter.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 Для того, чтобы обеспечить постраничный вывод, можно просто хранить список из контейнеров для страниц (например, курсоров) в адаптере, а в `getView()`, если запрошен один из последних элементов, запускать запрос на следующую страницу (предпочтительно - `AsyncTask`), который при получении нового контейнера добавит его в адаптер и адаптер сможет вызвать `notifyDataSetChanged()`. Примерно так:
 
@@ -283,17 +283,17 @@ public void addSource(Page page) {
 
 Не стоит писать реализацию самому, это несколько неблагодарное дело, благо уже есть отличная библиотека [signpost](http://code.google.com/p/oauth-signpost/) и лучших альтернатив, насколько я знаю, пока нет.
 
- * Пример из vimeoid: [`VimeoApi`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/connection/VimeoApi.java?r=85e18485bdda1c526141170f67e65f4e00202f34#101)
- * Использует signpost через: [`JsonOverHttp`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/connection/JsonOverHttp.java?r=85e18485bdda1c526141170f67e65f4e00202f34#164)
- * Активити, которое получает токен пользователя: [`ReceiveCredentials`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/ReceiveCredentials.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Его описание в манифесте: [`AndroidManifest.xml`](http://code.google.com/p/vimeoid/source/browse/apk/AndroidManifest.xml?r=85e18485bdda1c526141170f67e65f4e00202f34#22)
+* Пример из vimeoid: [`VimeoApi`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/connection/VimeoApi.java?r=85e18485bdda1c526141170f67e65f4e00202f34#101)
+* Использует signpost через: [`JsonOverHttp`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/connection/JsonOverHttp.java?r=85e18485bdda1c526141170f67e65f4e00202f34#164)
+* Активити, которое получает токен пользователя: [`ReceiveCredentials`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/ReceiveCredentials.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Его описание в манифесте: [`AndroidManifest.xml`](http://code.google.com/p/vimeoid/source/browse/apk/AndroidManifest.xml?r=85e18485bdda1c526141170f67e65f4e00202f34#22)
 
 Для начала нужно получить уникальный ключ для вашего приложения от веб-сервиса и указать веб-сервису URL, на который будет возвращатся пользователя при успешной авторизации (напр., `vimeoid://oauth.done`) (но в случае Android его передают при запросе к `/request_token`). Обычно это делается через веб-интерфейс самого сервиса.
 
 Алгоритм первой авторизации на Android следующий:
 
  1. Указать signpost где у сервиса находятся точки входа в OAuth
- 1. Запросом к `/request_token` получить пару токен/секрет приложения для неавторизированных запросов по этому ключу (колбэк-URL `vimeoid://oauth.done` передают здесь): `provider.retrieveRequestToken(Uri callbackUri)`. *NB:* `retrieveRequestToken` возвращает не токен, а сразу `Uri`, тот самый `authUri` по которому надо обратиться в следующем пункте
+ 1. Запросом к `/request_token` получить пару токен/секрет приложения для неавторизированных запросов по этому ключу (колбэк-URL `vimeoid://oauth.done` передают здесь): `provider.retrieveRequestToken(Uri callbackUri)`. _NB:_ `retrieveRequestToken` возвращает не токен, а сразу `Uri`, тот самый `authUri` по которому надо обратиться в следующем пункте
  1. Запустить активити браузера, обратиться к `/authorize`, передав токен приложения и, если необходимо, добавив дополнительные параметры о необходимых правах: `startActivity(new Intent(Intent.ACTION_VIEW, authUri + ...))`
  1. Пользователь увидит страницу в стиле "Разрешить этому приложению доступ к вашему аккаунту?" (если он разлогинен в сервисе, ему предложат залогиниться). Если он разрешает доступ, браузер перенаправляется по адресу колбэка `vimeoid://oauth.done?...`, но так как в вашем `AndroidManifest.xml` для перехвата таких URL описано специальное активити, Android возвращает пользователя к вашему приложению, открывая это самое активити - `ReceiveCredentials`
  1. В активити `ReceiveCredentials` вы получаете токен пользователя в параметрах `Uri uri = getIntent().getData()`, теперь по этому токену нужно получить секрет через запрос к `/access_token`: `provider.retrieveAccessToken(Uri uri)`
@@ -313,9 +313,9 @@ public void addSource(Page page) {
 
 Если же вам тоже пришлось получать поток вручную, я обращу ваше внимание на пару моментов, в остальном просто продемонстрирую код, он должен рассказать всё сам:
 
-  * Пример из vimeoid: [`VimeoVideoPlayingTask`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/media/VimeoVideoPlayingTask.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
-  * Вызывается из активити: [`Player`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/Player.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
-  * Лэйаут: [`player.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/layout/player.xml?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Пример из vimeoid: [`VimeoVideoPlayingTask`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/media/VimeoVideoPlayingTask.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Вызывается из активити: [`Player`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/Player.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Лэйаут: [`player.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/layout/player.xml?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 Загружать поток лучше используя `AsyncTask`. Я просто агрегирую `MediaPlayer` внутри `...PlayingTask` для удобства, вы можете выбрать любой другой способ, но получать поток определённо лучше через `AsyncTask`. При этом, в методе `onPreExecute` можно подготовить плеер и настроить его, в `doInBackground` получить поток видео и вернуть этот поток в `onPostExecute`, в котором и запустить проигрывание. Опять же, удобно показывать процентный прогресс загрузки, потому что в `doInBackground` известно количество полученных данных.
 
@@ -472,7 +472,7 @@ public abstract class TasksQueue<Params, Result>
 
     @Override
     public void onPerfomed(int taskId, Result result, HasNextTask<Params> nextTask) {
-    	  Log.d(TAG, "Task " + taskId + " performed");
+       Log.d(TAG, "Task " + taskId + " performed");
         if (taskId != currentTask)
             throw new IllegalStateException("Tasks queue desynchronized");
         running = false;
@@ -488,7 +488,7 @@ public abstract class TasksQueue<Params, Result>
     }
 
     protected void execute(HasNextTask<Result> task) throws Exception {
-    	  Log.d(TAG, "Trying to run task " + task.getId());
+       Log.d(TAG, "Trying to run task " + task.getId());
         if (running) throw new IllegalStateException("Tasks queue desynchronized");
         currentTask = task.getId();
         running = true;
@@ -578,10 +578,10 @@ new Thread(secondaryTasks, "Tasks Queue").start();
 
 ```
 
- * Очередь в vimeoid: [`ApiTasksQueue`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/ApiTasksQueue.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Создаётся в: [`SingleItemActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/SingleItemActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#49)
- * Инициализируется задачами в: [`UserActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/item/UserActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#122)
- * Обработка выполненных задач в: [`UserActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/item/UserActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#301)
+* Очередь в vimeoid: [`ApiTasksQueue`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/ApiTasksQueue.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Создаётся в: [`SingleItemActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/SingleItemActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#49)
+* Инициализируется задачами в: [`UserActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/item/UserActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#122)
+* Обработка выполненных задач в: [`UserActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/item/UserActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#301)
 
 ### 10. Подсветка выбора в ListView
 
@@ -593,9 +593,9 @@ new Thread(secondaryTasks, "Tasks Queue").start();
 
 `selector_bg.xml` - это ещё один `xml`-файл, набор правил о том как изменяется подстветка в зависимости от состояний. Система проходит по каждому правилу и как только первое правило совпало, оно выполняется, а следующие игнорируются. Алгоритм прост, но выстроить правила в верном порядке не всегда выходит сразу. Смотрите примеры:
 
- * Описание: [`selector_bg.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/drawable/selector_bg.xml?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Анимация: [`selector_bg_transition.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/drawable/selector_bg_transition.xml?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Объявлен в: [`generic_list.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/layout/generic_list.xml?r=85e18485bdda1c526141170f67e65f4e00202f34#16)
+* Описание: [`selector_bg.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/drawable/selector_bg.xml?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Анимация: [`selector_bg_transition.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/drawable/selector_bg_transition.xml?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Объявлен в: [`generic_list.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/layout/generic_list.xml?r=85e18485bdda1c526141170f67e65f4e00202f34#16)
 
 ![редактор 9-patch]({{ get_figure(slug, 'draw9patch-norm.png') }})
 
@@ -636,8 +636,8 @@ protected QuickAction createQuickActions(final int position, final ... item, Vie
 
 ```
 
- * Каталог, содержащий модифицированную библиотеку [`lib-qactions`](http://code.google.com/p/vimeoid/source/browse/lib-qactions?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Используется в: [`VideosActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/list/VideosActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#113)
+* Каталог, содержащий модифицированную библиотеку [`lib-qactions`](http://code.google.com/p/vimeoid/source/browse/lib-qactions?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Используется в: [`VideosActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/list/VideosActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#113)
 
 О добавлении внешней библиотеки в проект Eclipse рассказано в [этой статье](http://developer.android.com/guide/developing/eclipse-adt.html#libraryProject). Если кратко, достаточно создать для библиотеки отдельный Android-проект с исходниками, установить чекбокс `isLibrary` в разделе `Android` в свойствах этого проекта, а в основном проекте добавить проект с библиотекой пунктом `Library` -> `Add` из того же раздела. При этом `R`-файл из проекта с библиотекой будет добавлен в основной проект.
 
@@ -647,7 +647,7 @@ protected QuickAction createQuickActions(final int position, final ... item, Vie
 
 Если в вашем приложении много различных активити и они вызываются схожим образом, возможно будет удобно перенести их вызовы включая заполнение `Extras` в отдельный класс:
 
- * Пример из vimeoid: [`Invoke`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/util/Invoke.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Пример из vimeoid: [`Invoke`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/util/Invoke.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 #### 12б. Про плэйсхолдеры в локализации
 
@@ -672,10 +672,10 @@ public static String format(String source, String... params) {
 
 Обязательно прочитайте эти статьи, инфлэйтер в андроиде действительно очень чувствителен к сложным структурам и если вы пишете сложное приложение, лэйауты рано или поздно придётся оптимизировать:
 
- * [Layout Tricks #1](http://www.curious-creature.org/2009/02/22/android-layout-tricks-1/)
- * [Layout Tricks #2](http://www.curious-creature.org/2009/02/25/android-layout-trick-2-include-to-reuse/)
- * [Layout Tricks #3](http://www.curious-creature.org/2009/03/01/android-layout-tricks-3-optimize-part-1/)
- * [Layout Tricks #4](http://www.curious-creature.org/2009/03/16/android-layout-tricks-4-optimize-part-2/)
- * [Speed up your Android UI](http://www.curious-creature.org/2009/03/04/speed-up-your-android-ui/)
+* [Layout Tricks \#1](http://www.curious-creature.org/2009/02/22/android-layout-tricks-1/)
+* [Layout Tricks \#2](http://www.curious-creature.org/2009/02/25/android-layout-trick-2-include-to-reuse/)
+* [Layout Tricks \#3](http://www.curious-creature.org/2009/03/01/android-layout-tricks-3-optimize-part-1/)
+* [Layout Tricks \#4](http://www.curious-creature.org/2009/03/16/android-layout-tricks-4-optimize-part-2/)
+* [Speed up your Android UI](http://www.curious-creature.org/2009/03/04/speed-up-your-android-ui/)
 
 Мои часто перерендеривающиеся лэйауты в один момент потерпели крах и `getView` адаптера стал вызываться практически каждую секунду (и до сих пор бывает такое, но уже сильно реже). После замены многих вложенных сложноструктурированных `LinearLayout`ов на менее вложенные и элегантные `RelativeLayout`, инфлэйтеру стало явно легче и мне самому тоже, потому что иерархия стала короче и делать мелкие изменения стало проще. Я их ещё не везде успел подменить, но теперь отнощусь к лэйаутам внимательнее. Также следите за тем, чтобы `width/height=wrap_content` использовался по возможности только для простых элементов, использование `wrap_content` в качестве параметров ширины/высоты `LinearLayout` и прочих сложных видов может привести к сложным последствиям. Может и не привести, но кто предупреждён...

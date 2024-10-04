@@ -8,7 +8,7 @@ excerpt: Kind of a problem for the developers of these plugins, is the fact that
 
 Seems I haven’t posted anything for a while, [since Sep 2014](http://shamansir.github.io/blog/) to be precise—even though I had nice [topics](http://shamansir.github.io/rpd/) to discuss. So here’s a new try to get back to you with writing nerdy texts. Especially, considering the fact it gets more popular and fancy every day.
 
-# A quintessence of this post (not to say TL;DR):
+# A quintessence of this post (not to say TL;DR)
 
 There exists a language Elm. Which could be a new nice replacement for JavaScript. [“That’s a rough and controversial statement!”, you would say. You have a right to say so!]. And, as it happens with every new language, step-by-step, it gets its plugins developed for every modern code editor / IDE. Every such plugin is usually written by the new-language community rather than developers of this particular editor / IDE.
 
@@ -127,7 +127,7 @@ But if you dig a little into the Elm REPL code, you’ll find that Elm compiler 
 
 This is what I was able to get from Haskell code of the REPL, along with using some UNIX utilities to lock files lying in a known directory from deleting—so I was able to patiently analyse them with no rush.
 
-**Trickity-trick #1:** Hello, my dear young shiny developer! This is the first exercise of mine for you. If you have already read some fairy-tales about the UNIX shell, could you please solve a minor problem for me? The question is: how would you prevent the file from deletion even before it’s being created and without knowing it’s name? …
+**Trickity-trick \#1:** Hello, my dear young shiny developer! This is the first exercise of mine for you. If you have already read some fairy-tales about the UNIX shell, could you please solve a minor problem for me? The question is: how would you prevent the file from deletion even before it’s being created and without knowing it’s name? …
 
 # Getting rid of intermediaries
 
@@ -166,7 +166,7 @@ First (actually, in process of writing 80% of current parser code), it was a man
 
 ![In the process of decomposing binaries, using MacOS Pages and iTerm 2.]({{ get_figure(slug, 'decomposing-process.png') }})
 
-**Trickity-trick #2:** Which UNIX tool you, the almighty UNIX master, would use to see binary file contents in a beautiful and friendly way?
+**Trickity-trick \#2:** Which UNIX tool you, the almighty UNIX master, would use to see binary file contents in a beautiful and friendly way?
 
 Then, closer to the finish, I discovered a very nice tool named “[Synalize it!](https://itunes.apple.com/de/app/synalyze-it/id417074533)” (formerly Hexinator). Basically, this tool is the very binary-reverse-engineer friend.
 
@@ -222,11 +222,11 @@ The kinds of structures here are a bit different to actual Elm types but still t
 * _Variable_ (marker is `1`): just a reference to some existing variable by its name;
 * _Lambda_ (marker is `0`): define something that applies _left side_ to the _right side_—in Elm code we represent it with an arrow (→) when we define types, i.e. `String -> Int`, where `String` is on the left side and `Int` is on the right side;
 * enclose either _Holley_ or _Filled_ Type (marker is `2`): this cell could be defined inside any other cell, where _Holley_ means the type defined in a local scope and thus referred by a single name and _Filled_ means the type which is defined not only by name, but also by user, package and module name;
-* _Application_ (marker is `3`): define something that has a _subject_ and an _object_—in Elm code we represent it with a space (` `) when we define types, i.e. `List Int`, where `List` is the subject and `Int` is the object; an infinite number of objects could be applied to a single subjects;
+* _Application_ (marker is `3`): define something that has a _subject_ and an _object_—in Elm code we represent it with a space (``) when we define types, i.e. `List Int`, where `List` is the subject and `Int` is the object; an infinite number of objects could be applied to a single subjects;
 * _Record_ (marker is `4`): a [record](http://elm-lang.org/docs/syntax#records) with named field↔type pairs inside it, prefixed with the number of stored fields inside;
 * Alias (marker is `5`): an inferred type which has a reusable alias inside the type definition—think of `a` in `Html a`, `msg` in `Cmd msg`, `foo` in `foo -> foo` and so on…; or a [type alias](https://guide.elm-lang.org/types/type_aliases.html);
 
-**NB:** lambda could only have two parts, so the definition like `String -> Int -> Bool` is stored as two lambdas, one inside another: lambda `(Int -> Bool)` is applied to a `String` type, and so the root lambda cell is `(outer-lambda: String -> (inner-lambda: Int -> Bool))`; **Trickity-trick #3:** think on how this could be connected to function definitions in Elm types;
+**NB:** lambda could only have two parts, so the definition like `String -> Int -> Bool` is stored as two lambdas, one inside another: lambda `(Int -> Bool)` is applied to a `String` type, and so the root lambda cell is `(outer-lambda: String -> (inner-lambda: Int -> Bool))`; **Trickity-trick \#3:** think on how this could be connected to function definitions in Elm types;
 
 ![All the Node kinds expanded (except Aliases).]({{ get_figure(slug, 'structure-types.png') }})
 
@@ -255,6 +255,6 @@ If you planned to parse the `.elmi` file and extract types out of it, now you ha
 
 # Solutions for the tricks
 
-* **#1:** nothing special, just use `chmod` and `chown` to set a sticky bit on a directory which could contain a file, to prevent a user who runs the application (REPL, in this case) from deleting anything inside it: http://unix.stackexchange.com/a/20106/7667;
-* **#2:** even less special, nice util named `xdd` is your friend: http://unix.stackexchange.com/a/282220/7667, http://stackoverflow.com/a/20305782/167262;
-* **#3:** no solution at all;
+* **\#1:** nothing special, just use `chmod` and `chown` to set a sticky bit on a directory which could contain a file, to prevent a user who runs the application (REPL, in this case) from deleting anything inside it: <http://unix.stackexchange.com/a/20106/7667>;
+* **\#2:** even less special, nice util named `xdd` is your friend: <http://unix.stackexchange.com/a/282220/7667>, <http://stackoverflow.com/a/20305782/167262>;
+* **\#3:** no solution at all;

@@ -28,7 +28,7 @@ Last summer I had ignited the desire to write an Android client for [vimeo](http
 
 I сonceived [this project](http://code.google.com/p/vimeoid) to be learning one (means I am learning), however as a result I've found that a valuable part was done (you can check out [screenshots of the finished things](http://code.google.com/p/vimeoid/wiki/Screenshots)), but it is still in progress. Almost simultaneously with me, being first, [makotosan](http://vimeo.com/makotosan) started to write his [own version](http://www.androlib.com/android.application.com-makotosan-vimeodroid-qmBCn.aspx) of client aimed at video upload and he is also has not finished it yet, but his version can do things that my version can not (and converse is also true, seems).
 
-Anyway, through programming process I've got some knowledge base which I want to share. Not all the themes are exclusive but some tricks are hidden in the web or even not covered there. _I will also give examples from vimeoid source code, so it will allow you to spy how the paragraph subject works in real-time_ (*NB*: some achors point to concrete lines in code).
+Anyway, through programming process I've got some knowledge base which I want to share. Not all the themes are exclusive but some tricks are hidden in the web or even not covered there. _I will also give examples from vimeoid source code, so it will allow you to spy how the paragraph subject works in real-time_ (_NB_: some achors point to concrete lines in code).
 
 ### 2. Lists with subsections
 
@@ -150,9 +150,9 @@ adapter.addItem(figuresSection, R.drawable.queen, "Queen");
 
 Sometimes it is required to change the list element content and/or switch activity when it is clicked. For example, the list of possible actions with some twitter account may contain "follow" element with minus icon, if you still do not follow this man and change its icon to plus when click happened and positive response (to following request) is received from twitter server. You can handle the selected element in current `ListActivity` and depending on position take a decision, but if your list is inside the general `Activity`, so may be it will be easier to handle selection inside the adapter.
 
- * Example from vimeoid: [`SectionedActionsAdapter`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/SectionedActionsAdapter.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Uses: [`LActionItem`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/LActionItem.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Used in: [`SingleItemActivity_`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/base/SingleItemActivity_.java?r=85e18485bdda1c526141170f67e65f4e00202f34#49)
+* Example from vimeoid: [`SectionedActionsAdapter`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/SectionedActionsAdapter.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Uses: [`LActionItem`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/LActionItem.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Used in: [`SingleItemActivity_`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/base/SingleItemActivity_.java?r=85e18485bdda1c526141170f67e65f4e00202f34#49)
 
 If you agree with that, your adapter can implement `OnItemClickListener` interface:
 
@@ -218,7 +218,7 @@ public static void invalidateByPos(AdapterView<?> parent, int position) {
 
 `invalidateByPos` updates view only if it is shown on the screen (forcing an adapter's `getView` method call), if this element is not visible - adapter's `getView` will be called automatically when this view will appear to user after scrolling. To update some child view of an element, you can use `getViewIsVisible` method, it will return the element view which gives access to its child views and it returns `null` if this element is not visible so update is not required.
 
- * Methods are defined in class: [`Utils`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/util/Utils.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Methods are defined in class: [`Utils`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/util/Utils.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 ### 5. Caching remote images for lists
 
@@ -228,20 +228,20 @@ If you are creating `ListView` containing images taken from web, this chapter is
 
 My variant is also from that list, it is [Fedor Vlasov](http://stackoverflow.com/questions/541966/android-how-do-i-do-a-lazy-load-of-images-in-listview/3068012#3068012)'s solution, that is corrected for my needs. First, I changed a directory for cached images to be static, so it is created once for application cycle and surely cleaned when calling `clearCache` (it is good to call this method in `onDestroy()` of `Activity` using `ImageLoader` or in `finalize()` method of adapter using it), also I've changed a bit a way of this directory creation (see `Utils.createCacheDir()`). Secondly, you may pass the drawables IDs to constructor to determine what drawables to show in this place while loading an image and/or if loading image is failed. Thidly, some minor changes. Though, this class can be a singleton and you can just change its options before using it, but it is left for your decision. In my case the instance is created for each `ListActivity` started and is passed to adapters of inner `ListView`s that need it (or created directly in adapters if `ListView`s are inside a regular `Activity`). The main method id `displayImage(String url, ImageView view)`, its definition speaks for itself.
 
- * Source from vimeoid: [`ImageLoader`](http://code.google.com/p/vimeoid/source/browse/apk/src/com/fedorvlasov/lazylist/ImageLoader.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Uses methods from: [`Utils`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/util/Utils.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Source from vimeoid: [`ImageLoader`](http://code.google.com/p/vimeoid/source/browse/apk/src/com/fedorvlasov/lazylist/ImageLoader.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Uses methods from: [`Utils`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/util/Utils.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 ### 6. Adapters iterating over cursors
 
 This chapter is about pagination in `ListView`. So, user gets first `n` elements, scrolls list to `n`-th element and only after that happen the response for `n` elements to DB or server is performed. Then the user scrolls the element `2n` and we ask for next package with `n` size and so on. In _vimeoid_ I make a resonse only after `footerView` with 'Load more...' label is clicked, it is not automatic way, but the technique is similar to subject.
 
- * Loading by click on `footerView`: [`ItemsListActivity_`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/base/ItemsListActivity_.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Guest implementation: [`ItemsListActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/guest/ItemsListActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Logged-in user implementation: [`ItemsListActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/ItemsListActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Loading by click on `footerView`: [`ItemsListActivity_`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/base/ItemsListActivity_.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Guest implementation: [`ItemsListActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/guest/ItemsListActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Logged-in user implementation: [`ItemsListActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/ItemsListActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 The classes hieararchy is a lit bit more complex, each page is loaded with special `AsyncTask` that calls Vimeo API in background and notifies the calling activity about are there any elements left or is it the last page, and the activity updates its views according to this data.
 
- * Adapter containing a set of cursors: [`EasyCursorsAdapter`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/EasyCursorsAdapter.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Adapter containing a set of cursors: [`EasyCursorsAdapter`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/adapter/EasyCursorsAdapter.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 To make a pagination possible, you may just keep a set of page containers (cursors, for example) in adapter and in `getView()`, if one of last elements is asked for, run the query for next page (`AsyncTask` is preferred), which will add new container to adapter when it will be received, so the adapter will have a possibility to call `notifyDataSetChanged()`. Like this:
 
@@ -283,17 +283,17 @@ If you are writing a client for a complex web-service - you need to fight with a
 
 There is no need to write your own implementation of OAuth, there is very cool library named [signpost](http://code.google.com/p/oauth-signpost/) exist, and I do not know any better alternatives for now.
 
- * Example from vimeoid: [`VimeoApi`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/connection/VimeoApi.java?r=85e18485bdda1c526141170f67e65f4e00202f34#101)
- * Uses signpost through: [`JsonOverHttp`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/connection/JsonOverHttp.java?r=85e18485bdda1c526141170f67e65f4e00202f34#164)
- * Activity that gets user token: [`ReceiveCredentials`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/ReceiveCredentials.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Its definition at manifest: [`AndroidManifest.xml`](http://code.google.com/p/vimeoid/source/browse/apk/AndroidManifest.xml?r=85e18485bdda1c526141170f67e65f4e00202f34#22)
+* Example from vimeoid: [`VimeoApi`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/connection/VimeoApi.java?r=85e18485bdda1c526141170f67e65f4e00202f34#101)
+* Uses signpost through: [`JsonOverHttp`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/connection/JsonOverHttp.java?r=85e18485bdda1c526141170f67e65f4e00202f34#164)
+* Activity that gets user token: [`ReceiveCredentials`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/ReceiveCredentials.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Its definition at manifest: [`AndroidManifest.xml`](http://code.google.com/p/vimeoid/source/browse/apk/AndroidManifest.xml?r=85e18485bdda1c526141170f67e65f4e00202f34#22)
 
 To start, you need to get the exclusive key for your application from web-service and set a callback URL to return user there after successful authorization (i.e. `vimeoid://oauth.done`) (but in case of Android, tou can pass it with call to `/request_token`). Recently it is done using service web-interface for programmer.
 
 The first authorization algorythm for Android is:
 
  1. Point signpost to a service's OAuth entry-points
- 1. Send a request to `/request_token`, get a token/secret pair using this key for unauthorized requests of your applization (`vimeoid://oauth.done` callback URL is passed here): `provider.retrieveRequestToken(Uri callbackUri)`. *NB:* `retrieveRequestToken` returns not token but `Uri` that you need to call in next step at once.
+ 1. Send a request to `/request_token`, get a token/secret pair using this key for unauthorized requests of your applization (`vimeoid://oauth.done` callback URL is passed here): `provider.retrieveRequestToken(Uri callbackUri)`. _NB:_ `retrieveRequestToken` returns not token but `Uri` that you need to call in next step at once.
  1. Launch browser activity, call `/authorize` with passing the application token and, optionally, appending additional parameters about required access rights: `startActivity(new Intent(Intent.ACTION_VIEW, authUri + ...))`
  1. User will see a page in 'Allow this application to access your account?' style (if he is logged out of service, service will ask him to log in). If user grants access, browser will be redirected to callback URL `vimeoid://oauth.done?...`, but in case in your `AndroidManifest.xml` there is a special activity to handle URLs like this, Android will return a user to your application and open this very activity - `ReceiveCredentials`.
  1. In `ReceiveCredentials` activity you get user token in parameters `Uri uri = getIntent().getData()`, now you need to get secret using this token by requesting `/access_token`: `provider.retrieveAccessToken(Uri uri)`.
@@ -313,9 +313,9 @@ So, if there is enough to call `MediaPlayer.setDataSource(Uri uri)` in your case
 
 And if you also had to get a stream manually, I will notice a few moments and just demonstrate the code, it must speak for itself:
 
-  * Example from vimeoid: [`VimeoVideoPlayingTask`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/media/VimeoVideoPlayingTask.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
-  * Called from activity: [`Player`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/Player.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
-  * Layout: [`player.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/layout/player.xml?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Example from vimeoid: [`VimeoVideoPlayingTask`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/media/VimeoVideoPlayingTask.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Called from activity: [`Player`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/Player.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Layout: [`player.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/layout/player.xml?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 It is better to get a stream using `AsyncTask`. I just aggregate `MediaPlayer` with `...PlayingTask` for convenience, you may use any other way you want, but definitely it is better to get a stream using `AsyncTask`.
 In this case in `onPreExecute` method you may set up yout player, in `doInBackground` you can get a video stream and return it to `onPostExecute` and start playing from there. Also, it is handy to show percentage progress of downloading, because you know an amount of data received in `doInBackground`.
@@ -579,10 +579,10 @@ new Thread(secondaryTasks, "Tasks Queue").start();
 
 ```
 
- * Tasks queue in vimeoid: [`ApiTasksQueue`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/ApiTasksQueue.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Created in: [`SingleItemActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/SingleItemActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#49)
- * Filled with tasks in: [`UserActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/item/UserActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#122)
- * Handling completed tasks in: [`UserActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/item/UserActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#301)
+* Tasks queue in vimeoid: [`ApiTasksQueue`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/ApiTasksQueue.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Created in: [`SingleItemActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/SingleItemActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#49)
+* Filled with tasks in: [`UserActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/item/UserActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#122)
+* Handling completed tasks in: [`UserActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/item/UserActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#301)
 
 ### 10. ListView selection highlight
 
@@ -592,9 +592,9 @@ You see a blue line on the image, it is a custom selected element highlight and 
 
 To define the states for selection highlight, set `android:listSelector="@drawable/selector_bg"` for your `ListView` in layout. The algorythm is simple, but it to build rules in proper order in not an easy task sometimes. See examples:
 
- * Definition: [`selector_bg.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/drawable/selector_bg.xml?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Animation: [`selector_bg_transition.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/drawable/selector_bg_transition.xml?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Declared at: [`generic_list.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/layout/generic_list.xml?r=85e18485bdda1c526141170f67e65f4e00202f34#16)
+* Definition: [`selector_bg.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/drawable/selector_bg.xml?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Animation: [`selector_bg_transition.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/drawable/selector_bg_transition.xml?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Declared at: [`generic_list.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/layout/generic_list.xml?r=85e18485bdda1c526141170f67e65f4e00202f34#16)
 
 ![9-patch editor]({{ get_figure(slug, 'draw9patch-norm.png') }})
 
@@ -635,8 +635,8 @@ protected QuickAction createQuickActions(final int position, final ... item, Vie
 
 ```
 
- * Directory contating a modified version of a library [`lib-qactions`](http://code.google.com/p/vimeoid/source/browse/lib-qactions?r=85e18485bdda1c526141170f67e65f4e00202f34)
- * Used in: [`VideosActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/list/VideosActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#113)
+* Directory contating a modified version of a library [`lib-qactions`](http://code.google.com/p/vimeoid/source/browse/lib-qactions?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Used in: [`VideosActivity`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/activity/user/list/VideosActivity.java?r=85e18485bdda1c526141170f67e65f4e00202f34#113)
 
 Adding external library to Eclipse project is described [in this article](http://developer.android.com/guide/developing/eclipse-adt.html#libraryProject). To be short, it is enough to create the separate Android project with sources for a library, set `isLibrary` checkbox in `Android` section in project properties, and in the original project just add the library project using `Library` -> `Add` button from the same section. `R`-file from the library project will be added to the original project after rebuild.
 
@@ -646,7 +646,7 @@ Adding external library to Eclipse project is described [in this article](http:/
 
 If your application uses a lot of different activities that called similar way, may be it will be useful for you to move this calls to a separate class, including filling `Extras` with data:
 
- * Example from vimeoid: [`Invoke`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/util/Invoke.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
+* Example from vimeoid: [`Invoke`](http://code.google.com/p/vimeoid/source/browse/apk/src/org/vimeoid/util/Invoke.java?r=85e18485bdda1c526141170f67e65f4e00202f34)
 
 #### 12b. Placeholders in localization strings
 
@@ -671,10 +671,10 @@ public static String format(String source, String... params) {
 
 Be sure to read these articles, inflater in Android is very sensitive to complicated structures and if you are writing a complex application, you'll have to fix your layouts sooner or later:
 
- * [Layout Tricks #1](http://www.curious-creature.org/2009/02/22/android-layout-tricks-1/)
- * [Layout Tricks #2](http://www.curious-creature.org/2009/02/25/android-layout-trick-2-include-to-reuse/)
- * [Layout Tricks #3](http://www.curious-creature.org/2009/03/01/android-layout-tricks-3-optimize-part-1/)
- * [Layout Tricks #4](http://www.curious-creature.org/2009/03/16/android-layout-tricks-4-optimize-part-2/)
- * [Speed up your Android UI](http://www.curious-creature.org/2009/03/04/speed-up-your-android-ui/)
+* [Layout Tricks \#1](http://www.curious-creature.org/2009/02/22/android-layout-tricks-1/)
+* [Layout Tricks \#2](http://www.curious-creature.org/2009/02/25/android-layout-trick-2-include-to-reuse/)
+* [Layout Tricks \#3](http://www.curious-creature.org/2009/03/01/android-layout-tricks-3-optimize-part-1/)
+* [Layout Tricks \#4](http://www.curious-creature.org/2009/03/16/android-layout-tricks-4-optimize-part-2/)
+* [Speed up your Android UI](http://www.curious-creature.org/2009/03/04/speed-up-your-android-ui/)
 
 My frequently re-rendedered layouts in one moment collapsed and `getView` has called approximately once per second (and I also meet this case now, but in much rare moments). After replacing a lot of nested complicated  `LinearLayout`s to less-nested and elegant `RelativeLayout`, inflater clearly felt itself easier and me too, mysefl, because a hierarchy also became less complicated and it became easier to make changes. I do not had time to fix all of these, but now I am more attentive to layouts. Also check that you use `width/height=wrap_content` only for simple elements if possible, using `wrap_content` for width/height of `LinearLayout`s and other compound views is dangerous and may lead to unexpected consequences. It may not lead, but who is forewarned...
