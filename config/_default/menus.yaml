@@ -57,12 +57,12 @@ main:                # sections in the website sidebar
     weight: 11
 
   - identifier: blog-ru
-    name: 'Blog : ru'
+    name: Blog Posts in Russian
     url: /blog-ru
     weight: 12
 
   - identifier: blog-en
-    name: 'Blog : en'
+    name: Blog Posts in English
     url: /blog-en
     weight: 13
 
