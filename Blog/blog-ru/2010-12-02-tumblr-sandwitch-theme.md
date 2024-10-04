@@ -7,7 +7,7 @@ tags: [ tumblr ]
 
 Сделал [тему для Tumblr](http://www.tumblr.com/theme/18012) под названием [Sandwitch](http://uncyclopedia.wikia.com/wiki/Sandwitch). Хотел чтобы tumblr-блог был похож стилем на тот, который я сделал для движка [showdown blog](http://code.google.com/p/showdown-blog/), а получилось даже лучше!
 
-![Скриншот]({{ get_figure(slug, 'screen.png') }})
+![Скриншот](assets/ru/tumblr-sandwitch-theme/screen.png)
 
 В настройках темы можно включить трансляцию последних твитов, прикрутить [Disqus](http://disqus.com) и даже организовать подсветку кода в постах.
 

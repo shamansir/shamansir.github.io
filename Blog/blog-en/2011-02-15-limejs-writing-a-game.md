@@ -18,7 +18,7 @@ By the way, here is a code example: [`javascript`](http://paste.pocoo.org/show/3
 
 During the article we will develop the very simplified version of ping-pong virtual game with the help of LimeJS. Here is how the result will look like:
 
-![Men in blue shorts on a green soccer field playing with a children-styled ball]({{ get_figure(slug, 'stage-designed.png') }})
+![Men in blue shorts on a green soccer field playing with a children-styled ball](assets/en/limejs-writing-a-game/stage-designed.png)
 
 There will be videos demonstrating the game we will write running on iPad, iPhone and Android in the end of the article.
 
@@ -26,18 +26,18 @@ There will be videos demonstrating the game we will write running on iPad, iPhon
 
 The engine have a sort of CLI, Command Line Interface. It is written in Python and it gets a required packages using `git` when installing, so you need to install [Python](http://python.org/download/), [`git`](http://git-scm.com/download) and [`git-svn`](http://www.kernel.org/pub/software/scm/git/docs/git-svn.html) to work with engine, if you haven't them already installed. (Seems, developers using Windows will need to do [some tricks](http://stackoverflow.com/questions/350907/git-svn-on-windows-where-to-get-binaries)). Then we get the sources [from github](http://github.com/digitalfruit/limejs) or [by downloading zip](https://github.com/digitalfruit/limejs/zipball/master) and unpack. This how it can be done on Ubuntu:
 
-    $ sudo apt-get install python git-core git-svn
-    $ wget https://github.com/digitalfruit/limejs/zipball/master -no-check-certificate
-    $ unzip ./master ./digitalfruit-limejs
-    $ cd ./digitalfruit-limejs
+    sudo apt-get install python git-core git-svn
+    wget https://github.com/digitalfruit/limejs/zipball/master -no-check-certificate
+    unzip ./master ./digitalfruit-limejs
+    cd ./digitalfruit-limejs
 
 To install all the other packages required for development (including Closure), we run:
 
-    $ ./bin/lime.py init
+    ./bin/lime.py init
 
 ### Let's Start
 
-    $ ./bin/lime.py create pingpong
+    ./bin/lime.py create pingpong
 
 Yes, let it be the ping-pong, a little bit similar to that shown by Dominic in [making a game with Impact HTML5 Engine](http://vimeo.com/17161851) tutorial. Later I discovered that in [demo-sources](https://github.com/digitalfruit/limejs/tree/master/lime/demos/pong) there is something like that, but let our variant will be much simpler.
 
@@ -47,22 +47,22 @@ There will `pingpong.html` and `pingpong.js` files created in `pinpong` director
 
 A brief summary of [Programming guide](http://www.limejs.com/0-getting-started):
 
- * `Director` - is, literally, a director of the game, it holds the scenes, manages transitions between them and keeps the general game settings;
- * `Scene` - is a separate screen of the game, you can add child objects and layers to it;
- * `Layer` - is any rectangular part of the screen, it is useful to split screen parts in layers and layers can also be a containers for children objects. Though, the layers can overlap each other, like in Photoshop;
- * `ScheduleManager` - is a planning tool, it helps to call certain functions either in every frame either after some amount of time will pass;
- * `Node` - any entity in the game, has its own position, size, scale factor, rotation angle and local coordinate system, so it can be translated (moved), rotated, scaled and animated;
- * `Sprite` - is the ancestor of `Node`, it has all its properties/possibilities and can represent an image and/or geometric shape (startin from circle to any polygon); sprites can be masked from each other, filled with gradients and their collisions can be tested with `hitTest` method;
+* `Director` - is, literally, a director of the game, it holds the scenes, manages transitions between them and keeps the general game settings;
+* `Scene` - is a separate screen of the game, you can add child objects and layers to it;
+* `Layer` - is any rectangular part of the screen, it is useful to split screen parts in layers and layers can also be a containers for children objects. Though, the layers can overlap each other, like in Photoshop;
+* `ScheduleManager` - is a planning tool, it helps to call certain functions either in every frame either after some amount of time will pass;
+* `Node` - any entity in the game, has its own position, size, scale factor, rotation angle and local coordinate system, so it can be translated (moved), rotated, scaled and animated;
+* `Sprite` - is the ancestor of `Node`, it has all its properties/possibilities and can represent an image and/or geometric shape (startin from circle to any polygon); sprites can be masked from each other, filled with gradients and their collisions can be tested with `hitTest` method;
 
 ----
 
- - Engine is oriented on timeline, not on the things that required to be shown in current frame;
- - All the different events related to controllers are handled through Closure mechanisms;
- - Animations - translation, rotation, scaling, and fading - can be applied to a single object or to several at once and also can be joined in chains (sequential, simultaneous, looped);
- - `DOM`- and `Canvas`-rendering is supported. `WebGL`-rendering is planned;
- - If the animation is applied to DOM-element, it is translated to CSS3-property;
- - The out script can be hardly optimized;
- - There is an `Audio` class to play sounds;
+* Engine is oriented on timeline, not on the things that required to be shown in current frame;
+* All the different events related to controllers are handled through Closure mechanisms;
+* Animations - translation, rotation, scaling, and fading - can be applied to a single object or to several at once and also can be joined in chains (sequential, simultaneous, looped);
+* `DOM`- and `Canvas`-rendering is supported. `WebGL`-rendering is planned;
+* If the animation is applied to DOM-element, it is translated to CSS3-property;
+* The out script can be hardly optimized;
+* There is an `Audio` class to play sounds;
 
 ### Building a scene
 
@@ -134,7 +134,7 @@ this.addPoints(-50,-125, 0,-175, 50,-125, 50,125, 0,175, -50,125, 0,75, 0,-75)
 
 ```
 
-![Player]({{ get_figure(slug, 'player.png') }})
+![Player](assets/en/limejs-writing-a-game/player.png)
 
 The red dot on a picture is an `anchorPoint`, it is calculated automatically for polygon. This point is a reference point of local coordinates system of the sprite - all the relative sizes and distances related to polygon are calculated starting from this point.
 
@@ -168,12 +168,12 @@ board_.appendChild(playerTwo);
 
 Before we run it in a browser we need to make one manipulation more - to update dependencies for Closure (it allows you to include just `base.js` with Closure utilities and `pingpong.js` in your `.html`, and all other files are loaded automatically using `goog.require`). However there is a little bug in the current version of engine - when you create a project, its name is not added to `./bin/projects` file. So you need to define `pingpong` line in your `./bin/projects` file before, and after that you can update the dependencies:
 
-    $ vim ./bin/projects   # add `pingpong` line
-    $ ./bin/lime.py update
+    vim ./bin/projects   # add `pingpong` line
+    ./bin/lime.py update
 
 So, this is what you can see on the screen:
 
-![Beach-boys wearing blue shorts]({{ get_figure(slug, 'stage1.png') }})
+![Beach-boys wearing blue shorts](assets/en/limejs-writing-a-game/stage1.png)
 
 #### Ball blank
 
@@ -197,7 +197,7 @@ goog.inherits(pingpong.Ball, lime.Circle);
 
 Then update dependencies:
 
-    $ ./bin/lime.py update
+    ./bin/lime.py update
 
 And add the ball to the board in `pingpong.js`:
 
@@ -217,7 +217,7 @@ board_.appendChild(ball);
 
 ```
 
-![Beach-boys wearing blue shorts playing with a ball]({{ get_figure(slug, 'stage2.png') }})
+![Beach-boys wearing blue shorts playing with a ball](assets/en/limejs-writing-a-game/stage2.png)
 
 #### Background
 
@@ -255,7 +255,7 @@ board_.appendChild(...);
 
 ```
 
-![Beach-boys wearing blue shorts playing on a asphalt]({{ get_figure(slug, 'stage3.png') }})
+![Beach-boys wearing blue shorts playing on a asphalt](assets/en/limejs-writing-a-game/stage3.png)
 
 #### Wall blank
 
@@ -279,7 +279,7 @@ goog.inherits(pingpong.Wall, lime.Sprite);
 
 Update dependencies:
 
-    $ ./bin/lime.py update
+    ./bin/lime.py update
 
 And place the walls along the canvas edges in `pingpong.js`:
 
@@ -308,7 +308,7 @@ board_.appendChild(...);
 
 That's all, the game board is complete - we can start to program logic!
 
-![Beach-boys wearing blue shorts with a ball over a grey rectangles surrounded with yellow crates]({{ get_figure(slug, 'stage4.png') }})
+![Beach-boys wearing blue shorts with a ball over a grey rectangles surrounded with yellow crates](assets/en/limejs-writing-a-game/stage4.png)
 
 #### Players logic
 
@@ -637,7 +637,7 @@ goog.inherits(pingpong.Wall, lime.RoundedRect);
 
 Now everything looks much prettier:
 
-![Men in blue shorts on a soccer field playing with children ball]({{ get_figure(slug, 'stage-designed.png') }})
+![Men in blue shorts on a soccer field playing with children ball](assets/en/limejs-writing-a-game/stage-designed.png)
 
 #### Compilation
 
@@ -647,8 +647,8 @@ So, the demonstration game is complete. Here are the sources I've got:
 
 Now please re-check all `goog.require` lines - delete the calls that were not used then update the dependencies and collect all the resulting things in one script:
 
-    $ ./bin/lime.py update
-    $ ./bin/lime.py build pingpong -o pingpong/compiled/pp.js
+    ./bin/lime.py update
+    ./bin/lime.py build pingpong -o pingpong/compiled/pp.js
 
 You can copy a `pingpong.html` file into `compiled` folder and change the Javascript calls in the header:
 
@@ -688,6 +688,6 @@ The main thing - it is not a state-machine-based engine that is fashionable now 
 
 [Here you can try to play](http://shamansir.madfire.net/_pingpong/pingpong.html) (it can be a little buggy, because it is a very simplified version, please compare the platform-related experience you get with what you see on video)
 
-![QRCode]({{ get_figure(slug, 'qrcode.png') }})
+![QRCode](assets/en/limejs-writing-a-game/qrcode.png)
 
 P.S. Special thanks to [lazio_od](http://www.lazio.com.ua/), he helped me with testing among with engine authors.

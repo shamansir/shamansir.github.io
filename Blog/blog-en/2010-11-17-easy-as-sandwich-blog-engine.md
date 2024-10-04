@@ -15,13 +15,13 @@ I think you now feel what I mean: I have a proposal for you abou this all. It'd 
 
 ### Picture ###
 
-![Screenshot]({{ get_figure(slug, 'screenshot-small.png') }})
+![Screenshot](assets/en/easy-as-sandwich-blog-engine/screenshot-small.png)
 
 ### Components ###
 
- * [JQuery](http://jquery.com), for bread
- * [Showdown](http://www.attacklab.net/showdown/), for a sausage
- * And a dates parser for a mustard
+* [JQuery](http://jquery.com), for bread
+* [Showdown](http://www.attacklab.net/showdown/), for a sausage
+* And a dates parser for a mustard
 
 Not to make things to hard, I've taken [JQuery](http://jquery.com) (I use only DOM-operations and a helper to load XML files asynchronously from it, so for the cruel need it can be accurately excised). Then I've taken  [Showdown](http://www.attacklab.net/showdown/), it is Markdown syntax parser moved to JavaScript. Then I've taken some strange dates parser (to display them nicely). And I've mixed all these stuff into one solid thing, so I've got a crazy little thing called JS/XML-driven blog engine. Easy as sandwich.
 
@@ -38,33 +38,33 @@ Now, once more
 
 ### Advantages ###
 
- * Minimalism.
- * No server side. At all.
- * Posts are written with Markdown-syntax.
- * One post - one XML file
- * Configuration-over-XML
- * Styles-over-CSS
- * Tags, tags cloud and tags navigation
- * Permalink for every post
- * Supports mobile browsers (some)
- * Several entry-points are supported
- * RSS-generating script is included out-of-the-box
+* Minimalism.
+* No server side. At all.
+* Posts are written with Markdown-syntax.
+* One post - one XML file
+* Configuration-over-XML
+* Styles-over-CSS
+* Tags, tags cloud and tags navigation
+* Permalink for every post
+* Supports mobile browsers (some)
+* Several entry-points are supported
+* RSS-generating script is included out-of-the-box
 
 ### Disadvantages ###
 
- * No commenting support
- * No indexing with search engines
- * Only for JavaScript-powered browsers
- * Javascript and JQuery sometimes go slowly in slow networks
- * If you have no `.htaccess`, user must name `index.html` explicitly
- * Things to optimize
+* No commenting support
+* No indexing with search engines
+* Only for JavaScript-powered browsers
+* Javascript and JQuery sometimes go slowly in slow networks
+* If you have no `.htaccess`, user must name `index.html` explicitly
+* Things to optimize
 
 ### May be later ###
 
- * Paging
- * Templates support
- * More Nice RSS / RSS Automation
- * Calendar
+* Paging
+* Templates support
+* More Nice RSS / RSS Automation
+* Calendar
 
 ### Example ###
 

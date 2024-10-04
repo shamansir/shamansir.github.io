@@ -9,7 +9,7 @@ tags: [ gwt, mvp4g, java ]
 
 ### Слайды
 
-[![Cлайды]({{ get_figure(slug, 'gdocs.ru.png') }})](https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B9lKUPDNyz1vYTViZjYwZTEtODNmNC00OWZlLWFhODUtMDNkYzE5N2NjM2Fk&hl=en)
+[![Cлайды](assets/ru/gwt-mvp4g-slides/gdocs.ru.png)](https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B9lKUPDNyz1vYTViZjYwZTEtODNmNC00OWZlLWFhODUtMDNkYzE5N2NjM2Fk&hl=en)
 
 [Также на Scribd](http://www.scribd.com/doc/54690967/)
 
@@ -40,37 +40,51 @@ tags: [ gwt, mvp4g, java ]
 
 ### Ссылки со слайдов
 
- * [Слайды в PDF](http://goo.gl/4GgnS)
+* [Слайды в PDF](http://goo.gl/4GgnS)
+
  1. Кратко о GWT
-   * [Quake 2 в браузере](http://quake2-gwt-port.appspot.com)
+
+* [Quake 2 в браузере](http://quake2-gwt-port.appspot.com)
+
  2. Концепции GWT
-   * [Статья про разницу MVC и MVP](http://geekswithblogs.net/kobush/archive/2006/01/09/65305.aspx)
-   * [Ray Ryan про Архитектуру GWT-приложений](http://www.youtube.com/watch?v=PDuhR18-EdM)
-   * [Видео про EventBus](http://tv.jetbrains.net/videocontent/gwt-event-bus-basics)
-   * [Презентация по Deferred Binding](http://www.docstoc.com/docs/53396874/Deferred-Binding-The-Magic-of-GWT)
-   * [Вики-страницы Guice](http://code.google.com/p/google-guice/wiki/Motivation?tm=6)
-   * [Руководство по созданию Remote Services](http://developerlife.com/tutorials/?p=125)
-   * [Обсуждение недостатков GWT](http://www.linux.org.ru/forum/talks/4497412)
-   * [Резюме по оптимизации GWT-кода](http://galak-sandbox.blogspot.com/2010/10/gwt.html)
+
+* [Статья про разницу MVC и MVP](http://geekswithblogs.net/kobush/archive/2006/01/09/65305.aspx)
+* [Ray Ryan про Архитектуру GWT-приложений](http://www.youtube.com/watch?v=PDuhR18-EdM)
+* [Видео про EventBus](http://tv.jetbrains.net/videocontent/gwt-event-bus-basics)
+* [Презентация по Deferred Binding](http://www.docstoc.com/docs/53396874/Deferred-Binding-The-Magic-of-GWT)
+* [Вики-страницы Guice](http://code.google.com/p/google-guice/wiki/Motivation?tm=6)
+* [Руководство по созданию Remote Services](http://developerlife.com/tutorials/?p=125)
+* [Обсуждение недостатков GWT](http://www.linux.org.ru/forum/talks/4497412)
+* [Резюме по оптимизации GWT-кода](http://galak-sandbox.blogspot.com/2010/10/gwt.html)
+
  3. mvp4g
-   * [Страница фреймворка mvp4g](http://code.google.com/p/mvp4g/)
-   * [Showcase фреймворка mvp4g](http://mvp4gshowcase.appspot.com)
-   * [Сравнение GWT и фреймворка mvp4g](http://code.google.com/p/mvp4g/wiki/Mvp4g_vs_GWTP)
-   * [Небольшой туториал по созданию проекта на mvp4g](http://cambiatablog.wordpress.com/2010/12/04/gwt-and-mvp4g-tutorial-1/)
+
+* [Страница фреймворка mvp4g](http://code.google.com/p/mvp4g/)
+* [Showcase фреймворка mvp4g](http://mvp4gshowcase.appspot.com)
+* [Сравнение GWT и фреймворка mvp4g](http://code.google.com/p/mvp4g/wiki/Mvp4g_vs_GWTP)
+* [Небольшой туториал по созданию проекта на mvp4g](http://cambiatablog.wordpress.com/2010/12/04/gwt-and-mvp4g-tutorial-1/)
+
  4. UI компоненты
-   * [Библиотека компонентов GWT](http://code.google.com/webtoolkit/doc/latest/RefWidgetGallery.html)
+
+* [Библиотека компонентов GWT](http://code.google.com/webtoolkit/doc/latest/RefWidgetGallery.html)
+
  5. Layouting
-   * [Демонстрация Layouting (в процессе) на GWT+mvp4g](http://github.com/shamansir/gwt-mvp4g-layouting-demo)
+
+* [Демонстрация Layouting (в процессе) на GWT+mvp4g](http://github.com/shamansir/gwt-mvp4g-layouting-demo)
+
  6. Non-Java API
-   * [Суть](http://code.google.com/p/google-web-toolkit-doc-1-5/wiki/GettingStartedJSON)
-   * [Описание с исходным кодом](http://shamansir-ru.tumblr.com/post/1728720550/deferred-api-gwt-rpc)
+
+* [Суть](http://code.google.com/p/google-web-toolkit-doc-1-5/wiki/GettingStartedJSON)
+* [Описание с исходным кодом](http://shamansir-ru.tumblr.com/post/1728720550/deferred-api-gwt-rpc)
+
  7. i18n
  8. Заключение
-   * [Сайт Experika](http://experika.com)
-   * [Твиттер Виталия Гашка](http://twitter.com/vgashock)
-   * [Сайт Михаила Кашкина](http://www.vurt.ru)
-   * [Сайт компании EmDev](http://emdev.ru)
-   * [Мой Google-профиль](http://profiles.google.com/shaman.sir)
+
+* [Сайт Experika](http://experika.com)
+* [Твиттер Виталия Гашка](http://twitter.com/vgashock)
+* [Сайт Михаила Кашкина](http://www.vurt.ru)
+* [Сайт компании EmDev](http://emdev.ru)
+* [Мой Google-профиль](http://profiles.google.com/shaman.sir)
 
 ### Вопросы
 

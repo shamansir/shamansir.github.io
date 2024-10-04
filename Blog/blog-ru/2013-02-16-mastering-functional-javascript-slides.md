@@ -13,21 +13,21 @@ tags: [ javascript, functional-programming ]
 
 Итак, поехали:
 
-[![Slides]({{ get_figure(slug, 'first_slide.png') }})](https://speakerdeck.com/shamansir/postighaiem-funktsional-nyi-javascript)
+[![Slides](assets/ru/mastering-functional-javascript-slides/first_slide.png)](https://speakerdeck.com/shamansir/postighaiem-funktsional-nyi-javascript)
 
 ### Ссылки
 
 Ссылки на примеры:
 
 * Каррирование функций:
-    * [codepen.io/shamansir/pen/HskmE](http://codepen.io/shamansir/pen/HskmE) _(пример с парсером)_
-    * [codepen.io/shamansir/pen/kBzJe](http://codepen.io/shamansir/pen/kBzJe)
+  * [codepen.io/shamansir/pen/HskmE](http://codepen.io/shamansir/pen/HskmE) _(пример с парсером)_
+  * [codepen.io/shamansir/pen/kBzJe](http://codepen.io/shamansir/pen/kBzJe)
 * Частичные применения:
-    * [codepen.io/shamansir/pen/xCrgz](http://codepen.io/shamansir/pen/xCrgz)
+  * [codepen.io/shamansir/pen/xCrgz](http://codepen.io/shamansir/pen/xCrgz)
 * Цепочки функций:
-    * [codepen.io/shamansir/pen/AaHqy](http://codepen.io/shamansir/pen/AaHqy)
+  * [codepen.io/shamansir/pen/AaHqy](http://codepen.io/shamansir/pen/AaHqy)
 * Композиция функций:
-    * [codepen.io/shamansir/pen/Funwt](http://codepen.io/shamansir/pen/Funwt)
+  * [codepen.io/shamansir/pen/Funwt](http://codepen.io/shamansir/pen/Funwt)
 
 Lyfe.js: [bitbucket.org/balpha/lyfe](http://bitbucket.org/balpha/lyfe)<br/>
 Статья о lyfe.js: [Introducing Lyfe: yield in JavaScript](http://balpha.de/2011/06/introducing-lyfe-yield-in-javascript)

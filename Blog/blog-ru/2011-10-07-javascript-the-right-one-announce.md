@@ -16,6 +16,6 @@ tags: [ javascript, functional-programming ]
 
 Ввиду того, что на доклад у меня будет полчаса и я хочу подробно разобрать данные темы, думаю четырёх пунктов вполне достаточно.
 
-<center><img src="{{ get_figure(slug, 'js-the-right-one-no-bg.png') }}" width="400px" alt="Будь спартанцем!" text="Будь спартанцем!" /></center>
+![Будь спартанцем!](assets/ru/javascript-the-right-one-announce/js-the-right-one-no-bg.png){.center}
 
  SJ R.I.P., You were geniously cool.

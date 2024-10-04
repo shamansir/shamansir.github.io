@@ -25,7 +25,7 @@ tags: [ java ]
 
 Сама диаграмма охватывает все описанные в статье классы, поэтому выглядит довольно (мягко говоря) эпично, но к самому паттерну, как я считаю, следует относить только верхний левый пакет `[Core]`.
 
-[![Диаграмма рассматриваемого паттерна]({{ get_figure(slug, 'diagram-thumb.png') }})]({{ get_figure(slug, 'diagram.png') }})
+[![Диаграмма рассматриваемого паттерна](assets/ru/may-be-a-validator-pattern/diagram-thumb.png)](assets/ru/may-be-a-validator-pattern/diagram.png)
 
 ----
 
@@ -39,7 +39,7 @@ tags: [ java ]
 
 public class ValidationConstraint {
 
-	public enum ConstraintType { INVALID_FORMAT, // Значение в поле не соответствует регулярному выражению
+ public enum ConstraintType { INVALID_FORMAT, // Значение в поле не соответствует регулярному выражению
                                  ILLEGAL_CHARACTERS, // Частный случай первого, в поле введены недопустимые символы
                                  INVALID_VALUE, // Частный случай первого, вместо числа введена строка или подобные ограничения
                                  REQUIRED_VALUE, // Поле требуется к заполнению

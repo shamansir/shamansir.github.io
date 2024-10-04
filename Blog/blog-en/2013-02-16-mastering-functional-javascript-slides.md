@@ -13,23 +13,21 @@ However, a bit of basics at the start are also there, of course.
 
 OK, Here we go:
 
-[![Slides]({{ get_figure(slug, 'first_slide.png') }})](https://speakerdeck.com/shamansir/mastering-functional-javascript)
+[![Slides](assets/en/mastering-functional-javascript-slides/first_slide.png)](https://speakerdeck.com/shamansir/mastering-functional-javascript)
 
 ### Links
 
 Links to the examples:
 
 * Deferred functions:
-    * [codepen.io/shamansir/pen/HskmE](http://codepen.io/shamansir/pen/HskmE) _(parser example)_
-    * [codepen.io/shamansir/pen/kBzJe](http://codepen.io/shamansir/pen/kBzJe)
+  * [codepen.io/shamansir/pen/HskmE](http://codepen.io/shamansir/pen/HskmE) _(parser example)_
+  * [codepen.io/shamansir/pen/kBzJe](http://codepen.io/shamansir/pen/kBzJe)
 * Partial applications:
-    * [codepen.io/shamansir/pen/xCrgz](http://codepen.io/shamansir/pen/xCrgz)
+  * [codepen.io/shamansir/pen/xCrgz](http://codepen.io/shamansir/pen/xCrgz)
 * Queues of functions:
-    * [codepen.io/shamansir/pen/AaHqy](http://codepen.io/shamansir/pen/AaHqy)
+  * [codepen.io/shamansir/pen/AaHqy](http://codepen.io/shamansir/pen/AaHqy)
 * Composed functions:
-    * [codepen.io/shamansir/pen/Funwt](http://codepen.io/shamansir/pen/Funwt)
+  * [codepen.io/shamansir/pen/Funwt](http://codepen.io/shamansir/pen/Funwt)
 
 Lyfe.js: [bitbucket.org/balpha/lyfe](http://bitbucket.org/balpha/lyfe)<br/>
 Article on lyfe.js: [Introducing Lyfe: yield in JavaScript](http://balpha.de/2011/06/introducing-lyfe-yield-in-javascript)
-
-

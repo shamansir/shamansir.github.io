@@ -18,7 +18,7 @@ Some links to keep in your background tabs while reading this:
 * [the generated parser example][arithmetics-gist-fn] ([source][arithmetics-gist-src], [comparison][arithmetics-gist])
 * [the generated parser example – 2][arithmetics-gist-2-fn] ([source][arithmetics-gist-2-src], [comparison][arithmetics-gist-2])
 
-# Part 1. Story.
+# Part 1. Story
 
 Have you tried to read a parser code, generated with a common parser generator? In most cases it's an unreadable crap, especially in comparison to parser grammar you composed. Though what happens is actually right – because the generated parser is totally not intended to be readable by human at all, but parse as fast as possible. Even though the parser code may be self-repeatable in a lot of places and may weight much more KBs or even MBs because of this.
 
@@ -32,7 +32,7 @@ But let's skip long stories and I'll show you the resulting code example. And th
 
 You may open this image in new tab (right click &rarr; Open in new Tab) to see it in full size.
 
-![Comparison of generated parsers]({{ get_figure(slug, 'comparison.png') }})
+![Comparison of generated parsers](assets/en/generating-functional-parsers/comparison.png)
 
 ``` peg
 /*
@@ -75,7 +75,7 @@ Since people will probably ask, I need to mention that, for sure, all of peg.js 
 
 So the third part of the article is about the structure of generated parser code, in details, on how it works from the inside, and a second one is a just a list of all 18 operators' code snippets with short comments. Just in case I'll get your interest in internals of the approach.
 
-# Part 2. Code. Parsing operators.
+# Part 2. Code. Parsing operators
 
 The main fuel for parsing process in `peg.js-fn` is _partial function application_ – this power is achieved with an ability of slightly modified functions to be called twice and to get all of the required arguments saved at first call, and second one just says "please apply the arguments you've stored before and call this function NOW, I mean IMMEDIATELY". Actually, it's just a sub-case of _partial application_, so I call this variant with special name, "_postponed functions_" (or "_postponable_", whatever you like). The way its done is not important for this article, if you really want to know, though, think of `Function.bind` or take a look at generated parser examples. All the parsers we produce in our Great Parser Factory are powered with this fine-selected fuel. This moves us the fastest way towards both parser readability and execution economy, since it allow us to write, say,
 
@@ -207,7 +207,7 @@ This operator ensures that some other operator at least tried to be executed, bu
 * **example:** `start = 'f'? (. .)?`
 * **code:**
     `rules.start  = seqnc(maybe(match('f')),`
-    `                     maybe(seqnc(ch(), ch())));`
+    `maybe(seqnc(ch(), ch())));`
 
 ``` javascript
 function maybe(f) {
@@ -476,11 +476,11 @@ A generated parser consists of several parts, in given order (later we will insp
 * _Global variables_, just `input`, `pos` (current parsing position) & `p_pos`(previous parsing position) are here. And parsing `options`. Four of them, and it's actually enough. They're accessible both to user code and parser code;
 * _User code_ from a parser grammar, wrapped in it's own closure, so it will only have access to functions defined in this closure and global variables. It has no access to internal parser code, which is itself isolated in another closure. Though we store user code in an object, so parser will have access to it. Oh, if you wonder where from we got this code, it's the one user may write in grammar prelude, inside `action`s and for `pre` and `xpre` operator;
 * _Parser closure_, which, in its turn, consists of:
-    * _Rules_, those ones, which were defined in a parser grammar and were converted to javascript code, same way as in examples for operators above, like `rules.space = function() { return (match(' '))(); };`;
-    * _Operators_ code, presented exactly as above, but, of course, there are only the ones included, that were used in the rules above, at least once;
-    * _Internal parser variables_, _Context management functions_;
-    * _`parse()` function_, the only one exported to user;
-    * _`MatchFailed`, `SyntaxError` exceptions_ definition, _parse error handling code_;
+  * _Rules_, those ones, which were defined in a parser grammar and were converted to javascript code, same way as in examples for operators above, like `rules.space = function() { return (match(' '))(); };`;
+  * _Operators_ code, presented exactly as above, but, of course, there are only the ones included, that were used in the rules above, at least once;
+  * _Internal parser variables_, _Context management functions_;
+  * _`parse()` function_, the only one exported to user;
+  * _`MatchFailed`, `SyntaxError` exceptions_ definition, _parse error handling code_;
 * A call of the parser closure defined above, to prepare its variables only once for several parsing sessions.
 
 [Here's the gist][arithmetics-gist] with the complete code of a parser generated using some simple grammar (also included).
@@ -652,14 +652,14 @@ All the operators were covered in details above, even with code examples, so for
 
 Ok, there's one more subtlety I need to tell you about. May be you recall I mentioned that operators are postponed functions. So every operator here is wrapped so that it's first call only stores arguments passed and second call actually performs the function code with the stored data. This may be done in different ways, like using `Function.bind`, for example. You may take a look at the Gist code to see which way it's implemented in my case, but the way actually has no matter here, only the result matters. This, however is the clockwork which makes everything tick _in functional way_.
 
-`cc()` and `ref()` functions mentioned in _[Operators](#Operators)_ chapter are also defined here.
+`cc()` and `ref()` functions mentioned in _[Operators](#operators)_ chapter are also defined here.
 
 #### Internal Parser Variables
 
 Parser needs to store some private things, of course. Each of this variables below resets to initial state at the start of each parsing cycle.
 
 * `cache` object stores the rules results by position in the `input` string, so in cases of backtracking there will be no special need in recalculating. Every rule wrapped the way it checks the cache before execution and if position matches, returns the result from cache. Caching may be disabled on parser generation;
-* `ctx` variable holds the vey root of context, the topmost level of it (see above in _[User Code](#User-Code)_ section regarding prototype chains for context levels);
+* `ctx` variable holds the vey root of context, the topmost level of it (see above in _[User Code](#user-code)_ section regarding prototype chains for context levels);
 * `cctx` points to current context level;
 * `ctxl` holds current context level index, the deeper the level, the higher index is stored here;
 * `current` is the name of the rule in process of execution;
@@ -668,7 +668,7 @@ Parser needs to store some private things, of course. Each of this variables bel
 
 #### Context Management Functions
 
-Actually, everything about context structure was described in _[User Code](#User-Code)_ section. I'll just remind you that new, deeper, context levels are just new JS objects which hold pointer to previous (higher) level of context in their `prototype`. And yeah, context is where labeled results are stored for `action`, `pre` and `xpre` operators, which may contain JS code intended to have access to these labels. Deeper level of context is marked in grammar with parentheses.
+Actually, everything about context structure was described in _[User Code](#user-code)_ section. I'll just remind you that new, deeper, context levels are just new JS objects which hold pointer to previous (higher) level of context in their `prototype`. And yeah, context is where labeled results are stored for `action`, `pre` and `xpre` operators, which may contain JS code intended to have access to these labels. Deeper level of context is marked in grammar with parentheses.
 
 * `ctx_level(parent)` creates a deeper level of context below a `parent` and returns it;
 * `din()` moves `cctx` (current context level) pointer to a deeper level, parallelly with creating it if requred;
@@ -677,7 +677,7 @@ Actually, everything about context structure was described in _[User Code](#User
 
 #### `parse()` Function
 
-It is the function called with evey new `input` to parse. It resets all the variables to their default values, clears the cache and does `$f = __user_blocks()` (see [User Code](#User-Code) section), for example, then searches for the starting rule and executes it in a `try`-`catch` block. If `MatchFailed` exception was fired during the execution, it collects all the necessary information about the failure and fires it further to user (since it reached the top level and wasn't suppressed, for suppressed exceptions no information that should have belonged to user is collected).
+It is the function called with evey new `input` to parse. It resets all the variables to their default values, clears the cache and does `$f = __user_blocks()` (see [User Code](#user-code) section), for example, then searches for the starting rule and executes it in a `try`-`catch` block. If `MatchFailed` exception was fired during the execution, it collects all the necessary information about the failure and fires it further to user (since it reached the top level and wasn't suppressed, for suppressed exceptions no information that should have belonged to user is collected).
 
 #### `MatchFailed`, `SyntaxError`, Error Handling
 

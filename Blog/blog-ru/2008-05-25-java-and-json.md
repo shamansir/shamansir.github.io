@@ -371,4 +371,4 @@ var JSONManager = Class.extend({
 
 ### Пояснительные изображения
 
-[![JSON Classes Structure]({{ get_figure(slug, 'json-package-structure-thumb.png') }})]({{ get_figure(slug, 'json-package-structure.png') }}) [![JSON Action Diagram]({{ get_figure(slug, 'json-action-diagram-thumb.png') }})]({{ get_figure(slug, 'json-action-diagram.png') }})
+[![JSON Classes Structure](assets/ru/java-and-json/json-package-structure-thumb.png)](assets/ru/java-and-json/json-package-structure.png) [![JSON Action Diagram](assets/ru/java-and-json/json-action-diagram-thumb.png)](assets/ru/java-and-json/json-action-diagram.png)
