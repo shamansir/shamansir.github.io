@@ -3,6 +3,10 @@
 
 page:
   siteTitle: Elektrokiłka a.k.a. shamansir
+  siteName: Srid
+  siteUrl: https://shamansir.github.io
+  headHtml: |
+    <snippet var="js.highlightjs" />
 
 template:
   theme: red
@@ -16,6 +20,9 @@ template:
   # layout:
   #   note:
   #     containerClass: container mx-auto max-w-screen-lg
+
+  uptree:
+    enable: true
 
   breadcrumbs:
     enable: true
