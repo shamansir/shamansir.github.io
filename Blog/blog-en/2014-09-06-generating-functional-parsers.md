@@ -32,7 +32,7 @@ But let's skip long stories and I'll show you the resulting code example. And th
 
 You may open this image in new tab (right click &rarr; Open in new Tab) to see it in full size.
 
-![Comparison of generated parsers](assets/en/generating-functional-parsers/comparison.png)
+![Comparison of generated parsers](../assets/en/generating-functional-parsers/comparison.png)
 
 ``` peg
 /*

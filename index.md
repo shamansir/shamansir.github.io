@@ -43,10 +43,12 @@ Till now I have published 26 blog articles in English and 42 articles in Russian
 * [[Blog/blog-en/2009-10-13-sametimed-google-wave-client]]
 * [[Blog/blog-en/2010-01-09-10-useful-solutions-for-android-developer]]
 * [[Blog/blog-en/2007-08-12-16-useful-solutions-for-javascript]]
+* [[Blog/blog-ru/2010-08-12-nijiato-detection-of-fingers-motion-algorithm]]
 * [[Blog/blog-ru/2018-02-11-category-theory-senseless-and-merciless]]
 * [[Blog/blog-ru/2012-02-22-the-way-of-the-asynchronous-samurai]]
 * [[Blog/blog-ru/2011-02-11-android-renderscript-example-translation]]
 * [[Blog/blog-ru/2011-11-16-monkey-patching-or-extending-native-types-religious-or-not]]
+
 
 Also you may find the list of [[Skills]] here.
 

@@ -7,9 +7,9 @@ tags: [ fluxus, opengl, scheme, racket, functional-programming ]
 
 Some time ago I [wrote a post](#post-about-fluxus) about [fluxus](http://www.pawfal.org/fluxus/), livecoding and 3D-prototyping system. Now I want to demonstrate some of its features and describe how you may use them in pseudo(;))scientific needs. For example, you can create a model of a simplified solar system and make it fit in only 125 lines of code (including comments) -- it is the advantage of [Racket](http://racket-lang.org/) language with graphic steroids, the core of fluxus and a descendant of PLT Scheme. Here how the result will look like:
 
-[![Screenshot 01](assets/en/fluxus-solar-system/screen04-thumb.png)](assets/en/fluxus-solar-system/screen04.png)
+![Screenshot 01](../assets/en/fluxus-solar-system/screen04.png)
 
-[![Screenshot 02](assets/en/fluxus-solar-system/screen05-thumb.png)](assets/en/fluxus-solar-system/screen05.png)
+![Screenshot 02](../assets/en/fluxus-solar-system/screen05.png)
 
 There are sources in the post, a short desription of code structure, tutorial movies in Slavic English, examining in detail the whole process of writing this complicated (;)) code.
 

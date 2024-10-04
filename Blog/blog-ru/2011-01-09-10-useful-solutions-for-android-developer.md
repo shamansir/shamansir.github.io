@@ -34,7 +34,7 @@ tags: [ java, android ]
 
 (здесь и далее я буду использовать слово _пункт_ как аналог английскому _item_, чтобы отличать элемент списка, который может быть и заголовком раздела и пунктом, от пункта, обычного элемента, который не может быть заголовком)
 
-![Список с разделами](assets/ru/10-useful-solutions-for-android-developer/guest-channel.png)
+![Список с разделами](../assets/ru/10-useful-solutions-for-android-developer/guest-channel.png)
 
 Заголовки не должны реагировать на нажатия и выбор и должны иметь собственный вид. Этого можно достичь, переопределив кроме `getView` методы `getItemViewType`, `getViewTypeCount` и `isEnabled` адаптера этого списка и отнаследовав его, например, от `BaseAdapter`.
 
@@ -222,7 +222,7 @@ public static void invalidateByPos(AdapterView<?> parent, int position) {
 
 ### 5. Про кэширование изображений для списков
 
-![Список с картинками](assets/ru/10-useful-solutions-for-android-developer/guest-videos.png)
+![Список с картинками](../assets/ru/10-useful-solutions-for-android-developer/guest-videos.png)
 
 Если вы создаёте список `ListView`, содержащий изображения загружаемые из сети, эта глава для вас. Неразумно бы было при каждом вызове `getView` в адаптере получать изображения по URL заново - естественно лучше бы было их а) кэшировать б) запрашивать только тогда, когда вид с изображением видим пользователю. На данный момент эта задача так часто вставала перед программистами на Android, что уже существует [множество её решений](http://stackoverflow.com/questions/541966/android-how-do-i-do-a-lazy-load-of-images-in-listview).
 
@@ -585,7 +585,7 @@ new Thread(secondaryTasks, "Tasks Queue").start();
 
 ### 10. Подсветка выбора в ListView
 
-![Выбранная строка в списке](assets/ru/10-useful-solutions-for-android-developer/user-video.png)
+![Выбранная строка в списке](../assets/ru/10-useful-solutions-for-android-developer/user-video.png)
 
 На картинке видно синюю полосу, это кастомная подсветка выбранного элемента, она имеет четыре состояния - нажатая, имеющая фокус, запрещённая и анимация перехода от нажатой в зажатую для долгого тапа. Первые три и зажатое состояние - это так называемые `9-patch`, вы наверняка [о них слышали](http://developer.android.com/guide/developing/tools/draw9patch.html), анимация - `xml`-файл анимации.
 
@@ -597,15 +597,15 @@ new Thread(secondaryTasks, "Tasks Queue").start();
 * Анимация: [`selector_bg_transition.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/drawable/selector_bg_transition.xml?r=85e18485bdda1c526141170f67e65f4e00202f34)
 * Объявлен в: [`generic_list.xml`](http://code.google.com/p/vimeoid/source/browse/apk/res/layout/generic_list.xml?r=85e18485bdda1c526141170f67e65f4e00202f34#16)
 
-![редактор 9-patch](assets/ru/10-useful-solutions-for-android-developer/draw9patch-norm.png)
+![редактор 9-patch](../assets/ru/10-useful-solutions-for-android-developer/draw9patch-norm.png)
 
 С 9-patch тоже есть хитрости, чуть что не так в лэйауте - и они разъезжаются и весь список разъезжается тоже. Главное правило - проверить прежде описание `ListView`, убедитесь что `layout_width` и `layout_height` установлены в `fill_parent` и кроме того перепроверьте элементы выше по иерархии. Затем, если не помогло, можно исправлять 9-patch. Тонкие чёрные линии сверху и слева обозначают области картинки, которые будут растянуты если контент не влез в картинку. Тонкие чёрные линии (необязательные) справа и снизу обозначают области в которые сам контент будет вписан. Подобрать нужные позиции тоже получается не сразу, приходится экспериментировать. Даже не думайте создавать 9-patch без редактора из коробки, это лишний вынос мозга - в редакторе подсвечиваются области для контента и ошибки, и даже когда всё вроде верно, не всегда раскладка воспринимается инфлейтером как ожидалось.
 
-![Запрещённое состояние](assets/ru/10-useful-solutions-for-android-developer/selector_bg_disabled.9.png) ![Cостояние фокуса](assets/ru/10-useful-solutions-for-android-developer/selector_bg_focus.9.png) ![Нажатое состояние](assets/ru/10-useful-solutions-for-android-developer/selector_bg_pressed.9.png) ![Зажатое состояние](assets/ru/10-useful-solutions-for-android-developer/selector_bg_longpress.9.png)
+![Запрещённое состояние](../assets/ru/10-useful-solutions-for-android-developer/selector_bg_disabled.9.png) ![Cостояние фокуса](../assets/ru/10-useful-solutions-for-android-developer/selector_bg_focus.9.png) ![Нажатое состояние](../assets/ru/10-useful-solutions-for-android-developer/selector_bg_pressed.9.png) ![Зажатое состояние](../assets/ru/10-useful-solutions-for-android-developer/selector_bg_longpress.9.png)
 
 ### 11. Добавление QuickActions
 
-![Пример QuickActions](assets/ru/10-useful-solutions-for-android-developer/user-videos.png)
+![Пример QuickActions](../assets/ru/10-useful-solutions-for-android-developer/user-videos.png)
 
 [QuickActions](http://www.londatiga.net/it/how-to-create-quickaction-dialog-in-android/) - небольшая библиотека для всплывающих диалогов с действиями, таких как на рисунке (и не только таких, потому что их дизайн можно менять свободно). Они стали новым популярным веянием при появлении официального твиттер-клиента. Должны быть и другие имплементации, в _vimeoid_ я использую эту, и её тоже немного подправил для своих нужд.
 

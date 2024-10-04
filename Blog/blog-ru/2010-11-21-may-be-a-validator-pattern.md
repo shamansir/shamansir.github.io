@@ -25,7 +25,7 @@ tags: [ java ]
 
 Сама диаграмма охватывает все описанные в статье классы, поэтому выглядит довольно (мягко говоря) эпично, но к самому паттерну, как я считаю, следует относить только верхний левый пакет `[Core]`.
 
-[![Диаграмма рассматриваемого паттерна](assets/ru/may-be-a-validator-pattern/diagram-thumb.png)](assets/ru/may-be-a-validator-pattern/diagram.png)
+![Диаграмма рассматриваемого паттерна](../assets/ru/may-be-a-validator-pattern/diagram.png)
 
 ----
 

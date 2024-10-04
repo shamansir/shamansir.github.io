@@ -15,7 +15,7 @@ tags: [ javascript, xml ]
 
 ### Картинка ###
 
-![Screenshot](assets/ru/easy-as-sandwich-blog-engine/screenshot-small.png)
+![Screenshot](../assets/ru/easy-as-sandwich-blog-engine/screenshot-small.png)
 
 ### Компоненты ###
 

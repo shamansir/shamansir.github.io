@@ -9,9 +9,9 @@ tags: [ fluxus, opengl, scheme, racket, functional-programming ]
 
 В посте исходники, краткое описание на русском и livecoding-видеоролики на славянском английском в подробностях рассматривающие и следящие за всем процессом написания этого сложного кода.
 
-[![Screenshot 01](assets/ru/fluxus-solar-system/screen04-thumb.png)](assets/ru/fluxus-solar-system/screen04.png)
+![Screenshot 01](../assets/ru/fluxus-solar-system/screen04.png)
 
-[![Screenshot 02](assets/ru/fluxus-solar-system/screen05-thumb.png)](assets/ru/fluxus-solar-system/screen05.png)
+![Screenshot 02](../assets/ru/fluxus-solar-system/screen05.png)
 
 ### Исходники
 

@@ -13,7 +13,7 @@ tags: [ javascript, functional-programming ]
 
 Итак, поехали:
 
-[![Slides](assets/ru/mastering-functional-javascript-slides/first_slide.png)](https://speakerdeck.com/shamansir/postighaiem-funktsional-nyi-javascript)
+[![Slides](../assets/ru/mastering-functional-javascript-slides/first_slide.png)](https://speakerdeck.com/shamansir/postighaiem-funktsional-nyi-javascript)
 
 ### Ссылки
 

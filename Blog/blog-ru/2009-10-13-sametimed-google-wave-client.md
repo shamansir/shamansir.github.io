@@ -7,17 +7,17 @@ tags: [ google-wave, java, javascript, ajax, dwr ]
 
 Здравствуйте.
 
-[![sametimed](assets/ru/sametimed-google-wave-client/logo.png)](http://code.google.com/p/sametimed)
+[![sametimed](../assets/ru/sametimed-google-wave-client/logo.png)](http://code.google.com/p/sametimed)
 
 Итак, я написал небольшой проект на Java, который представляет собой клиент к Google Wave, который, в свою очередь, вы можете расширить необходимыми вам возможностями. Визуально выглядит он не очень презентабельно <s>(впрочем, а-ля Windows 3.11, почему бы и нет)</s>, поскольку веб-дизайнер из меня не очень хороший, однако абсолютно за весь исходный код я отвечаю головой :). Так, например, требующиеся для отображения CSS-стили при этом выглядят максимально понятно, а XHTML-структура максимально упрощена (не в ущерб стандартам) для того, чтобы настоящий дизайнер мог развернуться и сделать действительно красиво :).
 
-[![screenshot](assets/ru/sametimed-google-wave-client/screenshot.png)](assets/ru/sametimed-google-wave-client/screenshot-full.png)
+[![screenshot](../assets/ru/sametimed-google-wave-client/screenshot.png)](../assets/ru/sametimed-google-wave-client/screenshot-full.png)
 
 Сайт, исходные коды, и war-пакет с текущим состоянием проекта находятся по адресу [http://code.google.com/p/sametimed](http://code.google.com/p/sametimed)
 
 Сейчас у меня нет под рукой общедоступного хостинга, чтобы я мог прямо вот так запустить проект и дать поиграться с ним не отходя от хабра, однако, я могу предложить вам [видео (на vimeo)](https://vimeo.com/7036141), демонстирующее его основные возможности, что, думаю, тоже вполне ничего, а запустить проект вы сможете сами, благо подробные инструкции есть на сайте проекта, а развёрнутые пояснения и подробное описание работы (и руководство к расширению возможностей) — внутри...
 
-[![video](assets/ru/sametimed-google-wave-client/vimeo.png)](http://vimeo.com/7036141)
+[![video](../assets/ru/sametimed-google-wave-client/vimeo.png)](http://vimeo.com/7036141)
 
 ### Установка
 

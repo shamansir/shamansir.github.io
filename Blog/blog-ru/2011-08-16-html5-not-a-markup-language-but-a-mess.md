@@ -13,7 +13,7 @@ tags: [ html5 ]
 
 Canvas/WebGL, LocalStorage, встроенная поддержка видео, избавление от устаревших тэгов — очевидные плюсы, с этим глупо спорить. Но только сейчас, совершенно неожиданно для себя, я осознал, что эти *нововведения* сомнительны просто потому, что действительно **введены куда-то не туда**.
 
-![Inserted not there](assets/ru/html5-not-a-markup-language-but-a-mess/inserted-not-there.png)
+![Inserted not there](../assets/ru/html5-not-a-markup-language-but-a-mess/inserted-not-there.png)
 
 (Обращу ваше внимание: я считаю, что по отдельности эти возможности просто прекрасны)
 
@@ -36,7 +36,7 @@ Canvas/WebGL, LocalStorage, встроенная поддержка видео, 
 
 Может быть уже тогда всё пошло не так? Зачем *внутри* текстового документа динамика? Почему вдруг в документе определяется шрифт и цвет? Последний вопрос решили, когда придумали CSS — и это был правильный ход. Но вопрос с динамикой открыт и сейчас. То есть да, *HyperText* — это и есть, буквально, «текст, но круче чем текст», «супер-текст», «текст-супермэн» — да, **но зачем**, дорогой бобёр?
 
-![Beaver](assets/ru/html5-not-a-markup-language-but-a-mess/beaver-error.jpg)
+![Beaver](../assets/ru/html5-not-a-markup-language-but-a-mess/beaver-error.jpg)
 
 Тогда это не было остро заметно, но именно сейчас мы пожинаем плоды. Мы вставляем в документы интерактивные игры, мы меняем части документа на другие части, мы вообще, можно сказать, издеваемся над документами. Пусть так, в этом вроде ничего плохого, но мы продолжаем делать это *внутри них самих*, *внутри их разметки*.
 
@@ -52,7 +52,7 @@ Canvas/WebGL, LocalStorage, встроенная поддержка видео, 
 * Операционные системы, блять!
 * *Впишите ещё 200 вариантов*
 
-![Markup vs Stuff](assets/ru/html5-not-a-markup-language-but-a-mess/markup-vs-stuff.png)
+![Markup vs Stuff](../assets/ru/html5-not-a-markup-language-but-a-mess/markup-vs-stuff.png)
 
 Теперь в одной спецификации разметки у нас *перемешаны* (сравните с вариантом из прошлого):
 
@@ -74,17 +74,17 @@ Canvas/WebGL, LocalStorage, встроенная поддержка видео, 
 
 > Игра на HTML5 ← Canvas ← WebGL ← видеокарта ← ничего общего с разметкой
 
-> ![HTML5 ← Canvas](assets/ru/html5-not-a-markup-language-but-a-mess/html5-canvas-videocard.png)
+> ![HTML5 ← Canvas](../assets/ru/html5-not-a-markup-language-but-a-mess/html5-canvas-videocard.png)
 
 > Явно видно, что логическая цепочка рвётся уже между понятиями «HTML» и «Canvas»
 
 И это — одна спецификация, один *МНОГОФУНКЦИОНАЛЬНЫЙ-СУКА-ГИПЕРДОКУМЕНТ*!
 
-![Multi-dammit-hyper-document](assets/ru/html5-not-a-markup-language-but-a-mess/multi-dammit-hyperdocument.png)
+![Multi-dammit-hyper-document](../assets/ru/html5-not-a-markup-language-but-a-mess/multi-dammit-hyperdocument.png)
 
 Ведь это правда **МЕССИВО**!!
 
-![mess](assets/ru/html5-not-a-markup-language-but-a-mess/mess.png)
+![mess](../assets/ru/html5-not-a-markup-language-but-a-mess/mess.png)
 
 И при этом у нас до сих пор нет унифицированного, легко читаемого формата для книги (`fb2` хорош, но не подходит для книг издательства [O`Reilly][oreilly]!). (Зато есть интерактивные книги: это, кстати, хорошо). Нет поддержки математических формул, до сих пор нет редакторов, которые бы производили *стандартный* результат, одинаковый между ними самими.
 
@@ -94,7 +94,7 @@ Canvas/WebGL, LocalStorage, встроенная поддержка видео, 
 
 Я считаю, что основная цель — добиться типизации: отделить мух (разметку документа) от тараканов (блоков аудио/видео/канвас), тараканов от котлет (блочной разметки aside/nav/header). Поэтому требуется *классифицировать* все те варианты, которые сейчас оказались перемешаны в кучу. Выделим пяток основных пунктов:
 
-![Fly-Cockroach-Cutlet](assets/ru/html5-not-a-markup-language-but-a-mess/fly-cockroach-cutlet.png)
+![Fly-Cockroach-Cutlet](../assets/ru/html5-not-a-markup-language-but-a-mess/fly-cockroach-cutlet.png)
 
 * Простой Текстовый Документ (статья, резюме, обзор, докторская)
 * Блог, Вики-портал (набор статей) ([tumblr](http://tumblr.com), [blogspot](http://blogspot.com), ...)
@@ -155,7 +155,7 @@ Canvas/WebGL, LocalStorage, встроенная поддержка видео, 
 
 А потом, постепенно, можно заменить в этих сценариях HTML на что-то более вразумительное и строгое: но это будет внутренний формат браузера, обычному веб-разработчику до него не должно будет быть дела: блоггеру нужно будет знать только markdown/latex/wiki, веб-UI-разработчику — декларативный язык виджетов, разработчику игр — только WebGL. Им не нужно будет знать HTML.
 
-![Inserted there: happy](assets/ru/html5-not-a-markup-language-but-a-mess/inserted-there-happy.png)
+![Inserted there: happy](../assets/ru/html5-not-a-markup-language-but-a-mess/inserted-there-happy.png)
 
 Я думаю, вы поняли принцип. По-моему этот подход вполне логичен и оправдан, типы контента *строго разделены* и разработчики и пользователи счастливы, им не нужно знать кучу веб-стандартов.
 

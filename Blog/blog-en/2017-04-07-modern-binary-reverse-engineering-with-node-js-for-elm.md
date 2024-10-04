@@ -14,11 +14,11 @@ There exists a language Elm. Which could be a new nice replacement for JavaScrip
 
 Kind of a problem for the developers of these plugins, is the fact that for the moment Elm has no reflection (a way to get a type of an entity) and tends not to have it at all. By itself, having no reflection is rather a good thing, usually it complicates the language syntax and/or libraries a lot. But the detailed types information is needed to implement helpful things in editors—nice type hints, nice auto-completion etc.
 
-![By itself, having no reflection is rather a normal thing… Primitive joke, I know… Failed to resist.](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/no-reflection.jpeg)
+![By itself, having no reflection is rather a normal thing… Primitive joke, I know… Failed to resist.](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/no-reflection.jpeg)
 
 It could look like nothing special from the first sight—a bunch of languages have no reflection, so usually people write IDE-dependent Lexers and Parsers or use some other ways to get type information. But with Elm, there’s one subtle difference: it has a REPL which shows the correct type of an entity (variable or function) for every entry. It works not with the help of language, but with some hidden tricky features of the compiler (I will cover them later). So why not use the official REPL result to get this useful information?.. The post answers why.
 
-![Elm Language REPL (every pun intended… or not)](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-repl.png)
+![Elm Language REPL (every pun intended… or not)](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-repl.png)
 
 Also, this post shamelessly promotes the node.js library named [node-elm-repl](https://github.com/shamansir/node-elm-repl), to those who develop Elm plugins for IDEs, but only for those who do not disdain running node.js processes inside their target IDE.
 
@@ -30,19 +30,19 @@ So, if you are not interested in Elm or writing plugins for IDEs or parsing bina
 
 Some may be satisfied with [Lighttable](http://lighttable.com/) way of determining the type — selecting the expression and pressing a special key to get the value and type from the execution in background REPL process.
 
-![Elm REPL in Lighttable](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-repl-lighttable.gif)
+![Elm REPL in Lighttable](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-repl-lighttable.gif)
 
 _Lighttable_ was probably the first IDE inspired by Bret Victor lectures on sandboxing and gave us some ideas on how it would work in real life. For now, there are much more implementations of sandbox-driven programming, and some of them actually show the results live.
 
 There are [Swift Playgrounds](https://developer.apple.com/swift/blog/?id=35) in XCode, there is [Haskell for Mac](http://haskellformac.com/), there is [Jupyter](http://jupyter.org/) (formerly iPython) Notebook, there are [DevCards in ClojureScript](https://github.com/bhauman/devcards), there are [React Storybooks](https://getstorybook.io/), there is [Wolfram Alpha](https://www.wolframalpha.com/) and new [Wolfram Language](http://www.wolfram.com/development-platform/), and there’s [datalore.io](http://datalore.io/) from [JetBrains](https://www.jetbrains.com/)—all of them have something different, some are _visual REPLs_, others are _livecoding environments_, but in general the concept is in observing the results and/or statistics of the code expressions on the fly and usually side-to-side.
 
-![Different types of Sandboxes, Playgrounds and Visual REPLs for different languages (not Elm).](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/types-of-sandboxes.png)
+![Different types of Sandboxes, Playgrounds and Visual REPLs for different languages (not Elm).](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/types-of-sandboxes.png)
 
 Several of the listed environments provide users with the way to change the input values using special controls without modifying an actual code — to let users supervise how subtle changes could affect the output.
 
 Haskell for Mac is probably the closest thing to what would be cool to have for Elm. (Especially, considering the fact that Elm has quite stable [WebGL package](http://package.elm-lang.org/packages/elm-community/webgl/latest) already, it could be huge).
 
-![Elm Playground Mockup](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-playground-mockup.png)
+![Elm Playground Mockup](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-playground-mockup.png)
 
 Why would it be cool for Elm in particular?
 
@@ -50,7 +50,7 @@ First, unlike Python and JS, Elm is strictly-typed language, so actually any var
 
 Second, as in React, Elm could treat functions, which return some markup (i.e. HTML) in response to changes in a _State_, as _Components_. So, if your expression returns HTML (or SVG or commands for canvas context, or whatever you could treat _visual_) and your IDE supports sandboxing, you may observe the changes to your Components just when you change the State bound to this Component. Following The Elm Architecture, _views_ are the functions which return `Html` in response to any change in a `Model`.
 
-![An example of Elm components provided by elm-mdl library.](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-mdl.png)
+![An example of Elm components provided by elm-mdl library.](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-mdl.png)
 
 (Above is the example of Elm Components provided by [elm-mdl](https://debois.github.io/elm-mdl) library.)
 
@@ -62,7 +62,7 @@ So, Elm is the language which fits sandboxing in its best.
 
 [Mukesh Soni](https://twitter.com/mukeshsoni) is developing [a plugin for Atom](https://github.com/mukeshsoni/elm-instant) which brings React Storybooks-inspired interface to Elm.
 
-![Elm-Instant plugin for Atom by Mukesh Soni](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-instant.png)
+![Elm-Instant plugin for Atom by Mukesh Soni](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-instant.png)
 
 But user needs to wrap blocks of code in a special form and to write things-to-try in a Playground panel, unlike Sandboxes which provide programmer with the view and control over the actual code being developed.
 
@@ -99,11 +99,11 @@ Evan, the author of Elm language, however, had noticed once, that at some points
 
 In case of using REPL, the connection is only required if you have no required package installed (“I haven’t found your package locally, may I download your package?”, it asks, and you may agree). In all the other cases you may happily continue asking it for types:
 
-![Elm REPL, getting types](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-repl-types.png)
+![Elm REPL, getting types](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-repl-types.png)
 
 Except the fact that every request for a command is really slow. As a user, you may not notice that at all, but it takes 300ms to several seconds for _every_ request even on my modern machine. If you wrap the call with node.js using child processes, and it turns out you need to run an isolated REPL process to detect the type of a single expression, so the pause between single calls becomes completely unpredictable.
 
-![The actual sensitive pause required to determine the type of the expression for the first time in Elm REPL.](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-getting-types-pause.gif)
+![The actual sensitive pause required to determine the type of the expression for the first time in Elm REPL.](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-getting-types-pause.gif)
 
 Why node.js? Most of the popular editors nowadays are either powered with JS, or may run JS from the inside. Plus, Elm compiles to JS for the moment, plus you may use native JS modules to connect JS and Elm, plus there are JS-ports for data communication with JS—so JS is like a really friendly neighbour. At least for now. While we are yet not into WebAssembly.
 
@@ -123,7 +123,7 @@ But if you dig a little into the Elm REPL code, you’ll find that Elm compiler 
 * Also, take the value of this expression by executing compiled `.js` file, including some additions to log the evaluated value, with node.js;
 * Delete everything temporary, like it never happened (`.elmi` files stay for reuse, to the moment source was changed);
 
-![Elm REPL Logic.](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-repl-logic.png)
+![Elm REPL Logic.](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/elm-repl-logic.png)
 
 This is what I was able to get from Haskell code of the REPL, along with using some UNIX utilities to lock files lying in a known directory from deleting—so I was able to patiently analyse them with no rush.
 
@@ -146,7 +146,7 @@ I decided that having JS chain-like syntax is enough for that purpose — to
 
 First, I thought I may just use `.tap()` function of node-binary to dive into complex structures, but it turned out I also was required to have a `.choice()` function to decide which sub-parser to call if some byte equals some expected value, and also the binary-parser from keichi seemed to be not so abandoned (2012 vs 2016).
 
-![Some code from the parser](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/parser-code-example.png)
+![Some code from the parser](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/parser-code-example.png)
 
 Yet it required some modifications, though.
 
@@ -164,7 +164,7 @@ As a source material of `.elmi` files and as a goal to parse properly, I decided
 
 First (actually, in process of writing 80% of current parser code), it was a manual trial and error: using shell binary viewer and passing the result to MacOS Pages (ha-ha!), I changed the font to monospaced, marked the areas, appearing to be common, with different colours and tried to find a structure and relations between them:
 
-![In the process of decomposing binaries, using MacOS Pages and iTerm 2.](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/decomposing-process.png)
+![In the process of decomposing binaries, using MacOS Pages and iTerm 2.](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/decomposing-process.png)
 
 **Trickity-trick \#2:** Which UNIX tool you, the almighty UNIX master, would use to see binary file contents in a beautiful and friendly way?
 
@@ -174,7 +174,7 @@ It allows you to open binary file, see all its bits in a nice grid, easily mark 
 
 The `.grammar` file for .elmi also [lies in the repository](https://github.com/shamansir/node-elm-repl/blob/master/elmi.grammar).
 
-![A complete grammar structure and an example binary file, parsed with this grammar, side-by-side. Synalyze it!](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/grammar-structure-synalyze-it.png)
+![A complete grammar structure and an example binary file, parsed with this grammar, side-by-side. Synalyze it!](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/grammar-structure-synalyze-it.png)
 
 # Destructuring ELMI in details
 
@@ -187,11 +187,11 @@ Some primitive conclusions were quite easy to determine from the start:
 * then, there go type definitions paired with variable names;
 * this usually ends the important part of a file (sometimes not);
 
-![Root ELMI File structure.](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/structure-elmi.png)
+![Root ELMI File structure.](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/structure-elmi.png)
 
 Some things were much harder to evaluate: for example complex structures, when stored in binary, usually consist of several marker bit-cells with numbers, following the marker bit-cells with the same numbers, but in this case these same numbers could have totally different meaning, and in theory could (or could not) define the number of bytes we should read after reading such marker, but these bytes, which we should probably read, could also include markers with different meaning, and also some markers inside them could define that the structure should split in three branches from now on, and each of these branches starts with some markers… truly, when you destructure these plain sequences of senseless numbers and try to form a meaningful stable tree from them, it feels like you are some kind of _holistic detective_…
 
-![How a line of random byte and string sequences could lead to a meaningful structure with cells and markers.](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/random-bytes-line.png)
+![How a line of random byte and string sequences could lead to a meaningful structure with cells and markers.](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/random-bytes-line.png)
 
 How a line of random byte and string sequences could lead to a meaningful structure with cells and markers.
 
@@ -199,15 +199,15 @@ Especially when you do it in Pages App. So, at least don’t do this kind of stu
 
 The project [has all the tests](https://github.com/shamansir/node-elm-repl/tree/master/test) required for every discovered example of complex type, including pre-compiled `.elmi` files and not-yet-compiled `.elm` files to test.
 
-![Package info definition.](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/structure-package.png)
+![Package info definition.](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/structure-package.png)
 
-![Package Info example from HelloWorld.elm.](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/package-info-hello.png)
+![Package Info example from HelloWorld.elm.](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/package-info-hello.png)
 
 **Package Info.** Package info requires no comments, it just contains the Elm compiler version, package author username and project name.
 
-![Imports and Exports definition.](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/structure-import-export.png)
+![Imports and Exports definition.](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/structure-import-export.png)
 
-![Imports and Exports example from HelloWorld.elm](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/import-export-hello.png)
+![Imports and Exports example from HelloWorld.elm](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/import-export-hello.png)
 
 **Imports.** Any import could be an internal packages and so defined just by name (marker `0001`), or require a full path to a package and type (marker `02`).
 
@@ -215,7 +215,7 @@ The project [has all the tests](https://github.com/shamansir/node-elm-repl/tree/
 
 **Type Definitions.** Type Definitions are the most complex and complicated things in a file. They are the ones who contain mysterious markers-inside-markers constructions described above. But I’m here to help.
 
-![Type Definitions and Nodes kinds.](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/structure-node.png)
+![Type Definitions and Nodes kinds.](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/structure-node.png)
 
 The kinds of structures here are a bit different to actual Elm types but still they define them in a deterministic way. The single type is defined with a recursive structure of data cells, where a cell could be a:
 
@@ -228,20 +228,20 @@ The kinds of structures here are a bit different to actual Elm types but still t
 
 **NB:** lambda could only have two parts, so the definition like `String -> Int -> Bool` is stored as two lambdas, one inside another: lambda `(Int -> Bool)` is applied to a `String` type, and so the root lambda cell is `(outer-lambda: String -> (inner-lambda: Int -> Bool))`; **Trickity-trick \#3:** think on how this could be connected to function definitions in Elm types;
 
-![All the Node kinds expanded (except Aliases).](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/structure-types.png)
+![All the Node kinds expanded (except Aliases).](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/structure-types.png)
 
-![Type Definition example from HelloWorld.elm](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/types-hello.png)
+![Type Definition example from HelloWorld.elm](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/types-hello.png)
 
 The trick here is that almost every cell may include another cell with its own internal namespace of definitions and numbers, and this is the reason why plain structure of bytes looks so repetitive from the start. If you have Ph.D. in Binary Reverse Engineering (like I do not), you would treat that obvious, but for newbies there’s always an advice not to be fearful of the structures and believe that there is a meaningful reason behind every bit, every byte, every Life, every Universe and EveryThing…
 
-![Aliased Node structure.](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/structure-aliased.png)
+![Aliased Node structure.](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/structure-aliased.png)
 
 **Unions, Aliases, Fixities.** Any of these seem to have no effect on type definitions, so these parts could be skipped from parsing completely.
 All the schemes above, along with the `.grammar` file, do define the structure of any `.elmi` file [I found yet]. If you have found the `.elmi` file not satisfying to this schemes and grammar, please fork [node-elm-repl](https://github.com/shamansir/node-elm-repl) repository, add this file [to the specs](https://github.com/shamansir/node-elm-repl/tree/master/test) and then make a Pull Request to the origin.
 
 So, now we know the type (and a value) of any expression, [node-elm-repl](https://github.com/shamansir/node-elm-repl) in Action.:
 
-![node-elm-repl in Action.](assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/node-elm-repl-in-action.png)
+![node-elm-repl in Action.](../assets/en/modern-binary-reverse-engineering-with-node-js-for-elm/node-elm-repl-in-action.png)
 
 # The Verdict
 

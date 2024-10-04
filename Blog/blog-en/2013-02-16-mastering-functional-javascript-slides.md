@@ -13,7 +13,7 @@ However, a bit of basics at the start are also there, of course.
 
 OK, Here we go:
 
-[![Slides](assets/en/mastering-functional-javascript-slides/first_slide.png)](https://speakerdeck.com/shamansir/mastering-functional-javascript)
+[![Slides](../assets/en/mastering-functional-javascript-slides/first_slide.png)](https://speakerdeck.com/shamansir/mastering-functional-javascript)
 
 ### Links
 

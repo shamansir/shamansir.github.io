@@ -17,7 +17,7 @@ _Open Source_, _кроссплатформенность_ и _HTML5_ - это т
 
 В течении прочтения статьи мы напишем очень упрощённую версию пинг-понга на LimeJS. Вот так будет выглядеть результат:
 
-![Мужчины в синих шортах на футбольном поле с детским мячиком](assets/ru/limejs-writing-a-game/stage-designed.png)
+![Мужчины в синих шортах на футбольном поле с детским мячиком](../assets/ru/limejs-writing-a-game/stage-designed.png)
 
 В конце статьи видео с демонстрацией написанной игры на iPad, iPhone и Android.
 
@@ -133,7 +133,7 @@ this.addPoints(-50,-125, 0,-175, 50,-125, 50,125, 0,175, -50,125, 0,75, 0,-75)
 
 ```
 
-![Игрок](assets/ru/limejs-writing-a-game/player.png)
+![Игрок](../assets/ru/limejs-writing-a-game/player.png)
 
 Красной точкой на рисунке помечена так называемая `anchorPoint`, для полигона она рассчитывается автоматически. Это точка отсчёта локальной системы координат спрайта - от неё высчитываются все относительные размеры и расстояния, к нему относящиеся.
 
@@ -172,7 +172,7 @@ board_.appendChild(playerTwo);
 
 Итак, вот что сейчас на экране:
 
-![Пляжники в синих плавках](assets/ru/limejs-writing-a-game/stage1.png)
+![Пляжники в синих плавках](../assets/ru/limejs-writing-a-game/stage1.png)
 
 #### Заготовка мячика
 
@@ -216,7 +216,7 @@ board_.appendChild(ball);
 
 ```
 
-![Пляжники в синих плавках с мячиком](assets/ru/limejs-writing-a-game/stage2.png)
+![Пляжники в синих плавках с мячиком](../assets/ru/limejs-writing-a-game/stage2.png)
 
 #### Фон
 
@@ -256,7 +256,7 @@ board_.appendChild(...);
 
 ```
 
-![Пляжники в синих плавках с мячиком на асфальте](assets/ru/limejs-writing-a-game/stage3.png)
+![Пляжники в синих плавках с мячиком на асфальте](../assets/ru/limejs-writing-a-game/stage3.png)
 
 #### Заготовка стен
 
@@ -309,7 +309,7 @@ board_.appendChild(...);
 
 Всё, поле наконец готово - можно приступать к логике!
 
-![Пляжники в синих плавках с мячиком на серых квадратах, окружённые жёлтыми ящиками](assets/ru/limejs-writing-a-game/stage4.png)
+![Пляжники в синих плавках с мячиком на серых квадратах, окружённые жёлтыми ящиками](../assets/ru/limejs-writing-a-game/stage4.png)
 
 #### Логика игроков
 
@@ -641,7 +641,7 @@ goog.inherits(pingpong.Wall, lime.RoundedRect);
 
 Вот, теперь у нас всё выглядит много симпатичнее:
 
-![Мужчины в синих шортах на футбольном поле с детским мячиком](assets/ru/limejs-writing-a-game/stage-designed.png)
+![Мужчины в синих шортах на футбольном поле с детским мячиком](../assets/ru/limejs-writing-a-game/stage-designed.png)
 
 #### Компиляция
 
@@ -693,6 +693,6 @@ goog.inherits(pingpong.Wall, lime.RoundedRect);
 
 [Здесь можно попробовать поиграть](http://shamansir.madfire.net/_pingpong/pingpong.html) (может глючить, потому что это очень упрощённая версия, сравнивайте пожалуйста ожидания работы на вашей платформе с приведёнными выше видео)
 
-![QRCode](assets/ru/limejs-writing-a-game/qrcode.png)
+![QRCode](../assets/ru/limejs-writing-a-game/qrcode.png)
 
 P.S. Отдельное спасибо [lazio_od](http://www.lazio.com.ua/), он помогал мне в тестировании одновременно с авторами движка.
