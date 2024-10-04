@@ -1,11 +1,8 @@
 ---
+layout: post.html
 title: "Ссылка: RoR IDE из gedit"
-author: Anton Kotenko
-publishDate: 2011-01-01T21:44:00
-draft: false
+datetime: 2 Jan 2011 21:44
+tags: [ ruby, gedit ]
 ---
 
 [JackyFox](http://www.jackyfox.com) написал [статью о GMate](http://www.jackyfox.com/2010/12/27/ruby-on-rails-ide-iz-gedit-a/), пакете который позволяет сделать из GEdit практически TextMate, в частности включает полноценную поддержку Ruby
-
-
-This text is auto inserted at the end of the exported Markdown.

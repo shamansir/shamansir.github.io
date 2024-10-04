@@ -1,49 +1,32 @@
 ---
-title: "About me"
-author: Anton Kotenko
-draft: false
+layout: blog-en
+title: About me
+datetime: 2 Dec 2010 16:24
+tags: shamansir,about
 ---
 
-<div class="ox-hugo-toc toc has-section-numbers">
-
-<div class="heading">Table of Contents</div>
-
-- <span class="section-num">1</span> [shaman.sir](#shaman.sir)
-    - <span class="section-num">1.1</span> [Contacts](#contacts)
-    - <span class="section-num">1.2</span> [Who I am](#who-i-am)
-    - <span class="section-num">1.3</span> [vCard](#vcard)
-    - <span class="section-num">1.4</span> [More stuff](#more-stuff)
-    - <span class="section-num">1.5</span> [QR](#qr)
-
-</div>
-<!--endtoc-->
-
-
-
-## <span class="section-num">1</span> shaman.sir {#shaman.sir}
+### shaman.sir
 
 (a.k.a. **Ulric Wilfred**)
 
 [ [Blog](http://shamansir.tumblr.com) ] [ [Blog (ru)](http://shamansir-ru.tumblr.com) ] [ [Resume](http://shamansir.madfire.net/resume.html) ]
 
-{{< figure src="http://shamansir.madfire.net/shamansir_120.jpg" caption="<span class=\"figure-number\">Figure 1: </span>shaman.sir aka Ulric Wilfred" >}}
+![shaman.sir aka Ulric Wilfred](http://shamansir.madfire.net/shamansir_120.jpg)
 
+#### Contacts
 
-### <span class="section-num">1.1</span> Contacts {#contacts}
+ * _site_: <http://shamansir.madfire.net>
+ * _e-mail_: [shaman.sir@gmail.com](mailto:shaman.sir@gmail.com)
+ * _jabber_: `ulric.wilfred@jabber.org`, `shaman.sir@gmail.com`
+ * _skype_: `shaman.sir`
+ * _twitter_: [shaman_sir](http://twitter.com/shaman_sir)
+ * _LinkedIn_: [shamansir](http://www.linkedin.com/in/shamansir)
+ * _googlecode_: [shaman.sir](http://code.google.com/u/shaman.sir/)
+ * _launchpad_: [~shaman-sir](https://launchpad.net/~shaman-sir)
+ * _vimeo_: [shamansir](http://vimeo.com/shamansir)
+ * _picasa_: [shaman.sir](http://picasaweb.google.com/shaman.sir)
 
--   _site_: <http://shamansir.madfire.net>
--   _e-mail_: [shaman.sir@gmail.com](mailto:shaman.sir@gmail.com)
--   _jabber_: `ulric.wilfred@jabber.org`, `shaman.sir@gmail.com`
--   _skype_: `shaman.sir`
--   _twitter_: [shaman_sir](http://twitter.com/shaman_sir)
--   _LinkedIn_: [shamansir](http://www.linkedin.com/in/shamansir)
--   _googlecode_: [shaman.sir](http://code.google.com/u/shaman.sir/)
--   _launchpad_: [~shaman-sir](https://launchpad.net/~shaman-sir)
--   _vimeo_: [shamansir](http://vimeo.com/shamansir)
--   _picasa_: [shaman.sir](http://picasaweb.google.com/shaman.sir)
-
-
-### <span class="section-num">1.2</span> Who I am {#who-i-am}
+#### Who I am
 
 At work, I am JavaEE/Web developer. I like to develop client side: UI controls, visual representation of the server data, server to client (and back) data transfer and everything connected with that. Because of this, I am also experienced in JavaScript (with JQuery usage or without) and AJAX technologies (XML/JSON included). I like Java for its considered strictness and serious, technological approach. I also pay respect to [Web Standards](http://webstandards.org/). JavaScript in its current condition is the Web language with its own culture, now it is an easy language to do dynamic and fun things on the pages. Of course, my skills is not limited with described ones, but these enumerated are the best in me :).
 
@@ -53,23 +36,18 @@ At home, I like everything connected to CG. I like to use at most Free/Open Sour
 
 I am trying to write the articles [in my blog](http://shamansir.tumblr.com) about the new things I find and getting to know (they call it `knowledge transfer`). In past times I've written posts a little bit rarely, but I'm trying to fill it up. And I am writing more to my russian version of the blog and just putting the translation later here.
 
+#### vCard
 
-### <span class="section-num">1.3</span> vCard {#vcard}
+ * [`vCard`](http://shamansir.madfire.net/ulric.wilfred.vcf)
+ * [`vCard XML`](http://shamansir.madfire.net/personal-data.xml)
+ * [`vCard RDF`](http://shamansir.madfire.net/personal-data-rdf.xml)
 
--   [`vCard`](http://shamansir.madfire.net/ulric.wilfred.vcf)
--   [`vCard XML`](http://shamansir.madfire.net/personal-data.xml)
--   [`vCard RDF`](http://shamansir.madfire.net/personal-data-rdf.xml)
+#### More stuff
 
+ * [Japanese Language Reference](http://shaman-sir.by.ru/files/japan.pdf) (in Russian)
+ * [ProcessingJS code highlighting for `gedit`](http://paste.pocoo.org/show/163442/)
 
-### <span class="section-num">1.4</span> More stuff {#more-stuff}
+#### QR
 
--   [Japanese Language Reference](http://shaman-sir.by.ru/files/japan.pdf) (in Russian)
--   [ProcessingJS code highlighting for `gedit`](http://paste.pocoo.org/show/163442/)
+![QR-code](http://shamansir.madfire.net/qrinfo01.png)
 
-
-### <span class="section-num">1.5</span> QR {#qr}
-
-{{< figure src="http://shamansir.madfire.net/qrinfo01.png" caption="<span class=\"figure-number\">Figure 2: </span>QR-code" >}}
-
-
-This text is auto inserted at the end of the exported Markdown.

@@ -1,24 +1,15 @@
 ---
-title: "ООП и JavaScript"
-author: Anton Kotenko
-publishDate: 2007-08-19T02:29:00
-draft: false
+layout: post.html
+title: ООП и JavaScript
+datetime: 19 Aug 2007 02:29
+tags: [ javascript ]
 ---
-
-<div class="ox-hugo-toc toc has-section-numbers">
-
-<div class="heading">Table of Contents</div>
-
-- <span class="section-num">1</span> [Ссылки](#ссылки)
-
-</div>
-<!--endtoc-->
 
 В [предыдущей статье](../16-useful-solutions-for-javascript) я представил на ваше рассмотрение небольшой кусок кода, который позволяет использовать три столпа ООП в JavaScript. Все это достигается несколько хитро, тем не менее я позволил себе чуточку изменить функцию `extend`, дабы классы имели понятие о том, что такое статические константы (на самом деле константы конечно получились условные, но это, думаю, можно оправдать условностью их в самом JavaScript). Здесь я рассмотрю этот вопрос поподробнее и, видимо, буду расширять статью по мере его более глубокого понимания.
 
 Итак, исходные данные (повторюсь, заимствованы из источников на [AJAXPath](http://www.ajaxpath.com/javascript-inheritance) и на [AJAXPatterns](http://ajaxpatterns.org/Javascript_Inheritance)):
 
-```javascript
+``` javascript
 
 function Class() { };
 
@@ -47,15 +38,16 @@ Class.extend = function(def) {
 
     return classDef;
 };
+
 ```
 
 Благодаря использованию трех этих функций, у вас появляется замечательная возможность строить довольно серьезные и обширные по конструкции фреймворки, не теряя при этом читабельности кода и возможности быстро найти нужное место дабы его изменить. Ну и плюс, конечно, практически все преимущества ООП.
 
-Эти три функции использовались как фундамент ООП-Drag'n'Drop фреймворка для крупного проекта на Java+Wicket. Я бы с удовольствием безвозмездно поделился бы его кодом, но по контракту этот код - собственность компании, а компания не хочет его рассекречивать. По этой причине я могу лишь дать, если нужно, наводящие мысли, наводящие на конкретные мысли :).
+Эти три функции использовались как фундамент ООП-Drag’n'Drop фреймворка для крупного проекта на Java+Wicket. Я бы с удовольствием безвозмездно поделился бы его кодом, но по контракту этот код - собственность компании, а компания не хочет его рассекречивать. По этой причине я могу лишь дать, если нужно, наводящие мысли, наводящие на конкретные мысли :).
 
 Впрочем, ближе к делу. Для такого кода требуется пример. Я наваял тут небольшой скрипт, эмулирующий операционную систему Windows, надеюсь он подойдет:
 
-```javascript
+``` javascript
 
 /* пара вспомогательных функций */
 
@@ -205,13 +197,14 @@ function perform() {
     // выключаем ОС
     testOs.shutDown();
 }
+
 ```
 
 **NB!** (не забывайте - после последнего объявления метода в классе запятой ставить не нужно, иначе Ослик (IE) обидится)
 
 Если предыдущий пример вам не понравился -- я могу предложить вам довольно полезный класс, который сильно помогает, если в вашем проекте понятие элемента DOM пересекается с понятием объекта, над которым производятся манипуляции:
 
-```javascript
+``` javascript
 
 var ElementWrapper = Class.extend({
 
@@ -249,37 +242,38 @@ var ElementWrapper = Class.extend({
         }
 
 });
+
 ```
 
 От этого класса очень удобно наследовать классы, расширяющие функциональность элементов DOM. Также, теперь вы можете использовать код типа этого:
 
-```javascript
+``` javascript
 var someElement = new ElementWrapper('someElmId');
 ```
 
-...и объект `someElement` будет связан с элементом (оборачивать элемент) с `id` _'`SomeElmId`'_. Доступ к нему -- как к элементу DOM -- можно будет получить через свойство `someElement.element`.
+…и объект `someElement` будет связан с элементом (оборачивать элемент) с `id` _‘`SomeElmId`’_. Доступ к нему -- как к элементу DOM -- можно будет получить через свойство `someElement.element`.
 
 Приведенный ниже класс наследуется от `ElementWrapper` и позволяет обращаться с обернутым элементом как с практически полноценным (неполноценным? :) ) графическим объектом (используются некоторые функции из [предыдущей статьи](../16-useful-solutions-for-javascript): `getElmAttr`, `setElmAttr`, `findOffsetHeight`, `getPosition`, `getAlignedPosition`)
 
 > Как и у некоторых функций из [предыдущей статьи](../16-useful-solutions-for-javascript), со временем код изменился -- в данном случае он оброс функциональностью и одновременно несколько упростился:
 
-```javascript
+``` javascript
 
-var DND_NS              = 'dnd'; // to use in getAttributeNS and setAttributeNS
+var DND_NS 				= 'dnd'; // to use in getAttributeNS and setAttributeNS
 
-var DND_LWIDTH_ATTR     = 'localWidth';
-var DND_LHEIGHT_ATTR    = 'localHeight';
-var DND_LTOP_ATTR       = 'localTop';
-var DND_LLEFT_ATTR      = 'localLeft';
-var DND_BTOP_ATTR       = 'baseTop';
-var DND_BLEFT_ATTR      = 'baseLeft';
+var DND_LWIDTH_ATTR 	= 'localWidth';
+var DND_LHEIGHT_ATTR 	= 'localHeight';
+var DND_LTOP_ATTR 		= 'localTop';
+var DND_LLEFT_ATTR 		= 'localLeft';
+var DND_BTOP_ATTR 		= 'baseTop';
+var DND_BLEFT_ATTR 		= 'baseLeft';
 
 var GraphicalElementWrapper = ExpandedElementWrapper.extend({
 
-    _assignListeners:
-        function() {
-            // не назначать слушателей событий, если не необходимо
-        },
+	_assignListeners:
+		function() {
+			// не назначать слушателей событий, если не необходимо
+		},
 
     // ========[ функции установки необходимых для работы аттрибутов ]==========
 
@@ -289,237 +283,234 @@ var GraphicalElementWrapper = ExpandedElementWrapper.extend({
        baseLeft, baseTop -- атрибуты, содержащие координату верхнего левого угла элемента
                             без учёта смещения [скроллинга] */
 
-    setLocalWidth:
-        function(localWidth) {
-            setElmAttr(this.element, DND_LWIDTH_ATTR, localWidth + 'px', DND_NS);
-        },
+	setLocalWidth:
+		function(localWidth) {
+			setElmAttr(this.element, DND_LWIDTH_ATTR, localWidth + 'px', DND_NS);
+		},
 
-    setLocalHeight:
-        function(localHeight) {
-            setElmAttr(this.element, DND_LHEIGHT_ATTR, localHeight + 'px', DND_NS);
-        },
+	setLocalHeight:
+		function(localHeight) {
+			setElmAttr(this.element, DND_LHEIGHT_ATTR, localHeight + 'px', DND_NS);
+		},
 
-    setLocalLeft:
-        function(localLeft) {
-            setElmAttr(this.element, DND_LLEFT_ATTR, localLeft + 'px', DND_NS);
-        },
+	setLocalLeft:
+		function(localLeft) {
+			setElmAttr(this.element, DND_LLEFT_ATTR, localLeft + 'px', DND_NS);
+		},
 
-    setLocalTop:
-        function(localTop) {
-            setElmAttr(this.element, DND_LTOP_ATTR, localTop + 'px', DND_NS);
-        },
+	setLocalTop:
+		function(localTop) {
+			setElmAttr(this.element, DND_LTOP_ATTR, localTop + 'px', DND_NS);
+		},
 
-    setBaseLeft:
-        function(baseLeft) {
-            setElmAttr(this.element, DND_BLEFT_ATTR, baseLeft + 'px', DND_NS);
-        },
+	setBaseLeft:
+		function(baseLeft) {
+			setElmAttr(this.element, DND_BLEFT_ATTR, baseLeft + 'px', DND_NS);
+		},
 
-    setBaseTop:
-        function(baseTop) {
-            setElmAttr(this.element, DND_BTOP_ATTR, baseTop + 'px', DND_NS);
-        },
+	setBaseTop:
+		function(baseTop) {
+			setElmAttr(this.element, DND_BTOP_ATTR, baseTop + 'px', DND_NS);
+		},
 
-    getLocalWidth:
-        function() {
-            return getElmAttr(this.element, DND_LWIDTH_ATTR, DND_NS);
-        },
+	getLocalWidth:
+		function() {
+			return getElmAttr(this.element, DND_LWIDTH_ATTR, DND_NS);
+		},
 
-    getLocalHeight:
-        function() {
-            return getElmAttr(this.element, DND_LHEIGHT_ATTR, DND_NS);
-        },
+	getLocalHeight:
+		function() {
+			return getElmAttr(this.element, DND_LHEIGHT_ATTR, DND_NS);
+		},
 
-    getLocalLeft:
-        function() {
-            return getElmAttr(this.element, DND_LLEFT_ATTR, DND_NS);
-        },
+	getLocalLeft:
+		function() {
+			return getElmAttr(this.element, DND_LLEFT_ATTR, DND_NS);
+		},
 
-    getLocalTop:
-        function() {
-            return getElmAttr(this.element, DND_LTOP_ATTR, DND_NS);
-        },
+	getLocalTop:
+		function() {
+			return getElmAttr(this.element, DND_LTOP_ATTR, DND_NS);
+		},
 
-    getBaseLeft:
-        function() {
-            return getElmAttr(this.element, DND_BLEFT_ATTR, DND_NS);
-        },
+	getBaseLeft:
+		function() {
+			return getElmAttr(this.element, DND_BLEFT_ATTR, DND_NS);
+		},
 
-    getBaseTop:
-        function() {
-            return getElmAttr(this.element, DND_BTOP_ATTR, DND_NS);
-        },
+	getBaseTop:
+		function() {
+			return getElmAttr(this.element, DND_BTOP_ATTR, DND_NS);
+		},
 
-    getOffsetWidth:
-        function() {
-            return this.element.offsetWidth;
-        },
+	getOffsetWidth:
+		function() {
+			return this.element.offsetWidth;
+		},
 
-    getOffsetHeight:
-        function() {
-            return this.element.offsetHeight || this.element.style.pixelHeight || findOffsetHeight(this.element);
-        },
+	getOffsetHeight:
+		function() {
+			return this.element.offsetHeight || this.element.style.pixelHeight || findOffsetHeight(this.element);
+		},
 
     // =======[ / функции установки необходимых для работы аттрибутов ]=========
 
-    show: // показать элемент
-        function() {
-            this.element.style.display    = '';
-            this.element.style.visibility = 'visible';
-        },
+	show: // показать элемент
+		function() {
+			this.element.style.display    = '';
+			this.element.style.visibility = 'visible';
+		},
 
-    hide: // спрятать элемент
-        function() {
-            if (this.element.style.display != 'none') {
-                this.element.style.display  = 'none';
-            }
-        },
+	hide: // спрятать элемент
+		function() {
+			if (this.element.style.display != 'none') {
+				this.element.style.display  = 'none';
+			}
+		},
 
-    blank: // "забелить" эелемент
-        function() {
-            if (this.element.style.display != '') {
-                this.element.style.display    = '';
-                this.element.style.visibility = 'hidden';
-            }
-        },
+	blank: // "забелить" эелемент
+		function() {
+			if (this.element.style.display != '') {
+				this.element.style.display    = '';
+				this.element.style.visibility = 'hidden';
+			}
+		},
 
-    makeBlock: // сделать элемент блоком (иногда необходимо)
-        function() {
-            if (this.element.style.display != 'block') {
-                this.element.style.display  = 'block';
-            }
-        },
+	makeBlock: // сделать элемент блоком (иногда необходимо)
+		function() {
+			if (this.element.style.display != 'block') {
+				this.element.style.display  = 'block';
+			}
+		},
 
-    isPointInside: // находится ли точка внутри элемента, точка в формате {x, y}
-        function(curPoint) {
-            var localRight  = parseInt(this.getLocalLeft()) + parseInt(this.getLocalWidth())
+	isPointInside: // находится ли точка внутри элемента, точка в формате {x, y}
+		function(curPoint) {
+			var localRight  = parseInt(this.getLocalLeft()) + parseInt(this.getLocalWidth())
                                        + this.element.scrollLeft;
-            var localBottom = parseInt(this.getLocalTop())  + parseInt(this.getLocalHeight())
+    		var localBottom = parseInt(this.getLocalTop())  + parseInt(this.getLocalHeight())
                                        + this.element.scrollTop;
-            return (parseInt(this.getLocalLeft()) < curPoint.x) &&
-                   (parseInt(this.getLocalTop())  < curPoint.y) &&
-                   (localRight > curPoint.x) && (localBottom > curPoint.y);
-        },
+    		return (parseInt(this.getLocalLeft()) < curPoint.x) &&
+    			   (parseInt(this.getLocalTop())  < curPoint.y) &&
+    			   (localRight > curPoint.x) && (localBottom > curPoint.y);
+    	},
 
-    isElementNear: /* находится ли переданный элемент рядом с этим элементом
+	isElementNear: /* находится ли переданный элемент рядом с этим элементом
             (перекрывает область этого элемента больше чем половиной своей) */
-        function(graphicalElement) {
-            if (graphicalElement) {
-                var elmCurPos = findPos(graphicalElement.element);
-                var elmHalfHeight = parseInt(graphicalElement.getLocalHeight())/2;
-                var elmHalfWidth = parseInt(graphicalElement.getLocalWidth())/2;
-                var localLeft = (parseInt(this.getLocalLeft()) > 0 ? parseInt(this.getLocalLeft()) : 0);
-                var localTop = (parseInt(this.getLocalTop()) > 0 ? parseInt(this.getLocalTop()) : 0);
-                var leftCorrect = (elmCurPos.x > (localLeft - elmHalfWidth)) &&
-                                  (elmCurPos.x < (localLeft + parseInt(this.getLocalWidth()) - elmHalfWidth));
-                var topCorrect = (elmCurPos.y > (localTop - elmHalfHeight)) &&
-                                 (elmCurPos.y < (localTop + parseInt(this.getLocalHeight()) - elmHalfHeight));
-                return leftCorrect && topCorrect;
-            } else return false;
-        },
+    	function(graphicalElement) {
+    		if (graphicalElement) {
+				var elmCurPos = findPos(graphicalElement.element);
+				var elmHalfHeight = parseInt(graphicalElement.getLocalHeight())/2;
+				var elmHalfWidth = parseInt(graphicalElement.getLocalWidth())/2;
+				var localLeft = (parseInt(this.getLocalLeft()) > 0 ? parseInt(this.getLocalLeft()) : 0);
+				var localTop = (parseInt(this.getLocalTop()) > 0 ? parseInt(this.getLocalTop()) : 0);
+				var leftCorrect = (elmCurPos.x > (localLeft - elmHalfWidth)) &&
+								  (elmCurPos.x < (localLeft + parseInt(this.getLocalWidth()) - elmHalfWidth));
+				var topCorrect = (elmCurPos.y > (localTop - elmHalfHeight)) &&
+							     (elmCurPos.y < (localTop + parseInt(this.getLocalHeight()) - elmHalfHeight));
+				return leftCorrect && topCorrect;
+			} else return false;
+		},
 
-    isElementInside: // находится ли переданный элемент внутри этого элемента
-        function(graphicalElement) {
-            if (graphicalElement) {
-                var elmCurPos = findPos(graphicalElement.element);
-                var elmHalfHeight = parseInt(graphicalElement.getOffsetHeight())/2;
-                var elmHalfWidth = parseInt(graphicalElement.getOffsetWidth())/2;
-                return this.isPointInside({x:(elmCurPos.x + elmHalfWidth),
-                                       y:(elmCurPos.y + elmHalfHeight)})
-            } else return false;
-        },
+	isElementInside: // находится ли переданный элемент внутри этого элемента
+		function(graphicalElement) {
+			if (graphicalElement) {
+				var elmCurPos = findPos(graphicalElement.element);
+				var elmHalfHeight = parseInt(graphicalElement.getOffsetHeight())/2;
+				var elmHalfWidth = parseInt(graphicalElement.getOffsetWidth())/2;
+				return this.isPointInside({x:(elmCurPos.x + elmHalfWidth),
+									   y:(elmCurPos.y + elmHalfHeight)})
+			} else return false;
+		},
 
-    isLeftSide: // находится ли точка({x, y}) на левой стороне области элемента
-        function(curPoint) {
-            var elmHalfWidth = parseInt(this.getLocalWidth())/2;
-            var localLeft = (parseInt(this.getLocalLeft()) > 0 ? parseInt(this.getLocalLeft()) : 0);
-            return (curPoint.x >= localLeft) && (curPoint.x < (localLeft + elmHalfWidth));
-        },
+	isLeftSide: // находится ли точка({x, y}) на левой стороне области элемента
+		function(curPoint) {
+			var elmHalfWidth = parseInt(this.getLocalWidth())/2;
+			var localLeft = (parseInt(this.getLocalLeft()) > 0 ? parseInt(this.getLocalLeft()) : 0);
+			return (curPoint.x >= localLeft) && (curPoint.x < (localLeft + elmHalfWidth));
+		},
 
-    isRightSide: // находится ли точка({x, y}) на правой стороне элемента
-        function(curPoint) {
-            var elmHalfWidth = parseInt(this.getLocalWidth())/2;
-            var localRight = ((parseInt(this.getLocalLeft()) > 0
+	isRightSide: // находится ли точка({x, y}) на правой стороне элемента
+		function(curPoint) {
+			var elmHalfWidth = parseInt(this.getLocalWidth())/2;
+			var localRight = ((parseInt(this.getLocalLeft()) > 0
                     ? parseInt(this.getLocalLeft())
                     : 0)) + parseInt(this.getLocalWidth());
-            return (curPoint.x <= localRight) && (curPoint.x > (localRight - elmHalfWidth));
-        },
+    		return (curPoint.x <= localRight) && (curPoint.x > (localRight - elmHalfWidth));
+    	},
 
-    inTopOf: // находится ли точка({x, y}) на верхней стороне области элемента
-        function(curPoint) {
-            var localTop    = (parseInt(this.getLocalTop()) > 0 ? parseInt(this.getLocalTop()) : 0);
-            var localHeight = (parseInt(this.getLocalHeight()) > 0 ? parseInt(this.getLocalHeight()) : 0);
-            if (this.element.clientHeight && (this.element.clientHeight < localHeight))
+	inTopOf: // находится ли точка({x, y}) на верхней стороне области элемента
+		function(curPoint) {
+			var localTop 	= (parseInt(this.getLocalTop()) > 0 ? parseInt(this.getLocalTop()) : 0);
+			var localHeight = (parseInt(this.getLocalHeight()) > 0 ? parseInt(this.getLocalHeight()) : 0);
+			if (this.element.clientHeight && (this.element.clientHeight < localHeight))
                 localHeight = this.element.clientHeight;
-            return ((curPoint.y > localTop) && (curPoint.y <= (localTop + (localHeight / 10))));
-        },
+    		return ((curPoint.y > localTop) && (curPoint.y <= (localTop + (localHeight / 10))));
+    	},
 
-    inBottomOf: // находится ли точка({x, y}) на нижней стороне области элемента
-        function(curPoint) {
-            var localTop    = (parseInt(this.getLocalTop()) > 0 ? parseInt(this.getLocalTop()) : 0);
-            var localHeight = (parseInt(this.getLocalHeight()) > 0 ? parseInt(this.getLocalHeight()) : 0);
-            if (this.element.clientHeight && (this.element.clientHeight < localHeight))
+	inBottomOf: // находится ли точка({x, y}) на нижней стороне области элемента
+		function(curPoint) {
+			var localTop 	= (parseInt(this.getLocalTop()) > 0 ? parseInt(this.getLocalTop()) : 0);
+			var localHeight = (parseInt(this.getLocalHeight()) > 0 ? parseInt(this.getLocalHeight()) : 0);
+			if (this.element.clientHeight && (this.element.clientHeight < localHeight))
                 localHeight = this.element.clientHeight;
-            return ((curPoint.y >= (localTop + localHeight - (localHeight / 10))) &&
+    		return ((curPoint.y >= (localTop + localHeight - (localHeight / 10))) &&
                     (curPoint.y < (localTop + localHeight)));
-        },
+	    },
 
-    recalc: // пересчитывает координаты элемента
-           /* baseOffset в подавляющем большинстве случаев -- это
+	recalc: // пересчитывает координаты элемента
+	       /* baseOffset в подавляющем большинстве случаев -- это
            { x: this.element.scrollLeft, y: this.element.scrollTop } */
-        function(baseOffset) {
+    	function(baseOffset) {
 
-            var pos = findPos(this.element);
+    		var pos = findPos(this.element);
 
-            this.setBaseLeft(pos.x);
-            this.setBaseTop(pos.y);
-            this.setLocalLeft(pos.x - (baseOffset ? baseOffset.x : 0));
-            this.setLocalTop(pos.y - (baseOffset ? baseOffset.y : 0));
-            this.setLocalWidth(parseInt(this.getOffsetWidth()));
-            this.setLocalHeight(parseInt(this.getOffsetHeight()));
-        },
+    		this.setBaseLeft(pos.x);
+    		this.setBaseTop(pos.y);
+    		this.setLocalLeft(pos.x - (baseOffset ? baseOffset.x : 0));
+    		this.setLocalTop(pos.y - (baseOffset ? baseOffset.y : 0));
+    		this.setLocalWidth(parseInt(this.getOffsetWidth()));
+    		this.setLocalHeight(parseInt(this.getOffsetHeight()));
+    	},
 
-    addOffset: // добавляет смещение к элементу, смещение в формате {x, y}
-        function(offsetXY) {
-            this.setLocalLeft(parseInt(this.getBaseLeft()) - offsetXY.x);
-            this.setLocalTop(parseInt(this.getBaseTop()) - offsetXY.y);
-        },
+	addOffset: // добавляет смещение к элементу, смещение в формате {x, y}
+		function(offsetXY) {
+			this.setLocalLeft(parseInt(this.getBaseLeft()) - offsetXY.x);
+			this.setLocalTop(parseInt(this.getBaseTop()) - offsetXY.y);
+		},
 
     copyElmRectParameters: // скопировать атрибуты с этого элемента на другой
-        function(fromElm, toElm) {
-            toElm = toElm || this.element;
-            setElmAttr(toElm, DND_BTOP_ATTR, getElmAttr(fromElm, DND_BTOP_ATTR, DND_NS), DND_NS);
-            setElmAttr(toElm, DND_BLEFT_ATTR, getElmAttr(fromElm, DND_BLEFT_ATTR, DND_NS), DND_NS);
-            setElmAttr(toElm, DND_LTOP_ATTR, getElmAttr(fromElm, DND_LTOP_ATTR, DND_NS), DND_NS);
-            setElmAttr(toElm, DND_LLEFT_ATTR, getElmAttr(fromElm, DND_LLEFT_ATTR, DND_NS), DND_NS);
-            setElmAttr(toElm, DND_LWIDTH_ATTR, getElmAttr(fromElm, DND_LWIDTH_ATTR, DND_NS), DND_NS);
-            setElmAttr(toElm, DND_LHEIGHT_ATTR, getElmAttr(fromElm, DND_LHEIGHT_ATTR, DND_NS), DND_NS);
-        }
+    	function(fromElm, toElm) {
+    		toElm = toElm || this.element;
+	    	setElmAttr(toElm, DND_BTOP_ATTR, getElmAttr(fromElm, DND_BTOP_ATTR, DND_NS), DND_NS);
+	    	setElmAttr(toElm, DND_BLEFT_ATTR, getElmAttr(fromElm, DND_BLEFT_ATTR, DND_NS), DND_NS);
+	    	setElmAttr(toElm, DND_LTOP_ATTR, getElmAttr(fromElm, DND_LTOP_ATTR, DND_NS), DND_NS);
+	    	setElmAttr(toElm, DND_LLEFT_ATTR, getElmAttr(fromElm, DND_LLEFT_ATTR, DND_NS), DND_NS);
+	    	setElmAttr(toElm, DND_LWIDTH_ATTR, getElmAttr(fromElm, DND_LWIDTH_ATTR, DND_NS), DND_NS);
+	    	setElmAttr(toElm, DND_LHEIGHT_ATTR, getElmAttr(fromElm, DND_LHEIGHT_ATTR, DND_NS), DND_NS);
+	    }
 
 });
+
 ```
 
-Оба этих класса, надеюсь, помогут вам при решении задач, связанных с опознаванием элементов DOM как графических объектов (например, Drag'n'Drop (здесь я наследовал класс перетаскиваемыx нод, классы областей, их содержащих (несколько с разными свойствами, отнаследованных друг от друга) и помощник для перетаскивания -- от `GraphicElementWrapper`, а главный контейнер -- от `ElementWrapper`) или, например, веб-приложение, эмулирующее работу оконного (здесь, когда я этим занимался, я наследовал перетаскиваемые элементы от `GraphicElementWrapper`, а меню, статусбар, рабочую область -- от `ElementWrapper`).
+Оба этих класса, надеюсь, помогут вам при решении задач, связанных с опознаванием элементов DOM как графических объектов (например, Drag’n'Drop (здесь я наследовал класс перетаскиваемыx нод, классы областей, их содержащих (несколько с разными свойствами, отнаследованных друг от друга) и помощник для перетаскивания -- от `GraphicElementWrapper`, а главный контейнер -- от `ElementWrapper`) или, например, веб-приложение, эмулирующее работу оконного (здесь, когда я этим занимался, я наследовал перетаскиваемые элементы от `GraphicElementWrapper`, а меню, статусбар, рабочую область -- от `ElementWrapper`).
 
-Как всё это работает -- довольно-таки непростой вопрос, но я постараюсь через некоторое время уделить внимание и ему, возможно в этой же статье... А пока -- кажется всё. Удач в JS-конструировании :).
+Как всё это работает -- довольно-таки непростой вопрос, но я постараюсь через некоторое время уделить внимание и ему, возможно в этой же статье… А пока -- кажется всё. Удач в JS-конструировании :).
 
+### Ссылки
 
-## <span class="section-num">1</span> Ссылки {#ссылки}
+про это…
 
-про это...
-
--   ... - [по-русски, от Дмитрия Котерова](http://dklab.ru/chicken/nablas/40.html)
--   ... - [более поздние впечатления - по-русски, от Дмитрия Котерова и его соратников](http://forum.dklab.ru/comments/nablas/40InheritanceInJavascript.html?start=80&sid=fac82f100376bdaceb0f5024b136fb0c)
--   ...[на AjaxPatterns](http://ajaxpatterns.org/Javascript_Inheritance)
--   ...[на AJAXPath](http://www.ajaxpath.com/javascript-inheritance/)
--   ...[на XML.com](http://www.xml.com/pub/a/2006/06/07/object-oriented-javascript.html)
--   ...[на WebReference.com](http://www.webreference.com/js/column79/)
--   ...[на The Code Project](http://www.codeproject.com/aspnet/JsOOP1.asp)
--   ...[на JavaScript Kit](http://www.javascriptkit.com/javatutors/oopjs.shtml)
--   ...[на DevArticles](http://www.devarticles.com/c/a/JavaScript/ObjectOriented-JavaScript-An-Introduction-to-Core-Concepts/)
--   ... - [как на этом делать галерею](http://chunkysoup.net/advanced/oojavascript1/)
--   ...[кратко, от Kevin Lindsey](http://www.kevlindev.com/tutorials/javascript/inheritance/index.htm)
--   ...[кратко, от Dave Johnson](http://blogs.nitobi.com/dave/?p=166)
--   ... - [ссылки от Zeroglif](http://forum.vingrad.ru/index.php?showtopic=120066&view=findpost&p=1215304)
-
-
-This text is auto inserted at the end of the exported Markdown.
+* … - [по-русски, от Дмитрия Котерова](http://dklab.ru/chicken/nablas/40.html)
+* … - [более поздние впечатления - по-русски, от Дмитрия Котерова и его соратников](http://forum.dklab.ru/comments/nablas/40InheritanceInJavascript.html?start=80&sid=fac82f100376bdaceb0f5024b136fb0c)
+* …[на AjaxPatterns](http://ajaxpatterns.org/Javascript_Inheritance)
+* …[на AJAXPath](http://www.ajaxpath.com/javascript-inheritance/)
+* …[на XML.com](http://www.xml.com/pub/a/2006/06/07/object-oriented-javascript.html)
+* …[на WebReference.com](http://www.webreference.com/js/column79/ )
+* …[на The Code Project](http://www.codeproject.com/aspnet/JsOOP1.asp)
+* …[на JavaScript Kit](http://www.javascriptkit.com/javatutors/oopjs.shtml)
+* …[на DevArticles](http://www.devarticles.com/c/a/JavaScript/ObjectOriented-JavaScript-An-Introduction-to-Core-Concepts/)
+* … - [как на этом делать галерею](http://chunkysoup.net/advanced/oojavascript1/)
+* …[кратко, от Kevin Lindsey](http://www.kevlindev.com/tutorials/javascript/inheritance/index.htm)
+* …[кратко, от Dave Johnson](http://blogs.nitobi.com/dave/?p=166)
+* … - [ссылки от Zeroglif](http://forum.vingrad.ru/index.php?showtopic=120066&view=findpost&p=1215304)

@@ -1,32 +1,17 @@
 ---
-title: "3 Маленьких JS-Сниппета"
-author: Anton Kotenko
-publishDate: 2011-02-03T11:55:00
-draft: false
+layout: post.html
+title: 3 Маленьких JS-Сниппета
+datetime: 03 Feb 2011 11:55
+tags: [ javascript ]
 ---
-
-<div class="ox-hugo-toc toc has-section-numbers">
-
-<div class="heading">Table of Contents</div>
-
-- <span class="section-num">1</span> [Сниппет первый. Двустрочный each (одна функция)](#сниппет-первый.-двустрочный-each-одна-функция)
-- <span class="section-num">2</span> [Сниппет второй. Быстрое создание объекта (Одиночное наследование, одна функция)](#сниппет-второй.-быстрое-создание-объекта-одиночное-наследование-одна-функция)
-    - <span class="section-num">2.1</span> [Использование](#использование)
-- <span class="section-num">3</span> [Сниппет третий. Легкий механизм тестирования (одна или две функции)](#сниппет-третий.-легкий-механизм-тестирования-одна-или-две-функции)
-    - <span class="section-num">3.1</span> [Примеры](#примеры)
-- <span class="section-num">4</span> [Тесты для сниппетов](#тесты-для-сниппетов)
-
-</div>
-<!--endtoc-->
 
 В данный момент я делаю разные вещи на JavaScript и мне нужно, чтобы код с которым я работаю, был насколько возможно лёгок и прост. Лёгок и прост так же, как и эта статья. Но есть вещи, которые для комфортного программирования мне обязательны. Поэтому и от них тоже я требую лёгкости и простоты.
 
-
-## <span class="section-num">1</span> Сниппет первый. Двустрочный each (одна функция) {#сниппет-первый.-двустрочный-each-одна-функция}
+### Сниппет первый. Двустрочный each (одна функция)
 
 Работает с массивами и объектами. В случае объектов в колбэк передаются ключ и значение. В случае массивов - элемент.
 
-```javascript
+``` javascript
 
 /**
  * Нано-each
@@ -38,14 +23,14 @@ function each(iterable, func) {
     if (iterable instanceof Array) for (var i = 0; i < iterable.length; i++) func.call(iterable, iterable[i]);
     else if (iterable instanceof Object) for (field in iterable) func.call(iterable, iterable[field], field);
 }
+
 ```
 
-
-## <span class="section-num">2</span> Сниппет второй. Быстрое создание объекта (Одиночное наследование, одна функция) {#сниппет-второй.-быстрое-создание-объекта-одиночное-наследование-одна-функция}
+### Сниппет второй. Быстрое создание объекта (Одиночное наследование, одна функция)
 
 Это совсем чуть-чуть изменённая версия [из этой прелестной статьи](http://www.willmcgugan.com/blog/tech/2009/12/5/javascript-snippets/). Кстати, функция `bind` полезна для случаев типа такого: `var catMeow = bind(cat, Cat.meow);`.
 
-```javascript
+``` javascript
 
 function class_(def) {
     var _proto = def;
@@ -82,12 +67,12 @@ function class_(def) {
 function bind(obj, method) {
     return function() { return method.apply(obj, arguments); }
 }
+
 ```
 
+#### Использование
 
-### <span class="section-num">2.1</span> Использование {#использование}
-
-```javascript
+``` javascript
 
 var Base = class_({
 
@@ -131,14 +116,14 @@ console.log(b instanceof Base);
 console.log(b instanceof Child);
 console.log(c instanceof Base);
 console.log(c instanceof Child);
+
 ```
 
+### Сниппет третий. Легкий механизм тестирования (одна или две функции)
 
-## <span class="section-num">3</span> Сниппет третий. Легкий механизм тестирования (одна или две функции) {#сниппет-третий.-легкий-механизм-тестирования-одна-или-две-функции}
+Для быстрого TDD, если вам оно нравится. Если вам нужно просто проверять ассерты, а не запускать большие сложные тесты, берите только `AssertException` и функцию `assert` - это всё что вам нужно. Если нет, `runTests` позволяет вам запускать `JUnit`-подобные коллекции текстов, даже с использованием  `setUp` и `tearDown`. (Использует консоль для вывода результатов тестов, так что в этом варианте может работать только в Firefox и WebKit)
 
-Для быстрого TDD, если вам оно нравится. Если вам нужно просто проверять ассерты, а не запускать большие сложные тесты, берите только `AssertException` и функцию `assert` - это всё что вам нужно. Если нет, `runTests` позволяет вам запускать `JUnit`-подобные коллекции текстов, даже с использованием `setUp` и `tearDown`. (Использует консоль для вывода результатов тестов, так что в этом варианте может работать только в Firefox и WebKit)
-
-```javascript
+``` javascript
 
 function AssertException(result, expectation) { this.result = result;
                                                 this.expectation = expectation; }
@@ -225,12 +210,12 @@ function runTests(suite, _name, _stopWhenFailed) {
     }
     return null;
 }
+
 ```
 
+#### Примеры
 
-### <span class="section-num">3.1</span> Примеры {#примеры}
-
-```javascript
+``` javascript
 
 var T1 = class_({
 
@@ -280,16 +265,13 @@ runTests(_f, '_f');
 new T1().test1();
 
 _f();
+
 ```
 
-
-## <span class="section-num">4</span> Тесты для сниппетов {#тесты-для-сниппетов}
+### Тесты для сниппетов
 
 С использованием TDD-сниппета я написал общий Test Suite для всех трёх сниппетов, чтобы продемонстрировать их во взаимодействии:
 
 [Test Suite](http://paste.pocoo.org/show/344963/) | [Все сниппеты](http://paste.pocoo.org/show/344962/)
 
 **P.S.** См. тж. [atom.js](https://github.com/theshock/nanojs) ([статья](http://habrahabr.ru/blogs/javascript/109762/))
-
-
-This text is auto inserted at the end of the exported Markdown.

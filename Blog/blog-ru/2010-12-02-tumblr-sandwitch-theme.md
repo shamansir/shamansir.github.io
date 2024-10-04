@@ -1,13 +1,13 @@
 ---
+layout: post.html
 title: "Sandwitch: Тема для Tumblr"
-author: Anton Kotenko
-publishDate: 2010-12-02T19:31:00
-draft: false
+datetime: 2 Dec 2010 19:31
+tags: [ tumblr ]
 ---
 
 Сделал [тему для Tumblr](http://www.tumblr.com/theme/18012) под названием [Sandwitch](http://uncyclopedia.wikia.com/wiki/Sandwitch). Хотел чтобы tumblr-блог был похож стилем на тот, который я сделал для движка [showdown blog](http://code.google.com/p/showdown-blog/), а получилось даже лучше!
 
-{{< figure src="%7B%7B%20get_figure(slug,%20'screen.png')%20%7D%7D" caption="<span class=\"figure-number\">Figure 1: </span>Скриншот" >}}
+![Скриншот]({{ get_figure(slug, 'screen.png') }})
 
 В настройках темы можно включить трансляцию последних твитов, прикрутить [Disqus](http://disqus.com) и даже организовать подсветку кода в постах.
 
@@ -16,6 +16,3 @@ draft: false
 Для трансляции твитов пропишите в [настройках темы](http://www.tumblr.com/customize) "Twitter username".
 
 Для того чтобы включить [Disqus](http://disqus.com), укажите в [тех же настройках](http://www.tumblr.com/customize) "Disqus shortname" вашего блога.
-
-
-This text is auto inserted at the end of the exported Markdown.

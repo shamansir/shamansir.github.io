@@ -1,8 +1,8 @@
 ---
-title: "JSP Custom tags"
-author: Anton Kotenko
-publishDate: 2008-05-25T00:00:00
-draft: false
+layout: post.html
+title: JSP Custom tags
+datetime: 15 May 2006 19:06
+tags: [ java, jsp ]
 ---
 
 Расскажу вам для затравки, например, о кастом-тэгах для [JSP](http://java.sun.com/products/jsp/) (а по принципу - и для каких-нибудь там Java Server Faces). Информации об этом действительно не так уж мало. Но тем не менее хотелось предложить для начала что-нибудь простенькое дабы развернуть тему.
@@ -15,7 +15,7 @@ draft: false
 
 Спецификация получилась примерно такой:
 
-```java
+``` java
 
 /**
  * @author uwilfred
@@ -45,10 +45,11 @@ draft: false
  *      underline                             -> <u>body</u>
  *      strike                                -> <strike>body</strike>
  *      .<css-class>            .foo          -> <span class=”foo”>body</span>
- *      {<css-style>; ...}      {font-weight: bold;} -> <span style="font-weight: bold;">body</span>
+ *      {<css-style>; ...}  	{font-weight: bold;} -> <span style="font-weight: bold;">body</span>
  *      /<html-tag-name>    /foo              -> <foo>body</foo>
  */
-```
+
+ ```
 
 То есть за счёт всяких хитрых символов и алиасов я включил поддержку практически любых желаний пользователя :).
 
@@ -56,7 +57,7 @@ draft: false
 
 По спецификации, опишем тег в `.tld`-файле - библиотеке тегов:
 
-```xml
+``` xml
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE taglib PUBLIC
@@ -97,13 +98,14 @@ draft: false
    </tag>
 
 </taglib>
+
 ```
 
 Значит тело нашего тега - это нечто, вычисляемое засчет JSP-кода (обычный текст на выходе дает текст), атрибут `value` необходим и содержит выражение, все остальные атрибуты необязательны.
 
 Ну и сразу чтобы не тянуть - описываем класс тега:
 
-```java
+``` java
 
 package org.individpro.uwilfred.tag;
 
@@ -170,14 +172,14 @@ public class PriorityFontTag extends BodyTagSupport implements Tag {
 
    /**
     * style description to apply to the content with value higher
-    *        than the level.
-    *        supports: bold, italic, underline or any
+    *		 than the level.
+    *		 supports: bold, italic, underline or any
                                         body-having html tag or css-style
-    *            format: bold | italic | underline | strike
-    *                .<CSS-class>
-    *                {<CSS-Descriptors-Line>}
-    *                :<HTML-Tag-Name>
-    *        default: italic
+    *		     format: bold | italic | underline | strike
+    *		         .<CSS-class>
+    *		         {<CSS-Descriptors-Line>}
+    *		         :<HTML-Tag-Name>
+    *		 default: italic
     */
 
    public String getHighChange() {
@@ -212,14 +214,14 @@ public class PriorityFontTag extends BodyTagSupport implements Tag {
 
    /**
     * style description to apply to the content with value lower
-    *        than the level.
-    *        supports: bold, italic, underline or any
+    *		 than the level.
+    *		 supports: bold, italic, underline or any
                                     body-having html tag or css-style
-    *            format: bold | italic | underline | strike
-    *                .<CSS-class>
-    *                {<CSS-Descriptors-Line>}
-    *                :<HTML-Tag-Name>
-    *        default: italic
+    *		     format: bold | italic | underline | strike
+    *		         .<CSS-class>
+    *		         {<CSS-Descriptors-Line>}
+    *		         :<HTML-Tag-Name>
+    *		 default: italic
     */
 
    public String getLowChange() {
@@ -319,6 +321,7 @@ public class PriorityFontTag extends BodyTagSupport implements Tag {
    }
 
 }
+
 ```
 
 Наследуя тег от класса `BodyTagSupport` мы подразумевали, что у тега будет тело. Очистка значений происходит в методе `release()`, значения атрибутов устанавливаются в скомпилированной JSP - HTTP-сервлете - засчет аксессоров. Методы `doStartTag()`, `doAfterBody()` и `doEndTag()` перегружены от родителя (и имплементят соответствующие методы интерфейса `Tag`) и вызываются в указанном порядке - после обработки открывающего тега, после обработки тела и после обработки закрывающего тега соответственно.
@@ -329,7 +332,7 @@ public class PriorityFontTag extends BodyTagSupport implements Tag {
 
 Ну и посмотрим на использование тега:
 
-```html
+``` html
 
 <%@ taglib uri="/WEB-INF/uwilfred.tld" prefix="uwilfred" %>...
 <html><%
@@ -400,7 +403,5 @@ public class PriorityFontTag extends BodyTagSupport implements Tag {
 </body>
 
 </html>
+
 ```
-
-
-This text is auto inserted at the end of the exported Markdown.

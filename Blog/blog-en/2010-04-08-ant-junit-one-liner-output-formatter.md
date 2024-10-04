@@ -1,31 +1,29 @@
 ---
-title: "Ant JUnit Nice Output Formatter"
-author: Anton Kotenko
-publishDate: 2010-04-08T19:32:00
-draft: false
+layout: post.html
+title: Ant JUnit Nice Output Formatter
+datetime: 08 Apr 2010 19:32
+tags: [ ant, java, junit ]
 ---
 
 I've seached for nice Apache Ant formatter which do not writes full stack trace in console/file and just writes what methods are passed, what methods are failed, and if failed - where and why they failed (and only trace about methods from test class). I haven't found any. So I've written one.
 
 For example:
 
-```text
-[junit] ----------------------------------------------------------
-[junit] Testsuite: com.undefined.MyTest
-[junit] Ran [0.322] testMethodOne ... OK
-[junit] Ran [0.023] testMethodOne... OK
-[junit] Ran [0.333] testMethodTwo ... FAILED
-[junit] Ran [0.343] testMethodThree ... FAILED
-[junit]
-[junit] Testcase: testMethodTwo(com.undefined.MyTest):  FAILED
-[junit]     (AssertionFailedError): expected:<Bender> but was:<null>
-[junit]     (MyTest) assertEqualsInfo: 887
-[junit]     (MyTest) testGetUserInfoByUserId: 188
-```
+    [junit] ----------------------------------------------------------
+    [junit] Testsuite: com.undefined.MyTest
+    [junit] Ran [0.322] testMethodOne ... OK
+    [junit] Ran [0.023] testMethodOne... OK
+    [junit] Ran [0.333] testMethodTwo ... FAILED
+    [junit] Ran [0.343] testMethodThree ... FAILED
+    [junit]
+    [junit] Testcase: testMethodTwo(com.undefined.MyTest):	FAILED
+    [junit]     (AssertionFailedError): expected:<Bender> but was:<null>
+    [junit]     (MyTest) assertEqualsInfo: 887
+    [junit]     (MyTest) testGetUserInfoByUserId: 188
 
 There is ant task for this:
 
-```xml
+``` xml
 
 <target name="easy-test" depends="test-clean, compile">
     <mkdir dir="out/junit"/>
@@ -53,11 +51,12 @@ There is ant task for this:
     <fail if="test.failed">tests.failed=${test.failed}</fail>
 
 </target>
+
 ```
 
 And finally, the implementation:
 
-```java
+``` java
 
 package com.undefined.testing;
 
@@ -267,8 +266,8 @@ public class OneLinerFormatter implements JUnitResultFormatter {
         output.write("Ran [");
         output.write(((System.currentTimeMillis() - l.longValue()) / 1000.0) + "] ");
         output.write(getTestName(test) + " ... " + (failed ? "FAILED" : "OK"));
-        output.write(StringUtils.LINE_SEP);
-        output.flush();
+	    output.write(StringUtils.LINE_SEP);
+	    output.flush();
     }
 
     /**
@@ -353,7 +352,7 @@ public class OneLinerFormatter implements JUnitResultFormatter {
     protected synchronized void formatError(String type, Test test,
                                             Throwable error) {
         if (test != null) {
-            failedTests.put(test, test);
+        	failedTests.put(test, test);
             endTest(test);
         }
 
@@ -405,7 +404,5 @@ public class OneLinerFormatter implements JUnitResultFormatter {
     }
 
 }
+
 ```
-
-
-This text is auto inserted at the end of the exported Markdown.

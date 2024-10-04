@@ -1,8 +1,8 @@
 ---
-title: "Fluxus — Прототипирование OpenGL графики и игр on-the-fly (добавить Scheme по вкусу)"
-author: Anton Kotenko
-publishDate: 2010-06-10T13:10:00
-draft: false
+layout: post.html
+title: Fluxus — Прототипирование OpenGL графики и игр on-the-fly (добавить Scheme по вкусу)
+datetime: 10 Jul 2010 13:10
+tags: [ fluxus, opengl, scheme, racket, functional-programming ]
 ---
 
 Интернет для программиста интересующегося трёхмерной графикой уже несколько лет полнится видео, в котором на лету программируют визуалайзеры для музыки, сложные цветоморфированные эффекты или даже намного более хитрые вещи, работающие на стыке интерактива и трёхмерной графики - буквально, человек пишет код и где-то на фоне он тут же компилируется, выполняется и отображается результат, это называется _livecoding_. Чаще всего такие программы пишутся на языках из Lisp-семейства, подобный редактор есть для ProcessingJS, он тут же рендерит результат выполнения графического кода в браузере, но речь не о нём.
@@ -11,23 +11,13 @@ draft: false
 
 Впрочем, [смотрите сами](http://www.youtube.com/watch?v=aTt8r3LhCFM):
 
-<div class="html">
-
-&lt;object width="480" height="385"&gt;
-
-</div>
-
-<div class="html">
-
-&lt;/object&gt;
-
-</div>
+<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/aTt8r3LhCFM?fs=1&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/aTt8r3LhCFM?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
 
 Когда приложение запускается, оно запускается в режиме интерпретатора. Чтобы переключиться в режим написания полной программы, который показан на большинстве видео, нажмите Ctrl+1. Чтобы запустить рендеринг описанной сцены - нажмите F5.
 
 Вот, например, две вращающиеся меняющие цвет сферы:
 
-```scheme
+``` scheme
 
 (define (animate)
     (let* ((t (* (time) 2))
@@ -45,7 +35,5 @@ draft: false
         (draw-sphere))))
 
 (every-frame (animate))
+
 ```
-
-
-This text is auto inserted at the end of the exported Markdown.

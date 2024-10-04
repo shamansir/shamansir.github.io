@@ -1,32 +1,17 @@
 ---
-title: "3 Tiny JavaScript Snippets"
-author: Anton Kotenko
-publishDate: 2011-02-03T11:55:00
-draft: false
+layout: post.html
+title: 3 Tiny JavaScript Snippets
+datetime: 03 Feb 2011 11:55
+tags: [ javascript ]
 ---
-
-<div class="ox-hugo-toc toc has-section-numbers">
-
-<div class="heading">Table of Contents</div>
-
-- <span class="section-num">1</span> [Two-Liner Each (one function)](#two-liner-each-one-function)
-- <span class="section-num">2</span> [Quick Class Construction (Single Inheritance, one function)](#quick-class-construction-single-inheritance-one-function)
-    - <span class="section-num">2.1</span> [Usage](#usage)
-- <span class="section-num">3</span> [Easy assertions mechanism (one or two functions)](#easy-assertions-mechanism-one-or-two-functions)
-    - <span class="section-num">3.1</span> [Examples](#examples)
-- <span class="section-num">4</span> [Snippets tests](#snippets-tests)
-
-</div>
-<!--endtoc-->
 
 Currently I am doing some stuff in JavaScript and I need to have just a tiny amounts of code to work with. As tiny as this article. But there are some things I really need to make the development comfortable for myself. So I require them to be tiny too.
 
-
-## <span class="section-num">1</span> Two-Liner Each (one function) {#two-liner-each-one-function}
+### Two-Liner Each (one function)
 
 Works just with objects and arrays. For objects, callback takes key and value. For arrays, callback takes element.
 
-```javascript
+``` javascript
 
 /**
  * Tiny each
@@ -38,14 +23,14 @@ function each(iterable, func) {
     if (iterable instanceof Array) for (var i = 0; i < iterable.length; i++) func.call(iterable, iterable[i]);
     else if (iterable instanceof Object) for (field in iterable) func.call(iterable, iterable[field], field);
 }
+
 ```
 
-
-## <span class="section-num">2</span> Quick Class Construction (Single Inheritance, one function) {#quick-class-construction-single-inheritance-one-function}
+### Quick Class Construction (Single Inheritance, one function)
 
 This is just a slightly modified version from [this nice article](http://www.willmcgugan.com/blog/tech/2009/12/5/javascript-snippets/). Also, `bind` function is useful to make stuff like this: `var catMeow = bind(cat, Cat.meow);`.
 
-```javascript
+``` javascript
 
 function class_(def) {
     var _proto = def;
@@ -82,12 +67,12 @@ function class_(def) {
 function bind(obj, method) {
     return function() { return method.apply(obj, arguments); }
 }
+
 ```
 
+#### Usage
 
-### <span class="section-num">2.1</span> Usage {#usage}
-
-```javascript
+``` javascript
 
 var Base = class_({
 
@@ -131,14 +116,14 @@ console.log(b instanceof Base);
 console.log(b instanceof Child);
 console.log(c instanceof Base);
 console.log(c instanceof Child);
+
 ```
 
-
-## <span class="section-num">3</span> Easy assertions mechanism (one or two functions) {#easy-assertions-mechanism-one-or-two-functions}
+### Easy assertions mechanism (one or two functions)
 
 Just for quick TDD, if you like it. If you need only assertions, not a tests suites, take just `AssertException` and `assert` function - they are everything you need. Else, `runTests` allows you to run `JUnit`-like tests suites, even with proper `setUp` and `tearDown`. (Uses console to inform about tests results so in the presented form it may work only in Firefox / WebKit browsers)
 
-```javascript
+``` javascript
 
 function AssertException(result, expectation) { this.result = result;
                                                 this.expectation = expectation; }
@@ -225,12 +210,12 @@ function runTests(suite, _name, _stopWhenFailed) {
     }
     return null;
 }
+
 ```
 
+#### Examples
 
-### <span class="section-num">3.1</span> Examples {#examples}
-
-```javascript
+``` javascript
 
 var T1 = class_({
 
@@ -280,14 +265,11 @@ runTests(_f, '_f');
 new T1().test1();
 
 _f();
+
 ```
 
-
-## <span class="section-num">4</span> Snippets tests {#snippets-tests}
+### Snippets tests
 
 Using TDD-snippet, I wrote a general Test Suite for all of three snippets to demonstrate their interaction.
 
 [Test Suite](http://paste.pocoo.org/show/344963/) | [All snippets](http://pastie.org/pastes/1585157)
-
-
-This text is auto inserted at the end of the exported Markdown.

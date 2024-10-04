@@ -1,8 +1,8 @@
 ---
-title: "JSP Custom Tags"
-author: Anton Kotenko
-publishDate: 2008-05-25T00:00:00
-draft: false
+layout: post.html
+title: JSP Custom Tags
+datetime: 15 May 2006 19:06
+tags: [ java, jsp ]
 ---
 
 Let the first post will be about custom-tags for [JSP](http://java.sun.com/products/jsp/), for example (and Java Server Faces, I think, will also follows these rules). There is a lot of information about them, but I've wanted to introduce you my sight and also to start from something relatively easy, though.
@@ -15,7 +15,7 @@ Ok, let's take a decision what properties this tag must own. Obviously, it must 
 
 This is the specification:
 
-```java
+``` java
 
 /**
  * @author uwilfred
@@ -45,9 +45,10 @@ This is the specification:
  *      underline                             -> <u>body</u>
  *      strike                                -> <strike>body</strike>
  *      .<css-class>            .foo          -> <span class=”foo”>body</span>
- *      {<css-style>; ...}      {font-weight: bold;} -> <span style="font-weight: bold;">body</span>
+ *      {<css-style>; ...}  	{font-weight: bold;} -> <span style="font-weight: bold;">body</span>
  *      /<html-tag-name>    /foo              -> <foo>body</foo>
  */
+
 ```
 
 So, using some funny symbols and aliases, I've included a support of almost everything that user might want :)
@@ -56,7 +57,7 @@ So, using some funny symbols and aliases, I've included a support of almost ever
 
 Following the specification, let us define our tag in `.tld`-file (a library of tags):
 
-```xml
+``` xml
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE taglib PUBLIC
@@ -97,13 +98,14 @@ Following the specification, let us define our tag in `.tld`-file (a library of 
    </tag>
 
 </taglib>
+
 ```
 
 So the body of our tag is something calculated with JSP-code (normal text results in normal text), `value` attribute is required and contains an equation, all other attributes are optional.
 
 Now, not to be a downers - let's define our tag class:
 
-```java
+``` java
 
 package org.individpro.uwilfred.tag;
 
@@ -170,14 +172,14 @@ public class PriorityFontTag extends BodyTagSupport implements Tag {
 
    /**
     * style description to apply to the content with value higher
-    *        than the level.
-    *        supports: bold, italic, underline or any
+    *		 than the level.
+    *		 supports: bold, italic, underline or any
                                         body-having html tag or css-style
-    *            format: bold | italic | underline | strike
-    *                .<CSS-class>
-    *                {<CSS-Descriptors-Line>}
-    *                :<HTML-Tag-Name>
-    *        default: italic
+    *		     format: bold | italic | underline | strike
+    *		         .<CSS-class>
+    *		         {<CSS-Descriptors-Line>}
+    *		         :<HTML-Tag-Name>
+    *		 default: italic
     */
 
    public String getHighChange() {
@@ -212,14 +214,14 @@ public class PriorityFontTag extends BodyTagSupport implements Tag {
 
    /**
     * style description to apply to the content with value lower
-    *        than the level.
-    *        supports: bold, italic, underline or any
+    *		 than the level.
+    *		 supports: bold, italic, underline or any
                                     body-having html tag or css-style
-    *            format: bold | italic | underline | strike
-    *                .<CSS-class>
-    *                {<CSS-Descriptors-Line>}
-    *                :<HTML-Tag-Name>
-    *        default: italic
+    *		     format: bold | italic | underline | strike
+    *		         .<CSS-class>
+    *		         {<CSS-Descriptors-Line>}
+    *		         :<HTML-Tag-Name>
+    *		 default: italic
     */
 
    public String getLowChange() {
@@ -319,6 +321,7 @@ public class PriorityFontTag extends BodyTagSupport implements Tag {
    }
 
 }
+
 ```
 
 By extending a tag from `BodyTagSupport`, we mean that this tag will have a body. The values are discarded in `release()` method, attributes values are set in compiled JSP - HTTP-servlet - with help of accessors. Methods `doStartTag()` `doAfterBody()` and `doEndTag()` are overriden from the parent (and they implement `Tag` interface by the way) and they are called in the specified order - after evaluation of opening tag, after evaluation of tag body, and after evaluation of closing tag respectively.
@@ -329,7 +332,7 @@ If our tag was designed not to have a body (`empty` in `.tld`) - we'd extend it 
 
 Now let's look on the usage of tag:
 
-```html
+``` html
 
 <%@ taglib uri="/WEB-INF/uwilfred.tld" prefix="uwilfred" %>...
 <html><%
@@ -400,7 +403,5 @@ Now let's look on the usage of tag:
 </body>
 
 </html>
+
 ```
-
-
-This text is auto inserted at the end of the exported Markdown.

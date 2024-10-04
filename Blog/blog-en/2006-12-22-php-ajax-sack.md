@@ -1,11 +1,11 @@
 ---
-title: "PHP + AJAX = SACK"
-author: Anton Kotenko
-publishDate: 2006-12-22T12:27:00
-draft: false
+layout: post.html
+title: PHP + AJAX = SACK
+datetime: 22 Dec 2006 12:27
+tags: [ php, ajax, sack, javascript ]
 ---
 
-Occasionally, I've got a task to... But I was too lazy to write my own function, to check the browser and blah-blah-blah (the more, as I remember, there are more progressive methods exist already :) ) ... Tried to attach [JsHttpRequest from dklab.ru](http://dklab.ru/lib/JsHttpRequest/), but 've got different tricky errors and everything from Mr. D. Koteroff is a little bit misty for me :), 'cause I am not a prof in `PHP` still. So I've taken [another sack](http://www.twilightuniverse.com/projects/sack/), named `SACK` -- Simple AJAX Code-Kit. And in this sack everything is so simple and trivial for real -- I haven't needed anything more.
+Occasionally, I've got a task to... But I was too lazy to write my own function, to check the browser and blah-blah-blah (the more, as I remember, there are more progressive methods exist already :) ) ... Tried to attach [JsHttpRequest from dklab.ru](http://dklab.ru/lib/JsHttpRequest/), but 've got different tricky errors and everything from Mr. D. Koteroff is a little bit misty for me :), 'cause I am not a prof in `PHP` still. So I've taken [another sack](http://www.twilightuniverse.com/projects/sack/), named  `SACK` -- Simple AJAX Code-Kit. And in this sack everything is so simple and trivial for real -- I haven't needed anything more.
 
 I was making a primitive form to pop out above the hyperlink, to ask a question and to write it in DB, while not refreshing the page (it is strange, bit it was _not mine_ crazy decision).
 
@@ -21,7 +21,7 @@ I'll show you the result and will give a description on hard moments (if they ar
 
 > (to make highlighting correct I've splitted the code in five blocks, they just go one by one, following each other: if you just select them all and copy - everything will work ok)
 
-```html
+``` html
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -31,182 +31,186 @@ I'll show you the result and will give a description on hard moments (if they ar
     <title>Blah</title>
 
     <style type="text/css">
+
 ```
 
-```css
+``` css
 
-/**/.invisible {
-    display: none;
-}
+        /**/.invisible {
+            display: none;
+        }
 
-.visible {
-    display: block;
-}
+        .visible {
+            display: block;
+        }
 
-body {
-    margin: 25px;
-    font-size: 16px;
-    font-family: Times New Roman, Georgia, serif;
-}
+        body {
+            margin: 25px;
+            font-size: 16px;
+            font-family: Times New Roman, Georgia, serif;
+        }
 
-div#question-box {
-    position: absolute;
-    left: 5%;
-    margin-top: 5px;
-    width: 300px;
-    height: 245px;
-    border: 1px solid #000;
-    background-color: #ffc;
-    font-family: Tahoma, Arial, Helvetica, sans-serif;
-}
+        div#question-box {
+            position: absolute;
+            left: 5%;
+            margin-top: 5px;
+            width: 300px;
+            height: 245px;
+            border: 1px solid #000;
+            background-color: #ffc;
+            font-family: Tahoma, Arial, Helvetica, sans-serif;
+        }
 
-div#question-box label {
-    font-size: 11px;
-}
+        div#question-box label {
+            font-size: 11px;
+        }
 
-div#question-box span#qbox-label {
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 10px;
-    padding: 5px;
-    font-size: 11px;
-    font-weight: bold;
-    text-align: center;
-    background-color: #ff9;
-}
+        div#question-box span#qbox-label {
+            display: block;
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 10px;
+            padding: 5px;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #ff9;
+        }
 
-div#question-box form {
-    padding: 5px 15px;
-}
+        div#question-box form {
+            padding: 5px 15px;
+        }
 
-form#question-form * {
-    color: #333;
-    display: block;
-    width: 98%;
-}
+        form#question-form * {
+            color: #333;
+            display: block;
+            width: 98%;
+        }
 
-form#question-form input,
-form#question-form textarea {
-    margin: 3px 0;
-    border: 1px solid #333;
-}
+        form#question-form input,
+        form#question-form textarea {
+            margin: 3px 0;
+            border: 1px solid #333;
+        }
 
-form#question-form input[type="button"] {
-    margin-top: 10px;
-}
+        form#question-form input[type="button"] {
+            margin-top: 10px;
+        }
 
-form label {
-    font-weight: bold;
-}
+        form label {
+            font-weight: bold;
+        }
 
-div#status-box span.message,
-div#status-box span.error,
-div#status-box span.warning {
-    display: block;
-    width: 100%;
-    font-weight: bold;
-    padding: 5px;
-}
+        div#status-box span.message,
+        div#status-box span.error,
+        div#status-box span.warning {
+            display: block;
+            width: 100%;
+            font-weight: bold;
+            padding: 5px;
+        }
 
-span.message {
-    color: #fff;
-}
+        span.message {
+            color: #fff;
+        }
 
-span.error {
-    background-color: #f00;
-    color: #fff;
-}
+        span.error {
+            background-color: #f00;
+            color: #fff;
+        }
 
-span.warning {
-    color: #660;
-}
+        span.warning {
+            color: #660;
+        }
 
-form textarea[name="question"] {
-    height: 60px;
-}
+        form textarea[name="question"] {
+            height: 60px;
+        }
 
-div#question-box div#status-box {
-    display: block;
-    width: 100%;
-    height: 20px;
-    background-color: #003;
-    font-size: 11px;
-    color: #fff;
-    padding: 0;
-}
+        div#question-box div#status-box {
+            display: block;
+            width: 100%;
+            height: 20px;
+            background-color: #003;
+            font-size: 11px;
+            color: #fff;
+            padding: 0;
+        }
+
 ```
 
-```html
+``` html
 
-</style>
+    </style>
 
-<script type="text/javascript" src="./scripts/tw-sack.js"></script>
-<script language="JavaScript" type="text/javascript">
-<!--
+    <script type="text/javascript" src="./scripts/tw-sack.js"></script>
+    <script language="JavaScript" type="text/javascript">
+    <!--
+
 ```
 
-```javascript
+``` javascript
 
-function showElement(elementId) {
-    element = document.getElementById(elementId);
-    element.className = 'visible';
-        // element.style.display = 'block';
-}
+        function showElement(elementId) {
+            element = document.getElementById(elementId);
+            element.className = 'visible';
+                // element.style.display = 'block';
+        }
 
-function hideElement(elementId) {
-    element = document.getElementById(elementId);
-    element.className = 'invisible';
-        // element.style.display = 'none';
-}
+        function hideElement(elementId) {
+            element = document.getElementById(elementId);
+            element.className = 'invisible';
+                // element.style.display = 'none';
+        }
 
-function clearFormFields() {
-    // optimize for any form then....
-    var form = document.getElementById('question-form');
-    form.heading.value = '';
-    form.sender.value = '';
-    form.question.value = '';
-};
+        function clearFormFields() {
+            // optimize for any form then....
+            var form = document.getElementById('question-form');
+            form.heading.value = '';
+            form.sender.value = '';
+            form.question.value = '';
+        };
 
-var ajax = new sack();
+        var ajax = new sack();
 
-function whenLoading(){
-    var e = document.getElementById('status-box');
-    e.innerHTML = "Sending data...";
-}
+        function whenLoading(){
+            var e = document.getElementById('status-box');
+            e.innerHTML = "Sending data...";
+        }
 
-function whenLoaded(){
-    var e = document.getElementById('status-box');
-    e.innerHTML = "Data sent...";
-}
+        function whenLoaded(){
+            var e = document.getElementById('status-box');
+            e.innerHTML = "Data sent...";
+        }
 
-function whenInteractive(){
-    var e = document.getElementById('status-box');
-    e.innerHTML = "Getting data...";
-}
+        function whenInteractive(){
+            var e = document.getElementById('status-box');
+            e.innerHTML = "Getting data...";
+        }
 
-function whenCompleted(){
-}
+        function whenCompleted(){
+        }
 
-function sendQuestion(){
-    var form = document.getElementById('question-form');
-    ajax.setVar("heading", form.heading.value);
-        // recomended method of setting data to be parsed.
-    ajax.setVar("sender", form.sender.value);
-    ajax.setVar("question", form.question.value);
-    ajax.requestFile = "q.php";
-    ajax.method = 'POST';
-    ajax.element = 'status-box';
-    ajax.onLoading = whenLoading;
-    ajax.onLoaded = whenLoaded;
-    ajax.onInteractive = whenInteractive;
-    ajax.onCompletion = whenCompleted;
-    ajax.runAJAX();
-}
+        function sendQuestion(){
+            var form = document.getElementById('question-form');
+            ajax.setVar("heading", form.heading.value);
+                // recomended method of setting data to be parsed.
+            ajax.setVar("sender", form.sender.value);
+            ajax.setVar("question", form.question.value);
+            ajax.requestFile = "q.php";
+            ajax.method = 'POST';
+            ajax.element = 'status-box';
+            ajax.onLoading = whenLoading;
+            ajax.onLoaded = whenLoaded;
+            ajax.onInteractive = whenInteractive;
+            ajax.onCompletion = whenCompleted;
+            ajax.runAJAX();
+        }
+
 ```
 
-```html
+``` html
 
      //-->
  </script>
@@ -239,11 +243,12 @@ function sendQuestion(){
  </div>
 </body>
 </html>
+
 ```
 
 And the receiving script - `q.php` (_pay attention_ - it is in `utf-8`, to conform with the page in encoding):
 
-```php
+``` php
 
 <?php
 ob_start();
@@ -294,6 +299,7 @@ if (isset($question) && ('' != $question)) {
 
 echo $responce_str;
 ?>
+
 ```
 
 It is even `CSS` is a greatest part of the `HTML`-page :).
@@ -303,6 +309,3 @@ In `JavaScript`, after the `var ajax = new sack();` line, the `Sack`-related cod
 I think - that is great.
 
 Dunno about arrays in `SACK`, but if you'll watch the demo that exist in the sackage - this problem is also perfectly solved.
-
-
-This text is auto inserted at the end of the exported Markdown.

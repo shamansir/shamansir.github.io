@@ -1,34 +1,9 @@
 ---
+layout: post.html
 title: "LimeJS: Пишем кроссплатформенную игру на HTML5 с поддержкой прикосновений"
-author: Anton Kotenko
-publishDate: 2011-02-15T22:10:00
-draft: false
+datetime: 15 Feb 2011 22:10
+tags: [ html5, javascript, limejs ]
 ---
-
-<div class="ox-hugo-toc toc has-section-numbers">
-
-<div class="heading">Table of Contents</div>
-
-- <span class="section-num">1</span> [Что получится](#что-получится)
-- <span class="section-num">2</span> [Подготовка к разработке](#подготовка-к-разработке)
-- <span class="section-num">3</span> [Начинаем наш проект](#начинаем-наш-проект)
-- <span class="section-num">4</span> [Основные классы и концепции](#основные-классы-и-концепции)
-- <span class="section-num">5</span> [Строим сцену](#строим-сцену)
-    - <span class="section-num">5.1</span> [Заготовка игрока](#заготовка-игрока)
-    - <span class="section-num">5.2</span> [Заготовка мячика](#заготовка-мячика)
-    - <span class="section-num">5.3</span> [Фон](#фон)
-    - <span class="section-num">5.4</span> [Заготовка стен](#заготовка-стен)
-    - <span class="section-num">5.5</span> [Логика игроков](#логика-игроков)
-    - <span class="section-num">5.6</span> [Логика мяча](#логика-мяча)
-    - <span class="section-num">5.7</span> [Сообщение о проигрыше](#сообщение-о-проигрыше)
-    - <span class="section-num">5.8</span> [Марафет](#марафет)
-    - <span class="section-num">5.9</span> [Компиляция](#компиляция)
-- <span class="section-num">6</span> [Резюме](#резюме)
-- <span class="section-num">7</span> [Видео](#видео)
-- <span class="section-num">8</span> [Поиграть](#поиграть)
-
-</div>
-<!--endtoc-->
 
 [LimeJS](http://www.limejs.com) - 2D Open Source HTML5 движок для написания игр с поддержкой прикосновений и работающий (по описанию) на большинстве мобильных платформ. Я наткнулся на него не сам, мне прислали письмо с просьбой рассказать о нём сообществу и я решил, раз так - что уж мелочиться, надо попробовать его в деле. Кроме того, я заранее договорился с авторами движка, что буду честен - буду рассказывать и о достоинствах и о недостатках, так что надеюсь убрать из статьи ореол рекламы (хотя какая реклама может быть связана с open source)..?
 
@@ -38,72 +13,61 @@ _Open Source_, _кроссплатформенность_ и _HTML5_ - это т
 
 Кстати, вот пример кода: [`javascript`](http://paste.pocoo.org/show/336927/) и [`html`](http://paste.pocoo.org/show/336929/) - чтобы вы могли сразу сделать какой-то вывод, а то я изначально относился к движку довольно скептически, а вот сейчас думаю, что наверняка зря.
 
-
-## <span class="section-num">1</span> Что получится {#что-получится}
+### Что получится
 
 В течении прочтения статьи мы напишем очень упрощённую версию пинг-понга на LimeJS. Вот так будет выглядеть результат:
 
-{{< figure src="%7B%7B%20get_figure(slug,%20'stage-designed.png')%20%7D%7D" caption="<span class=\"figure-number\">Figure 1: </span>Мужчины в синих шортах на футбольном поле с детским мячиком" >}}
+![Мужчины в синих шортах на футбольном поле с детским мячиком]({{ get_figure(slug, 'stage-designed.png') }})
 
 В конце статьи видео с демонстрацией написанной игры на iPad, iPhone и Android.
 
-
-## <span class="section-num">2</span> Подготовка к разработке {#подготовка-к-разработке}
+### Подготовка к разработке
 
 У движка есть небольшой CLI, Command Line Interface. Он написан на Python и скачивает нужные пакеты с помощью `git`, поэтому для работы с движком нужно установить [Python](http://python.org/download/), [`git`](http://git-scm.com/download) и [`git-svn`](http://www.kernel.org/pub/software/scm/git/docs/git-svn.html) соответственно, если вдруг они не установлены (разработчикам с Windows видимо [придётся помучиться](http://stackoverflow.com/questions/350907/git-svn-on-windows-where-to-get-binaries)). Затем берём исходники [из github](http://github.com/digitalfruit/limejs) или [скачиваем zip](https://github.com/digitalfruit/limejs/zipball/master) и распаковываем. На Ubuntu это будет выглядеть примерно так:
 
-```text
-$ sudo apt-get install python git-core git-svn
-$ wget https://github.com/digitalfruit/limejs/zipball/master -no-check-certificate
-$ unzip ./master ./digitalfruit-limejs
-$ cd ./digitalfruit-limejs
-```
+    $ sudo apt-get install python git-core git-svn
+    $ wget https://github.com/digitalfruit/limejs/zipball/master -no-check-certificate
+    $ unzip ./master ./digitalfruit-limejs
+    $ cd ./digitalfruit-limejs
 
 Чтобы автоматически установить другие нужные для разработки пакеты (включая Closure), запускаем:
 
-```text
-$ ./bin/lime.py init
-```
+    $ ./bin/lime.py init
 
+### Начинаем наш проект
 
-## <span class="section-num">3</span> Начинаем наш проект {#начинаем-наш-проект}
-
-```text
-$ ./bin/lime.py create pingpong
-```
+    $ ./bin/lime.py create pingpong
 
 Да, пусть это будет пинг-понг, подобный тому, который показывает Dominic в руководстве по [созданию игры на Impact HTML5 Engine](http://vimeo.com/17161851). Я потом обнаружил, что в [демо-исходниках](https://github.com/digitalfruit/limejs/tree/master/lime/demos/pong) есть что-то похожее, но пусть у нас будет намного более простой вариант.
 
 В каталоге `pingpong` будут созданы файлы `pingpong.html` и `pingpong.js`. Откройте `.html` файл в браузере, он уже довольно интересен - в центре вы увидите симпатичный круг, который можно таскать по странице мышкой или пальцем. В `.js`-файле тоже много полезного - показано как создаётся сцена и видно, как организовывается слежение за событиями. Код остаётся при этом вполне понятным и читаемым. Я не буду разбирать его подробно, это всё-таки просто пример-заглушка, а ссылки по которым можно посмотреть его "нутро" я привёл в начале статьи.
 
-
-## <span class="section-num">4</span> Основные классы и концепции {#основные-классы-и-концепции}
+### Основные классы и концепции
 
 Краткое резюме [Programming guide](http://www.limejs.com/0-getting-started):
 
--   `Director` - это _режиссёр_ игры, он управляет переходами между сценами (включая анимацию переходов) и содержит основные настройки игры;
--   `Scene` - это сцена, отдельный _экран_ в игре, на него добавляются дочерние объекты и слои;
--   `Layer` - это _слой_, участки экрана удобно разделять/распределять на слои и слои тоже могут быть контейнерами дочерних объектов. При этом они вполне могут перекрываться, как в фотошопе;
--   `ScheduleManager` - _планировщик_, помогает запускать определённые функции либо в каждом кадре, либо по прошествию указанного времени;
--   `Node` - любая _сущность_ в игре, имеет свою позицию, локальную систему координат и размер, может перемещаться, вращаться, масштабироваться и анимироваться;
--   `Sprite` - наследник `Node`, имеет все его свойства/способности и может представлять собой _изображение_ и/или _геометрический объект_ (от круга до любого полигона); спрайты можно отрезать друг от друга с использованием масок, заполнять градиентами и проверять на коллизии методом `hitTest`;
+ * `Director` - это _режиссёр_ игры, он управляет переходами между сценами (включая анимацию переходов) и содержит основные настройки игры;
+ * `Scene` - это сцена, отдельный _экран_ в игре, на него добавляются дочерние объекты и слои;
+ * `Layer` - это _слой_, участки экрана удобно разделять/распределять на слои  и слои тоже могут быть контейнерами дочерних объектов. При этом они вполне могут перекрываться, как в фотошопе;
+ * `ScheduleManager` - _планировщик_, помогает запускать определённые функции либо в каждом кадре, либо по прошествию указанного времени;
+ * `Node` - любая _сущность_ в игре, имеет свою позицию, локальную систему координат и размер, может перемещаться, вращаться, масштабироваться и анимироваться;
+ * `Sprite` - наследник `Node`, имеет все его свойства/способности и может представлять собой _изображение_ и/или _геометрический объект_ (от круга до любого полигона); спрайты можно отрезать друг от друга с использованием масок, заполнять градиентами и проверять на коллизии методом `hitTest`;
 
----
+----
 
--   Движок ориентируется на таймлайн, а не на то что должно отображаться в текущем кадре;
--   Всё разнообразные события, связанные с контроллерами обрабатываются через механизмы Closure;
--   Анимации - переместить, масштабировать, вращать, пропасть - могут применяться и к одному объекту и к нескольким сразу и могут объединяться в цепочки (последовательные, одновременные, циклические);
--   Поддерживается `DOM`- и `Canvas`-рендеринг. `WebGL`-реднеринг планируется;
--   Если анимация применяется к DOM-эелемнту, она транслируется в CSS3-свойство;
--   Скрипты на выходе можно оптимизировать;
--   Есть класс `Audio` для проигрывания звука;
+ - Движок ориентируется на таймлайн, а не на то что должно отображаться в текущем кадре;
+ - Всё разнообразные события, связанные с контроллерами обрабатываются через механизмы Closure;
+ - Анимации - переместить, масштабировать, вращать, пропасть - могут применяться и к одному объекту и к нескольким сразу и могут объединяться в цепочки (последовательные, одновременные, циклические);
+ - Поддерживается `DOM`- и `Canvas`-рендеринг. `WebGL`-реднеринг планируется;
+ - Если анимация применяется к DOM-эелемнту, она транслируется в CSS3-свойство;
+ - Скрипты на выходе можно оптимизировать;
+ - Есть класс `Audio` для проигрывания звука;
 
-
-## <span class="section-num">5</span> Строим сцену {#строим-сцену}
+### Строим сцену
 
 Оставим из переданной нам от разработчиков функции `pingpong.start` только несколько строк:
 
-```javascript
+``` javascript
 
 // entrypoint
 pingpong.start = function(){
@@ -117,11 +81,12 @@ pingpong.start = function(){
     director.replaceScene(scene);
 
 }
+
 ```
 
 Не забудьте убрать ненужные строки `goog.require`. Я не буду напоминать про это в дальнейшем, как должен будет выглядеть заголовок файла вы всегда сможете посмотреть в конце статьи. Добавим в сцену три слоя - фон `floor_`, стены `walls_` и доску, на которой будет происходить всё действие - `board_`:
 
-```javascript
+``` javascript
 
 var director = new lime.Director(document.body),
     scene = new lime.Scene(),
@@ -135,14 +100,14 @@ scene.appendChild(walls_);
 scene.appendChild(board_);
 
 . . .
+
 ```
 
-
-### <span class="section-num">5.1</span> Заготовка игрока {#заготовка-игрока}
+#### Заготовка игрока
 
 В отдельном файле `player.js` опишем класс игрока - это будет полигон в форме скейтборда (чтобы хорошо проверить как работают коллизии):
 
-```javascript
+``` javascript
 
 goog.provide('pingpong.Player');
 
@@ -154,32 +119,35 @@ pingpong.Player = function() {
     // ... собираем полигон
 }
 goog.inherits(pingpong.Player, lime.Polygon);
+
 ```
 
 На месте комментария опишем точки полигона и зальём полупрозрачным синим. Так будет выглядеть игрок (в руководстве для координат полигона используются дробные числа от -1 до 1, но в текущей версии они у меня не заработали):
 
-```javascript
+``` javascript
 
 // -1,-2.5, 0,-3.5, 1,-2.5, 1,2.5, 0,3.5, -1,2.5, 0,1.5, 0,-1.5
 this.addPoints(-50,-125, 0,-175, 50,-125, 50,125, 0,175, -50,125, 0,75, 0,-75)
     .setFill(0,0,210,.7)
     .setScale(.4);
+
 ```
 
-{{< figure src="%7B%7B%20get_figure(slug,%20'player.png')%20%7D%7D" caption="<span class=\"figure-number\">Figure 2: </span>Игрок" >}}
+![Игрок]({{ get_figure(slug, 'player.png') }})
 
 Красной точкой на рисунке помечена так называемая `anchorPoint`, для полигона она рассчитывается автоматически. Это точка отсчёта локальной системы координат спрайта - от неё высчитываются все относительные размеры и расстояния, к нему относящиеся.
 
 Пока что код равноценен вызову:
 
-```javascript
+``` javascript
 
 var playerOne = new lime.Polygon().addPoints(...).setFill(...);
+
 ```
 
 Но позже мы добавим поведение к игроку и будет очевидно, что выделить класс было разумным. Давайте проверим, корректно ли отображается игрок в сцене - вернёмся к файлу `pingpong.js`... впрочем, что уж тянуть, давайте добавим сразу обоих игроков и отразим первого, чтобы они стояли лицом к лицу:
 
-```javascript
+``` javascript
 
 . . .
 goog.require('pingpong.Player');
@@ -194,25 +162,23 @@ board_.appendChild(playerOne);
 board_.appendChild(playerTwo);
 
 . . .
+
 ```
 
 Перед запуском в браузере, нужно произвести ещё одно мановение - обновить зависимости Closure (за счёт этого в `.html` могут быть включены только `base.js` и `pingpong.js`, а остальные внешние файлы подгружаются автоматически через `goog.require`). При этом в текущей версии библиотеки есть небольшой баг - при создании имя проекта не добавляется в файл `./bin/projects`. Поэтому прежде нужно добавить строку `pingpong` в `./bin.projects`, а потом обновить зависимости:
 
-```text
-$ vim ./bin/projects   # add `pingpong` line
-$ ./bin/lime.py update
-```
+    $ vim ./bin/projects   # add `pingpong` line
+    $ ./bin/lime.py update
 
 Итак, вот что сейчас на экране:
 
-{{< figure src="%7B%7B%20get_figure(slug,%20'stage1.png')%20%7D%7D" caption="<span class=\"figure-number\">Figure 3: </span>Пляжники в синих плавках" >}}
+![Пляжники в синих плавках]({{ get_figure(slug, 'stage1.png') }})
 
-
-### <span class="section-num">5.2</span> Заготовка мячика {#заготовка-мячика}
+#### Заготовка мячика
 
 Создадим файл `ball.js` с таким содержимым:
 
-```javascript
+``` javascript
 
 goog.provide('pingpong.Ball');
 
@@ -225,17 +191,16 @@ pingpong.Ball = function() {
         .setSize(20,20);
 }
 goog.inherits(pingpong.Ball, lime.Circle);
+
 ```
 
 Обновим зависимости:
 
-```text
-$ ./bin/lime.py update
-```
+    $ ./bin/lime.py update
 
 И добавим мячик на доску в `pingpong.js`:
 
-```javascript
+``` javascript
 
 . . .
 goog.require('pingpong.Ball');
@@ -248,34 +213,36 @@ goog.require('pingpong.Ball');
 board_.appendChild(playerOne);
 board_.appendChild(playerTwo);
 board_.appendChild(ball);
+
 ```
 
-{{< figure src="%7B%7B%20get_figure(slug,%20'stage2.png')%20%7D%7D" caption="<span class=\"figure-number\">Figure 4: </span>Пляжники в синих плавках с мячиком" >}}
+![Пляжники в синих плавках с мячиком]({{ get_figure(slug, 'stage2.png') }})
 
-
-### <span class="section-num">5.3</span> Фон {#фон}
+#### Фон
 
 Давайте зададим фон на поле с игроками, для каждого игрока половина поля своего цвета. Добавим к `Director` параметры размеров экрана игры:
 
-```javascript
+``` javascript
 
 var director = new lime.Director(document.body,600,480),
+
 ```
 
 Эти размеры никак не соотносятся с какими-либо пикселями - полотно игры автоматически масштабируется или разворачивается на весь экран при необходимости, но эти размеры позволяют задавать относительное положение элементов на полотне. Поправим позиции мяча и игроков в соответствии с ними:
 
-```javascript
+``` javascript
 
 playerOne = new pingpong.Player().setPosition(40,240).setRotation(180),
 playerTwo = new pingpong.Player().setPosition(600,240),
 ball = new pingpong.Ball().setPosition(320,240);
+
 ```
 
 При изменении размеров окна так, чтобы поле было меньше чем указанные размеры, логика может сбиваться - хотя скорее всего, это я при тестированиях указал в каком-то месте координаты не так, как нужно было.
 
 Теперь, наконец, фон. Это будут просто два спрайта, разделяющие экран пополам - никакой побочной логики.
 
-```javascript
+``` javascript
 
 floor_.appendChild(new lime.Sprite().setPosition(160,240)
                                     .setSize(320,480)
@@ -286,16 +253,16 @@ floor_.appendChild(new lime.Sprite().setPosition(480,240)
 
 board_.appendChild(...);
 . . .
+
 ```
 
-{{< figure src="%7B%7B%20get_figure(slug,%20'stage3.png')%20%7D%7D" caption="<span class=\"figure-number\">Figure 5: </span>Пляжники в синих плавках с мячиком на асфальте" >}}
+![Пляжники в синих плавках с мячиком на асфальте]({{ get_figure(slug, 'stage3.png') }})
 
-
-### <span class="section-num">5.4</span> Заготовка стен {#заготовка-стен}
+#### Заготовка стен
 
 У стен будет совсем немного логики, но тем не менее тоже выделим их в отдельный класс. Стены будут размером 20x20. Создадим файл `wall.js` с таким содержимым:
 
-```javascript
+``` javascript
 
 goog.provide('pingpong.Wall');
 
@@ -308,17 +275,16 @@ pingpong.Wall = function() {
         .setSize(20,20);
 }
 goog.inherits(pingpong.Wall, lime.Sprite);
+
 ```
 
 Обновим зависимости:
 
-```text
-$ ./bin/lime.py update
-```
+    $ ./bin/lime.py update
 
 И расставим стены вдоль краёв полотна в `pingpong.js`:
 
-```javascript
+``` javascript
 
 . . .
 goog.require('pingpong.Wall');
@@ -338,18 +304,18 @@ for (y = 30; y <= 450; y += 20) {
 }
 
 board_.appendChild(...);
+
 ```
 
 Всё, поле наконец готово - можно приступать к логике!
 
-окружённые жёлтыми ящиками ![](%7B%7B%20get_figure(slug,%20'stage4.png')%20%7D%7D)
+![Пляжники в синих плавках с мячиком на серых квадратах, окружённые жёлтыми ящиками]({{ get_figure(slug, 'stage4.png') }})
 
-
-### <span class="section-num">5.5</span> Логика игроков {#логика-игроков}
+#### Логика игроков
 
 Спрайт игрока должен постепенно двигаться по вертикали к точке, в которую нажали мышью или пальцем, при этом не врезаясь в стены. Движение делается просто:
 
-```javascript
+``` javascript
 
 . . .
 
@@ -365,11 +331,12 @@ goog.events.listen(floor_,['mousedown','touchstart'],function(e){
 });
 
 director.replaceScene(scene);
+
 ```
 
 Но при таком поведении игроки проходят сквозь стены. Не будем сохранять экзепляры каждой стены, чтобы тестировать на столкновение с игроками, просто позволим программисту задать за какие границы игроку нельзя попадать - добавим два метода в конец `player.js`:
 
-```javascript
+``` javascript
 
 pingpong.Player.prototype.setMovementBounds = function(top,right,bottom,left) {
     this._moveBounds = new goog.math.Box(top,right,bottom,left);
@@ -391,24 +358,26 @@ pingpong.Player.prototype.alignBounds = function(x, y) {
                   newY = this._moveBounds.bottom - (size_.height / 2);
     return new goog.math.Coordinate(newX, newY);
 }
+
 ```
 
 Первый позволяет устанавливать прямоугольные границы для игрока, а второй - вернуть выровненную относительно этих границ позицию. Заметьте, что при расчётах учитывается вектор масштабирования.
 
 Теперь в `pingpong.js` обновим определение игроков:
 
-```javascript
+``` javascript
 
 playerOne = new pingpong.Player().setPosition(40,240)
                                  .setRotation(180)
                                  .setMovementBounds(20,620,460,20),
 playerTwo = new pingpong.Player().setPosition(600,240)
                                  .setMovementBounds(20,620,460,20),
+
 ```
 
 И исправим событие, их перемещающее:
 
-```javascript
+``` javascript
 
 goog.events.listen(floor_,['mousedown','touchstart'],function(e){
     var player_ = (e.position.x <= 320) ? playerOne : playerTwo;
@@ -418,14 +387,14 @@ goog.events.listen(floor_,['mousedown','touchstart'],function(e){
                                         e.screenPosition.y))
                               .setDuration(2));
 });
+
 ```
 
-
-### <span class="section-num">5.6</span> Логика мяча {#логика-мяча}
+#### Логика мяча
 
 Для мяча понадобится несколько дополнительных функций. Одна позволяет ограничивать движение прямоугольным регионом, так же как и у и игрока, другая устанавливает скорость движения мяча, третья сбрасывает его положение в начальную точку (`ball.js`):
 
-```javascript
+``` javascript
 
 pingpong.Ball = function() {
     goog.base(this);
@@ -455,11 +424,12 @@ pingpong.Ball.prototype.setResetPosition = function(x, y) {
     this._resetPos = new goog.math.Coordinate(x, y);
     return this;
 }
+
 ```
 
 Туда же допишем основную функцию проверки, поймал ли один из игроков мяч и сброса позиции мяча, если нет. Если произошёл удар о вертикальную стенку, функция возвращает позицию удара, чтобы внешняя функция смогла определить, кто из игроков виноват, рассудив по их расположению.
 
-```javascript
+``` javascript
 
 pingpong.Ball.prototype.updateAndCheckHit = function(dt,playerOne,playerTwo) {
     var newPos_ = this.getPosition();
@@ -488,13 +458,15 @@ pingpong.Ball.prototype.updateAndCheckHit = function(dt,playerOne,playerTwo) {
     this.setPosition(newPos_.x, newPos_.y);
     return null;
 }
+
 ```
 
-> В подобных функциях требуется внимательно следить за координатной системой, с которой вы работаете в данный момент и правильно их конвертировать при необходимости. В данном случае `parent` - это слой, на котором располагается мяч и позиция мяча - это позиция относительно системы координат слоя. Таким образом, мы переводим координату позиции мяча в системе координат слоя в экранную систему координат перед передачей, а в методе `catched`, описанном ниже, переводим переданную позицию из экранной системы координат в локальную систему координат игрока.
+> В подобных функциях требуется внимательно следить за координатной системой, с которой вы
+работаете в данный момент и правильно их конвертировать при необходимости. В данном случае `parent`  - это слой, на котором располагается мяч и позиция мяча - это позиция относительно системы координат слоя. Таким образом, мы переводим координату позиции мяча в системе координат слоя в экранную систему координат перед передачей, а в методе `catched`, описанном ниже, переводим переданную позицию из экранной системы координат в локальную систему координат игрока.
 
 В `player.js` добавим использующуйся в предыдущей функции метод `catched`. Он, учитывая координаты всех точек полигона игрока + масштаб и поворот, возвращает попала ли переданная позиция в область полигона или нет:
 
-```javascript
+``` javascript
 
 pingpong.Player.prototype.catched = function(pos) {
     var p = this.getPoints(),
@@ -529,21 +501,23 @@ pingpong.Player.prototype.catched = function(pos) {
 
     return inPoly;
 }
+
 ```
 
 Установим все необходимые настройки при инициализации мяча в `pingpong.js`:
 
-```javascript
+``` javascript
 
 ball = new pingpong.Ball().setPosition(320,240)
                           .setMovementBounds(20,620,460,20)
                           .setVelocity(.2)
                           .setResetPosition(320,240);
+
 ```
 
 И, самое главное, проверка событий, произошедших с мячом. Для этого мы используем метод `schedule` из `sheduleManager`, он вызывает переданную функцию в каждом кадре, сообщая о прошедшем с предыдущего кадра времени. Пока будем хаять проигравшего в консоли, а в следущей подглаве сделаем для этого `Label`:
 
-```javascript
+``` javascript
 
 goog.events.listen(. . .);
 
@@ -555,14 +529,14 @@ lime.scheduleManager.schedule(function(dt){
 },ball);
 
 director.replaceScene(scene);
+
 ```
 
-
-### <span class="section-num">5.7</span> Сообщение о проигрыше {#сообщение-о-проигрыше}
+#### Сообщение о проигрыше
 
 Теперь добавим лэйбл, который будет сообщать о проигравшем игроке. Не будем сильно заморачиваться отсчитывая очки, просто напишем кто пропустил мяч:
 
-```javascript
+``` javascript
 
 ball = . . .
        .setResetPosition(320,240),
@@ -571,19 +545,21 @@ label = new lime.Label().setPosition(280,30)
                         .setText('').setFontFamily('Verdana')
                         .setFontColor('#c00').setFontSize(18)
                         .setFontWeight('bold').setSize(150,30);
+
 ```
 
 Не забудем добавить лейбл на слой с доской:
 
-```javascript
+``` javascript
 
 board_.appendChild(ball);
 board_.appendChild(label);
+
 ```
 
 И, исправим вывод текста о проигрыше на лейбл вместо консоли:
 
-```javascript
+``` javascript
 
 goog.events.listen(. . .);
 
@@ -598,18 +574,18 @@ lime.scheduleManager.schedule(function(dt){
 },ball);
 
 director.replaceScene(scene);
+
 ```
 
 Всё, мячик летается по полю, отбивается от игроков, пропустивший наказывается страшной красной надписью - для демонстрационной игры, я считаю, достаточно.
 
-
-### <span class="section-num">5.8</span> Марафет {#марафет}
+#### Марафет
 
 Отлично, теперь давайте наведём небольшой марафет, чтобы продемонстрировать работу с градиентами и текстурами.
 
 Сделаем фон приятного зелёно-травяного цвета - поменяем инициализацию фоновых спрайтов в `pingpong.js`:
 
-```javascript
+``` javascript
 
 floor_.appendChild(new lime.Sprite().setPosition(160,240)
                                     .setSize(321,480)
@@ -623,11 +599,12 @@ floor_.appendChild(new lime.Sprite().setPosition(480,240)
                                                      .setDirection(1,1,0,0)
                                                      .addColorStop(0,0,92,0,1)
                                                      .addColorStop(1,134,200,105,1)));
+
 ```
 
 Сделаем игрокам (`player.js`) немного прозрачный синий морской градиент:
 
-```javascript
+``` javascript
 
 this.addPoints(-50,-125, 0,-175, 50,-125, 50,125, 0,175, -50,125, 0,75, 0,-75)
     .setFill(new lime.fill.LinearGradient()
@@ -635,19 +612,21 @@ this.addPoints(-50,-125, 0,-175, 50,-125, 50,125, 0,175, -50,125, 0,75, 0,-75)
                           .addColorStop(0,0,0,210,.7)
                           .addColorStop(1,0,0,105,.7))
     .setScale(.4);
+
 ```
 
 Мячу (`ball.js`) поставим текстуру с мячиком:
 
-```javascript
+``` javascript
 
 this.setFill('./ball.png')
     .setSize(20,20);
+
 ```
 
 Стену (`wall.js`) раскрасим в бетонно-синий цвет и отнаследуем от `RoundedRect`:
 
-```javascript
+``` javascript
 
 pingpong.Wall = function() {
     goog.base(this);
@@ -657,14 +636,14 @@ pingpong.Wall = function() {
         .setRadius(3);
 }
 goog.inherits(pingpong.Wall, lime.RoundedRect);
+
 ```
 
 Вот, теперь у нас всё выглядит много симпатичнее:
 
-{{< figure src="%7B%7B%20get_figure(slug,%20'stage-designed.png')%20%7D%7D" caption="<span class=\"figure-number\">Figure 7: </span>Мужчины в синих шортах на футбольном поле с детским мячиком" >}}
+![Мужчины в синих шортах на футбольном поле с детским мячиком]({{ get_figure(slug, 'stage-designed.png') }})
 
-
-### <span class="section-num">5.9</span> Компиляция {#компиляция}
+#### Компиляция
 
 Итак, демонстрационная игра готова. Исходники, которые получились у меня:
 
@@ -672,14 +651,13 @@ goog.inherits(pingpong.Wall, lime.RoundedRect);
 
 Теперь перепроверьте все `goog.require` - уберите неиспользуемые вызовы, затем обновите зависимости и соберите всё в один скрипт:
 
-```text
-$ ./bin/lime.py update
-$ ./bin/lime.py build pingpong -o pingpong/compiled/pp.js
-```
+    $ ./bin/lime.py update
+    $ ./bin/lime.py build pingpong -o pingpong/compiled/pp.js
 
-Теперь в папку `compiled` можно скопировать `pingpong.html` и в заголовке поменять вызовы JavaScript:
+Теперь в папку `compiled` можно скопировать `pingpong.html` и в заголовке поменять
+вызовы JavaScript:
 
-```html
+``` html
 
 <!DOCTYPE HTML>
 
@@ -692,10 +670,10 @@ $ ./bin/lime.py build pingpong -o pingpong/compiled/pp.js
 <body onload="pingpong.start()"></body>
 
 </html>
+
 ```
 
-
-## <span class="section-num">6</span> Резюме {#резюме}
+### Резюме
 
 Сначала я относился к движку немного скептически, представленные на сайте две (всего) игры чересчур каузальны, я не очень это люблю. Мало примеров и подробностей в документации и многовато всего нужно для установки. И ещё очень кислотный незамысловатый квадратик в `favicon`... :)
 
@@ -703,97 +681,18 @@ $ ./bin/lime.py build pingpong -o pingpong/compiled/pp.js
 
 Главное - это действительно не state-machine, которые сейчас модно делать - здесь можно отталкиваться от сценария игры, привязываясь к событиям, а не ко времени или текущему кадру, вам не надо думать как оптимизировать отрисовку многих объектов в следующем кадре - да, почти что Flash, жаль что без редактора.
 
+### Видео
 
-## <span class="section-num">7</span> Видео {#видео}
-
-<div class="html">
-
-&lt;iframe src="<http://player.vimeo.com/video/19973495>" width="400" height="300" frameborder="0"&gt;
-
-</div>
-
-<div class="html">
-
-&lt;/iframe&gt;
-
-</div>
-
-<div class="html">
-
-&lt;p&gt;
-
-</div>
-
-LimeJS Engine demonstation on iPhone - PingPong game from Ulric Wilfred on Vimeo.
-
-<div class="html">
-
-&lt;/p&gt;
-
-</div>
-
-<div class="html">
-
-&lt;iframe src="<http://player.vimeo.com/video/19973601>" width="400" height="706" frameborder="0"&gt;
-
-</div>
-
-<div class="html">
-
-&lt;/iframe&gt;
-
-</div>
-
-<div class="html">
-
-&lt;p&gt;
-
-</div>
-
-LimeJS Engine demonstation on Android - PingPong game from Ulric Wilfred on Vimeo.
-
-<div class="html">
-
-&lt;/p&gt;
-
-</div>
-
-<div class="html">
-
-&lt;iframe src="<http://player.vimeo.com/video/19973167>" width="400" height="225" frameborder="0"&gt;
-
-</div>
-
-<div class="html">
-
-&lt;/iframe&gt;
-
-</div>
-
-<div class="html">
-
-&lt;p&gt;
-
-</div>
-
-LimeJS Engine demonstation on iPad - PingPong game from Ulric Wilfred on Vimeo.
-
-<div class="html">
-
-&lt;/p&gt;
-
-</div>
+<iframe src="http://player.vimeo.com/video/19973495" width="400" height="300" frameborder="0"></iframe><p><a href="http://vimeo.com/19973495">LimeJS Engine demonstation on iPhone - PingPong game</a> from <a href="http://vimeo.com/shamansir">Ulric Wilfred</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+<iframe src="http://player.vimeo.com/video/19973601" width="400" height="706" frameborder="0"></iframe><p><a href="http://vimeo.com/19973601">LimeJS Engine demonstation on Android - PingPong game</a> from <a href="http://vimeo.com/shamansir">Ulric Wilfred</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+<iframe src="http://player.vimeo.com/video/19973167" width="400" height="225" frameborder="0"></iframe><p><a href="http://vimeo.com/19973167">LimeJS Engine demonstation on iPad - PingPong game</a> from <a href="http://vimeo.com/shamansir">Ulric Wilfred</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
 
 (Видео записаны с помощью авторов движка)
 
-
-## <span class="section-num">8</span> Поиграть {#поиграть}
+### Поиграть
 
 [Здесь можно попробовать поиграть](http://shamansir.madfire.net/_pingpong/pingpong.html) (может глючить, потому что это очень упрощённая версия, сравнивайте пожалуйста ожидания работы на вашей платформе с приведёнными выше видео)
 
-{{< figure src="%7B%7B%20get_figure(slug,%20'qrcode.png')%20%7D%7D" caption="<span class=\"figure-number\">Figure 8: </span>QRCode" >}}
+![QRCode]({{ get_figure(slug, 'qrcode.png') }})
 
 P.S. Отдельное спасибо [lazio_od](http://www.lazio.com.ua/), он помогал мне в тестировании одновременно с авторами движка.
-
-
-This text is auto inserted at the end of the exported Markdown.

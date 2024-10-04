@@ -1,27 +1,25 @@
 ---
-title: "Только полезная информация в выводе JUnit при запуске из ant"
-author: Anton Kotenko
-publishDate: 2010-04-08T19:32:00
-draft: false
+layout: post.html
+title: Только полезная информация в выводе JUnit при запуске из ant
+datetime: 08 Apr 2010 19:32
+tags: [ ant, java, junit ]
 ---
 
 При прогоне JUnit-тестов по таску из ant, в консоль выводится очень много не особо нужной, на мой взгляд, информации. Особенно любят переполнять консоль стэк-трэйсы. Я хотел найти форматтер, который выводил бы только методы которые прошли, методы которые упали и если какой-то упал - только пару строк из стэк-трейса, которые относятся к тестирующему классу.
 
 Например так:
 
-```text
-[junit] ----------------------------------------------------------
-[junit] Testsuite: com.undefined.MyTest
-[junit] Ran [0.322] testMethodOne ... OK
-[junit] Ran [0.023] testMethodOne... OK
-[junit] Ran [0.333] testMethodTwo ... FAILED
-[junit] Ran [0.343] testMethodThree ... FAILED
-[junit]
-[junit] Testcase: testMethodTwo(com.undefined.MyTest):  FAILED
-[junit]     (AssertionFailedError): expected:<Bender> but was:<null>
-[junit]     (MyTest) assertEqualsInfo: 887
-[junit]     (MyTest) testGetUserInfoByUserId: 188
-```
+    [junit] ----------------------------------------------------------
+    [junit] Testsuite: com.undefined.MyTest
+    [junit] Ran [0.322] testMethodOne ... OK
+    [junit] Ran [0.023] testMethodOne... OK
+    [junit] Ran [0.333] testMethodTwo ... FAILED
+    [junit] Ran [0.343] testMethodThree ... FAILED
+    [junit]
+    [junit] Testcase: testMethodTwo(com.undefined.MyTest):	FAILED
+    [junit]     (AssertionFailedError): expected:<Bender> but was:<null>
+    [junit]     (MyTest) assertEqualsInfo: 887
+    [junit]     (MyTest) testGetUserInfoByUserId: 188
 
 И не нашёл ни одного такого.
 
@@ -29,7 +27,7 @@ draft: false
 
 Вот ant-task для его вызова:
 
-```xml
+``` xml
 
 <target name="easy-test" depends="test-clean, compile">
     <mkdir dir="out/junit"/>
@@ -57,11 +55,12 @@ draft: false
     <fail if="test.failed">tests.failed=${test.failed}</fail>
 
 </target>
+
 ```
 
 И, собственно, код:
 
-```java
+``` java
 
 package com.undefined.testing;
 
@@ -409,7 +408,5 @@ public class OneLinerFormatter implements JUnitResultFormatter {
     }
 
 }
+
 ```
-
-
-This text is auto inserted at the end of the exported Markdown.

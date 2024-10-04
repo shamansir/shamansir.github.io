@@ -579,6 +579,3 @@ Generator.IterationError = IterationError;
 
 })();
 ```
-
-
-This text is auto inserted at the end of the exported Markdown.

@@ -1,13 +1,13 @@
 ---
-title: "Sandwitch Tumblr Theme"
-author: Anton Kotenko
-publishDate: 2010-12-02T19:31:00
-draft: false
+layout: post.html
+title: Sandwitch Tumblr Theme
+datetime: 2 Dec 2010 19:31
+tags: [ tumblr ]
 ---
 
 Have created [Tumblr theme](http://www.tumblr.com/theme/18012) named [Sandwitch](http://uncyclopedia.wikia.com/wiki/Sandwitch). I was going to make tumblr-blog look like [showdown blog](http://code.google.com/p/showdown-blog/)-engine style I've made, and seems the result in the end is even better!
 
-{{< figure src="%7B%7B%20get_figure(slug,%20'screen.png')%20%7D%7D" caption="<span class=\"figure-number\">Figure 1: </span>Screenshot" >}}
+![Screenshot]({{ get_figure(slug, 'screen.png') }})
 
 You can turn on tweets translation, allow [Disqus](http://disqus.com) comments and... write posts with source code highlighting!
 
@@ -17,5 +17,3 @@ To translate tweets, set your "Twitter username" at [theme customization](http:/
 
 To turn on [Disqus](http://disqus.com), set your "Disqus shortname" at the [very same settings](http://www.tumblr.com/customize).
 
-
-This text is auto inserted at the end of the exported Markdown.

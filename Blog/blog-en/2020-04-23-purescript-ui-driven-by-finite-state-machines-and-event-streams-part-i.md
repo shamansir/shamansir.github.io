@@ -1,30 +1,11 @@
 ---
+layout: post.html
 title: "PureScript: UI driven by Finite State Machines and Event Streams"
-author: Anton Kotenko
-publishDate: 2020-04-23T13:01:00
-draft: false
+datetime: 07 Apr 2020 13:01
+tags: [ purescript, functional-programming ]
+excerpt: Building UIs as state machines is not a new approach, and may appear common to a reader by some other names. Still, in PureScript, with it's freedom to choose any approach you like, it may seem not to come to head as a first thought, or even second one. Usually one may just use some framework. This post is about what could be behind your framework and for those who want to consider different ways to write UI by hand in PureScript. As the title says, plus accumulating errors and recovering to the latest successful state.
 ---
 
-<div class="ox-hugo-toc toc has-section-numbers">
-
-<div class="heading">Table of Contents</div>
-
-- <span class="section-num">1</span> [Considering Effects](#considering-effects)
-- <span class="section-num">2</span> [Recursing to Actions](#recursing-to-actions)
-- <span class="section-num">3</span> [Errors, Introducing `Covered`](#errors-introducing-covered)
-- <span class="section-num">4</span> [FRP and Running](#frp-and-running)
-- <span class="section-num">5</span> [UI, Renderers and VDOM](#ui-renderers-and-vdom)
-- <span class="section-num">6</span> [The Stub and the Actual App](#the-stub-and-the-actual-app)
-- <span class="section-num">7</span> [Aftermath](#aftermath)
-    - <span class="section-num">7.1</span> [Aftermath One](#aftermath-one)
-    - <span class="section-num">7.2</span> [Aftermath Two](#aftermath-two)
-    - <span class="section-num">7.3</span> [Aftermath Three](#aftermath-three)
-    - <span class="section-num">7.4</span> [Aftermath Four](#aftermath-four)
-    - <span class="section-num">7.5</span> [Aftermath Five](#aftermath-five)
-    - <span class="section-num">7.6</span> [And Everything Else...](#and-everything-else)
-
-</div>
-<!--endtoc-->
 
 I should've call the article _”The Elm Architecture in PureScript”_, but both the inner demons and the inner angels said "Oh, dear, no!". Still I can't deny the article covers such topic as well.
 
@@ -32,7 +13,7 @@ Among that, this article covers the easiest way for accumulating errors and reco
 
 Also I plan to abandon explaining why I chose PureScript and get straight to the details. Just keep in mind that Haskell and PureScript are bro-s: each one is pretending to be radically different, but they share truly a lot of common.
 
-The project I am working on, _Noodle_, has quite complex UI and API as well. For some time I struggled in finding the proper architecture to define both of them, because my intuition strictly said there are common patterns I am yet too blind to see. In pure functional languages it is really easy to write some shitty code, just not making it public, and reason about it later, while you have everything working and stable. And not to confuse you with the harsh word _shitty_, I have a bunch of unit tests to ensure the logic is what I expect it to be. Also, I think, in leaning to perfection it is important to know where to do a step off the road for some time and get back to this infinite road with new strengths and visions... but enough morals.
+The project I am working on, _Noodle_, has quite complex UI and API as well. For some time I struggled in finding the proper architecture to define both of them, because my intuition strictly said there are common patterns I am yet too blind to see. In pure functional languages it is really easy to write some shitty code, just not making it public, and reason about it later, while you have everything working and stable. And not to confuse you with the harsh word _shitty_, I have a bunch of unit tests to ensure the logic is what I expect it to be. Also, I think, in leaning to perfection it is important to know where to do a step off the road for some time and get back to this infinite road with new strengths and visions… but enough morals.
 
 When I discovered the article [Finite State Machines in Haskell](https://wickstrom.tech/finite-state-machines/2017/11/10/finite-state-machines-part-1-modeling-with-haskell.html) and read it, everything stood on its place. This was the pattern! Not to oblige you reading the article, the key point is that Finite State Machine is as easy as this function:
 
@@ -44,16 +25,15 @@ finiteStateMachine
 
 That is our famous _”The Elm Architecture”_ in its essence, simplified to the origins where it was actually born.
 
-The function, which receives some _action_ (say, `DecrementCounter` or `WithdrawMoney` or `JustRobThePlace`), gets _previous model_ and evaluates to the _new modified model_. Some people prefer it flipped, so the model comes as the first argument. Those actions are usually the sum types so it is easy to keep them in one place and have a birds-eye view on the processes happening in your application.&nbsp;[^fn:1]
+The function, which receives some _action_ (say, `DecrementCounter` or `WithdrawMoney` or `JustRobThePlace`), gets _previous model_ and evaluates to the _new modified model_. Some people prefer it flipped, so the model comes as the first argument. Those actions are usually the sum types so it is easy to keep them in one place and have a birds-eye view on the processes happening in your application. [^1]
 
-Let's move the practical example [to another part of the article](https://dev.to/shamansir/purescript-ui-driven-by-finite-state-machines-and-event-streams-part-ii-the-example-3m77) and for now mostly speak theory. Don't be confused, in the end of this part I'll give the complete working code for FSM using FRP, since it's just a few lines of code. First, we will define the signature, then the way to `make` it and, finally, `run` it.
+Let’s move the practical example [to another part of the article](https://dev.to/shamansir/purescript-ui-driven-by-finite-state-machines-and-event-streams-part-ii-the-example-3m77) and for now mostly speak theory. Don’t be confused, in the end of this part I’ll give the complete working code for FSM using FRP, since it’s just a few lines of code. First, we will define the signature, then the way to `make` it and, finally, `run` it.
 
+## Considering Effects
 
-## <span class="section-num">1</span> Considering Effects {#considering-effects}
+Both the UI and API in my case require some side effects to be performed. For API it’s, for example, generating a random UUID for any new entity. And, since I use FRP events, subscribing to event streams or cancelling them is also a side effect. In case of UI, it is `Event.stopPropagation` (where _event_ is HTML event, not the FRP one), `requestAnimationFrame`, drawing on canvas, some connections to JavaScript using FFI. Some of such effects should be `Aff` though, since they are asynchronous, but it doesn’t really _affect_ what we discuss in any matter.
 
-Both the UI and API in my case require some side effects to be performed. For API it's, for example, generating a random UUID for any new entity. And, since I use FRP events, subscribing to event streams or cancelling them is also a side effect. In case of UI, it is `Event.stopPropagation` (where _event_ is HTML event, not the FRP one), `requestAnimationFrame`, drawing on canvas, some connections to JavaScript using FFI. Some of such effects should be `Aff` though, since they are asynchronous, but it doesn't really _affect_ what we discuss in any matter.
-
-Separating effects from the pure actions is very important in pure functional languages, still it doesn't mean you can't use them, just keep them marked as such and, preferably, sorted (see below).
+Separating effects from the pure actions is very important in pure functional languages, still it doesn’t mean you can’t use them, just keep them marked as such and, preferably, sorted (see below).
 
 ```haskell
 finiteStateMachine
@@ -61,7 +41,7 @@ finiteStateMachine
      . action -> model -> Effect model
 ```
 
-In Elm, every `update` function returns `Cmd` along with the model, which is also the wrapper for the effects, still you may need some effort to realise it. Actually, they separate model from the effects, and that's smart thing to do, so let's do the same:
+In Elm, every `update` function returns `Cmd` along with the model, which is also the wrapper for the effects, still you may need some effort to realise it. Actually, they separate model from the effects, and that’s smart thing to do, so let’s do the same:
 
 ```haskell
 finiteStateMachine
@@ -81,11 +61,11 @@ performEffect
      . effect -> Effect Unit
 ```
 
-Where `performEffect` is performed after every call to FSM. That's a really good way to sort the effects and don't put them into one basket. But I decided not to do that in the end: I had such code before and may be I'll get it back in some form, but during the rewriting stage I wanted not to bother thinking about that, and now I have the working code, which is open to return to this approach, at some point, maybe. Just please notice that it's really something to think through.
+Where `performEffect` is performed after every call to FSM.  That’s a really good way to sort the effects and don’t put them into one basket. But I decided not to do that in the end: I had such code before and may be I’ll get it back in some form, but during the rewriting stage I wanted not to bother thinking about that, and now I have the working code, which is open to return to this approach, at some point, maybe. Just please notice that it’s really something to think through.
 
-Actually the Elm's `Cmd` is doing the similar thing by requiring you to provide functions which return specific actions, but more on that later, just in the next chapter.
+Actually the Elm’s `Cmd` is doing the similar thing by requiring you to provide functions which return specific actions, but more on that later, just in the next chapter.
 
-If you have considered that, let's get back to the latest specification and stick with it in the end of this section:
+If you have considered that, let’s get back to the latest specification and stick with it in the end of this section:
 
 ```haskell
 finiteStateMachine
@@ -93,12 +73,11 @@ finiteStateMachine
      . action -> model -> model /\ Effect Unit
 ```
 
-The article on Haskell's way covers it really well with the examples using `IO`, which is the same concept as `Effect` in PureScript.
+The article on Haskell’s way covers it really well with the examples using `IO`, which is the same concept as `Effect` in PureScript.
 
+## Recursing to Actions
 
-## <span class="section-num">2</span> Recursing to Actions {#recursing-to-actions}
-
-If you are willing to keep actions minimalistic, meaning that each action is modifying the model in one single and predictable way, defined by the name of such action (e.g. not just `RobTheBank`, but rather splitting it into `BuyToyShotgun`, `DefineWorkingHours`, `FindOutSecuritySchedule`, `WearMask`, `EnterTheBank`, `GetToCachier`, `TryNotToPee` and so on, it's not me to give you details on how to do it, just visit `wikihow.com` on robbing banks), you would see that one action sometimes requires other actions to be performed. Without wearing a mask, it's better not to start the robbing procedure at all (depends on your case, for sure).
+If you are willing to keep actions minimalistic, meaning that each action is modifying the model in one single and predictable way, defined by the name of such action (e.g. not just `RobTheBank`, but rather splitting it into `BuyToyShotgun`, `DefineWorkingHours`, `FindOutSecuritySchedule`, `WearMask`, `EnterTheBank`, `GetToCachier`, `TryNotToPee` and so on, it’s not me to give you details on how to do it, just visit `wikihow.com` on robbing banks), you would see that one action sometimes requires other actions to be performed. Without wearing a mask, it’s better not to start the robbing procedure at all (depends on your case, for sure).
 
 So it becomes handy to return the list of the actions to perform next, which can be empty, of course.
 
@@ -108,7 +87,7 @@ finiteStateMachine
      . action -> model -> model /\ List action
 ```
 
-If you are still thinking about Elm, you may recall that `Cmd.batch` thing, which represents effects that are evaluated from `update` function where every effect is bound to the specific action. Let's also join this concept with the specification of effects we did previously:
+If you are still thinking about Elm, you may recall that `Cmd.batch` thing, which represents effects that are evaluated from `update` function where every effect is bound to the specific action. Let’s also join this concept with the specification of effects we did previously:
 
 ```haskell
 finiteStateMachine
@@ -126,7 +105,7 @@ finiteStateMachine
 
 This way you can not share data between the effects you perform, only with carrying them together with actions. Which is really a good thing for making things really pure and minimalistic. But I decided to avoid that for the sake of simplicity, still you are always free to choose the proper way by just replacing one with another and make it compile.
 
-I also made some helpers to refrain from typing `pure` in the end of `do`-blocks a lot. If you use `List (Effect action)` technique, you don't need them, obviously:
+I also made some helpers to refrain from typing `pure` in the end of `do`-blocks a lot. If you use `List (Effect action)` technique, you don’t need them, obviously:
 
 ```haskell
 doNothing :: forall action. Effect (List action)
@@ -146,7 +125,7 @@ data FSM action model =
     FSM (action -> model -> model /\ Effect (List action))
 ```
 
-Let's also define the function to create such instances, which is just a type constructor for now, but we leave the opportunity for it to be changed later:
+Let’s also define the function to create such instances, which is just a type constructor for now, but we leave the opportunity for it to be changed later:
 
 ```haskell
 make
@@ -156,10 +135,9 @@ make
 make = FSM
 ```
 
-That's actually it! We can represent all other things just with reusing this one.
+That’s actually it! We can represent all other things just with reusing this one.
 
-
-## <span class="section-num">3</span> Errors, Introducing `Covered` {#errors-introducing-covered}
+## Errors, Introducing `Covered`
 
 I have to confess that I am using my own data type to work with errors. As much of you probably did, I researched the problem of accumulating errors (no, I do swear I have no intention [to have separate types for them](https://www.parsonsmatt.org/2018/11/03/trouble_with_typed_errors.html)!) and no solution satisfied me, except this one:
 
@@ -169,9 +147,9 @@ data Covered e a
     | Recovered e a
 ```
 
-Where `Carried` means we _carry_ the value and it's all good. And `Recovered` means we had some error and the value was _recovered_ from that failure. It just always stores the last successful value, along with the error, when it had un-fortune to happen. The single and the latest error, same as for value,.. unless you have `Semigroup e => Covered e a`!
+Where `Carried` means we _carry_ the value and it’s all good. And `Recovered` means we had some error and the value was _recovered_ from that failure.  It just always stores the last successful value, along with the error, when it had un-fortune to happen. The single and the latest error, same as for value,.. unless you have `Semigroup e => Covered e a`!
 
-Imagine you are cooking something and if you have forgot to buy some ingredient, you just skip it and happily continue the process, but notice such failure in the list of failures to avoid in the future. Or you broke the eggs together with the eggshells while preparing the cake, so you just suck the eggs and the eggshells back from the stock, and it's all fine, you just put a notice near the cake that eggshells were there, and the eggs were also required to be reverted due to error, but it's all clean now, _bon appétit_. Seems I am not that good in examples.
+Imagine you are cooking something and if you have forgot to buy some ingredient, you just skip it and happily continue the process, but notice such failure in the list of failures to avoid in the future. Or you broke the eggs together with the eggshells while preparing the cake, so you just suck the eggs and the eggshells back from the stock, and it’s all fine, you just put a notice near the cake that eggshells were there, and the eggs were also required to be reverted due to error, but it’s all clean now, _bon appétit_. Seems I am not that good in examples.
 
 So the FSM, where it is possible to keep the last error (or accumulate errors), looks like this:
 
@@ -189,7 +167,7 @@ data CoveredFSM error action model =
 
 Since `Either` is the purest way of dealing with errors, I use it as an atomic part of the API: every function that belongs to the core API and can fail with some error, evaluates to `Either` and nothing else. So does the `update` function that wraps the API, except that _inbetween_ the calls, after the action was applied to the model, it either (no pun intended) replaces `Either` with the `Covered`, holding the previous model (which we always have in `update` function) _or_, if the error type satisfies `Semigroup` typeclass, it glues the errors from the previous call with the ones from the ongoing call.
 
-But first, let's review the approach where we just store the last error and rollback to a last successful state. For that you'll need a function that moves the error from one `Covered` instance to another, if there is one. The function is simple:
+But first, let’s review the approach where we just store the last error and rollback to a last successful state. For that you’ll need a function that moves the error from one `Covered` instance to another, if there is one. The function is simple:
 
 ```haskell
 consider
@@ -224,7 +202,7 @@ make updateF =
 
 If storing the last error satisfies your needs, you could stop at this point.
 
-If you want to store all the errors happened, you'll need some function to append errors from one `Covered` instance to another. Let's call it `appendErrors`---it's not `Semigroup`'s `append`, since it operates on errors rather than values:
+If you want to store all the errors happened, you’ll need some function to append errors from one `Covered` instance to another. Let’s call it `appendErrors`—it’s not `Semigroup`’s `append`, since it operates on errors rather than values:
 
 ```haskell
 appendErrors
@@ -239,7 +217,7 @@ appendErrors (Carried _) coveredB =
     coveredB
 ```
 
-And it's update function looks like this:
+And it’s update function looks like this:
 
 ```haskell
 make'
@@ -256,7 +234,7 @@ make' updateF =
             in (model `appendErrors` model') /\ effects'
 ```
 
-A trained eye may notice a pattern here: we just have one function that changes the way how we join the previous model with the next one. If it sounds like _folding_ to you, I share your inference. By defining a data type or `newtype` we are ensuring that user uses the proper instance of `CoveredFSM` and don't forget to specify the way to glue errors. But that doesn't prevent us from adding a helper to `FSM`, such as:
+A trained eye may notice a pattern here: we just have one function that changes the way how we join the previous model with the next one. If it sounds like _folding_ to you, I share your inference. By defining a data type or `newtype` we are ensuring that user uses the proper instance of `CoveredFSM` and don’t forget to specify the way to glue errors. But that doesn’t prevent us from adding a helper to `FSM`, such as:
 
 ```haskell
 joinWith
@@ -297,14 +275,13 @@ make' =
         >>> CoveredFSM
 ```
 
-One of the downsides of using `Covered` could be that it's not that fancy to use=Covered= in `do`-notation, rather than its brothers `Maybe` and `Either` since (unless you wrap the `Either`-producing function in `Covered` later, as noted above) you always have to specify the fallback value and it is usually the same value through all the block. I suppose it could potentially be solved with monad transformers and `State` monad, and if yes, please tell in the comments how.
+One of the downsides of using `Covered` could be that it’s not that fancy to use`Covered` in `do`-notation, rather than its brothers `Maybe` and `Either` since (unless you wrap the `Either`-producing function in `Covered` later, as noted above) you always have to specify the fallback value and it is usually the same value through all the block. I suppose it could potentially be solved with monad transformers and `State` monad, and if yes, please tell in the comments how.
 
+## FRP and Running
 
-## <span class="section-num">4</span> FRP and Running {#frp-and-running}
+Finally, let’s implement it! Using event streams from the [FRP Events Library](https://github.com/paf31/purescript-event).
 
-Finally, let's implement it! Using event streams from the [FRP Events Library](https://github.com/paf31/purescript-event).
-
-It's rather simple: we provide the initial model (`init`), we create the actions stream, and on every push of some action, we call the FSM's `update` function on it, skipping the effects from previous update. And we subscribe to the stream of updates to perform all the effects requested after the update. Then we provide user with the ability to `push` actions into system. Which is quite useful for UIs for example, to push some specific action in response to the HTML event handler.
+It’s rather simple: we provide the initial model (`init`), we create the actions stream, and on every push of some action, we call the FSM’s `update` function on it, skipping the effects from previous update. And we subscribe to the stream of updates to perform all the effects requested after the update.  Then we provide user with the ability to `push` actions into system.  Which is quite useful for UIs for example, to push some specific action in response to the HTML event handler.
 
 ```haskell
 run
@@ -328,7 +305,7 @@ run (FSM updateF) init = do
     pure { push, stop }
 ```
 
-This has a little sense though, since you have no way to see what models are, so let's add the ability to specify the subscription to models. The problem with just returning the event stream of models is that if you subscribe to it after the subscription which performs the effects, you get the results of these calls in the model stream as well, which you would probably like to avoid.
+This has a little sense though, since you have no way to see what models are, so let’s add the ability to specify the subscription to models. The problem with just returning the event stream of models is that if you subscribe to it after the subscription which performs the effects, you get the results of these calls in the model stream as well, which you would probably like to avoid.
 
 ```haskell
 run
@@ -393,8 +370,7 @@ run
 run (CoveredFSM fsm) = FSM.run fsm
 ```
 
-
-## <span class="section-num">5</span> UI, Renderers and VDOM {#ui-renderers-and-vdom}
+## UI, Renderers and VDOM
 
 Now, to the UI part. Finite State Machine only lacks one addition to be able to render model into some view. And this addition is easily represented with a corresponding function:
 
@@ -471,16 +447,16 @@ run (UI fsm viewF) model = do
 
 What user gets is response is the stream of views and we can now feed it to the rendering engine.
 
-Let's address to `Halogen` VDOM engine which is distributed in a [separate package](https://github.com/purescript-halogen/purescript-halogen-vdom). First, we now definitely render to HTML:
+Let’s address to `Halogen` VDOM engine which is distributed in a [separate package](https://github.com/purescript-halogen/purescript-halogen-vdom). First, we now definitely render to HTML:
 
 ```haskell
 type HtmlRenderer error action model =
     CoveredUI error action model (Html action)
 ```
 
-Another confession I have to make: currently, yes, it's the `Html` from the `Spork` library. But since in this article we intentionally decline the techniques behind the libraries like `Spork` for the sake of learning, I had to keep it in secret till the end. Also, it is still up to you which output you want to have, _SVG_ or _canvas_ or _text string_ or may be even you will decide to output to terminal using _ASCII_, for all =view=s it works the same!
+Another confession I have to make: currently, yes, it’s the `Html` from the `Spork` library. But since in this article we intentionally decline the techniques behind the libraries like `Spork` for the sake of learning, I had to keep it in secret till the end. Also, it is still up to you which output you want to have, _SVG_ or _canvas_ or _text string_ or may be even you will decide to output to terminal using _ASCII_, for all `view`s it works the same!
 
-And we're just giving the specific examples.
+And we’re just giving the specific examples.
 
 This code is a bit more complicated since `VDOM` and `HTML` API are both not as friendly as ours, but still it works like a charm:
 
@@ -529,12 +505,11 @@ embed sel render firstModel = do
             pure unit
 ```
 
-Wait... It turns out the `VDOM` engine uses the Finite State Machines under the hood as well. Just _a bit_ more complicated ones.
+Wait… It turns out the `VDOM` engine uses the Finite State Machines under the hood as well. Just _a bit_ more complicated ones.
 
+## The Stub and the Actual App
 
-## <span class="section-num">6</span> The Stub and the Actual App {#the-stub-and-the-actual-app}
-
-We need some actual code to work with the system, let's do some stubs:
+We need some actual code to work with the system, let’s do some stubs:
 
 ```haskell
 data Error = Error
@@ -575,13 +550,11 @@ main =
     VDom.embed "#app" myRenderer init
 ```
 
-That's it, folks!
+That’s it, folks!
 
+## Aftermath
 
-## <span class="section-num">7</span> Aftermath {#aftermath}
-
-
-### <span class="section-num">7.1</span> Aftermath One {#aftermath-one}
+### Aftermath One
 
 What we defined as `UI` is actually containing both application logic (the `FSM` stored inside) and rendering (`model -> view` function), so you could want to separate these functions or just rename `UI` to `App` and abstract your application by `view`:
 
@@ -611,10 +584,9 @@ main =
 
 But now you may reuse the same logic for different views.
 
+### Aftermath Two
 
-### <span class="section-num">7.2</span> Aftermath Two {#aftermath-two}
-
-Another thing. This would be useful to `map` over the `FSM` types to convert, for example, `FSM action (Either error model)` to `FSM action (Covered error model)` with just one call, but if you try to implement `Functor` instance for it, you'll find that to do it we also need a function to convert `Covered` to `Either` back, which breaks the `Functor` logic, of course. But it looks like there's =Invariant=for that!
+Another thing. This would be useful to `map` over the `FSM` types to convert, for example, `FSM action (Either error model)` to `FSM action (Covered error model)` with just one call, but if you try to implement `Functor` instance for it, you’ll find that to do it we also need a function to convert `Covered` to `Either` back, which breaks the `Functor` logic, of course. But it looks like there’s `Invariant`for that!
 
 ```haskell
 imapModel
@@ -634,29 +606,27 @@ instance invariantFSM :: Invariant (FSM action) where
     imap = imapModel
 ```
 
-...Unfortunately, no, `imap` is not enough, because you can not create `Covered` out of thin air if there's `Left error` value in `Either` part---you need some value to put in `Covered`. You may use `imap` for any cases where models are easily converted both one to another and back without the loss of data.
+…Unfortunately, no, `imap` is not enough, because you can not create `Covered` out of thin air if there’s `Left error` value in `Either` part—you need some value to put in `Covered`. You may use `imap` for any cases where models are easily converted both one to another and back without the loss of data.
 
+### Aftermath Three
 
-### <span class="section-num">7.3</span> Aftermath Three {#aftermath-three}
-
-Remember I noticed that it's better to use `List (Effect action)` rather than `Effect (List action)`? It indeed is, and it requires just one change in the code of the `run` function. To replace:
+Remember I noticed that it’s better to use `List (Effect action)` rather than `Effect (List action)`? It indeed is, and it requires just one change in the code of the `run` function. To replace:
 
 ```haskell
-stopPerformingEffects <- Event.subscribe updates
-    \(_ /\ eff) -> eff >>= traverse_ pushAction
+    stopPerformingEffects <- Event.subscribe updates
+        \(_ /\ eff) -> eff >>= traverse_ pushAction
 ```
 
 with
 
 ```haskell
-stopPerformingEffects <- Event.subscribe updates
-    \(_ /\ effs) -> traverse_ ((=<<) pushAction) effs
+    stopPerformingEffects <- Event.subscribe updates
+        \(_ /\ effs) -> traverse_ ((=<<) pushAction) effs
 ```
 
 Done. The example is written using `List (Effect Action)`, by the way.
 
-
-### <span class="section-num">7.4</span> Aftermath Four {#aftermath-four}
+### Aftermath Four
 
 And the last. `Covered` type has the `Bind` instance such as (where `recover` extracts the value from the `Covered` type):
 
@@ -666,17 +636,15 @@ instance coveredBind
     bind covered k = appendErrors covered $ k $ recover covered
 ```
 
-You've seen `appendErrors` above. So now you know, that you may use `>>=` anywhere to join errors between two `Covered` values in any place.
+You’ve seen `appendErrors` above. So now you know, that you may use `>>=` anywhere to join errors between two `Covered` values in any place.
 
-
-### <span class="section-num">7.5</span> Aftermath Five {#aftermath-five}
+### Aftermath Five
 
 One project that inspired me for using PureScript with FRP is [Flare](https://david-peter.de/articles/flare/). The way it uses Functor and Applicative instances to adapt the values inside of the components is just awesome and they are all just one-liners. So the future plan is to find a way to do similar things with FSMs.
 
+### And Everything Else…
 
-### <span class="section-num">7.6</span> And Everything Else... {#and-everything-else}
-
-Don't forget to take a look at [the example](https://dev.to/shamansir/purescript-ui-driven-by-finite-state-machines-and-event-streams-part-ii-the-example-3m77) which has the code with the effects, and passing actions from the `UI` and everything you would question about during reading this article. Hope you enjoyed it.
+Don’t forget to take a look at [the example](https://dev.to/shamansir/purescript-ui-driven-by-finite-state-machines-and-event-streams-part-ii-the-example-3m77) which has the code with the effects, and passing actions from the `UI` and everything you would question about during reading this article. Hope you enjoyed it.
 
 Also, here is the [example source code](https://github.com/shamansir/purescript-fsm).
 
@@ -684,6 +652,4 @@ On the other hand, the article could contain errors and misleading information, 
 
 If you see the ways to improve the approach, please also do comment. Even comment if you have ideas on how to do things worse.
 
-[^fn:1]: There is some controversy on the effectiveness of the approach, but let's decide the author (for sure) and the reader (hope so) still think the approach is just awesome, if you use it right.
-
-This text is auto inserted at the end of the exported Markdown.
+[^1]:	There is some controversy on the effectiveness of the approach, but let’s decide the author (for sure) and the reader (hope so) still think the approach is just awesome, if you use it right.
