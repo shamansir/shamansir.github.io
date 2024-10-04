@@ -1,4 +1,0 @@
-#+title: Andropedros Pistoleros Rhinoceros
-#+hugo_section: blog-drafts
-#+draft: true
-#+author: Anton Kotenko
