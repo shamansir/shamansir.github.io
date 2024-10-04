@@ -32,9 +32,25 @@ My real name is **Anton Kotenko**, I was born in _Saint-Petersburg, Russia_ in M
 
 ## Blog Articles & Talks
 
-Till now I have published 26 blog articles in English and 42 articles in Russian, they are mostly on technical topics and the first posts were just my emotions to share. In the [[Blog]] folder you may find all them.
+Till now I have published 26 blog articles in English and 42 articles in Russian, they are mostly on technical topics and the first posts were just my emotions to share. In the [[Blog]] folder you may find all them. I also gave a dozen of tech [[Talks]]. Here is the list of some the articles I am proud of:
 
-## This page
+* [[Blog/blog-en/2014-09-06-generating-functional-parsers]]
+* [[Blog/blog-en/2017-04-07-modern-binary-reverse-engineering-with-node-js-for-elm]]
+* [[Blog/blog-en/2020-04-23-purescript-ui-driven-by-finite-state-machines-and-event-streams-part-i]]
+* [[Blog/blog-en/2020-04-23-purescript-ui-driven-by-finite-state-machines-and-event-streams-part-ii]]
+* [[Blog/blog-en/2010-08-12-nijiato-detection-of-fingers-motion-algorithm]]
+* [[Blog/blog-en/2010-07-10-post-about-fluxus]], [[Blog/blog-en/2010-12-06-fluxus-solar-system]]
+* [[Blog/blog-en/2009-10-13-sametimed-google-wave-client]]
+* [[Blog/blog-en/2010-01-09-10-useful-solutions-for-android-developer]]
+* [[Blog/blog-en/2007-08-12-16-useful-solutions-for-javascript]]
+* [[Blog/blog-ru/2018-02-11-category-theory-senseless-and-merciless]]
+* [[Blog/blog-ru/2012-02-22-the-way-of-the-asynchronous-samurai]]
+* [[Blog/blog-ru/2011-02-11-android-renderscript-example-translation]]
+* [[Blog/blog-ru/2011-11-16-monkey-patching-or-extending-native-types-religious-or-not]]
+
+Also you may find the list of [[Skills]] here.
+
+## Technology behind this page
 
 If you are wondering, this page is built by [Emanote].
 
@@ -47,6 +63,7 @@ Lastly I almost had no wish to do it, since I really got obsessed with the idea 
 * It treats all the `.org` files on your drive or in some folder, depends on your configuration, as one source of data, and so all the TODOs and tasks are there;
 * It did all the things [Obsidian] does even before the Big Bang, and very probably was the inspiration for all the [Notion] and [Obsidian] etc.
 * Its syntax is much more powerful and supports LaTeX and many things #Markdown lacks even nowadays;
+* And many more...
 
 _Still I currently write this page is in Markdown :)_. I was looking for some `orgmode`-based data/blog/site engine for _truly_ a lot. #Emacs and especially #Spacemacs are awesome and, as said, it is one of the advantages of `org` to have all these things close to your code, but I am still very bad in using #emacs or #vim and through my career I used mostly lightweight visual IDEs, while being a fan of text-mode. Anyway, I probably don't have to explain myself at my own homepage, yet I try using/learning #spacemacs every three months so once I could succeed.
 
