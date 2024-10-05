@@ -1,0 +1,292 @@
+* CV: Anton Kotenko
+
+  - E-mail: shaman.sir@gmail.com
+  - Location: Munich, Germany
+  - Phone: +49 176 84181188
+  - [[https://shamansir.github.io][Website]]: https://shamansir.github.io
+  - Birthday: 4 March 1984
+
+Blah Blah Blah
+
+** Timeline
+
+*** JetBrains GmbH
+*FrontEnd & Software Developer*
+
+May 2016 — August 2024
+
+  - /Munich/, /Germany/ 
+
+- Technologies: :: JavaScript, React, Elm, HTML5 Canvas, GLSL Shaders, Kotlin JS, Kotlin
+*** Animatron LLC
+*GWT/JS Developer*
+
+July 2011 — May 2016
+
+Developing the Player based on HTML5 Canvas technology, in pure vanilla JavaScript. Integrating it into the GWT-Based Application, but it also could be used standalone and be embedded into websites
+
+  - /Munich/, /Germany/ 2012 — 2016 /(JetBrains GmbH)/
+  - /Odessa/, /Ukraine/ 2011 — 2012
+  - /Boston/, /United States, MA/ 
+
+- Technologies: :: Java, Google Web Toolkit (GWT), JavaScript, HTML5 Canvas
+*** iPark Ventures
+*GWT Developer*
+
+April 2010 — June 2011
+
+Programming and Architecture with GWT ﴾with mvp4g﴿, writing custom components
+
+  - /Odessa/, /Ukraine/ 
+
+- Technologies: :: Java, Google Web Toolkit (GWT), mvp4g GWT Framework, JavaScript, Python
+*** Exectum LLC
+*Java EE / Web Developer*
+
+October 2009 — February 2010
+
+Participation in Billing engine development
+
+  - /St. Petersburg/, /Russia/ 
+
+- Technologies: :: Java, Java RPC, Spring, JavaScript, ExtJS
+*** Sea Project
+*XSLT Developer*
+
+August 2009 — September 2009
+
+Project, related to sea machinery documentation
+
+  - /St. Petersburg/, /Russia/ 
+
+- Technologies: :: Java, Java EE, XML, XSLT, JavaScript
+*** FotoNation / Piclinq
+*Java EE Developer*
+*JavaScript Web UI Developer*
+
+June 2007 — June 2009
+
+Photo sharing service for Nikon. UI Team: Java & JavaScript: Development with Apache Wicket + JavaScript ‐ complex native‐JS+Java components and layouting scripts + action system, UI prototypes using JQuery. Components/Layouts are dynamically communicate with server‐side/Database.
+
+  - /St. Petersburg/, /Russia/ 
+
+- Technologies: :: Java, Apache Wicket, Java Server Pages, JavaScript
+*** FK LTD
+*Web Developer*
+
+November 2006 — June 2007
+
+CMS Project Development for Real Estate Industry; Several small AJAX‐related projects
+
+  - /St. Petersburg/, /Russia/ 
+
+- Technologies: :: PHP, JavaScript, AJAX, XML
+*** EmDev LLC
+*Software / Web Developer*
+
+March 2005 — October 2006
+
+Participation in huge J2EE Projects ﴾Spring, Hibernate﴿ from the scratch, writing components, trying out and using new technologies ﴾Ajax, JSF, Spring/Hibernate﴿; Delphi Visual Component for Dynamic Data Visualization using TreeMap Algorythm to be integrated into the big Desktop Application; Dealing with threads concurrency and a high rate of updates;
+
+  - /St. Petersburg/, /Russia/ 
+
+- Technologies: :: Java, Java EE, Enterprise Java Beans, Java Server Pages, Java Server Faces, Spring, Hibernate, Borland Delphi, Python
+*** FSBI "VNII Okeangeologia"
+*Software Developer*
+*Animation Creator for Conferences*
+*Scientific Researcher*
+*Interpreter*
+
+March 2003 — March 2005
+
+Laboratoriya Mnogourovnevogo Geophizicheskogo Monitoringa Multi‐Level Geophysical Monitoring Laboratory
+
+Scientific Delphi Applications; Flash Animation for Conferences; Interpreter;
+        
+
+  - /St. Petersburg/, /Russia/ 
+  - /Xiao Nang Hai/, /China/ 
+  - /Privetnoye/, /Ukraine/ 
+
+- Technologies: :: Borland Delphi, Object Pascal, C++, Assembler, Macromedia Flash
+
+** Talks
+
+*** Web-development with GWT & mvp4g
+(Веб-разработка на GWT и mvp4g)
+
+April 2011
+
+@ [[https://addconf.ru/en/program/12587][Application Developer Days (ADD)]]. St. Peterburg, Russia
+
+  - [[https://speakerdeck.com/shamansir/gwt-mvp4g][Slides]]  (RU)
+
+  - [[https://vimeo.com/26357352][Video, p.1/3]]  (RU)
+  - [[https://vimeo.com/26413549][Video, p.2/3]]  (RU)
+  - [[https://vimeo.com/26715073][Video, p.3/3]]  (RU)
+
+
+*** Fluxus
+April 2011
+
+@ [[https://addconf.ru/en/program/12587][Application Developer Days (ADD)]]. St. Peterburg, Russia
+
+  - [[https://vimeo.com/23468113][Video]]  (RU)
+
+
+*** The Real JavaScript
+(Настоящий JavaScript)
+
+October 2011
+
+@ [[https://dou.ua/calendar/983/][Web Standards Days]]. Kyiv, Ukraine
+
+  - [[https://speakerdeck.com/shamansir/pravil-nyi-javascript][Slides]]  (RU)
+
+  - [[https://vimeo.com/33393795][Video]]  (RU)
+
+
+*** How to Grasp the Functional Way of Writing JavaScript
+(Постигаем функциональный JavaScript)
+
+in 2012
+
+@ Meetup @ e-legion. St. Petersburg, Russia
+
+  - [[https://speakerdeck.com/shamansir/postighaiem-funktsional-nyi-javascript][Slides (ru)]]  (RU)
+  - [[https://speakerdeck.com/shamansir/mastering-functional-javascript][Slides (en)]]  (EN)
+
+
+*** Animatron Player API in Details
+in 2013
+
+@ [[https://www.meetup.com/munich-frontend-developers/][Frontend Developers Meetup]]. Munich, Germany
+
+Wayra GmbH
+
+  - [[https://speakerdeck.com/shamansir/animatron-player-api-in-details-v3][Slides, v.3]]  (EN)
+
+  - [[https://vimeo.com/manage/videos/79683081][Video]]  (EN)
+
+
+*** RPD: Reactive Patch Development
+in 2016
+
+@ [[https://kaiser.gallery/events/js-kongress-2016/][JS Kongress]]. Munich, Germany
+
+  - [[https://speakerdeck.com/shamansir/rpd-reactive-patch-development][Slides @ JS Kongress 2016]]  (EN)
+
+  - [[https://www.youtube.com/watch?v=K6KDDGlTGqc][Video @ JS Kongress 2016]]  (EN)
+
+
+*** RPD: Reactive Patch Development v2.0
+February 2017
+
+@ [[https://www.meetup.com/munichjs-user-group/events/237146815/][JavaScript Meetup]]. Munich, Germany
+
+Google
+
+  - [[https://speakerdeck.com/shamansir/rpd-reactive-patch-development-extended-cut][Slides @ Google Meetup 2017]]  (EN)
+
+
+*** Elm: 2D & 3D Graphics.
+June 2017
+
+@ [[https://www.meetup.com/munich-frontend-developers/][Frontend Developers Meetup]]. Munich, Germany
+
+  - [[https://speakerdeck.com/shamansir/elm-2d-and-3d-graphics][Slides]]  (EN)
+
+  - [[https://vimeo.com/manage/videos/222331979][Video]]  (EN)
+
+
+*** About Git. That's easy
+(Про Гит. Вот так просто)
+
+in 2017
+
+Munich, Germany
+
+JetBrains GmbH
+
+  - [[https://speakerdeck.com/shamansir/pro-git][Slides (ru)]]  (RU)
+
+
+*** Elm. The language itself and how it brings functional programming into web
+September 2017
+
+@ [[https://www.meetup.com/de-DE/munich-frontend-developers/events/241139489/][Frontend Developers Meetup]]. Munich, Germany
+
+  - [[https://speakerdeck.com/shamansir/elm-revolution][Slides]]  (EN)
+
+  - [[https://www.youtube.com/watch?v=-3OL8V7Lk-Y][Video]]  (EN)
+
+
+*** iElm
+December 2017
+
+Munich, Germany
+
+  - [[https://speakerdeck.com/shamansir/ielm][Slides]]  (EN)
+
+
+*** iElm @ JetBrains
+January 2017
+
+Munich, Germany
+
+JetBrains GmbH
+
+  - [[https://speakerdeck.com/shamansir/ielm-tech-jb][Slides]]  (EN)
+
+
+*** The Future of Web UI Development.
+September 2018
+
+@ [[https://www.meetup.com/de-DE/munich-frontend-developers/events/253679780/][FrontEnd Developers Meetup]]. Munich, Germany
+
+  - [[https://speakerdeck.com/shamansir/the-future-of-web-ui-development][Slides]]  (EN)
+
+
+*** Generative Animation in Elm
+w/Sergey Golovatschov
+
+in 2019
+
+@ [[https://www.youtube.com/playlist?list=PLpVeA1tdgfCCCAKy8DD1SJJ85mOB2ss3l][f(by) '19]]. Minsk, Belarus
+
+  - [[https://speakerdeck.com/shamansir/generating-animation-with-elm][Slides]]  (EN)
+
+  - [[https://www.youtube.com/watch?v=he1t3uXvl7o][Video]]  (EN)
+
+
+*** Tron : Minimalist UI for Generative Art
+in 2020
+
+@ [[https://www.jetbrains.com/lp/designconf/][JetBrains Design Conference '20]]. Munich, Germany
+
+  - [[https://www.youtube.com/watch?v=5mOT5q8SKDM][Video]]  (EN)
+
+
+*** Noodle : Animation as Ramen
+in 2020
+
+@ JetBrains Design Talks '22. Munich, Germany
+
+  - [[https://www.youtube.com/watch?v=FSzMBKYgvCE&list=PLQ176FUIyIUZ3DvECf0NkkOpYwE0JECFn&index=9][Video]]  (EN)
+
+
+*** PureScript with a chance of Free Monads
+in 2023
+
+@ [[https://www.meetup.com/munich-lambda/events/289723656/?eventOrigin=group_past_events][Lambda Meetup @ JetBrains ('head 23)]]. Munich, Germany
+
+  - [[https://www.youtube.com/watch?v=oSZMB9f6v4c][Video]]  (EN)
+
+
+*** The Basics of Generating Everything
+in 2023
+
+@ [[https://www.meetup.com/munich-lambda/events/296915834/][Lambda Meetup @ JetBrains ('tail 23)]]. Munich, Germany
+
+  - [[https://youtu.be/e9urkjHSgXY][Video]]  (EN)
+
