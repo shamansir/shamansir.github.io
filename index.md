@@ -2,11 +2,13 @@
 
 ## About
 
-My real name is **Anton Kotenko**, I was born in _Saint-Petersburg, Russia_ in March of 1984, at my age of 24 I moved to _Odessa, Ukraine_ and after living there for a few years, I moved to _Munich, Germany_ in 2012. I am a software/fronted developer starting from 2003 which makes me 21-years being in this shit and I still really like it :). You can find my complete [[Lebenslauf]] here, which is the German word for _'How my life runs'_ or _'The story of my life'_. Also I have a list of my [[Travels]] here. I am in the Internet for a long time, being really old-school and I change my nicknames periodically (the current one I love the most), so you may know me under one of my other nicknames:
+My real name is **Anton Kotenko**. Definitely a geek and kind of musician and kind of VJ. I was born in _Saint-Petersburg, Russia_ in March of 1984, at my age of 24 I moved to _Odessa, Ukraine_ and after living there for a few years (lovely city and people!), I moved to _Munich, Germany_ in 2012. For work and leisure, I am a software/frontend developer starting from 2003 which makes me 21 years being in this shit and I still really like it! :). You can find my complete [[Lebenslauf]] here, which is the German word for _'How my life runs'_ or _'The story of my life'_ or _'How my life was ruined'_ as well. Also below is the list of my other passions, I mean, other than programming. I am in the Internet for a long time, being really scoofy, so I change my nicknames periodically (the current one I prefer the most, for the moment), so you may happen to know me under one of my other nicknames:
 
 * Ulric Wilfred
 * `shamansir` or `shaman_sir`
 * `tunguss` or `tungusso`
+* `Elektrokiłka`
+* Gordey Nudo
 * `zokotuhaFly`
 
 ## Social Links
@@ -29,6 +31,7 @@ My real name is **Anton Kotenko**, I was born in _Saint-Petersburg, Russia_ in M
 * Performing [[Music]]
 * Programming Music;
 * Being a VJ (TouchDesigner, vvvv, hydra);
+* [[Travelling][Travels]];
 
 ## Blog Articles & Talks
 
@@ -48,7 +51,6 @@ Till now I have published 26 blog articles in English and 42 articles in Russian
 * [[Blog/blog-ru/2012-02-22-the-way-of-the-asynchronous-samurai]]
 * [[Blog/blog-ru/2011-02-11-android-renderscript-example-translation]]
 * [[Blog/blog-ru/2011-11-16-monkey-patching-or-extending-native-types-religious-or-not]]
-
 
 Also you may find the list of [[Skills]] here.
 
