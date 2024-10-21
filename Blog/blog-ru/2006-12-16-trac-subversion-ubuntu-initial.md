@@ -7,7 +7,7 @@ tags: [ trac, subversion, ubuntu ]
 
 Приветствую всех заинтересованных. Ведь вас, наверняка, не очень много :).
 
-> **Upd.**: Более структурированное и последовательное (правда менее повествовательное) руководство для [Ubuntu Feisty](http://ubuntuguide.org/wiki/Ubuntu:Feisty Ubuntu 7.04) находится [здесь](./trac-subersion-ubuntu-revisited)
+> **Upd.**: Более структурированное и последовательное (правда менее повествовательное) руководство для [Ubuntu Feisty](<http://ubuntuguide.org/wiki/Ubuntu:Feisty> Ubuntu 7.04) находится [здесь](./2008-03-17-trac-subersion-ubuntu-revisited.md)
 
 Ну а я, в свою очередь, славлюсь среди знающих меня извращенными подходами к простым вещам, так что и в этот раз решил не ломать традиций :).
 
@@ -36,7 +36,7 @@ _Ubuntu 6.06 TLS_ (руссская, хе-хе :) ), _Trac 0.10.3_, Subversion _
 > Добавляем (`Insert`):
 >
 >     deb http://ru.archive.ubuntu.com/ubuntu dapper universe main restricted multiverse
->     deb-src http://ru.archive.ubuntu.com/ubuntu dapper universe
+> deb-src http://ru.archive.ubuntu.com/ubuntu dapper universe
 >
 > Если нужно, снимаем комменты со строк с `http://**.archive.ubuntu.com` и делаем:
 >
@@ -94,7 +94,7 @@ _Ubuntu 6.06 TLS_ (руссская, хе-хе :) ), _Trac 0.10.3_, Subversion _
 
 ```
 
-Если кратко, мы настраиваем виртуальный хост, устанавливаеваем корневой каталог для [CGI](http://en.wikipedia.org/wiki/Common_Gateway_Interface Common Gateway Interface)-скриптов и документов в `/usr/share/trac/cgi-bin/`, а адрес `http://localhost/trac` привязываем к пути `/usr/share/trac/htdocs` - там лежат всяческие веб-документы. Для доступа к проектам для запросов на `http://localhost/trac.cgi` устанавливается корневой каталог для окружений trac’а - `/var/trac`. В принципе,знающему английский все должно быть понятно :).
+Если кратко, мы настраиваем виртуальный хост, устанавливаеваем корневой каталог для [CGI](<http://en.wikipedia.org/wiki/Common_Gateway_Interface> Common Gateway Interface)-скриптов и документов в `/usr/share/trac/cgi-bin/`, а адрес `http://localhost/trac` привязываем к пути `/usr/share/trac/htdocs` - там лежат всяческие веб-документы. Для доступа к проектам для запросов на `http://localhost/trac.cgi` устанавливается корневой каталог для окружений trac’а - `/var/trac`. В принципе,знающему английский все должно быть понятно :).
 
 Теперь следует включить обработку `cgi`-скриптов:
 
@@ -307,34 +307,34 @@ _Ubuntu 6.06 TLS_ (руссская, хе-хе :) ), _Trac 0.10.3_, Subversion _
 > Затем в `/tmp/` (очистив его предварительно :) ) `mkdir`-ом построить структуру “по одному каталогу для каждого проекта”. А в каждом из этих каталогов сделать, соответственно, свои `trunk`-`tags`-`branches`. Затем сделать
 
 >     cd /tmp
->     sudo svn import . file:///var/svn/ -m “Initial import”
+> sudo svn import . file:///var/svn/ -m “Initial import”
 
 > В `/etc/apache2/mods-enabled/dav_svn.conf` указать:
 
 >     <Location /svn>
->         DAV svn
->         SVNPath /var/svn/
->         AuthType Basic
->         AuthName "Subversion Repository"
->         AuthUserFile /etc/apache2/dav_svn.passwd
->         AuthSVNAccessFile /etc/apache2/dav_svn.authz
->         Require valid-user
->     </Location>
+>     DAV svn
+>     SVNPath /var/svn/
+>     AuthType Basic
+>     AuthName "Subversion Repository"
+>     AuthUserFile /etc/apache2/dav_svn.passwd
+>     AuthSVNAccessFile /etc/apache2/dav_svn.authz
+>     Require valid-user
+> </Location>
 
 > и убрать ненужные `Location`’ы (подкаталоги `svn`’а), если они там есть.
 
 > А вот уже в файле аутентификации `/etc/apache2/dav_svn.authz` мы прописываем права на проекты:
 
 >     [/]
->     megaroot = rw
+> megaroot = rw
 >
->     [/SomeProject]
->     user1 = rw
->     user2 = r
+> [/SomeProject]
+> user1 = rw
+> user2 = r
 
 >     [/AnotherProject]
->     user1 = rw
->     user2 = r
+> user1 = rw
+> user2 = r
 
 > При создании окружений в `trac-admin`, мы в пути к репозиторию, соответственно, указываем `/var/svn/SomeProject`
 
@@ -363,9 +363,9 @@ _Ubuntu 6.06 TLS_ (руссская, хе-хе :) ), _Trac 0.10.3_, Subversion _
 >     Жмем `Insert` и вставляем в конец файла:
 
 >     [/NewProject]
->     user1 = rw
->     user2 = r
->     megaroot = rw
+> user1 = rw
+> user2 = r
+> megaroot = rw
 
 > делаем `Esc/:wq` и…. все. Вот так - если все правильно настроено - делать нужно минимум.
 
@@ -382,10 +382,9 @@ _Ubuntu 6.06 TLS_ (руссская, хе-хе :) ), _Trac 0.10.3_, Subversion _
 > Вставляем в нужный проект:
 
 >     [/SomeProject]
->     user1 = rw
->     user2 = r
->     megaroot = rw
->     new_user = rw
+> user1 = rw
+> user2 = r
+> megaroot = rw
+> new_user = rw
 
 Вот теперь точно все. Успехов :)
-

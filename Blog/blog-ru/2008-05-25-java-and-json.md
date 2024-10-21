@@ -307,7 +307,7 @@ public class JSONBeanServlet extends HttpServlet {
 
 ```
 
-Клиентская часть состоит, собственно из [JSON-парсера-конструктора](http://www.json.org/json2.js) (да, всё это можно сделать через `eval()`, но предоставленный разработчиками код делает это, по их обещаниям, аккуратнее) и, в моём случае, класса, облегчающего работу с сервлетом. Класс использует немного модифицированную функцию `makeRequest` из [статьи о решениях JavaScript](?16-really-useful-javascript-solutions) (которую я обновлю до этой версии там сразу же после написания статьи) и обеспечивающие ООП функции `Class` \[[1](../16-useful-solutions-for-javascript#sol-1)\] и `createMethodReference` \[[2](../16-useful-solutions-for-javascript#sol-2)\] оттуда же.
+Клиентская часть состоит, собственно из [JSON-парсера-конструктора](http://www.json.org/json2.js) (да, всё это можно сделать через `eval()`, но предоставленный разработчиками код делает это, по их обещаниям, аккуратнее) и, в моём случае, класса, облегчающего работу с сервлетом. Класс использует немного модифицированную функцию `makeRequest` из [статьи о решениях JavaScript](?16-really-useful-javascript-solutions) (которую я обновлю до этой версии там сразу же после написания статьи) и обеспечивающие ООП функции `Class` \[[1](./2007-08-12-16-useful-solutions-for-javascript.md#sol-1)\] и `createMethodReference` \[[2](./2007-08-12-16-useful-solutions-for-javascript.md#sol-2)\] оттуда же.
 
 ``` javascript
 

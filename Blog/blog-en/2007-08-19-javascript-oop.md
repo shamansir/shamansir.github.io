@@ -254,27 +254,27 @@ var someElement = new ElementWrapper('someElmId');
 
 …and `someElement` object will be linked to element (wrapping an element) with `id` _‘`SomeElmId`’_. To access it -- as a DOM element -- you can ask `someElement.element` property.
 
-The following class inherits `ElementWrapper` and allows to work with element as a fully-functional graphic object (using some functions from [previous article](../16-useful-solutions-for-javascript): `getElmAttr`, `setElmAttr`, `findOffsetHeight`, `getPosition`, `getAlignedPosition`)
+The following class inherits `ElementWrapper` and allows to work with element as a fully-functional graphic object (using some functions from [previous article](./2007-08-12-16-useful-solutions-for-javascript.md): `getElmAttr`, `setElmAttr`, `findOffsetHeight`, `getPosition`, `getAlignedPosition`)
 
-> As it is for some functions from [previous article](../16-useful-solutions-for-javascript), the code is changed through times -- in this case it was parallelly simplified and growed in functionality:
+> As it is for some functions from [previous article](./2007-08-12-16-useful-solutions-for-javascript.md), the code is changed through times -- in this case it was parallelly simplified and growed in functionality:
 
 ``` javascript
 
-var DND_NS 				= 'dnd'; // to use in getAttributeNS and setAttributeNS
+var DND_NS     = 'dnd'; // to use in getAttributeNS and setAttributeNS
 
-var DND_LWIDTH_ATTR 	= 'localWidth';
-var DND_LHEIGHT_ATTR 	= 'localHeight';
-var DND_LTOP_ATTR 		= 'localTop';
-var DND_LLEFT_ATTR 		= 'localLeft';
-var DND_BTOP_ATTR 		= 'baseTop';
-var DND_BLEFT_ATTR 		= 'baseLeft';
+var DND_LWIDTH_ATTR  = 'localWidth';
+var DND_LHEIGHT_ATTR  = 'localHeight';
+var DND_LTOP_ATTR   = 'localTop';
+var DND_LLEFT_ATTR   = 'localLeft';
+var DND_BTOP_ATTR   = 'baseTop';
+var DND_BLEFT_ATTR   = 'baseLeft';
 
 var GraphicalElementWrapper = ExpandedElementWrapper.extend({
 
-	_assignListeners:
-		function() {
-			// do not assign events listeners if they are not required
-		},
+ _assignListeners:
+  function() {
+   // do not assign events listeners if they are not required
+  },
 
     // ========[ functions to work with required attributes ]==========
 
@@ -284,211 +284,211 @@ var GraphicalElementWrapper = ExpandedElementWrapper.extend({
        baseLeft, baseTop -- coorfinates of top left element corner
                             without the [scrolling] offset */
 
-	setLocalWidth:
-		function(localWidth) {
-			setElmAttr(this.element, DND_LWIDTH_ATTR, localWidth + 'px', DND_NS);
-		},
+ setLocalWidth:
+  function(localWidth) {
+   setElmAttr(this.element, DND_LWIDTH_ATTR, localWidth + 'px', DND_NS);
+  },
 
-	setLocalHeight:
-		function(localHeight) {
-			setElmAttr(this.element, DND_LHEIGHT_ATTR, localHeight + 'px', DND_NS);
-		},
+ setLocalHeight:
+  function(localHeight) {
+   setElmAttr(this.element, DND_LHEIGHT_ATTR, localHeight + 'px', DND_NS);
+  },
 
-	setLocalLeft:
-		function(localLeft) {
-			setElmAttr(this.element, DND_LLEFT_ATTR, localLeft + 'px', DND_NS);
-		},
+ setLocalLeft:
+  function(localLeft) {
+   setElmAttr(this.element, DND_LLEFT_ATTR, localLeft + 'px', DND_NS);
+  },
 
-	setLocalTop:
-		function(localTop) {
-			setElmAttr(this.element, DND_LTOP_ATTR, localTop + 'px', DND_NS);
-		},
+ setLocalTop:
+  function(localTop) {
+   setElmAttr(this.element, DND_LTOP_ATTR, localTop + 'px', DND_NS);
+  },
 
-	setBaseLeft:
-		function(baseLeft) {
-			setElmAttr(this.element, DND_BLEFT_ATTR, baseLeft + 'px', DND_NS);
-		},
+ setBaseLeft:
+  function(baseLeft) {
+   setElmAttr(this.element, DND_BLEFT_ATTR, baseLeft + 'px', DND_NS);
+  },
 
-	setBaseTop:
-		function(baseTop) {
-			setElmAttr(this.element, DND_BTOP_ATTR, baseTop + 'px', DND_NS);
-		},
+ setBaseTop:
+  function(baseTop) {
+   setElmAttr(this.element, DND_BTOP_ATTR, baseTop + 'px', DND_NS);
+  },
 
-	getLocalWidth:
-		function() {
-			return getElmAttr(this.element, DND_LWIDTH_ATTR, DND_NS);
-		},
+ getLocalWidth:
+  function() {
+   return getElmAttr(this.element, DND_LWIDTH_ATTR, DND_NS);
+  },
 
-	getLocalHeight:
-		function() {
-			return getElmAttr(this.element, DND_LHEIGHT_ATTR, DND_NS);
-		},
+ getLocalHeight:
+  function() {
+   return getElmAttr(this.element, DND_LHEIGHT_ATTR, DND_NS);
+  },
 
-	getLocalLeft:
-		function() {
-			return getElmAttr(this.element, DND_LLEFT_ATTR, DND_NS);
-		},
+ getLocalLeft:
+  function() {
+   return getElmAttr(this.element, DND_LLEFT_ATTR, DND_NS);
+  },
 
-	getLocalTop:
-		function() {
-			return getElmAttr(this.element, DND_LTOP_ATTR, DND_NS);
-		},
+ getLocalTop:
+  function() {
+   return getElmAttr(this.element, DND_LTOP_ATTR, DND_NS);
+  },
 
-	getBaseLeft:
-		function() {
-			return getElmAttr(this.element, DND_BLEFT_ATTR, DND_NS);
-		},
+ getBaseLeft:
+  function() {
+   return getElmAttr(this.element, DND_BLEFT_ATTR, DND_NS);
+  },
 
-	getBaseTop:
-		function() {
-			return getElmAttr(this.element, DND_BTOP_ATTR, DND_NS);
-		},
+ getBaseTop:
+  function() {
+   return getElmAttr(this.element, DND_BTOP_ATTR, DND_NS);
+  },
 
-	getOffsetWidth:
-		function() {
-			return this.element.offsetWidth;
-		},
+ getOffsetWidth:
+  function() {
+   return this.element.offsetWidth;
+  },
 
-	getOffsetHeight:
-		function() {
-			return this.element.offsetHeight || this.element.style.pixelHeight || findOffsetHeight(this.element);
-		},
+ getOffsetHeight:
+  function() {
+   return this.element.offsetHeight || this.element.style.pixelHeight || findOffsetHeight(this.element);
+  },
 
     // =======[ / function to set required attributes ]=========
 
-	show: // show element
-		function() {
-			this.element.style.display    = '';
-			this.element.style.visibility = 'visible';
-		},
+ show: // show element
+  function() {
+   this.element.style.display    = '';
+   this.element.style.visibility = 'visible';
+  },
 
-	hide: // hide element
-		function() {
-			if (this.element.style.display != 'none') {
-				this.element.style.display  = 'none';
-			}
-		},
+ hide: // hide element
+  function() {
+   if (this.element.style.display != 'none') {
+    this.element.style.display  = 'none';
+   }
+  },
 
-	blank: // make element "blank"
-		function() {
-			if (this.element.style.display != '') {
-				this.element.style.display    = '';
-				this.element.style.visibility = 'hidden';
-			}
-		},
+ blank: // make element "blank"
+  function() {
+   if (this.element.style.display != '') {
+    this.element.style.display    = '';
+    this.element.style.visibility = 'hidden';
+   }
+  },
 
-	makeBlock: // return the element from blank or hidden state
-		function() {
-			if (this.element.style.display != 'block') {
-				this.element.style.display  = 'block';
-			}
-		},
+ makeBlock: // return the element from blank or hidden state
+  function() {
+   if (this.element.style.display != 'block') {
+    this.element.style.display  = 'block';
+   }
+  },
 
-	isPointInside: // is point inside the element, point in {x, y} format
-		function(curPoint) {
-			var localRight  = parseInt(this.getLocalLeft()) + parseInt(this.getLocalWidth())
+ isPointInside: // is point inside the element, point in {x, y} format
+  function(curPoint) {
+   var localRight  = parseInt(this.getLocalLeft()) + parseInt(this.getLocalWidth())
                                        + this.element.scrollLeft;
-    		var localBottom = parseInt(this.getLocalTop())  + parseInt(this.getLocalHeight())
+      var localBottom = parseInt(this.getLocalTop())  + parseInt(this.getLocalHeight())
                                        + this.element.scrollTop;
-    		return (parseInt(this.getLocalLeft()) < curPoint.x) &&
-    			   (parseInt(this.getLocalTop())  < curPoint.y) &&
-    			   (localRight > curPoint.x) && (localBottom > curPoint.y);
-    	},
+      return (parseInt(this.getLocalLeft()) < curPoint.x) &&
+          (parseInt(this.getLocalTop())  < curPoint.y) &&
+          (localRight > curPoint.x) && (localBottom > curPoint.y);
+     },
 
-	isElementNear: /* is element is positioned near the passed element
+ isElementNear: /* is element is positioned near the passed element
             (overlaps the region of this element with more than a half of the current element region) */
-    	function(graphicalElement) {
-    		if (graphicalElement) {
-				var elmCurPos = findPos(graphicalElement.element);
-				var elmHalfHeight = parseInt(graphicalElement.getLocalHeight())/2;
-				var elmHalfWidth = parseInt(graphicalElement.getLocalWidth())/2;
-				var localLeft = (parseInt(this.getLocalLeft()) > 0 ? parseInt(this.getLocalLeft()) : 0);
-				var localTop = (parseInt(this.getLocalTop()) > 0 ? parseInt(this.getLocalTop()) : 0);
-				var leftCorrect = (elmCurPos.x > (localLeft - elmHalfWidth)) &&
-								  (elmCurPos.x < (localLeft + parseInt(this.getLocalWidth()) - elmHalfWidth));
-				var topCorrect = (elmCurPos.y > (localTop - elmHalfHeight)) &&
-							     (elmCurPos.y < (localTop + parseInt(this.getLocalHeight()) - elmHalfHeight));
-				return leftCorrect && topCorrect;
-			} else return false;
-		},
+     function(graphicalElement) {
+      if (graphicalElement) {
+    var elmCurPos = findPos(graphicalElement.element);
+    var elmHalfHeight = parseInt(graphicalElement.getLocalHeight())/2;
+    var elmHalfWidth = parseInt(graphicalElement.getLocalWidth())/2;
+    var localLeft = (parseInt(this.getLocalLeft()) > 0 ? parseInt(this.getLocalLeft()) : 0);
+    var localTop = (parseInt(this.getLocalTop()) > 0 ? parseInt(this.getLocalTop()) : 0);
+    var leftCorrect = (elmCurPos.x > (localLeft - elmHalfWidth)) &&
+          (elmCurPos.x < (localLeft + parseInt(this.getLocalWidth()) - elmHalfWidth));
+    var topCorrect = (elmCurPos.y > (localTop - elmHalfHeight)) &&
+            (elmCurPos.y < (localTop + parseInt(this.getLocalHeight()) - elmHalfHeight));
+    return leftCorrect && topCorrect;
+   } else return false;
+  },
 
-	isElementInside: // is passed element is inside current element
-		function(graphicalElement) {
-			if (graphicalElement) {
-				var elmCurPos = findPos(graphicalElement.element);
-				var elmHalfHeight = parseInt(graphicalElement.getOffsetHeight())/2;
-				var elmHalfWidth = parseInt(graphicalElement.getOffsetWidth())/2;
-				return this.isPointInside({x:(elmCurPos.x + elmHalfWidth),
-									   y:(elmCurPos.y + elmHalfHeight)})
-			} else return false;
-		},
+ isElementInside: // is passed element is inside current element
+  function(graphicalElement) {
+   if (graphicalElement) {
+    var elmCurPos = findPos(graphicalElement.element);
+    var elmHalfHeight = parseInt(graphicalElement.getOffsetHeight())/2;
+    var elmHalfWidth = parseInt(graphicalElement.getOffsetWidth())/2;
+    return this.isPointInside({x:(elmCurPos.x + elmHalfWidth),
+            y:(elmCurPos.y + elmHalfHeight)})
+   } else return false;
+  },
 
-	isLeftSide: // is the point ({x, y}) on the left side of elements region
-		function(curPoint) {
-			var elmHalfWidth = parseInt(this.getLocalWidth())/2;
-			var localLeft = (parseInt(this.getLocalLeft()) > 0 ? parseInt(this.getLocalLeft()) : 0);
-			return (curPoint.x >= localLeft) && (curPoint.x < (localLeft + elmHalfWidth));
-		},
+ isLeftSide: // is the point ({x, y}) on the left side of elements region
+  function(curPoint) {
+   var elmHalfWidth = parseInt(this.getLocalWidth())/2;
+   var localLeft = (parseInt(this.getLocalLeft()) > 0 ? parseInt(this.getLocalLeft()) : 0);
+   return (curPoint.x >= localLeft) && (curPoint.x < (localLeft + elmHalfWidth));
+  },
 
-	isRightSide: // is the point ({x, y}) on the right side of elements region
-		function(curPoint) {
-			var elmHalfWidth = parseInt(this.getLocalWidth())/2;
-			var localRight = ((parseInt(this.getLocalLeft()) > 0
+ isRightSide: // is the point ({x, y}) on the right side of elements region
+  function(curPoint) {
+   var elmHalfWidth = parseInt(this.getLocalWidth())/2;
+   var localRight = ((parseInt(this.getLocalLeft()) > 0
                     ? parseInt(this.getLocalLeft())
                     : 0)) + parseInt(this.getLocalWidth());
-    		return (curPoint.x <= localRight) && (curPoint.x > (localRight - elmHalfWidth));
-    	},
+      return (curPoint.x <= localRight) && (curPoint.x > (localRight - elmHalfWidth));
+     },
 
-	inTopOf: // is the point ({x, y}) on the top side of elements region
-		function(curPoint) {
-			var localTop 	= (parseInt(this.getLocalTop()) > 0 ? parseInt(this.getLocalTop()) : 0);
-			var localHeight = (parseInt(this.getLocalHeight()) > 0 ? parseInt(this.getLocalHeight()) : 0);
-			if (this.element.clientHeight && (this.element.clientHeight < localHeight))
+ inTopOf: // is the point ({x, y}) on the top side of elements region
+  function(curPoint) {
+   var localTop  = (parseInt(this.getLocalTop()) > 0 ? parseInt(this.getLocalTop()) : 0);
+   var localHeight = (parseInt(this.getLocalHeight()) > 0 ? parseInt(this.getLocalHeight()) : 0);
+   if (this.element.clientHeight && (this.element.clientHeight < localHeight))
                 localHeight = this.element.clientHeight;
-    		return ((curPoint.y > localTop) && (curPoint.y <= (localTop + (localHeight / 10))));
-    	},
+      return ((curPoint.y > localTop) && (curPoint.y <= (localTop + (localHeight / 10))));
+     },
 
-	inBottomOf: // is the point ({x, y}) on the bottom side of elements region
-		function(curPoint) {
-			var localTop 	= (parseInt(this.getLocalTop()) > 0 ? parseInt(this.getLocalTop()) : 0);
-			var localHeight = (parseInt(this.getLocalHeight()) > 0 ? parseInt(this.getLocalHeight()) : 0);
-			if (this.element.clientHeight && (this.element.clientHeight < localHeight))
+ inBottomOf: // is the point ({x, y}) on the bottom side of elements region
+  function(curPoint) {
+   var localTop  = (parseInt(this.getLocalTop()) > 0 ? parseInt(this.getLocalTop()) : 0);
+   var localHeight = (parseInt(this.getLocalHeight()) > 0 ? parseInt(this.getLocalHeight()) : 0);
+   if (this.element.clientHeight && (this.element.clientHeight < localHeight))
                 localHeight = this.element.clientHeight;
-    		return ((curPoint.y >= (localTop + localHeight - (localHeight / 10))) &&
+      return ((curPoint.y >= (localTop + localHeight - (localHeight / 10))) &&
                     (curPoint.y < (localTop + localHeight)));
-	    },
+     },
 
-	recalc: // recalculates the element's coordinates
-	       /* baseOffset in the very most cases is
+ recalc: // recalculates the element's coordinates
+        /* baseOffset in the very most cases is
            { x: this.element.scrollLeft, y: this.element.scrollTop } */
-    	function(baseOffset) {
+     function(baseOffset) {
 
-    		var pos = findPos(this.element);
+      var pos = findPos(this.element);
 
-    		this.setBaseLeft(pos.x);
-    		this.setBaseTop(pos.y);
-    		this.setLocalLeft(pos.x - (baseOffset ? baseOffset.x : 0));
-    		this.setLocalTop(pos.y - (baseOffset ? baseOffset.y : 0));
-    		this.setLocalWidth(parseInt(this.getOffsetWidth()));
-    		this.setLocalHeight(parseInt(this.getOffsetHeight()));
-    	},
+      this.setBaseLeft(pos.x);
+      this.setBaseTop(pos.y);
+      this.setLocalLeft(pos.x - (baseOffset ? baseOffset.x : 0));
+      this.setLocalTop(pos.y - (baseOffset ? baseOffset.y : 0));
+      this.setLocalWidth(parseInt(this.getOffsetWidth()));
+      this.setLocalHeight(parseInt(this.getOffsetHeight()));
+     },
 
-	addOffset: // adds the offset to element, offset is in {x, y} format
-		function(offsetXY) {
-			this.setLocalLeft(parseInt(this.getBaseLeft()) - offsetXY.x);
-			this.setLocalTop(parseInt(this.getBaseTop()) - offsetXY.y);
-		},
+ addOffset: // adds the offset to element, offset is in {x, y} format
+  function(offsetXY) {
+   this.setLocalLeft(parseInt(this.getBaseLeft()) - offsetXY.x);
+   this.setLocalTop(parseInt(this.getBaseTop()) - offsetXY.y);
+  },
 
     copyElmRectParameters: // copy attributes of this element to another
-    	function(fromElm, toElm) {
-    		toElm = toElm || this.element;
-	    	setElmAttr(toElm, DND_BTOP_ATTR, getElmAttr(fromElm, DND_BTOP_ATTR, DND_NS), DND_NS);
-	    	setElmAttr(toElm, DND_BLEFT_ATTR, getElmAttr(fromElm, DND_BLEFT_ATTR, DND_NS), DND_NS);
-	    	setElmAttr(toElm, DND_LTOP_ATTR, getElmAttr(fromElm, DND_LTOP_ATTR, DND_NS), DND_NS);
-	    	setElmAttr(toElm, DND_LLEFT_ATTR, getElmAttr(fromElm, DND_LLEFT_ATTR, DND_NS), DND_NS);
-	    	setElmAttr(toElm, DND_LWIDTH_ATTR, getElmAttr(fromElm, DND_LWIDTH_ATTR, DND_NS), DND_NS);
-	    	setElmAttr(toElm, DND_LHEIGHT_ATTR, getElmAttr(fromElm, DND_LHEIGHT_ATTR, DND_NS), DND_NS);
-	    }
+     function(fromElm, toElm) {
+      toElm = toElm || this.element;
+      setElmAttr(toElm, DND_BTOP_ATTR, getElmAttr(fromElm, DND_BTOP_ATTR, DND_NS), DND_NS);
+      setElmAttr(toElm, DND_BLEFT_ATTR, getElmAttr(fromElm, DND_BLEFT_ATTR, DND_NS), DND_NS);
+      setElmAttr(toElm, DND_LTOP_ATTR, getElmAttr(fromElm, DND_LTOP_ATTR, DND_NS), DND_NS);
+      setElmAttr(toElm, DND_LLEFT_ATTR, getElmAttr(fromElm, DND_LLEFT_ATTR, DND_NS), DND_NS);
+      setElmAttr(toElm, DND_LWIDTH_ATTR, getElmAttr(fromElm, DND_LWIDTH_ATTR, DND_NS), DND_NS);
+      setElmAttr(toElm, DND_LHEIGHT_ATTR, getElmAttr(fromElm, DND_LHEIGHT_ATTR, DND_NS), DND_NS);
+     }
 
 });
 

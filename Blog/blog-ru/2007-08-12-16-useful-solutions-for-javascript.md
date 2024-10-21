@@ -55,7 +55,7 @@ Class.extend = function(def) {
 
 ```
 
-Полные примеры использования относительно велики, поэтому я их вынесу в [следующую статью](../javascript-oop) и проследую далее. Пару простых примеров вы можете наблюдать в пунктах _[2](#sol-2)_, _[5](#sol-5)_ и _[15](#sol-15)_.
+Полные примеры использования относительно велики, поэтому я их вынесу в [следующую статью](./2007-08-19-javascript-oop.md) и проследую далее. Пару простых примеров вы можете наблюдать в пунктах _[2](#sol-2)_, _[5](#sol-5)_ и _[15](#sol-15)_.
 
 <a name="sol-2"></a> _2._ Следующая функция -- простая, но изящная -- полезна в сочетании с предыдущим набором -- она **создает функцию-ссылку на метод**:
 
@@ -317,22 +317,22 @@ function getAlignedPosition(e) {
 ``` javascript
 
 function findPos(e) {
-	var baseEl = e;
-	var curleft = curtop = 0;
-	if (e.offsetParent) {
-		do {
-			curleft += e.offsetLeft;
-			curtop += e.offsetTop;
-		} while (e = e.offsetParent);
-	}
-	var docBody = document.documentElement ? document.documentElement : document.body;
-	if (docBody) {
-		curleft += (baseEl.currentStyle?(parseInt(baseEl.currentStyle.borderLeftWidth)).NaN0():0) +
-				   (IS_IE ? (parseInt(docBody.scrollLeft)).NaN0() : 0) - (parseInt(docBody.clientLeft)).NaN0();
-		curtop  += (baseEl.currentStyle?(parseInt(baseEl.currentStyle.borderTopWidth)).NaN0():0) +
-				   (IS_IE ? (parseInt(docBody.scrollTop)).NaN0() : 0) - (parseInt(docBody.clientTop)).NaN0();
-	}
-	return {x: curleft, y:curtop};
+ var baseEl = e;
+ var curleft = curtop = 0;
+ if (e.offsetParent) {
+  do {
+   curleft += e.offsetLeft;
+   curtop += e.offsetTop;
+  } while (e = e.offsetParent);
+ }
+ var docBody = document.documentElement ? document.documentElement : document.body;
+ if (docBody) {
+  curleft += (baseEl.currentStyle?(parseInt(baseEl.currentStyle.borderLeftWidth)).NaN0():0) +
+       (IS_IE ? (parseInt(docBody.scrollLeft)).NaN0() : 0) - (parseInt(docBody.clientLeft)).NaN0();
+  curtop  += (baseEl.currentStyle?(parseInt(baseEl.currentStyle.borderTopWidth)).NaN0():0) +
+       (IS_IE ? (parseInt(docBody.scrollTop)).NaN0() : 0) - (parseInt(docBody.clientTop)).NaN0();
+ }
+ return {x: curleft, y:curtop};
 }
 
 ```
@@ -342,15 +342,15 @@ function findPos(e) {
 ``` javascript
 
 function mouseCoords(ev){
-	if (ev.pageX || ev.pageY) {
-		return {x:ev.pageX, y:ev.pageY};
-	}
-	var docBody = document.documentElement ? document.documentElement : document.body;
+ if (ev.pageX || ev.pageY) {
+  return {x:ev.pageX, y:ev.pageY};
+ }
+ var docBody = document.documentElement ? document.documentElement : document.body;
 
-	return {
-		x: ev.clientX + docBody.scrollLeft - docBody.clientLeft,
-		y: ev.clientY + docBody.scrollTop  - docBody.clientTop
-	};
+ return {
+  x: ev.clientX + docBody.scrollLeft - docBody.clientLeft,
+  y: ev.clientY + docBody.scrollTop  - docBody.clientTop
+ };
 }
 
 function getMouseOffset(target, ev, aligned) {
@@ -436,21 +436,21 @@ function getOffsetHeight(e) {
 ``` javascript
 
 function walkTree(node, mapFunction, dataPackage) {
-	if (node == null) return;
-	mapFunction(node, dataPackage);
-	for (var i = 0; i < node.childNodes.length; i++) {
-		walkTree(node.childNodes[i], mapFunction, dataPackage);
-	}
+ if (node == null) return;
+ mapFunction(node, dataPackage);
+ for (var i = 0; i < node.childNodes.length; i++) {
+  walkTree(node.childNodes[i], mapFunction, dataPackage);
+ }
 }
 
 function searchTree(node, searchFunction, dataPackage) {
-	if (node == null) return;
-	var funcResult = searchFunction(node, dataPackage);
-	if (funcResult) return funcResult;
-	for (var i = 0; i < node.childNodes.length; i++) {
-		var searchResult = searchTree(node.childNodes[i], searchFunction, dataPackage);
-		if (searchResult) return searchResult;
-	}
+ if (node == null) return;
+ var funcResult = searchFunction(node, dataPackage);
+ if (funcResult) return funcResult;
+ for (var i = 0; i < node.childNodes.length; i++) {
+  var searchResult = searchTree(node.childNodes[i], searchFunction, dataPackage);
+  if (searchResult) return searchResult;
+ }
 }
 
 ```
@@ -602,16 +602,16 @@ function makeRequest(locationURL, parameters, onComplete, doPost, dataPackage) {
     //var salt = hex_md5(new Date().toString());
     http_request.onreadystatechange = completeListener;
     if (doPost) {
-		http_request.open('POST', locationURL, true);
-		http_request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		http_request.setRequestHeader("Content-length", parameters.length);
-		http_request.setRequestHeader("Connection", "close");
-		http_request.send(parameters);
+  http_request.open('POST', locationURL, true);
+  http_request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  http_request.setRequestHeader("Content-length", parameters.length);
+  http_request.setRequestHeader("Connection", "close");
+  http_request.send(parameters);
     } else {
-    	http_request.open('GET', locationURL + (parameters ? ("?" + parameters) : ""), true);
-    	//http_request.open('GET', './proxy.php?' + parameters +
+     http_request.open('GET', locationURL + (parameters ? ("?" + parameters) : ""), true);
+     //http_request.open('GET', './proxy.php?' + parameters +
                     // "&salt=" + salt, true);
-    	http_request.send(null);
+     http_request.send(null);
     }
 
 }
@@ -779,15 +779,15 @@ temp=""+this;while(temp.length<fillNum)temp="0"+temp;return temp;}
 ``` javascript
 
 function intComparator(a, b) {
-	return a - b;
+ return a - b;
 }
 
 function getObjSortedProps(obj, sortFunc) {
-	var propsArr = [];
-	for (propName in obj) {
-		propsArr.push(propName);
-	}
-	return propsArr.sort(sortFunc);
+ var propsArr = [];
+ for (propName in obj) {
+  propsArr.push(propName);
+ }
+ return propsArr.sort(sortFunc);
 }
 
 ```
@@ -799,20 +799,20 @@ function getObjSortedProps(obj, sortFunc) {
 ``` javascript
 
 function indexOf(arr, elem) {
-	for (itemIdx in arr) {
-		if (arr[itemIdx] == elem) return itemIdx;
-	}
-	return null;
+ for (itemIdx in arr) {
+  if (arr[itemIdx] == elem) return itemIdx;
+ }
+ return null;
 }
 
 function removeFromArray(arr, element) { // removes only one item!
-	for (itemIndex in arr) {
-		if (arr[itemIndex] == element) {
-			arr.splice(itemIndex, 1);
-			return arr;
-		}
-	}
-	return null;
+ for (itemIndex in arr) {
+  if (arr[itemIndex] == element) {
+   arr.splice(itemIndex, 1);
+   return arr;
+  }
+ }
+ return null;
 }
 
 ```
@@ -821,4 +821,4 @@ function removeFromArray(arr, element) { // removes only one item!
 
 ### Заключение
 
-Ну вот -- кажется, пока всё. Статья -- в состоянии готовности к исправлениям (если понадобятся :) ), можно переходить к следующим :). В [следующей статье](#javascript-oop) я намереваюсь рассказать поподробнее про ООП в JavaScript и привести в пример пару простых, но полезных классов. Надеюсь, эта статья вам помогла и хоть немного сократила имеющие потенциальную возможность быть потраченными на решение всяких причуд браузеров рабочие человекочасы.
+Ну вот -- кажется, пока всё. Статья -- в состоянии готовности к исправлениям (если понадобятся :) ), можно переходить к следующим :). В [следующей статье](./2007-08-19-javascript-oop.md) я намереваюсь рассказать поподробнее про ООП в JavaScript и привести в пример пару простых, но полезных классов. Надеюсь, эта статья вам помогла и хоть немного сократила имеющие потенциальную возможность быть потраченными на решение всяких причуд браузеров рабочие человекочасы.

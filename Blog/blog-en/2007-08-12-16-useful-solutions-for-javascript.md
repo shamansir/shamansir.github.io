@@ -55,7 +55,7 @@ Class.extend = function(def) {
 
 ```
 
-The complete examples of usage are too huge for this article, so I'll pass them to [the next article](../javascript-oop), and now we'll proceed further. You may notice two simple examples in the points _[2](#sol-2)_, _[5](#sol-5)_ and _[15](#sol-15)_.
+The complete examples of usage are too huge for this article, so I'll pass them to [the next article](./2007-08-19-javascript-oop.md), and now we'll proceed further. You may notice two simple examples in the points _[2](#sol-2)_, _[5](#sol-5)_ and _[15](#sol-15)_.
 
 <a name="sol-2"></a> _2._ Next function -- a simple but elegant one -- is useful in combination with previous set -- it **creates a function reference for the method**:
 
@@ -126,7 +126,7 @@ var clonedObj = cloneObj(objToClone);
 
 ```
 
-<a name="sol-4"></a> _4._ **Objects converter**. Next function provides an elegant way to make a conditional constructs like  `if (tablet.toLowerCase() in oc(['cialis','mevacor','zocor'])) { alert('I will not!') };` work. The code is borrowed from [here]http://snook.ca/archives/javascript/testing_for_a_v/).
+<a name="sol-4"></a> _4._ **Objects converter**. Next function provides an elegant way to make a conditional constructs like  `if (tablet.toLowerCase() in oc(['cialis','mevacor','zocor'])) { alert('I will not!') };` work. The code is borrowed from [here]<http://snook.ca/archives/javascript/testing_for_a_v/>).
 
 ``` javascript
 
@@ -317,22 +317,22 @@ function getAlignedPosition(e) {
 ``` javascript
 
 function findPos(e) {
-	var baseEl = e;
-	var curleft = curtop = 0;
-	if (e.offsetParent) {
-		do {
-			curleft += e.offsetLeft;
-			curtop += e.offsetTop;
-		} while (e = e.offsetParent);
-	}
-	var docBody = document.documentElement ? document.documentElement : document.body;
-	if (docBody) {
-		curleft += (baseEl.currentStyle?(parseInt(baseEl.currentStyle.borderLeftWidth)).NaN0():0) +
-				   (IS_IE ? (parseInt(docBody.scrollLeft)).NaN0() : 0) - (parseInt(docBody.clientLeft)).NaN0();
-		curtop  += (baseEl.currentStyle?(parseInt(baseEl.currentStyle.borderTopWidth)).NaN0():0) +
-				   (IS_IE ? (parseInt(docBody.scrollTop)).NaN0() : 0) - (parseInt(docBody.clientTop)).NaN0();
-	}
-	return {x: curleft, y:curtop};
+ var baseEl = e;
+ var curleft = curtop = 0;
+ if (e.offsetParent) {
+  do {
+   curleft += e.offsetLeft;
+   curtop += e.offsetTop;
+  } while (e = e.offsetParent);
+ }
+ var docBody = document.documentElement ? document.documentElement : document.body;
+ if (docBody) {
+  curleft += (baseEl.currentStyle?(parseInt(baseEl.currentStyle.borderLeftWidth)).NaN0():0) +
+       (IS_IE ? (parseInt(docBody.scrollLeft)).NaN0() : 0) - (parseInt(docBody.clientLeft)).NaN0();
+  curtop  += (baseEl.currentStyle?(parseInt(baseEl.currentStyle.borderTopWidth)).NaN0():0) +
+       (IS_IE ? (parseInt(docBody.scrollTop)).NaN0() : 0) - (parseInt(docBody.clientTop)).NaN0();
+ }
+ return {x: curleft, y:curtop};
 }
 
 ```
@@ -342,15 +342,15 @@ function findPos(e) {
 ``` javascript
 
 function mouseCoords(ev){
-	if (ev.pageX || ev.pageY) {
-		return {x:ev.pageX, y:ev.pageY};
-	}
-	var docBody = document.documentElement ? document.documentElement : document.body;
+ if (ev.pageX || ev.pageY) {
+  return {x:ev.pageX, y:ev.pageY};
+ }
+ var docBody = document.documentElement ? document.documentElement : document.body;
 
-	return {
-		x: ev.clientX + docBody.scrollLeft - docBody.clientLeft,
-		y: ev.clientY + docBody.scrollTop  - docBody.clientTop
-	};
+ return {
+  x: ev.clientX + docBody.scrollLeft - docBody.clientLeft,
+  y: ev.clientY + docBody.scrollTop  - docBody.clientTop
+ };
 }
 
 function getMouseOffset(target, ev, aligned) {
@@ -436,21 +436,21 @@ function getOffsetHeight(e) {
 ``` javascript
 
 function walkTree(node, mapFunction, dataPackage) {
-	if (node == null) return;
-	mapFunction(node, dataPackage);
-	for (var i = 0; i < node.childNodes.length; i++) {
-		walkTree(node.childNodes[i], mapFunction, dataPackage);
-	}
+ if (node == null) return;
+ mapFunction(node, dataPackage);
+ for (var i = 0; i < node.childNodes.length; i++) {
+  walkTree(node.childNodes[i], mapFunction, dataPackage);
+ }
 }
 
 function searchTree(node, searchFunction, dataPackage) {
-	if (node == null) return;
-	var funcResult = searchFunction(node, dataPackage);
-	if (funcResult) return funcResult;
-	for (var i = 0; i < node.childNodes.length; i++) {
-		var searchResult = searchTree(node.childNodes[i], searchFunction, dataPackage);
-		if (searchResult) return searchResult;
-	}
+ if (node == null) return;
+ var funcResult = searchFunction(node, dataPackage);
+ if (funcResult) return funcResult;
+ for (var i = 0; i < node.childNodes.length; i++) {
+  var searchResult = searchTree(node.childNodes[i], searchFunction, dataPackage);
+  if (searchResult) return searchResult;
+ }
 }
 
 ```
@@ -600,16 +600,16 @@ function makeRequest(locationURL, parameters, onComplete, doPost, dataPackage) {
     //var salt = hex_md5(new Date().toString());
     http_request.onreadystatechange = completeListener;
     if (doPost) {
-		http_request.open('POST', locationURL, true);
-		http_request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		http_request.setRequestHeader("Content-length", parameters.length);
-		http_request.setRequestHeader("Connection", "close");
-		http_request.send(parameters);
+  http_request.open('POST', locationURL, true);
+  http_request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  http_request.setRequestHeader("Content-length", parameters.length);
+  http_request.setRequestHeader("Connection", "close");
+  http_request.send(parameters);
     } else {
-    	http_request.open('GET', locationURL + (parameters ? ("?" + parameters) : ""), true);
-    	//http_request.open('GET', './proxy.php?' + parameters +
+     http_request.open('GET', locationURL + (parameters ? ("?" + parameters) : ""), true);
+     //http_request.open('GET', './proxy.php?' + parameters +
                     // "&salt=" + salt, true);
-    	http_request.send(null);
+     http_request.send(null);
     }
 
 }
@@ -785,15 +785,15 @@ Along with that, we can add the **sorting** functions to the [second part](#js-o
 ``` javascript
 
 function intComparator(a, b) {
-	return a - b;
+ return a - b;
 }
 
 function getObjSortedProps(obj, sortFunc) {
-	var propsArr = [];
-	for (propName in obj) {
-		propsArr.push(propName);
-	}
-	return propsArr.sort(sortFunc);
+ var propsArr = [];
+ for (propName in obj) {
+  propsArr.push(propName);
+ }
+ return propsArr.sort(sortFunc);
 }
 
 ```
@@ -805,20 +805,20 @@ function getObjSortedProps(obj, sortFunc) {
 ``` javascript
 
 function indexOf(arr, elem) {
-	for (itemIdx in arr) {
-		if (arr[itemIdx] == elem) return itemIdx;
-	}
-	return null;
+ for (itemIdx in arr) {
+  if (arr[itemIdx] == elem) return itemIdx;
+ }
+ return null;
 }
 
 function removeFromArray(arr, element) { // removes only one item!
-	for (itemIndex in arr) {
-		if (arr[itemIndex] == element) {
-			arr.splice(itemIndex, 1);
-			return arr;
-		}
-	}
-	return null;
+ for (itemIndex in arr) {
+  if (arr[itemIndex] == element) {
+   arr.splice(itemIndex, 1);
+   return arr;
+  }
+ }
+ return null;
 }
 
 ```
@@ -827,4 +827,4 @@ function removeFromArray(arr, element) { // removes only one item!
 
 ### Epilogue
 
-That's all, seems, for now. The article is ready for corrections (if they will appear :) ), I can pass to the next ones :). In the [next-article](./javascript-oop) I want to tell about OOP in JavaScript and make a few simple but useful examples of classes. I hope this article saved some of your man-hours that you may potentially had spent in the fighting with variable browsers quirks.
+That's all, seems, for now. The article is ready for corrections (if they will appear :) ), I can pass to the next ones :). In the [next-article](./2007-08-19-javascript-oop.md) I want to tell about OOP in JavaScript and make a few simple but useful examples of classes. I hope this article saved some of your man-hours that you may potentially had spent in the fighting with variable browsers quirks.
