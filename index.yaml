@@ -9,7 +9,7 @@ page:
     <snippet var="js.highlightjs" />
 
 template:
-  theme: red
+  theme: purple
 
   # You can add your own variables here, like editBaseUrl.
   # See after-note.tpl to see where editBaseUrl gets used.
