@@ -258,7 +258,9 @@
   - <img src="./Music/assets/geeky-songs/flu.cover.jpg" width="60" height="60" alt="" style="display:inline-block"/>{.align-middle .mr-2} **Про пику** 01:59 /2023/ ([SC](https://soundcloud.com/shamansir/pro-piku?in=shamansir/sets/geeky-songs))
   - <img src="./Music/assets/geeky-songs/korona.cover.jpg" width="60" height="60" alt="" style="display:inline-block"/>{.align-middle .mr-2} **Korona** 01:27 /2023/ ([SC](https://soundcloud.com/shamansir/korona?in=shamansir/sets/geeky-songs))
 
-### Separate Tracks  - <img src="./Music/assets/jerome.cover.jpg" width="60" height="60" alt="Cover" style="display:inline-block"/>{.align-middle .mr-2} **Jerome** 02:39 /2023/ ([SC](https://soundcloud.com/shamansir/jerome)) *as* Elektrokiłka
+### Separate Tracks
+
+  - <img src="./Music/assets/jerome.cover.jpg" width="60" height="60" alt="Cover" style="display:inline-block"/>{.align-middle .mr-2} **Jerome** 02:39 /2023/ ([SC](https://soundcloud.com/shamansir/jerome)) *as* Elektrokiłka
   - <img src="./Music/assets/slimeberry-fields-revisited.cover.jpg" width="60" height="60" alt="Cover" style="display:inline-block"/>{.align-middle .mr-2} **Slimeberry Fields (Revisited)** 12:03 /2023/ ([SC](https://soundcloud.com/shamansir/slimeberry-fields-revisited)) *as* Elektrokiłka
   - <img src="./Music/assets/wonderjam.cover.jpg" width="60" height="60" alt="Cover" style="display:inline-block"/>{.align-middle .mr-2} **The Wonderjam (w/ Kostya Starostin)** 01:41:33 /2023/ ([SC](https://soundcloud.com/shamansir/the-wonderjam-w-kostya-starostin)) *as* Elektrokiłka
   - <img src="./Music/assets/inzhir.cover.jpg" width="60" height="60" alt="Cover" style="display:inline-block"/>{.align-middle .mr-2} **Инжир** 01:00 /2024/ ([SC](https://soundcloud.com/shamansir/inzhir-v23)) *as* Elektrokiłka

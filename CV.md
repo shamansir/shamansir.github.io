@@ -8,7 +8,7 @@
   - [Website](https://shamansir.github.io): https://shamansir.github.io
   - Birthday: 4 March 1984
 
-[GitHub](https://github.com/shamansir) -- [StackOverflow](https://stackoverflow.com/users/167262/shaman-sir) -- [Twitter (X)](https://x.com/shaman_sir) -- [Instagram](https://instagram.com/shamansir) -- [SoundCloud](https://soundcloud.com/shamansir) -- [Vimeo](https://vimeo.com/shamansir) -- [YouTube](https://youtube.com/@UlricWilfred) -- [Bandcamp (Artist)](https://shamansir.bandcamp.com/shamansir) -- [Bandcamp (Fan)](https://bandcamp.com/shamansir) -- [Last.fm](https://last.fm/shamansir) -- [LiveJournal](https://livejournal.com/tungusso) -- [Spotify (Artist)](https://open.spotify.com/artist/3p5XmmBfQLQkEScwpVdEwU) -- [Spotify (Listener)](https://open.spotify.com/user/11125039766) -- [GoodReads](https://www.goodreads.com/user/show/29823581-anton-kotenko) -- [Stepik](https://stepik.org/users/43031759/certificates) -- [CodeWars](https://codewars.com/users/shamansir) -- [Exercism](https://exercism.org/profiles/shamansir) -- [Lanyrd](https://lanyrd.com/shaman_sir) -- [Telegram](https://telegram.com/shaman_sir) -- [Backloggery](https://backloggery.com/shamansir) -- [InfiniteBacklog](https://infinitebacklog.com/users/shamansir) -- [Steam](https://steamcommunity.com/id/shamansir/) -- [Discord](https://discord.com/shaman.sir) -- [Duolingo](https://duolingo.com/profile/shamansir) -- [LinkedIn](https://www.linkedin.com/in/shamansir/)
+[GitHub](https://github.com/shamansir) -- [StackOverflow](https://stackoverflow.com/users/167262/shaman-sir) -- [meetup.com](https://www.meetup.com/members/95695422/) -- [Twitter (X)](https://x.com/shaman_sir) -- [Instagram](https://instagram.com/shamansir) -- [SoundCloud](https://soundcloud.com/shamansir) -- [Vimeo](https://vimeo.com/shamansir) -- [YouTube](https://youtube.com/@UlricWilfred) -- [Bandcamp (Artist)](https://shamansir.bandcamp.com/shamansir) -- [Bandcamp (Fan)](https://bandcamp.com/shamansir) -- [Last.fm](https://last.fm/shamansir) -- [LiveJournal](https://livejournal.com/tungusso) -- [Spotify (Artist)](https://open.spotify.com/artist/3p5XmmBfQLQkEScwpVdEwU) -- [Spotify (Listener)](https://open.spotify.com/user/11125039766) -- [GoodReads](https://www.goodreads.com/user/show/29823581-anton-kotenko) -- [Stepik](https://stepik.org/users/43031759/certificates) -- [CodeWars](https://codewars.com/users/shamansir) -- [Exercism](https://exercism.org/profiles/shamansir) -- [Lanyrd](https://lanyrd.com/shaman_sir) -- [Telegram](https://telegram.com/shaman_sir) -- [Backloggery](https://backloggery.com/shamansir) -- [InfiniteBacklog](https://infinitebacklog.com/users/shamansir) -- [Steam](https://steamcommunity.com/id/shamansir/) -- [Discord](https://discord.com/shaman.sir) -- [Duolingo](https://duolingo.com/profile/shamansir) -- [LinkedIn](https://www.linkedin.com/in/shamansir/)
 
 Starting from 2003, I work as a FrontEnd & Software Developer, but that's since even earlier I discovered that developing user interfaces or quite anything visual and interactive, is my passion.
 I often preferred programming to gaming or watching TV or going outside (not to the extent, though, or else how would I find friends?).
@@ -50,6 +50,14 @@ Technologies:
 Tags:
 :  #generative-art, #react, #redux, #elm, #glsl, #shaders, #html5-canvas, #animation, #dhall, #kotlin-js, #user-interfaces
 
+
+Talks:
+:  [The Basics of Generating Everything](CV.md#basics-of-genart), [Generative Animation in Elm](CV.md#elm-gen-art), [Tron : Minimalist UI for Generative Art](CV.md#tron-jb), [Noodle : Animation as Ramen](CV.md#noodle-jb), [RPD: Reactive Patch Development](CV.md#rpd-patch-dev-1), [RPD: Reactive Patch Development v2.0](CV.md#rpd-patch-dev-2), [iElm @ JetBrains](CV.md#ielm-jb), [About Git. That's easy](CV.md#pro-git)
+
+
+Projects:
+:  [Open Elmsfeuer](CV.md#open-elmsfeuer), [Open Radiant](CV.md#open-radiant), [Tron GUI](CV.md#tron-gui), [Kvant](CV.md#kvant), [GEN UI Lang](CV.md#gen-ui), [Noodle](CV.md#noodle)
+
 ### Animatron LLC {#animatron}
 **GWT/JS Developer**
 
@@ -71,6 +79,14 @@ Technologies:
 Tags:
 :  #html5-canvas, #javascript, #animation, #gwt, #svg, #graphics
 
+
+Talks:
+:  [Animatron Player API in Details](CV.md#animatron-api), [How to Grasp the Functional Way of Writing JavaScript](CV.md#func-js)
+
+
+Projects:
+:  [JS Player for Animatron](CV.md#animatron-player)
+
 ### iPark Ventures {#ipark}
 **GWT Developer**
 
@@ -87,6 +103,10 @@ Technologies:
 
 Tags:
 :  #java, #gwt, #mvp4j, #javascript, #python
+
+
+Talks:
+:  [Web-development with GWT & mvp4g](CV.md#gwt-mvp4g), [The Real JavaScript](CV.md#real-js)
 
 ### Exectum LLC {#exectum}
 **Java EE / Web Developer**
@@ -170,7 +190,7 @@ Technologies:
 Tags:
 :  #java, #java-ee, #jsp, #ejb, #jsf, #delphi, #python
 
-### FSBI "VNII Okeangeologia" {#vniio}
+### FSBI VNII Okeangeologia {#vniio}
 **Software Developer**
 **Animation Creator for Conferences**
 **Scientific Researcher**
@@ -432,7 +452,7 @@ The huge (but as fun as possible) talk in three parts on how you could architect
 
 ### Finished (to some point)
 
-  - **RPD**
+#### RPD
 
 Visual Programming for Generative Art, in JavaScript, driven by Reactive Streams Programming
 
@@ -445,7 +465,8 @@ Started: more than ten years ago
 Tags: #javascript, #svg, #visual-programming, #generative-art, #reactive-programming, #kefir.js, #computational-arts
 
 
-  - **Tron GUI**
+
+#### Tron GUI
 
 Innovative approach for generative art User Interfaces: now grid-based
 
@@ -458,7 +479,8 @@ Started: around two-three years ago
 Tags: #elm, #gui, #user-interface, #functional-programming, #dhall, #javascript, #generative-art, #computational-arts, #graphs
 
 
-  - **iElm**
+
+#### iElm
 
 Interactive Visual REPL for Elm language, showing types and SVG and even `elm-canvas` Graphics
 
@@ -471,7 +493,8 @@ Started: around four-five years ago
 Tags: #elm, #repl, #functional-programming
 
 
-  - **node-elm-repl**
+
+#### node-elm-repl
 
 CLI client for iElm to get the information about the type of the entered expression
 
@@ -484,7 +507,8 @@ Started: around four-five years ago
 Tags: #elm, #javasript, #binary, #repl, #functional-programming
 
 
-  - **JS Player for Animatron**
+
+#### JS Player for Animatron
 
 
 
@@ -497,7 +521,8 @@ Started: more than five years ago
 Tags: #javascript, #canvas, #animation
 
 
-  - **JetBrains Splash Screen Generator, with RPD**
+
+#### JetBrains Splash Screen Generator, with RPD
 
 
 
@@ -510,7 +535,8 @@ Started: more than five years ago
 Tags: #javascript, #visual-programming, #computational-arts, #glsl, #shaders
 
 
-  - **sametimed**
+
+#### sametimed
 
 The Chat with Friedly-UI based on Google Federation One (a.k.a. Google Wave) protocol
 
@@ -523,7 +549,8 @@ Started: more than ten years ago
 Tags: #java, #google-wave
 
 
-  - **nijiato**
+
+#### nijiato
 
 Finger-recognition in LISP with OpenCV
 
@@ -536,7 +563,8 @@ Started: more than ten years ago
 Tags: #lisp, #camera-tracking, #opencv
 
 
-  - **Open Radiant**
+
+#### Open Radiant
 
 One of the first art generators for JetBrains
 
@@ -549,7 +577,8 @@ Started: around four-five years ago
 Tags: #elm, #functional-programming, #computational-arts, #generative-art
 
 
-  - **Open Elmsfeuer**
+
+#### Open Elmsfeuer
 
 Another one of the first art generators for JetBrains
 
@@ -562,7 +591,8 @@ Started: around four-five years ago
 Tags: #elm, #functional-programming, #computational-arts, #generative-art
 
 
-  - **PegJS - FN**
+
+#### PegJS - FN
 
 The concept of functional PEG-driven parsers for JavaScript where every grammar rule is represented with a single pure function
 
@@ -575,7 +605,8 @@ Started: more than five years ago
 Tags: #javascript, #functional-programming, #parsing, #grammar
 
 
-  - **How to LiveCode (PDF / EPUB version)**
+
+#### How to LiveCode (PDF / EPUB version)
 
 The markup for the 1st version of "howto_co34pt_liveCode" book by coï¿¥ï¾¡pt
 
@@ -586,7 +617,8 @@ Started: around four-five years ago
 ([1st Edition compiled](https://github.com/theseanco/howto_co34pt_liveCode/tree/master/Documents/FirstEdition))
 
 
-  - **JavaScript Gardern**
+
+#### JavaScript Gardern
 
 I participated in translation of JavaScript Garden to Russian language
 
@@ -599,7 +631,8 @@ Started: more than ten years ago
 Tags: #javascript, #translation
 
 
-  - **Japanese Language Reference in Russian**
+
+#### Japanese Language Reference in Russian
 
 (PDF, 300+ pages)
 
@@ -612,7 +645,8 @@ Started: more than 20 years ago
 Tags: #japanese, #pdf, #translation
 
 
-  - **Python 3.5 (RU)**
+
+#### Python 3.5 (RU)
 
 Translating Python 3.5 Reference @ Wikibooks
 
@@ -625,7 +659,8 @@ Started: more than 15 years ago
 Tags: #python, #translation
 
 
-  - **PDF version for how-to-livecode Book**
+
+#### PDF version for how-to-livecode Book
 
 Laying out PDF for how-to-livecode book
 
@@ -638,7 +673,8 @@ Started: more than five years ago
 Tags: #pdf, #generative-audio
 
 
-  - **Finite State Machine engine+example for PureScript**
+
+#### Finite State Machine engine+example for PureScript
 
 The code for the examples from my posts at dev.to
 
@@ -651,7 +687,8 @@ Started: around two-three years ago
 Tags: #functional-programming, #purescript, #user-interface
 
 
-  - **purescript-yoga-tree-utils**
+
+#### purescript-yoga-tree-utils
 
 
 
@@ -664,7 +701,8 @@ Started: during last year
 Tags: #functional-programming, #purescript
 
 
-  - **Мюнхен-Флю**
+
+#### München-Flu
 
 Blog about Munich hidden places, cafes and nightclubs, in Russian
 
@@ -672,12 +710,12 @@ Status: Finished (to some point)
 
 Started: more than five years ago
 
-([Telegram](https://t.me/munich_flu))
+([Telegram: Мюнхен-Флю](https://t.me/munich_flu))
 
 
 ### Finished (but expect to continue developing)
 
-  - **Purs-Typeclasses**
+#### Purs-Typeclasses
 
 The auto-generated interactive SVG poster / Web App of the PureScript TypeClasses' structure and methods and dependencies
 
@@ -692,7 +730,7 @@ Tags: #functional-programming, #purescript, #svg
 
 ### Almost Finished (at least looks like it)
 
-  - **Noodle**
+#### Noodle
 
 Visual Programming for producing Generative Art and more, with CLI & Web & VR (planned) frot-ends, written in PureScript
 
@@ -705,7 +743,8 @@ Started: more than five years ago
 Tags: #purescript, #visual-programming, #functional-programming, #generative-art
 
 
-  - **purescript-blessed**
+
+#### purescript-blessed
 
 Port of JavaScript Blessed library, which is the powerful window management and component library for Command-Line-interfaces (CLI)
 
@@ -718,7 +757,8 @@ Started: during last year
 Tags: #cli, #functional-programming, #purescript, #user-interface, #components
 
 
-  - **purescript-doc**
+
+#### purescript-doc
 
 The generic documents definition for PureScript inspired by Doc in LEAN (but it turned out PureScript has Dodo library which has the same purpose)
 
@@ -731,7 +771,8 @@ Started: during last year
 Tags: #functional-programming, #purescript, #org-mode, #markdown
 
 
-  - **purescript-text-formatting**
+
+#### purescript-text-formatting
 
 The generic formatting library for PureScript which allows to produce Markdown, HTML, Org org LaTeX using single formatting API
 
@@ -744,7 +785,8 @@ Started: during last year
 Tags: #functional-programming, #purescript, #org-mode, #markdown
 
 
-  - **purescript-grammar**
+
+#### purescript-grammar
 
 Reinventing PEG grammars and parsing in PureScript with ability to keep parsing on any error and keeping all the places of failure in the Syntax Tree, inspired by Lingo IDE by Pete Vilter
 
@@ -759,7 +801,7 @@ Tags: #functional-programming, #purescript, #grammar, #parsing, #datalog
 
 ### Managed (has no finished state and always actual in some sense)
 
-  - **My TouchDesigner VJing sources**
+#### My TouchDesigner VJing sources
 
 
 
@@ -774,7 +816,7 @@ Tags: #touchdesigner, #visuals
 
 ### In progress
 
-  - **purescript-org**
+#### purescript-org
 
 org-mode document definition for PureScript
 
@@ -787,7 +829,8 @@ Started: during last year
 Tags: #functional-programming, #purescript, #org-mode
 
 
-  - **purescript-flex-layout**
+
+#### purescript-flex-layout
 
 Bin Packing algorithm for PureScript UIs
 
@@ -802,7 +845,7 @@ Tags: #functional-programming, #purescript, #bin-packing, #user-interface
 
 ### Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
 
-  - **Kvant**
+#### Kvant
 
 Translating Wave Function Collapse algorithm to Elm, and UI for it
 
@@ -815,7 +858,8 @@ Started: around four-five years ago
 Tags: #elm, #gui, #generative-art, #functional-programming, #computational-arts
 
 
-  - **GEN UI Lang**
+
+#### GEN UI Lang
 
 On storing UI components definitions for Generative Art in JSON or D-Hall format, for Tron GUI mostly
 
@@ -828,7 +872,8 @@ Started: around two-three years ago
 Tags: #elm, #dhall, #gui, #functional-programming, #computational-arts
 
 
-  - **Web PD: PureData for Web**
+
+#### Web PD: PureData for Web
 
 A try to re-implement PureData UI and audio generation (using WebAudio) in the Web
 
@@ -841,7 +886,8 @@ Started: more than five years ago
 Tags: #javascript, #pure-data, #svg, #audio-generation, #visual-programming
 
 
-  - **Elm Symbolic Logic Game**
+
+#### Elm Symbolic Logic Game
 
 Symbolic Logic Playground, inspired by books of Lewis Carrol
 
@@ -854,7 +900,8 @@ Started: around two-three years ago
 Tags: #elm, #logic, #lewis-carrol, #game
 
 
-  - **Cayley Rust**
+
+#### Cayley Rust
 
 The driver for Graph Database `Cayley` written using one of the first versions of Rust for training
 
@@ -867,7 +914,8 @@ Started: more than ten years ago
 Tags: #rust, #graphs, #database
 
 
-  - **Vimeoid**
+
+#### Vimeoid
 
 A client for Vimeo video service for HTC Hero (Android)
 
@@ -880,20 +928,21 @@ Started: more than ten years ago
 Tags: #android, #java, #application
 
 
-  - **Лё Баналь**
 
-Writing short stories on users' requests
+#### LeBanal
+
+Writing short stories on users' requests, in Russian
 
 Status: Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
 
 Started: around four-five years ago
 
-([Telegram](https://t.me/le_banal))
+([Telegram: Лё Баналь](https://t.me/le_banal))
 
 
 ### Just Started
 
-  - **WinniPeg**
+#### WinniPeg
 
 Visual aid and editor for implementing PEG grammars (purescript-grammar) in PureScript
 
@@ -908,7 +957,7 @@ Tags: #functional-programming, #purescript, #org-mode, #peg, #grammars, #parsing
 
 ### Draft
 
-  - **&ndORG**
+#### &ndORG
 
 An attempt to develop a user-friendly web ORG-mode editor while conversing most of its `emacs` profits and build UI on visual-keystrokes-concept
 
@@ -921,7 +970,8 @@ Started: during last year
 Tags: #functional-programming, #purescript, #org-mode, #grammars, #parsing
 
 
-  - **purescript-optics-interactive**
+
+#### purescript-optics-interactive
 
 An attempt to demonstrate visually and interactively how Profunctor Optics work in Functional Languages like PureScript (mostly for my own self)
 
@@ -934,7 +984,8 @@ Started: around two-three years ago
 Tags: #functional-programming, #purescript
 
 
-  - **purescript-mahjong**
+
+#### purescript-mahjong
 
 Implementing Riichi Mahjong game in PureScript
 
@@ -947,7 +998,8 @@ Started: around one-two years ago
 Tags: #functional-programming, #purescript, #mahjong, #game
 
 
-  - **PrimCivile**
+
+#### PrimCivile
 
 
 
@@ -962,7 +1014,7 @@ Tags: #purescript, #functional-programming, #game
 
 ### Unknown
 
-  - **NodeJS Binary Parser**
+#### NodeJS Binary Parser
 
 
 
@@ -971,7 +1023,8 @@ Started: more than ten years ago
 ([GH:nodejs-binary-parser](https://github.com/shamansir/nodejs-binary-parser))
 
 
-  - **Elm Goose Driven Tutorial**
+
+#### Elm Goose Driven Tutorial
 
 The Sources for Elm Goose Driven Tutorial
 
@@ -980,7 +1033,8 @@ Started: around four-five years ago
 ([GH:elm-goose-driven-tutorial](https://github.com/shamansir/elm-goose-driven-tutorial), [Elm Goose Driven Tutorial @ YouTube](https://www.youtube.com/playlist?list=PL4PKtHFA6sG9DQxKeGmV-Xjn_2eKDJM_J))
 
 
-  - **Showdown Blog**
+
+#### Showdown Blog
 
 Blog engine driven by JavaScript + XSLT
 
@@ -989,7 +1043,8 @@ Started: more than ten years ago
 ([GH:showdown-blog](https://github.com/shamansir/showdown-blog))
 
 
-  - **Translation for Duke Nukem 3D Build Engine Tutorial**
+
+#### Translation for Duke Nukem 3D Build Engine Tutorial
 
 
 
@@ -998,7 +1053,8 @@ Started: more than 20 years ago
 
 
 
-  - **The Neverhood Walhthrough**
+
+#### The Neverhood Walhthrough
 
 
 
@@ -1007,7 +1063,8 @@ Started: more than 20 years ago
 
 
 
-  - **Transit Maps**
+
+#### Transit Maps
 
 
 
@@ -1016,7 +1073,8 @@ Started: more than five years ago
 ([GH:transit-maps](https://github.com/shamansir/transit-maps))
 
 
-  - **LEAN Train**
+
+#### LEAN Train
 
 
 
@@ -1025,7 +1083,8 @@ Started: during last year
 ([GH:lean-train](https://github.com/shamansir/lean-train))
 
 
-  - **Elm Fluxus**
+
+#### Elm Fluxus
 
 
 
@@ -1034,7 +1093,8 @@ Started: more than five years ago
 ([GH:elm-fluxus](https://github.com/shamansir/elm-fluxus))
 
 
-  - **Elm Graph Render**
+
+#### Elm Graph Render
 
 
 
@@ -1043,7 +1103,8 @@ Started: around two-three years ago
 ([GH:elm-graph-render](https://github.com/shamansir/elm-graph-render))
 
 
-  - **elm-bin-pack**
+
+#### elm-bin-pack
 
 
 
@@ -1052,7 +1113,8 @@ Started: around two-three years ago
 ([GH:elm-bin-pack](https://github.com/shamansir/elm-bin-pack))
 
 
-  - **Forster**
+
+#### Forster
 
 
 
@@ -1061,21 +1123,24 @@ Started: more than five years ago
 ([GH:forster](https://github.com/shamansir/forster))
 
 
-  - **Dat Org Editor**
+
+#### Dat Org Editor
 
 
 
 ([GH:dat-org-editor](https://github.com/shamansir/dat-org-editor))
 
 
-  - **Elm-Graph-Render**
+
+#### Elm-Graph-Render
 
 
 
 ([GH:elm-graph-render](https://github.com/shamansir/elm-graph-render))
 
 
-  - **Exercism**
+
+#### Exercism
 
 
 
@@ -1084,35 +1149,40 @@ Started: more than five years ago
 ([GH:exercism](https://github.com/shamansir/exercism))
 
 
-  - **Elm-Friendly-Parser**
+
+#### Elm-Friendly-Parser
 
 
 
 ([GH:elm-friendly-parser](https://github.com/shamansir/elm-friendly-parser))
 
 
-  - **Track-Me-I-Am-Famous**
+
+#### Track-Me-I-Am-Famous
 
 
 
 ([GH:track-me-i-am-famous](https://github.com/shamansir/track-me-i-am-famous))
 
 
-  - **Elm-Ohm-Grammar**
+
+#### Elm-Ohm-Grammar
 
 
 
 ([GH:elm-ohm-grammar](https://github.com/shamansir/elm-ohm-grammar))
 
 
-  - **RPD-P5-Particle-System**
+
+#### RPD-P5-Particle-System
 
 
 
 ([GH:rpd-p5-particle-system](https://github.com/shamansir/rpd-p5-particle-system))
 
 
-  - **RPD-PureData**
+
+#### RPD-PureData
 
 
 
@@ -1121,42 +1191,48 @@ Started: more than five years ago
 ([GH:rpd-puredata](https://github.com/shamansir/rpd-puredata))
 
 
-  - **Showdown-Blog**
+
+#### Showdown-Blog
 
 
 
 ([GH:showdown-blog](https://github.com/shamansir/showdown-blog))
 
 
-  - **Mdown-Parse-PegJS**
+
+#### Mdown-Parse-PegJS
 
 
 
 ([GH:mdown-parse-pegjs](https://github.com/shamansir/mdown-parse-pegjs))
 
 
-  - **XTD (forall-TD)**
+
+#### XTD (forall-TD)
 
 
 
 ([GH:xtd](https://github.com/shamansir/xtd))
 
 
-  - **GWT-mvp4-layouting-demo**
+
+#### GWT-mvp4-layouting-demo
 
 
 
 ([GH:gwt-mvp4-layouting-demo](https://github.com/shamansir/gwt-mvp4-layouting-demo))
 
 
-  - **Fluxus-music-demo-addconf**
+
+#### Fluxus-music-demo-addconf
 
 
 
 ([GH:fluxus-music-demo-addconf](https://github.com/shamansir/fluxus-music-demo-addconf))
 
 
-  - **Cometd-Demo**
+
+#### Cometd-Demo
 
 
 
