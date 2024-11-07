@@ -427,7 +427,21 @@ The huge (but as fun as possible) talk in three parts on how you could architect
 
 ** Projects
 
-*** Finished (to some point)
+*** (--)
+
+**** Noodle
+
+Visual Programming for producing Generative Art and more, with CLI & Web & VR (planned) frot-ends, written in PureScript
+
+Status: Almost Finished (at least looks like it)
+
+Started: more than five years ago
+
+([[https://github.com/shamansir/noodle][GH:noodle]], [[https://noodle.labs.jb.gg/][Last working Noodle Demo]])
+
+Tags: #purescript, #visual-programming, #functional-programming, #generative-art
+
+
 
 **** RPD
 
@@ -454,6 +468,20 @@ Started: around two-three years ago
 ([[https://github.com/shamansir/tron-gui][GH:tron-gui]], [[https://tron.labs.jb.gg/][Tron Constructor @ CAI]], [[https://cai.jetbrains.com/][Computational Arts Initiative]], [[https://tiler.labs.jb.gg/][Tiler @ CAI usage example]], [[https://neobeam.labs.jb.gg/][Neobeam @ CAI usage example]], [[https://plasmatic.labs.jb.gg/][Plasmatic @ CAI usage example]])
 
 Tags: #elm, #gui, #user-interface, #functional-programming, #dhall, #javascript, #generative-art, #computational-arts, #graphs
+
+
+
+**** Kvant
+
+Translating Wave Function Collapse algorithm to Elm, and UI for it
+
+Status: Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
+
+Started: around four-five years ago
+
+([[https://github.com/shamansir/kvant][GH:kvant]], [[https://kvant.labs.jb.gg/][Kvant Demo @ CAI]], [[https://cai.jetbrains.com/][Computational Arts Initiative]])
+
+Tags: #elm, #gui, #generative-art, #functional-programming, #computational-arts
 
 
 
@@ -485,6 +513,20 @@ Tags: #elm, #javasript, #binary, #repl, #functional-programming
 
 
 
+**** GEN UI Lang
+
+On storing UI components definitions for Generative Art in JSON or D-Hall format, for Tron GUI mostly
+
+Status: Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
+
+Started: around two-three years ago
+
+([[https://github.com/shamansir/gen-ui][GH:gen-ui]])
+
+Tags: #elm, #dhall, #gui, #functional-programming, #computational-arts
+
+
+
 **** JS Player for Animatron
 
 
@@ -496,6 +538,20 @@ Started: more than five years ago
 ([[https://github.com/shamansir/animatron-player][GH:animatron-player]])
 
 Tags: #javascript, #canvas, #animation
+
+
+
+**** Web PD: PureData for Web
+
+A try to re-implement PureData UI and audio generation (using WebAudio) in the Web
+
+Status: Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
+
+Started: more than five years ago
+
+([[https://github.com/shamansir/web-pd][GH:web-pd]])
+
+Tags: #javascript, #pure-data, #svg, #audio-generation, #visual-programming
 
 
 
@@ -583,74 +639,6 @@ Tags: #javascript, #functional-programming, #parsing, #grammar
 
 
 
-**** How to LiveCode (PDF / EPUB version)
-
-The markup for the 1st version of "howto_co34pt_liveCode" book by coï¿¥ï¾¡pt
-
-Status: Finished (to some point)
-
-Started: around four-five years ago
-
-([[https://github.com/theseanco/howto_co34pt_liveCode/tree/master/Documents/FirstEdition][1st Edition compiled]])
-
-
-
-**** JavaScript Gardern
-
-I participated in translation of JavaScript Garden to Russian language
-
-Status: Finished (to some point)
-
-Started: more than ten years ago
-
-([[https://github.com/shamansir/javascript-garden][GH:javascript-garden]])
-
-Tags: #javascript, #translation
-
-
-
-**** Japanese Language Reference in Russian
-
-(PDF, 300+ pages)
-
-Status: Finished (to some point)
-
-Started: more than 20 years ago
-
-
-
-Tags: #japanese, #pdf, #translation
-
-
-
-**** Python 3.5 (RU)
-
-Translating Python 3.5 Reference @ Wikibooks
-
-Status: Finished (to some point)
-
-Started: more than 15 years ago
-
-
-
-Tags: #python, #translation
-
-
-
-**** PDF version for how-to-livecode Book
-
-Laying out PDF for how-to-livecode book
-
-Status: Finished (to some point)
-
-Started: more than five years ago
-
-
-
-Tags: #pdf, #generative-audio
-
-
-
 **** Finite State Machine engine+example for PureScript
 
 The code for the examples from my posts at dev.to
@@ -662,219 +650,6 @@ Started: around two-three years ago
 ([[https://github.com/shamansir/purescript-fsm][GH:purescript-fsm]], [[https://dev.to/shamansir/purescript-ui-driven-by-finite-state-machines-and-event-streams-994][FSM Post @ dev.to, p. I]], [[https://dev.to/shamansir/purescript-ui-driven-by-finite-state-machines-and-event-streams-part-ii-the-example-3m77][FSM Post @ dev.to, p. II]])
 
 Tags: #functional-programming, #purescript, #user-interface
-
-
-
-**** purescript-yoga-tree-utils
-
-
-
-Status: Finished (to some point) (Library)
-
-Started: during last year
-
-([[https://github.com/shamansir/purescript-yoga-tree-utils][GH:purescript-yoga-tree-utils]])
-
-Tags: #functional-programming, #purescript
-
-
-
-**** München-Flu
-
-Blog about Munich hidden places, cafes and nightclubs, in Russian
-
-Status: Finished (to some point)
-
-Started: more than five years ago
-
-([[https://t.me/munich_flu][Telegram: Мюнхен-Флю]])
-
-
-*** Finished (but expect to continue developing)
-
-**** Purs-Typeclasses
-
-The auto-generated interactive SVG poster / Web App of the PureScript TypeClasses' structure and methods and dependencies
-
-Status: Finished (but expect to continue developing)
-
-Started: around two-three years ago
-
-([[https://github.com/shamansir/purescript-typeclasses][GH:purescript-typeclasses]], [[https://x.com/shaman_sir/status/962696001139232768][Twitter post with sources, v.1]], [[https://x.com/shaman_sir/status/1027968186979950592][Twitter post with sources, v.2]])
-
-Tags: #functional-programming, #purescript, #svg
-
-
-*** Almost Finished (at least looks like it)
-
-**** Noodle
-
-Visual Programming for producing Generative Art and more, with CLI & Web & VR (planned) frot-ends, written in PureScript
-
-Status: Almost Finished (at least looks like it)
-
-Started: more than five years ago
-
-([[https://github.com/shamansir/noodle][GH:noodle]], [[https://noodle.labs.jb.gg/][Last working Noodle Demo]])
-
-Tags: #purescript, #visual-programming, #functional-programming, #generative-art
-
-
-
-**** purescript-blessed
-
-Port of JavaScript Blessed library, which is the powerful window management and component library for Command-Line-interfaces (CLI)
-
-Status: Almost Finished (at least looks like it) (Library)
-
-Started: during last year
-
-([[https://github.com/shamansir/purescript-blessed][GH:purescript-blessed]])
-
-Tags: #cli, #functional-programming, #purescript, #user-interface, #components
-
-
-
-**** purescript-doc
-
-The generic documents definition for PureScript inspired by Doc in LEAN (but it turned out PureScript has Dodo library which has the same purpose)
-
-Status: Almost Finished (at least looks like it) (Library)
-
-Started: during last year
-
-([[https://github.com/shamansir/purescript-doc][GH:purescript-doc]])
-
-Tags: #functional-programming, #purescript, #org-mode, #markdown
-
-
-
-**** purescript-text-formatting
-
-The generic formatting library for PureScript which allows to produce Markdown, HTML, Org org LaTeX using single formatting API
-
-Status: Almost Finished (at least looks like it) (Library)
-
-Started: during last year
-
-([[https://github.com/shamansir/purescript-doc][GH:purescript-doc]])
-
-Tags: #functional-programming, #purescript, #org-mode, #markdown
-
-
-
-**** purescript-grammar
-
-Reinventing PEG grammars and parsing in PureScript with ability to keep parsing on any error and keeping all the places of failure in the Syntax Tree, inspired by Lingo IDE by Pete Vilter
-
-Status: Almost Finished (at least looks like it) (Library)
-
-Started: during last year
-
-([[https://github.com/shamansir/purescript-grammar][GH:purescript-grammar]], [[https://petevilter.me/post/hytradboi-lingo-talk/][Lingo IDE Talk by Pete Vilter]])
-
-Tags: #functional-programming, #purescript, #grammar, #parsing, #datalog
-
-
-*** Managed (has no finished state and always actual in some sense)
-
-**** My TouchDesigner VJing sources
-
-
-
-Status: Managed (has no finished state and always actual in some sense)
-
-Started: around two-three years ago
-
-([[https://github.com/shamansir/touchdesigner][GH:touchdesigner]])
-
-Tags: #touchdesigner, #visuals
-
-
-*** In progress
-
-**** purescript-org
-
-org-mode document definition for PureScript
-
-Status: In progress (Library)
-
-Started: during last year
-
-([[https://github.com/shamansir/purescript-org][GH:purescript-org]])
-
-Tags: #functional-programming, #purescript, #org-mode
-
-
-
-**** purescript-flex-layout
-
-Bin Packing algorithm for PureScript UIs
-
-Status: In progress (Library)
-
-Started: around two-three years ago
-
-([[https://github.com/shamansir/purescript-flex-layout][GH:purescript-flex-layout]])
-
-Tags: #functional-programming, #purescript, #bin-packing, #user-interface
-
-
-*** Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
-
-**** Kvant
-
-Translating Wave Function Collapse algorithm to Elm, and UI for it
-
-Status: Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
-
-Started: around four-five years ago
-
-([[https://github.com/shamansir/kvant][GH:kvant]], [[https://kvant.labs.jb.gg/][Kvant Demo @ CAI]], [[https://cai.jetbrains.com/][Computational Arts Initiative]])
-
-Tags: #elm, #gui, #generative-art, #functional-programming, #computational-arts
-
-
-
-**** GEN UI Lang
-
-On storing UI components definitions for Generative Art in JSON or D-Hall format, for Tron GUI mostly
-
-Status: Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
-
-Started: around two-three years ago
-
-([[https://github.com/shamansir/gen-ui][GH:gen-ui]])
-
-Tags: #elm, #dhall, #gui, #functional-programming, #computational-arts
-
-
-
-**** Web PD: PureData for Web
-
-A try to re-implement PureData UI and audio generation (using WebAudio) in the Web
-
-Status: Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
-
-Started: more than five years ago
-
-([[https://github.com/shamansir/web-pd][GH:web-pd]])
-
-Tags: #javascript, #pure-data, #svg, #audio-generation, #visual-programming
-
-
-
-**** Elm Symbolic Logic Game
-
-Symbolic Logic Playground, inspired by books of Lewis Carrol
-
-Status: Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
-
-Started: around two-three years ago
-
-([[https://github.com/shamansir/elm-symbolic-logic][GH:elm-symbolic-logic]])
-
-Tags: #elm, #logic, #lewis-carrol, #game
 
 
 
@@ -906,104 +681,11 @@ Tags: #android, #java, #application
 
 
 
-**** LeBanal
-
-Writing short stories on users' requests, in Russian
-
-Status: Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
-
-Started: around four-five years ago
-
-([[https://t.me/le_banal][Telegram: Лё Баналь]])
-
-
-*** Just Started
-
-**** WinniPeg
-
-Visual aid and editor for implementing PEG grammars (purescript-grammar) in PureScript
-
-Status: Just Started
-
-Started: during last year
-
-([[https://github.com/shamansir/winni-peg][GH:winni-peg]], [[https://github.com/shamansir/purescript-grammar][GH:purescript-grammar]])
-
-Tags: #functional-programming, #purescript, #org-mode, #peg, #grammars, #parsing, #datalog
-
-
-*** Draft
-
-**** &ndORG
-
-An attempt to develop a user-friendly web ORG-mode editor while conversing most of its `emacs` profits and build UI on visual-keystrokes-concept
-
-Status: Draft
-
-Started: during last year
-
-([[https://github.com/shamansir/ndorg][GH:ndorg]])
-
-Tags: #functional-programming, #purescript, #org-mode, #grammars, #parsing
-
-
-
-**** purescript-optics-interactive
-
-An attempt to demonstrate visually and interactively how Profunctor Optics work in Functional Languages like PureScript (mostly for my own self)
-
-Status: Draft
-
-Started: around two-three years ago
-
-([[https://github.com/shamansir/purescript-optics-interactive][GH:purescript-optics-interactive]])
-
-Tags: #functional-programming, #purescript
-
-
-
-**** purescript-mahjong
-
-Implementing Riichi Mahjong game in PureScript
-
-Status: Draft
-
-Started: around one-two years ago
-
-([[https://github.com/shamansir/purescript-mahjong][GH:purescript-mahjong]])
-
-Tags: #functional-programming, #purescript, #mahjong, #game
-
-
-
-**** PrimCivile
-
-
-
-Status: Draft
-
-Started: around two-three years ago
-
-([[https://github.com/shamansir/primcivile][GH:primcivile]])
-
-Tags: #purescript, #functional-programming, #game
-
-
-*** Unknown
-
-**** NodeJS Binary Parser
-
-
-
-Started: more than ten years ago
-
-([[https://github.com/shamansir/nodejs-binary-parser][GH:nodejs-binary-parser]])
-
-
-
 **** Elm Goose Driven Tutorial
 
 The Sources for Elm Goose Driven Tutorial
+
+Status: Finished (to some point)
 
 Started: around four-five years ago
 
@@ -1011,79 +693,11 @@ Started: around four-five years ago
 
 
 
-**** Showdown Blog
-
-Blog engine driven by JavaScript + XSLT
-
-Started: more than ten years ago
-
-([[https://github.com/shamansir/showdown-blog][GH:showdown-blog]])
-
-
-
-**** Translation for Duke Nukem 3D Build Engine Tutorial
-
-
-
-Started: more than 20 years ago
-
-
-
-
-
-**** The Neverhood Walhthrough
-
-
-
-Started: more than 20 years ago
-
-
-
-
-
-**** Transit Maps
-
-
-
-Started: more than five years ago
-
-([[https://github.com/shamansir/transit-maps][GH:transit-maps]])
-
-
-
-**** LEAN Train
-
-
-
-Started: during last year
-
-([[https://github.com/shamansir/lean-train][GH:lean-train]])
-
-
-
-**** Elm Fluxus
-
-
-
-Started: more than five years ago
-
-([[https://github.com/shamansir/elm-fluxus][GH:elm-fluxus]])
-
-
-
-**** Elm Graph Render
-
-
-
-Started: around two-three years ago
-
-([[https://github.com/shamansir/elm-graph-render][GH:elm-graph-render]])
-
-
-
 **** elm-bin-pack
 
+Bin-Packing algorithm written in Elm
 
+Status: Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
 
 Started: around two-three years ago
 
@@ -1091,131 +705,27 @@ Started: around two-three years ago
 
 
 
-**** Forster
-
-
-
-Started: more than five years ago
-
-([[https://github.com/shamansir/forster][GH:forster]])
-
-
-
-**** Dat Org Editor
-
-
-
-([[https://github.com/shamansir/dat-org-editor][GH:dat-org-editor]])
-
-
-
-**** Elm-Graph-Render
-
-
-
-([[https://github.com/shamansir/elm-graph-render][GH:elm-graph-render]])
-
-
-
-**** Exercism
-
-
-
-Started: more than five years ago
-
-([[https://github.com/shamansir/exercism][GH:exercism]])
-
-
-
-**** Elm-Friendly-Parser
-
-
-
-([[https://github.com/shamansir/elm-friendly-parser][GH:elm-friendly-parser]])
-
-
-
-**** Track-Me-I-Am-Famous
-
-
-
-([[https://github.com/shamansir/track-me-i-am-famous][GH:track-me-i-am-famous]])
-
-
-
-**** Elm-Ohm-Grammar
-
-
-
-([[https://github.com/shamansir/elm-ohm-grammar][GH:elm-ohm-grammar]])
-
-
-
-**** RPD-P5-Particle-System
-
-
-
-([[https://github.com/shamansir/rpd-p5-particle-system][GH:rpd-p5-particle-system]])
-
-
-
-**** RPD-PureData
-
-
-
-Started: more than five years ago
-
-([[https://github.com/shamansir/rpd-puredata][GH:rpd-puredata]])
-
-
-
 **** Showdown-Blog
 
+The Blog Engine that uses XSLT + XML to generate pages
 
+Status: Finished (to some point)
+
+Started: more than 15 years ago
 
 ([[https://github.com/shamansir/showdown-blog][GH:showdown-blog]])
 
 
 
-**** Mdown-Parse-PegJS
-
-
-
-([[https://github.com/shamansir/mdown-parse-pegjs][GH:mdown-parse-pegjs]])
-
-
-
-**** XTD (forall-TD)
-
-
-
-([[https://github.com/shamansir/xtd][GH:xtd]])
-
-
-
 **** GWT-mvp4-layouting-demo
 
+A demo for the GWT+mvp4 Talk
 
-
-([[https://github.com/shamansir/gwt-mvp4-layouting-demo][GH:gwt-mvp4-layouting-demo]])
-
-
-
-**** Fluxus-music-demo-addconf
-
-
-
-([[https://github.com/shamansir/fluxus-music-demo-addconf][GH:fluxus-music-demo-addconf]])
-
-
-
-**** Cometd-Demo
-
-
+Status: Finished (to some point)
 
 Started: more than 15 years ago
 
-([[https://github.com/shamansir/cometd-demo][GH:cometd-demo]])
+([[https://github.com/shamansir/gwt-mvp4-layouting-demo][GH:gwt-mvp4-layouting-demo]])
 
 
 

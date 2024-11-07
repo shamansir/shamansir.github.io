@@ -176,7 +176,7 @@ Status: Finished (to some point)
 
 Started: more than ten years ago
 
-([GH:javascript-garden](https://github.com/shamansir/javascript-garden))
+([GH:JavaScript-Garden](https://github.com/shamansir/JavaScript-Garden))
 
 Tags: #javascript, #translation
 
@@ -252,6 +252,18 @@ Tags: #functional-programming, #purescript
 
 
 
+#### Elm Goose Driven Tutorial
+
+The Sources for Elm Goose Driven Tutorial
+
+Status: Finished (to some point)
+
+Started: around four-five years ago
+
+([GH:elm-goose-driven-tutorial](https://github.com/shamansir/elm-goose-driven-tutorial), [Elm Goose Driven Tutorial @ YouTube](https://www.youtube.com/playlist?list=PL4PKtHFA6sG9DQxKeGmV-Xjn_2eKDJM_J))
+
+
+
 #### München-Flu
 
 Blog about Munich hidden places, cafes and nightclubs, in Russian
@@ -261,6 +273,30 @@ Status: Finished (to some point)
 Started: more than five years ago
 
 ([Telegram: Мюнхен-Флю](https://t.me/munich_flu))
+
+
+
+#### Showdown-Blog
+
+The Blog Engine that uses XSLT + XML to generate pages
+
+Status: Finished (to some point)
+
+Started: more than 15 years ago
+
+([GH:showdown-blog](https://github.com/shamansir/showdown-blog))
+
+
+
+#### GWT-mvp4-layouting-demo
+
+A demo for the GWT+mvp4 Talk
+
+Status: Finished (to some point)
+
+Started: more than 15 years ago
+
+([GH:gwt-mvp4-layouting-demo](https://github.com/shamansir/gwt-mvp4-layouting-demo))
 
 
 ### Finished (but expect to continue developing)
@@ -490,6 +526,18 @@ Started: around four-five years ago
 ([Telegram: Лё Баналь](https://t.me/le_banal))
 
 
+
+#### elm-bin-pack
+
+Bin-Packing algorithm written in Elm
+
+Status: Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
+
+Started: around two-three years ago
+
+([GH:elm-bin-pack](https://github.com/shamansir/elm-bin-pack))
+
+
 ### Just Started
 
 #### WinniPeg
@@ -562,6 +610,18 @@ Started: around two-three years ago
 Tags: #purescript, #functional-programming, #game
 
 
+
+#### Elm Fluxus
+
+A try to reimplement Pawfal Fluxus API in Elm
+
+Status: Draft
+
+Started: more than five years ago
+
+([GH:elm-fluxus](https://github.com/shamansir/elm-fluxus))
+
+
 ### Unknown
 
 #### NodeJS Binary Parser
@@ -571,16 +631,6 @@ Tags: #purescript, #functional-programming, #game
 Started: more than ten years ago
 
 ([GH:nodejs-binary-parser](https://github.com/shamansir/nodejs-binary-parser))
-
-
-
-#### Elm Goose Driven Tutorial
-
-The Sources for Elm Goose Driven Tutorial
-
-Started: around four-five years ago
-
-([GH:elm-goose-driven-tutorial](https://github.com/shamansir/elm-goose-driven-tutorial), [Elm Goose Driven Tutorial @ YouTube](https://www.youtube.com/playlist?list=PL4PKtHFA6sG9DQxKeGmV-Xjn_2eKDJM_J))
 
 
 
@@ -594,29 +644,9 @@ Started: more than ten years ago
 
 
 
-#### Translation for Duke Nukem 3D Build Engine Tutorial
-
-
-
-Started: more than 20 years ago
-
-
-
-
-
-#### The Neverhood Walhthrough
-
-
-
-Started: more than 20 years ago
-
-
-
-
-
 #### Transit Maps
 
-
+The editor for Transit maps
 
 Started: more than five years ago
 
@@ -626,7 +656,7 @@ Started: more than five years ago
 
 #### LEAN Train
 
-
+Reimplementing examples from LEAN book
 
 Started: during last year
 
@@ -634,33 +664,13 @@ Started: during last year
 
 
 
-#### Elm Fluxus
-
-
-
-Started: more than five years ago
-
-([GH:elm-fluxus](https://github.com/shamansir/elm-fluxus))
-
-
-
 #### Elm Graph Render
 
-
+Rendering Data Graphs to SVG / Canvas using Elm
 
 Started: around two-three years ago
 
 ([GH:elm-graph-render](https://github.com/shamansir/elm-graph-render))
-
-
-
-#### elm-bin-pack
-
-
-
-Started: around two-three years ago
-
-([GH:elm-bin-pack](https://github.com/shamansir/elm-bin-pack))
 
 
 
@@ -678,21 +688,15 @@ Started: more than five years ago
 
 
 
+Started: more than five years ago
+
 ([GH:dat-org-editor](https://github.com/shamansir/dat-org-editor))
-
-
-
-#### Elm-Graph-Render
-
-
-
-([GH:elm-graph-render](https://github.com/shamansir/elm-graph-render))
 
 
 
 #### Exercism
 
-
+Solutions for some Exercism tasks
 
 Started: more than five years ago
 
@@ -742,14 +746,6 @@ Started: more than five years ago
 
 
 
-#### Showdown-Blog
-
-
-
-([GH:showdown-blog](https://github.com/shamansir/showdown-blog))
-
-
-
 #### Mdown-Parse-PegJS
 
 
@@ -763,14 +759,6 @@ Started: more than five years ago
 
 
 ([GH:xtd](https://github.com/shamansir/xtd))
-
-
-
-#### GWT-mvp4-layouting-demo
-
-
-
-([GH:gwt-mvp4-layouting-demo](https://github.com/shamansir/gwt-mvp4-layouting-demo))
 
 
 
