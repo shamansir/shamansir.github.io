@@ -16,11 +16,17 @@ I often preferred programming to gaming or watching TV or going outside (not to 
 It is thanks to this feeling of discovering something new and creating something new from the small little logical and mathematical parts, making something beautiful, appealing, friendly, and useful.
 
 So during my work experience I developed many complex components, such as Treemap (or BinPacking) component for monitoring stocks implemented in Delphi, or the interface for Fast Fourier analysis of seismic signal in Borland C++,
-or the UI for first neural networks with no more than a dozen layers of neurons, or else your PC take weeks to compute them, then using now-forgotten protocols (e.g. Google Wave aka Federation One) for delivering immersive and friendly chat experience, then it would be JavaScript player for web animation tool Animatron,
-and through years it got me into developing generative art with functional programming languages in JetBrains for marketing purposes, so that design team wouldn't be required to manually produce all the variants of art, but just to overlook and rule the generation process.
+or the UI for first neural networks with no more than a dozen layers of neurons (or else your PC take weeks to compute them), then using now-forgotten protocols (e.g. Google Wave aka Federation One) for delivering immersive and friendly chat experience, then it would be JavaScript player for web animation tool Animatron,
+and through years it got me into developing generative art both with JavaScript + GLSL, as well as functional programming languages in JetBrains on marketing purposes, so that design team wouldn't be required to manually produce all the variants of art, but just to overlook and rule the generation process.
 
 From all this it could look like I loved mathematics all the way, but at the start I really didn't, and only now I find its laws everywhere around, including music, geometry, or theorem proving.
 
+Of course, there were Java EE or GWT or React-driven application, and even Python was among my skills.
+
+
+## Skills
+
+Java, JavaScript, React, HTML5, Animation, Elm, PureScript, Functional Programming
 
 ## Timeline
 
@@ -1240,3 +1246,8 @@ Started: more than 15 years ago
 
 ([GH:cometd-demo](https://github.com/shamansir/cometd-demo))
 
+
+
+## Interests
+
+Generative Art, Visual Programming, Japanese Language, Functional Programming, Animation, Generative Music
