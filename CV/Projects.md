@@ -12,7 +12,7 @@ Started: more than ten years ago
 
 ([GH:rpd](https://github.com/shamansir/rpd), [RPD Docs & Demos](https://shamansir.github.io/rpd))
 
-Tags: #javascript, #svg, #visual-programming, #generative-art, #reactive-programming, #kefir.js, #computational-arts
+Tags: #javascript, #svg, #visual-programming, #generative-art, #reactive-programming, #kefir-js, #comp-arts
 
 
 
@@ -26,7 +26,7 @@ Started: around two-three years ago
 
 ([GH:tron-gui](https://github.com/shamansir/tron-gui), [Tron Constructor @ CAI](https://tron.labs.jb.gg/), [Computational Arts Initiative](https://cai.jetbrains.com/), [Tiler @ CAI usage example](https://tiler.labs.jb.gg/), [Neobeam @ CAI usage example](https://neobeam.labs.jb.gg/), [Plasmatic @ CAI usage example](https://plasmatic.labs.jb.gg/))
 
-Tags: #elm, #gui, #user-interface, #functional-programming, #dhall, #javascript, #generative-art, #computational-arts, #graphs
+Tags: #elm, #gui, #user-interface, #functional-programming, #dhall, #javascript, #generative-art, #comp-arts, #graphs
 
 
 
@@ -54,7 +54,7 @@ Started: around four-five years ago
 
 ([GH:node-elm-repl](https://github.com/shamansir/node-elm-repl))
 
-Tags: #elm, #javasript, #binary, #repl, #functional-programming
+Tags: #elm, #javascript, #binary, #repl, #functional-programming
 
 
 
@@ -68,7 +68,7 @@ Started: more than five years ago
 
 ([GH:animatron-player](https://github.com/shamansir/animatron-player))
 
-Tags: #javascript, #canvas, #animation
+Tags: #javascript, #html5-canvas, #animation
 
 
 
@@ -82,7 +82,7 @@ Started: more than five years ago
 
 ([GH:jb-rpd-splash](https://github.com/shamansir/jb-rpd-splash), [SETI Generator in Action @ CAI](https://seti.labs.jb.gg/), [Computational Arts Initiative](https://cai.jetbrains.com/))
 
-Tags: #javascript, #visual-programming, #computational-arts, #glsl, #shaders
+Tags: #javascript, #visual-programming, #comp-arts, #glsl, #glsl-shaders
 
 
 
@@ -110,7 +110,7 @@ Started: more than ten years ago
 
 ([GH:nijiato](https://github.com/shamansir/nijiato))
 
-Tags: #lisp, #camera-tracking, #opencv
+Tags: #lisp, #camera-tracking, #open-cv
 
 
 
@@ -124,7 +124,7 @@ Started: around four-five years ago
 
 ([GH:open-radiant](https://github.com/shamansir/open-radiant), [Computational Arts Initiative](https://cai.jetbrains.com/))
 
-Tags: #elm, #functional-programming, #computational-arts, #generative-art
+Tags: #elm, #functional-programming, #comp-arts, #generative-art
 
 
 
@@ -138,7 +138,7 @@ Started: around four-five years ago
 
 ([GH:open-elmsfeuer](https://github.com/shamansir/open-elmsfeuer), [Origami Generator in Action @ CAI](https://origami.labs.jb.gg/))
 
-Tags: #elm, #functional-programming, #computational-arts, #generative-art
+Tags: #elm, #functional-programming, #comp-arts, #generative-art
 
 
 
@@ -152,7 +152,7 @@ Started: more than five years ago
 
 ([GH:pegjs-fn](https://github.com/shamansir/pegjs-fn), [PegJS-Fn Playground](https://shamansir.github.io/pegjs-fn/))
 
-Tags: #javascript, #functional-programming, #parsing, #grammar
+Tags: #javascript, #functional-programming, #parsing, #parsers, #grammars
 
 
 
@@ -178,7 +178,7 @@ Started: more than ten years ago
 
 ([GH:JavaScript-Garden](https://github.com/shamansir/JavaScript-Garden))
 
-Tags: #javascript, #translation
+Tags: #javascript, #translations
 
 
 
@@ -192,7 +192,7 @@ Started: more than 20 years ago
 
 
 
-Tags: #japanese, #pdf, #translation
+Tags: #japanese, #pdf, #translations
 
 
 
@@ -206,7 +206,7 @@ Started: more than 15 years ago
 
 
 
-Tags: #python, #translation
+Tags: #python, #translations
 
 
 
@@ -234,7 +234,7 @@ Started: around two-three years ago
 
 ([GH:purescript-fsm](https://github.com/shamansir/purescript-fsm), [FSM Post @ dev.to, p. I](https://dev.to/shamansir/purescript-ui-driven-by-finite-state-machines-and-event-streams-994), [FSM Post @ dev.to, p. II](https://dev.to/shamansir/purescript-ui-driven-by-finite-state-machines-and-event-streams-part-ii-the-example-3m77))
 
-Tags: #functional-programming, #purescript, #user-interface
+Tags: #functional-programming, #purescript, #gui, #user-interface
 
 
 
@@ -262,6 +262,22 @@ Started: around four-five years ago
 
 ([GH:elm-goose-driven-tutorial](https://github.com/shamansir/elm-goose-driven-tutorial), [Elm Goose Driven Tutorial @ YouTube](https://www.youtube.com/playlist?list=PL4PKtHFA6sG9DQxKeGmV-Xjn_2eKDJM_J))
 
+Tags: #elm, #tutorial, #html5-canvas, #graphics
+
+
+
+#### Showdown Blog
+
+Blog engine driven by JavaScript + XSLT
+
+Status: Finished (to some point)
+
+Started: more than 15 years ago
+
+([GH:showdown-blog](https://github.com/shamansir/showdown-blog))
+
+Tags: #xml, #xslt
+
 
 
 #### München-Flu
@@ -274,17 +290,7 @@ Started: more than five years ago
 
 ([Telegram: Мюнхен-Флю](https://t.me/munich_flu))
 
-
-
-#### Showdown-Blog
-
-The Blog Engine that uses XSLT + XML to generate pages
-
-Status: Finished (to some point)
-
-Started: more than 15 years ago
-
-([GH:showdown-blog](https://github.com/shamansir/showdown-blog))
+Tags: #telegram
 
 
 
@@ -297,6 +303,8 @@ Status: Finished (to some point)
 Started: more than 15 years ago
 
 ([GH:gwt-mvp4-layouting-demo](https://github.com/shamansir/gwt-mvp4-layouting-demo))
+
+Tags: #example, #demo, #gwt, #mvp4g
 
 
 ### Finished (but expect to continue developing)
@@ -340,7 +348,7 @@ Started: during last year
 
 ([GH:purescript-blessed](https://github.com/shamansir/purescript-blessed))
 
-Tags: #cli, #functional-programming, #purescript, #user-interface, #components
+Tags: #cli, #functional-programming, #purescript, #gui, #user-interface, #components
 
 
 
@@ -382,7 +390,7 @@ Started: during last year
 
 ([GH:purescript-grammar](https://github.com/shamansir/purescript-grammar), [Lingo IDE Talk by Pete Vilter](https://petevilter.me/post/hytradboi-lingo-talk/))
 
-Tags: #functional-programming, #purescript, #grammar, #parsing, #datalog
+Tags: #functional-programming, #purescript, #grammars, #parsing, #parsers, #datalog
 
 
 ### Managed (has no finished state and always actual in some sense)
@@ -398,6 +406,20 @@ Started: around two-three years ago
 ([GH:touchdesigner](https://github.com/shamansir/touchdesigner))
 
 Tags: #touchdesigner, #visuals
+
+
+
+#### Exercism
+
+Solutions for some Exercism tasks
+
+Status: Managed (has no finished state and always actual in some sense)
+
+Started: more than five years ago
+
+([GH:exercism](https://github.com/shamansir/exercism))
+
+Tags: #training, #elm, #haskell
 
 
 ### In progress
@@ -426,7 +448,7 @@ Started: around two-three years ago
 
 ([GH:purescript-flex-layout](https://github.com/shamansir/purescript-flex-layout))
 
-Tags: #functional-programming, #purescript, #bin-packing, #user-interface
+Tags: #functional-programming, #purescript, #bin-packing, #gui, #user-interface
 
 
 ### Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
@@ -441,7 +463,7 @@ Started: around four-five years ago
 
 ([GH:kvant](https://github.com/shamansir/kvant), [Kvant Demo @ CAI](https://kvant.labs.jb.gg/), [Computational Arts Initiative](https://cai.jetbrains.com/))
 
-Tags: #elm, #gui, #generative-art, #functional-programming, #computational-arts
+Tags: #wfc, #elm, #gui, #user-interface, #generative-art, #functional-programming, #comp-arts
 
 
 
@@ -455,7 +477,7 @@ Started: around two-three years ago
 
 ([GH:gen-ui](https://github.com/shamansir/gen-ui))
 
-Tags: #elm, #dhall, #gui, #functional-programming, #computational-arts
+Tags: #elm, #dhall, #gui, #user-interface, #functional-programming, #comp-arts
 
 
 
@@ -469,7 +491,7 @@ Started: more than five years ago
 
 ([GH:web-pd](https://github.com/shamansir/web-pd))
 
-Tags: #javascript, #pure-data, #svg, #audio-generation, #visual-programming
+Tags: #javascript, #pure-data, #svg, #generative-audio, #visual-programming
 
 
 
@@ -483,7 +505,7 @@ Started: around two-three years ago
 
 ([GH:elm-symbolic-logic](https://github.com/shamansir/elm-symbolic-logic))
 
-Tags: #elm, #logic, #lewis-carrol, #game
+Tags: #elm, #logic, #game
 
 
 
@@ -497,7 +519,7 @@ Started: more than ten years ago
 
 ([GH:cayley-rust](https://github.com/shamansir/cayley-rust))
 
-Tags: #rust, #graphs, #database
+Tags: #rust, #graphs, #databases
 
 
 
@@ -511,7 +533,7 @@ Started: more than ten years ago
 
 ([GH:vimeoid](https://github.com/shamansir/vimeoid))
 
-Tags: #android, #java, #application
+Tags: #android, #java, #app
 
 
 
@@ -525,6 +547,8 @@ Started: around four-five years ago
 
 ([Telegram: Лё Баналь](https://t.me/le_banal))
 
+Tags: #telegram
+
 
 
 #### elm-bin-pack
@@ -536,6 +560,8 @@ Status: Stagnated (started, may be accomplished smth, but wasn't finished for a 
 Started: around two-three years ago
 
 ([GH:elm-bin-pack](https://github.com/shamansir/elm-bin-pack))
+
+Tags: #elm, #bin-packing
 
 
 ### Just Started
@@ -550,7 +576,7 @@ Started: during last year
 
 ([GH:winni-peg](https://github.com/shamansir/winni-peg), [GH:purescript-grammar](https://github.com/shamansir/purescript-grammar))
 
-Tags: #functional-programming, #purescript, #org-mode, #peg, #grammars, #parsing, #datalog
+Tags: #functional-programming, #purescript, #org-mode, #peg, #grammars, #parsing, #parsers, #datalog
 
 
 ### Draft
@@ -565,7 +591,7 @@ Started: during last year
 
 ([GH:ndorg](https://github.com/shamansir/ndorg))
 
-Tags: #functional-programming, #purescript, #org-mode, #grammars, #parsing
+Tags: #functional-programming, #purescript, #org-mode, #grammars, #parsing, #parsers, #todos
 
 
 
@@ -621,6 +647,34 @@ Started: more than five years ago
 
 ([GH:elm-fluxus](https://github.com/shamansir/elm-fluxus))
 
+Tags: #elm, #fluxus, #racket, #scheme
+
+
+
+#### Dat Org Editor
+
+
+
+Status: Draft
+
+Started: more than five years ago
+
+([GH:dat-org-editor](https://github.com/shamansir/dat-org-editor))
+
+Tags: #org-mode, #todos
+
+
+
+#### Elm-Friendly-Parser
+
+
+
+Status: Draft
+
+([GH:elm-friendly-parser](https://github.com/shamansir/elm-friendly-parser))
+
+Tags: #elm, #parsing, #parsers, #grammars
+
 
 ### Unknown
 
@@ -632,15 +686,7 @@ Started: more than ten years ago
 
 ([GH:nodejs-binary-parser](https://github.com/shamansir/nodejs-binary-parser))
 
-
-
-#### Showdown Blog
-
-Blog engine driven by JavaScript + XSLT
-
-Started: more than ten years ago
-
-([GH:showdown-blog](https://github.com/shamansir/showdown-blog))
+Tags: #binary, #javascript, #parsing, #parsers
 
 
 
@@ -652,6 +698,8 @@ Started: more than five years ago
 
 ([GH:transit-maps](https://github.com/shamansir/transit-maps))
 
+Tags: #transit
+
 
 
 #### LEAN Train
@@ -661,6 +709,8 @@ Reimplementing examples from LEAN book
 Started: during last year
 
 ([GH:lean-train](https://github.com/shamansir/lean-train))
+
+Tags: #lean, #training
 
 
 
@@ -672,6 +722,8 @@ Started: around two-three years ago
 
 ([GH:elm-graph-render](https://github.com/shamansir/elm-graph-render))
 
+Tags: #elm, #graphs, #svg
+
 
 
 #### Forster
@@ -682,33 +734,7 @@ Started: more than five years ago
 
 ([GH:forster](https://github.com/shamansir/forster))
 
-
-
-#### Dat Org Editor
-
-
-
-Started: more than five years ago
-
-([GH:dat-org-editor](https://github.com/shamansir/dat-org-editor))
-
-
-
-#### Exercism
-
-Solutions for some Exercism tasks
-
-Started: more than five years ago
-
-([GH:exercism](https://github.com/shamansir/exercism))
-
-
-
-#### Elm-Friendly-Parser
-
-
-
-([GH:elm-friendly-parser](https://github.com/shamansir/elm-friendly-parser))
+Tags: #game
 
 
 
@@ -718,6 +744,8 @@ Started: more than five years ago
 
 ([GH:track-me-i-am-famous](https://github.com/shamansir/track-me-i-am-famous))
 
+Tags: #camera-tracking
+
 
 
 #### Elm-Ohm-Grammar
@@ -726,6 +754,8 @@ Started: more than five years ago
 
 ([GH:elm-ohm-grammar](https://github.com/shamansir/elm-ohm-grammar))
 
+Tags: #elm, #parsing, #parsers, #grammars
+
 
 
 #### RPD-P5-Particle-System
@@ -733,6 +763,8 @@ Started: more than five years ago
 
 
 ([GH:rpd-p5-particle-system](https://github.com/shamansir/rpd-p5-particle-system))
+
+Tags: #p5-js, #processing, #javascript, #visual-programming
 
 
 
@@ -744,6 +776,8 @@ Started: more than five years ago
 
 ([GH:rpd-puredata](https://github.com/shamansir/rpd-puredata))
 
+Tags: #pure-data, #javascript, #visual-programming
+
 
 
 #### Mdown-Parse-PegJS
@@ -751,6 +785,8 @@ Started: more than five years ago
 
 
 ([GH:mdown-parse-pegjs](https://github.com/shamansir/mdown-parse-pegjs))
+
+Tags: #markdown, #parsing, #parsers, #grammars, #peg, #javascript
 
 
 
@@ -760,6 +796,8 @@ Started: more than five years ago
 
 ([GH:xtd](https://github.com/shamansir/xtd))
 
+Tags: #todos
+
 
 
 #### Fluxus-music-demo-addconf
@@ -767,6 +805,8 @@ Started: more than five years ago
 
 
 ([GH:fluxus-music-demo-addconf](https://github.com/shamansir/fluxus-music-demo-addconf))
+
+Tags: #example, #demo, #fluxus, #racket, #scheme
 
 
 
@@ -777,4 +817,6 @@ Started: more than five years ago
 Started: more than 15 years ago
 
 ([GH:cometd-demo](https://github.com/shamansir/cometd-demo))
+
+Tags: #java, #ajax
 

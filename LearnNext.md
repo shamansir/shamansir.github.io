@@ -1,1 +1,21 @@
 # Learn Next
+
+- Local LLVMs
+  - [[https://ollama.com/|ollama]]
+  - [[https://pieces.app/|pieces]]
+- [[https://lean-lang.org/|Microsoft LEAN]]
+- [[https://vvvv.org/|vvvv]]
+- [[https://www.unison-lang.org/|Unison Language]]
+- [[https://nixos-and-flakes.thiscute.world/preface|nix package manager / nix-darwin / nix OS]]
+- DONE [[https://www.uiua.org/|uiua]]
+- [[https://faust.grame.fr/|Faust Programming Language]]
+- [[https://isabelle.in.tum.de/documentation.html|Isabelle (TUM)]]
+- Combinatory Logic
+  - [[https://ncatlab.org/nlab/show/partial+combinatory+algebra|nLab]]
+  - [[https://jellyballs.github.io/|JellyBalls]]
+  - [[https://www.angelfire.com/tx4/cus/combinator/birds.html|Combinator Birds]]
+  - [[https://combinatorylogic.com/links.html|Combinatory Logic]]
+- Riichi Mahjong
+- [[https://lingo-workbench.dev/#?=basicBlocks|Lingo]]
+- [[https://github.com/theseanco/howto_co34pt_liveCode|how to livecode music]]
+- [[https://docs.racket-lang.org/plot/renderer3d.html|racket + 3d]]

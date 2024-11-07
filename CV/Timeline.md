@@ -24,7 +24,7 @@ Technologies:
 :  JavaScript, React, Elm, HTML5 Canvas, GLSL Shaders, d3.js, Kotlin JS, Kotlin, DHall, PureScript
 
 Tags:
-:  #generative-art, #react, #redux, #elm, #glsl, #shaders, #html5-canvas, #animation, #dhall, #kotlin-js, #user-interfaces
+:  #generative-art, #react, #redux, #elm, #glsl, #glsl-shaders, #html5-canvas, #animation, #dhall, #kotlin-js, #gui, #user-interface
 
 
 Talks:
@@ -50,7 +50,7 @@ At Animatron, I mostly developed the Web Player based on HTML5 Canvas technology
   - *Boston*, *United States, MA* 
 
 Technologies:
-:  Java, Google Web Toolkit (GWT), JavaScript, HTML5 Canvas
+:  Java, GWT (Google Web Toolkit), JavaScript, HTML5 Canvas
 
 Tags:
 :  #html5-canvas, #javascript, #animation, #gwt, #svg, #graphics
@@ -75,10 +75,10 @@ Programming and Architecture with GWT ﴾with mvp4g﴿, writing custom component
   - *Odessa*, *Ukraine* 
 
 Technologies:
-:  Java, Google Web Toolkit (GWT), mvp4g GWT Framework, JavaScript, Python
+:  Java, GWT (Google Web Toolkit), mvp4g GWT Framework, JavaScript, Python
 
 Tags:
-:  #java, #gwt, #mvp4j, #javascript, #python
+:  #java, #gwt, #mvp4g, #javascript, #python
 
 
 Talks:
@@ -94,7 +94,7 @@ The ExtJS-based FrontEnd for the Administration of a Billing Engine, which commu
   - *St. Petersburg*, *Russia* 
 
 Technologies:
-:  Java, Java RPC, Spring, JavaScript, ExtJS
+:  Java, Java RPC, Spring for Java EE, JavaScript, Ext JS
 
 Tags:
 :  #java, #spring, #java-rpc, #ext-js
@@ -114,10 +114,10 @@ Action System for the UI was the idea and implementation of ours since technolog
   - *St. Petersburg*, *Russia* 
 
 Technologies:
-:  Java, Apache Wicket, Java Server Pages, JavaScript
+:  Java, Apache Wicket, JSP (Java Server Pages), JavaScript
 
 Tags:
-:  #java, #apache-wicket, #javascript, #ajax, #jsp
+:  #java, #apache-wicket, #javascript, #ajax, #java-jsp
 
 
 Recommendations:
@@ -161,10 +161,10 @@ Dealing with threads concurrency and a high rate of updates;
   - *St. Petersburg*, *Russia* 
 
 Technologies:
-:  Java, Java EE, Enterprise Java Beans, Java Server Pages, Java Server Faces, Spring, Hibernate, Borland Delphi, Python
+:  Java, Java EE, EJB (Enterprise Java Beans), JSP (Java Server Pages), JSF (Java Server Faces), Spring for Java EE, Spring + Hibernate, Borland Delphi, Python
 
 Tags:
-:  #java, #java-ee, #jsp, #ejb, #jsf, #delphi, #python
+:  #java, #java-ee, #java-jsp, #java-ejb, #java-jsf, #borland-delphi, #python
 
 ### FSBI VNII Okeangeologia {#vniio}
 **Software Developer**
@@ -188,7 +188,7 @@ Also, it happend that someone noticed I know how to use Macromedia Flash and our
   - *Privetnoye*, *Ukraine* 
 
 Technologies:
-:  Borland Delphi, Object Pascal, C++, Assembler, Macromedia Flash
+:  Borland Delphi, Object Pascal, C++, Assembly Language, Macromedia Flash
 
 Tags:
-:  #animation, #delphi, #macromedia-flash, #asm, #cpp
+:  #animation, #borland-delphi, #macromedia-flash, #asm, #cpp

@@ -1,3 +1,3 @@
 ## Skills
 
-Java, JavaScript, React, HTML5, Animation, Elm, PureScript, Functional Programming
+Java, JavaScript, React, Python, Animation, Elm, PureScript, Functional Programming

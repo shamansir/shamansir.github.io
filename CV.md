@@ -8,7 +8,7 @@
   - [Website](https://shamansir.github.io): https://shamansir.github.io
   - Birthday: 4 March 1984
 
-[GitHub](https://github.com/shamansir) -- [StackOverflow](https://stackoverflow.com/users/167262/shaman-sir) -- [meetup.com](https://www.meetup.com/members/95695422/) -- [Twitter (X)](https://x.com/shaman_sir) -- [Instagram](https://instagram.com/shamansir) -- [SoundCloud](https://soundcloud.com/shamansir) -- [Vimeo](https://vimeo.com/shamansir) -- [YouTube](https://youtube.com/@UlricWilfred) -- [Bandcamp (Artist)](https://shamansir.bandcamp.com/shamansir) -- [Bandcamp (Fan)](https://bandcamp.com/shamansir) -- [Last.fm](https://last.fm/shamansir) -- [LiveJournal](https://livejournal.com/tungusso) -- [Spotify (Artist)](https://open.spotify.com/artist/3p5XmmBfQLQkEScwpVdEwU) -- [Spotify (Listener)](https://open.spotify.com/user/11125039766) -- [GoodReads](https://www.goodreads.com/user/show/29823581-anton-kotenko) -- [Stepik](https://stepik.org/users/43031759/certificates) -- [CodeWars](https://codewars.com/users/shamansir) -- [Exercism](https://exercism.org/profiles/shamansir) -- [Lanyrd](https://lanyrd.com/shaman_sir) -- [Telegram](https://telegram.com/shaman_sir) -- [Backloggery](https://backloggery.com/shamansir) -- [InfiniteBacklog](https://infinitebacklog.com/users/shamansir) -- [Steam](https://steamcommunity.com/id/shamansir/) -- [Discord](https://discord.com/shaman.sir) -- [Duolingo](https://duolingo.com/profile/shamansir) -- [LinkedIn](https://www.linkedin.com/in/shamansir/)
+[GitHub](https://github.com/shamansir) -- [StackOverflow](https://stackoverflow.com/users/167262/shaman-sir) -- [meetup.com](https://www.meetup.com/members/95695422/) -- [npmjs](https://www.npmjs.com/~shamansir) -- [GoodReads](https://www.goodreads.com/user/show/29823581-anton-kotenko) -- [Twitter (X)](https://x.com/shaman_sir) -- [YouTube](https://youtube.com/@UlricWilfred) -- [Instagram](https://instagram.com/shamansir) -- [SoundCloud](https://soundcloud.com/shamansir) -- [Vimeo](https://vimeo.com/shamansir) -- [Bandcamp (Artist)](https://shamansir.bandcamp.com/shamansir) -- [Bandcamp (Fan)](https://bandcamp.com/shamansir) -- [Last.fm](https://last.fm/shamansir) -- [LiveJournal](https://livejournal.com/tungusso) -- [Spotify (Artist)](https://open.spotify.com/artist/3p5XmmBfQLQkEScwpVdEwU) -- [Spotify (Listener)](https://open.spotify.com/user/11125039766) -- [Stepik](https://stepik.org/users/43031759/certificates) -- [CodeWars](https://codewars.com/users/shamansir) -- [Exercism](https://exercism.org/profiles/shamansir) -- [Lanyrd](https://lanyrd.com/shaman_sir) -- [Telegram](https://telegram.com/shaman_sir) -- [Backloggery](https://backloggery.com/shamansir) -- [InfiniteBacklog](https://infinitebacklog.com/users/shamansir) -- [Steam](https://steamcommunity.com/id/shamansir/) -- [Discord](https://discord.com/shaman.sir) -- [Duolingo](https://duolingo.com/profile/shamansir) -- [LinkedIn](https://www.linkedin.com/in/shamansir/)
 
 Starting from 2003, I work as a FrontEnd & Software Developer, but that's since even earlier I discovered that developing user interfaces or quite anything visual and interactive, is my passion.
 I often preferred programming to gaming or watching TV or going outside (not to the extent, though, or else how would I find friends?).
@@ -26,7 +26,7 @@ Of course, there were Java EE or GWT or React-driven application, and even Pytho
 
 ## Skills
 
-Java, JavaScript, React, HTML5, Animation, Elm, PureScript, Functional Programming
+Java, JavaScript, React, Python, Animation, Elm, PureScript, Functional Programming
 
 ## Timeline
 
@@ -54,7 +54,7 @@ Technologies:
 :  JavaScript, React, Elm, HTML5 Canvas, GLSL Shaders, d3.js, Kotlin JS, Kotlin, DHall, PureScript
 
 Tags:
-:  #generative-art, #react, #redux, #elm, #glsl, #shaders, #html5-canvas, #animation, #dhall, #kotlin-js, #user-interfaces
+:  #generative-art, #react, #redux, #elm, #glsl, #glsl-shaders, #html5-canvas, #animation, #dhall, #kotlin-js, #gui, #user-interface
 
 
 Talks:
@@ -80,7 +80,7 @@ At Animatron, I mostly developed the Web Player based on HTML5 Canvas technology
   - *Boston*, *United States, MA* 
 
 Technologies:
-:  Java, Google Web Toolkit (GWT), JavaScript, HTML5 Canvas
+:  Java, GWT (Google Web Toolkit), JavaScript, HTML5 Canvas
 
 Tags:
 :  #html5-canvas, #javascript, #animation, #gwt, #svg, #graphics
@@ -105,10 +105,10 @@ Programming and Architecture with GWT ﴾with mvp4g﴿, writing custom component
   - *Odessa*, *Ukraine* 
 
 Technologies:
-:  Java, Google Web Toolkit (GWT), mvp4g GWT Framework, JavaScript, Python
+:  Java, GWT (Google Web Toolkit), mvp4g GWT Framework, JavaScript, Python
 
 Tags:
-:  #java, #gwt, #mvp4j, #javascript, #python
+:  #java, #gwt, #mvp4g, #javascript, #python
 
 
 Talks:
@@ -124,7 +124,7 @@ The ExtJS-based FrontEnd for the Administration of a Billing Engine, which commu
   - *St. Petersburg*, *Russia* 
 
 Technologies:
-:  Java, Java RPC, Spring, JavaScript, ExtJS
+:  Java, Java RPC, Spring for Java EE, JavaScript, Ext JS
 
 Tags:
 :  #java, #spring, #java-rpc, #ext-js
@@ -144,10 +144,10 @@ Action System for the UI was the idea and implementation of ours since technolog
   - *St. Petersburg*, *Russia* 
 
 Technologies:
-:  Java, Apache Wicket, Java Server Pages, JavaScript
+:  Java, Apache Wicket, JSP (Java Server Pages), JavaScript
 
 Tags:
-:  #java, #apache-wicket, #javascript, #ajax, #jsp
+:  #java, #apache-wicket, #javascript, #ajax, #java-jsp
 
 
 Recommendations:
@@ -191,10 +191,10 @@ Dealing with threads concurrency and a high rate of updates;
   - *St. Petersburg*, *Russia* 
 
 Technologies:
-:  Java, Java EE, Enterprise Java Beans, Java Server Pages, Java Server Faces, Spring, Hibernate, Borland Delphi, Python
+:  Java, Java EE, EJB (Enterprise Java Beans), JSP (Java Server Pages), JSF (Java Server Faces), Spring for Java EE, Spring + Hibernate, Borland Delphi, Python
 
 Tags:
-:  #java, #java-ee, #jsp, #ejb, #jsf, #delphi, #python
+:  #java, #java-ee, #java-jsp, #java-ejb, #java-jsf, #borland-delphi, #python
 
 ### FSBI VNII Okeangeologia {#vniio}
 **Software Developer**
@@ -218,10 +218,10 @@ Also, it happend that someone noticed I know how to use Macromedia Flash and our
   - *Privetnoye*, *Ukraine* 
 
 Technologies:
-:  Borland Delphi, Object Pascal, C++, Assembler, Macromedia Flash
+:  Borland Delphi, Object Pascal, C++, Assembly Language, Macromedia Flash
 
 Tags:
-:  #animation, #delphi, #macromedia-flash, #asm, #cpp
+:  #animation, #borland-delphi, #macromedia-flash, #asm, #cpp
 
 ## Talks
 
@@ -482,7 +482,7 @@ Started: more than ten years ago
 
 ([GH:rpd](https://github.com/shamansir/rpd), [RPD Docs & Demos](https://shamansir.github.io/rpd))
 
-Tags: #javascript, #svg, #visual-programming, #generative-art, #reactive-programming, #kefir.js, #computational-arts
+Tags: #javascript, #svg, #visual-programming, #generative-art, #reactive-programming, #kefir-js, #comp-arts
 
 
 
@@ -496,7 +496,7 @@ Started: around two-three years ago
 
 ([GH:tron-gui](https://github.com/shamansir/tron-gui), [Tron Constructor @ CAI](https://tron.labs.jb.gg/), [Computational Arts Initiative](https://cai.jetbrains.com/), [Tiler @ CAI usage example](https://tiler.labs.jb.gg/), [Neobeam @ CAI usage example](https://neobeam.labs.jb.gg/), [Plasmatic @ CAI usage example](https://plasmatic.labs.jb.gg/))
 
-Tags: #elm, #gui, #user-interface, #functional-programming, #dhall, #javascript, #generative-art, #computational-arts, #graphs
+Tags: #elm, #gui, #user-interface, #functional-programming, #dhall, #javascript, #generative-art, #comp-arts, #graphs
 
 
 
@@ -510,7 +510,7 @@ Started: around four-five years ago
 
 ([GH:kvant](https://github.com/shamansir/kvant), [Kvant Demo @ CAI](https://kvant.labs.jb.gg/), [Computational Arts Initiative](https://cai.jetbrains.com/))
 
-Tags: #elm, #gui, #generative-art, #functional-programming, #computational-arts
+Tags: #wfc, #elm, #gui, #user-interface, #generative-art, #functional-programming, #comp-arts
 
 
 
@@ -538,7 +538,7 @@ Started: around four-five years ago
 
 ([GH:node-elm-repl](https://github.com/shamansir/node-elm-repl))
 
-Tags: #elm, #javasript, #binary, #repl, #functional-programming
+Tags: #elm, #javascript, #binary, #repl, #functional-programming
 
 
 
@@ -552,7 +552,7 @@ Started: around two-three years ago
 
 ([GH:gen-ui](https://github.com/shamansir/gen-ui))
 
-Tags: #elm, #dhall, #gui, #functional-programming, #computational-arts
+Tags: #elm, #dhall, #gui, #user-interface, #functional-programming, #comp-arts
 
 
 
@@ -566,7 +566,7 @@ Started: more than five years ago
 
 ([GH:animatron-player](https://github.com/shamansir/animatron-player))
 
-Tags: #javascript, #canvas, #animation
+Tags: #javascript, #html5-canvas, #animation
 
 
 
@@ -580,7 +580,7 @@ Started: more than five years ago
 
 ([GH:web-pd](https://github.com/shamansir/web-pd))
 
-Tags: #javascript, #pure-data, #svg, #audio-generation, #visual-programming
+Tags: #javascript, #pure-data, #svg, #generative-audio, #visual-programming
 
 
 
@@ -594,7 +594,7 @@ Started: more than five years ago
 
 ([GH:jb-rpd-splash](https://github.com/shamansir/jb-rpd-splash), [SETI Generator in Action @ CAI](https://seti.labs.jb.gg/), [Computational Arts Initiative](https://cai.jetbrains.com/))
 
-Tags: #javascript, #visual-programming, #computational-arts, #glsl, #shaders
+Tags: #javascript, #visual-programming, #comp-arts, #glsl, #glsl-shaders
 
 
 
@@ -622,7 +622,7 @@ Started: more than ten years ago
 
 ([GH:nijiato](https://github.com/shamansir/nijiato))
 
-Tags: #lisp, #camera-tracking, #opencv
+Tags: #lisp, #camera-tracking, #open-cv
 
 
 
@@ -636,7 +636,7 @@ Started: around four-five years ago
 
 ([GH:open-radiant](https://github.com/shamansir/open-radiant), [Computational Arts Initiative](https://cai.jetbrains.com/))
 
-Tags: #elm, #functional-programming, #computational-arts, #generative-art
+Tags: #elm, #functional-programming, #comp-arts, #generative-art
 
 
 
@@ -650,7 +650,7 @@ Started: around four-five years ago
 
 ([GH:open-elmsfeuer](https://github.com/shamansir/open-elmsfeuer), [Origami Generator in Action @ CAI](https://origami.labs.jb.gg/))
 
-Tags: #elm, #functional-programming, #computational-arts, #generative-art
+Tags: #elm, #functional-programming, #comp-arts, #generative-art
 
 
 
@@ -664,7 +664,7 @@ Started: more than five years ago
 
 ([GH:pegjs-fn](https://github.com/shamansir/pegjs-fn), [PegJS-Fn Playground](https://shamansir.github.io/pegjs-fn/))
 
-Tags: #javascript, #functional-programming, #parsing, #grammar
+Tags: #javascript, #functional-programming, #parsing, #parsers, #grammars
 
 
 
@@ -678,7 +678,7 @@ Started: around two-three years ago
 
 ([GH:purescript-fsm](https://github.com/shamansir/purescript-fsm), [FSM Post @ dev.to, p. I](https://dev.to/shamansir/purescript-ui-driven-by-finite-state-machines-and-event-streams-994), [FSM Post @ dev.to, p. II](https://dev.to/shamansir/purescript-ui-driven-by-finite-state-machines-and-event-streams-part-ii-the-example-3m77))
 
-Tags: #functional-programming, #purescript, #user-interface
+Tags: #functional-programming, #purescript, #gui, #user-interface
 
 
 
@@ -692,7 +692,7 @@ Started: more than ten years ago
 
 ([GH:cayley-rust](https://github.com/shamansir/cayley-rust))
 
-Tags: #rust, #graphs, #database
+Tags: #rust, #graphs, #databases
 
 
 
@@ -706,7 +706,7 @@ Started: more than ten years ago
 
 ([GH:vimeoid](https://github.com/shamansir/vimeoid))
 
-Tags: #android, #java, #application
+Tags: #android, #java, #app
 
 
 
@@ -720,6 +720,22 @@ Started: around four-five years ago
 
 ([GH:elm-goose-driven-tutorial](https://github.com/shamansir/elm-goose-driven-tutorial), [Elm Goose Driven Tutorial @ YouTube](https://www.youtube.com/playlist?list=PL4PKtHFA6sG9DQxKeGmV-Xjn_2eKDJM_J))
 
+Tags: #elm, #tutorial, #html5-canvas, #graphics
+
+
+
+#### Showdown Blog
+
+Blog engine driven by JavaScript + XSLT
+
+Status: Finished (to some point)
+
+Started: more than 15 years ago
+
+([GH:showdown-blog](https://github.com/shamansir/showdown-blog))
+
+Tags: #xml, #xslt
+
 
 
 #### elm-bin-pack
@@ -732,17 +748,21 @@ Started: around two-three years ago
 
 ([GH:elm-bin-pack](https://github.com/shamansir/elm-bin-pack))
 
+Tags: #elm, #bin-packing
 
 
-#### Showdown-Blog
 
-The Blog Engine that uses XSLT + XML to generate pages
+#### Exercism
 
-Status: Finished (to some point)
+Solutions for some Exercism tasks
 
-Started: more than 15 years ago
+Status: Managed (has no finished state and always actual in some sense)
 
-([GH:showdown-blog](https://github.com/shamansir/showdown-blog))
+Started: more than five years ago
+
+([GH:exercism](https://github.com/shamansir/exercism))
+
+Tags: #training, #elm, #haskell
 
 
 
@@ -756,8 +776,10 @@ Started: more than 15 years ago
 
 ([GH:gwt-mvp4-layouting-demo](https://github.com/shamansir/gwt-mvp4-layouting-demo))
 
+Tags: #example, #demo, #gwt, #mvp4g
+
 
 
 ## Interests
 
-Generative Art, Visual Programming, Japanese Language, Functional Programming, Animation, Generative Music
+Generative Art, Visual Programming, Japanese Language, Functional Programming, Animation, Generative Music, Theorem Proving

@@ -1,1 +1,40 @@
 # Visual Programming
+
+- [[https://github.com/suenot/awesome-visual-programming|Awesome Visual Programming]]
+- [[https://github.com/xyflow/awesome-node-based-uis|Awesome Node-Based UIs]]
+- [[http://blog.interfacevision.com/design/design-visual-progarmming-languages-snapshots/|Outdated (2014), but huge, list of Visual Prorgamming interfaces]]
+- Tools
+  - vvvv
+  - Touch Designer
+  - Notch
+  - Enso a.k.a lunalang
+  - Pure Data
+  - Max 8 in Ableton
+  - Faust IDE
+  - Bespoke Synth
+  - Grashopper in Rhinoceros
+  - Houdini
+  - cables.gl
+  - <https://nodes.io/>
+  - <https://www.textualize.io/projects/>
+  - <https://github.com/ojack/hydra/blob/main/docs/funcs.md>
+  - <https://hydra.ojack.xyz/garden/>
+- Resources from SPLASH Conf 2024
+  - [[https://ravichugh.github.io/sketch-n-sketch/|Sketch-n-Sketch]]
+  - <https://www.youtube.com/watch?v=YuGVC8VqXz0>
+  - <https://natto.dev/>
+  - [[https://joshuahhh.com/projects/pane/|PANE]]
+  - <https://joshuahhh.com/index-2020.html> <https://joshuahhh.com/>
+  - [[https://www.inkandswitch.com/jacquard/notebook/|Jacquard Notebooks]]
+  - [[https://www.inkandswitch.com/inkbase/|Inkbase]]
+  - [[https://dynamicland.org/|DynamicLand]]
+  - [[https://engraft.dev/|Engraft]] -- [[https://engraft.dev/use-engraft-demo-js/|Use Engraft API]]
+  - [[https://joshuahhh.com/about-relat/|Relat]]
+  - [[https://arxiv.org/pdf/2303.06777|Live, Rich, and Composable: Qualities for Programming Beyond Static Text]]
+  - [[https://conceptviz.github.io/#/eyJ0b3BpYyI6WyJtYXRoLmRpc2NyZXRlIiwibWF0aCIsIm1hdGguZ2VvbWV0cnkiLCJtYXRoLmxpbmVhckFsZ2VicmEiLCJtYXRoLnByb2Irc3RhdHMiXX0=|GALLERY OF CONCEPT VISUALIZATION]]
+  - [[https://joshuahhh.com/epipen/|EpiPEn]]
+  - [[https://joshuahhh.com/projects/burnside/|Burns IDE : Counting Symmetric Objects)]]
+  - [[https://cseweb.ucsd.edu/~lerner/papers/projection-boxes-chi2020.pdf|Projection Boxes: On-the-fly Reconfigurable Visualization for Live Programming]]
+  - [[https://tomasp.net/techdims/#footer=index,navigation;left=catalogue,list;right=dimensions/notation,expression-geography;top=catalogue,index|Catalogue of technical dimensions]]
+  - [[http://ftp.labdoo.org/download/Public/manuals/manuals-ubuntu/EN/eToys/etoys-reference-manual.pdf|ETOYS Reference Manual]]
+  - [[https://tomasp.net/techdims/pdfs/techdims-paper.pdf|Technical Dimensions of Programming Systems]]
