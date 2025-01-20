@@ -35,7 +35,7 @@
 
 **Release Date**: 11 May 2020
 
-**Length**: 01:01:59
+**Length**: 01:02:59
 
 **Tracks**:
 
@@ -54,6 +54,7 @@
   - <img src="./Music/assets/muenchen/m.ghandi-garage.cover.jpg" width="60" height="60" alt="" style="display:inline-block"/>{.align-middle .mr-2} **Классный подход (Ганди) (Garage Version)** 03:44 /2020/ ([SC](https://soundcloud.com/shamansir/ghandi-garage?in=shamansir/sets/muenchen)) *with* The Riders
   - <img src="./Music/assets/muenchen/m.wpa.cover.jpg" width="60" height="60" alt="" style="display:inline-block"/>{.align-middle .mr-2} **Отторжение Лосося (Garage Version)** 04:36 /2020/ ([SC](https://soundcloud.com/shamansir/wpa-salmon-rejection-garage?in=shamansir/sets/muenchen)) *with* The Riders
   - <img src="./Music/assets/muenchen/m.evening-alk.cover.jpg" width="60" height="60" alt="" style="display:inline-block"/>{.align-middle .mr-2} **Вечерний Алкоголь II** 03:56 /2020/ ([SC](https://soundcloud.com/shamansir/wpa-alcohol-afterdark-ii?in=shamansir/sets/muenchen)) *with* W.P.A.
+  - <img src="./Music/assets/muenchen/m.reject-riddim.cover.jpg" width="60" height="60" alt="" style="display:inline-block"/>{.align-middle .mr-2} **Инжир (v23)** 01:00 /2024/ ([SC](https://soundcloud.com/shamansir/inzhir-23?in=shamansir/sets/muenchen)) *with* The Unriders
 ### Mozart is a Trickster (EP) {#mozart-ep}
 
 ([SC](https://soundcloud.com/shamansir/sets/mozart-is-a-trickster-ep-2018))

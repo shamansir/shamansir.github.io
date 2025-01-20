@@ -2,7 +2,13 @@
 
 ## About
 
-My real name is **Anton Kotenko**. Definitely a geek and kind of musician and kind of VJ. I was born in _Saint-Petersburg, Russia_ in March of 1984, at my age of 24 I moved to _Odessa, Ukraine_ and after living there for a few years (lovely city and people!), I moved to _Munich, Germany_ in 2012. For work and leisure, I am a software/frontend developer starting from 2003 which makes me 21 years being in this shit and I still really like it! :). You can find my complete [[Lebenslauf]] here, which is the German word for _'How my life runs'_ or _'The story of my life'_ or _'How my life was ruined'_ as well. Also below is the list of my other passions, I mean, other than programming. I am in the Internet for a long time, being really scoofy, so I change my nicknames periodically (the current one I prefer the most, for the moment), so you may happen to know me under one of my other nicknames:
+My real name is **Anton Kotenko**. Definitely a geek and kind of musician and kind of VJ. I was born in _Saint-Petersburg, Russia_ in March of 1984, at my age of 24 I moved to _Odessa, Ukraine_ and after living there for a few years (lovely city and people[^1]), I moved to _Munich, Germany_ in 2012. For work and leisure. I am a software/frontend developer starting from 2003 which makes me 21 years being in this shit and I still really love it! :). You can find my complete [[Lebenslauf]] here, which is the German word for _'How my life runs'_ or _'The story of my life'_ or _'How my life was ruined'_ as well. Also below is the list of my other passions, I mean, other than programming.
+
+I prefer to mix these passions together sometimes, so that even some of my work responsibilities included art or procedurally generative art: like, writing JS Player for [Animatron](https://www.animatron.com/) project, which is now called Animatron Studio. And, in JetBrains we formed a team of [Computational Arts](https://cai.jetbrains.com/) where I worked for 5 years.
+
+In 2020, with the band _The Unriders_ we also have recorded a russian-hip-hop album about Munich, called [Мюнхен](https://www.youtube.com/watch?v=_9fTO_KBt6A) (you can find it on Spotify / Apple Music / ... as well).
+
+I am in the Internet for a long time, a really scoofy being, so I change my nicknames periodically, so you may happen to know me under one of my other nicknames:
 
 * Ulric Wilfred
 * `shamansir` or `shaman_sir`
@@ -10,32 +16,33 @@ My real name is **Anton Kotenko**. Definitely a geek and kind of musician and ki
 * `Elektrokiłka`
 * Gordey Nudo
 * `zokotuhaFly`
+* `Kor@viy`
 
 ## Social Links
 
-* Github
-* Twitter (X)
-* SoundCloud
-* Spotify
-* LiveJournal
-* Instagram
-* Facebook
+* [Github](https://github.com/shamansir)
+* [LinkedIn](https://www.linkedin.com/in/shamansir/)
+* [YouTube](https://www.youtube.com/@UlricWilfred)
+* [CodeWars](https://www.codewars.com/users/shamansir)
+* [SoundCloud](https://soundcloud.com/shamansir)
+
+...see many other ones in [[Social]] section.
 
 ## My Passions
 
 * See my [[Projects]] page which can give you an overall experience of what I do;
-* UIs and interactivity;
+* UIs and interactivity (my [[Noodle]] project incorporates some of these ideas);
 * Functional Programming (it started with LISP and Scheme, went through [Elm] and now it is [PureScript] and [Haskell]) #functional-programming ;
 * Generative Art;
 * Composing [[Music]];
-* Performing [[Music]];
+* Performing [[Music]] ( [YouTube](https://www.youtube.com/playlist?list=PL4PKtHFA6sG_GHmMwlpAbiIwpgJ6AZ7Za) );
 * Programming Music;
-* Being a VJ (TouchDesigner, vvvv, hydra);
+* Being a VJ (TouchDesigner, vvvv, hydra) ( [Latest Demo](https://www.youtube.com/playlist?list=PL4PKtHFA6sG_GHmMwlpAbiIwpgJ6AZ7Za) );
 * [[Travels|Travelling]];
 
 ## Blog Articles & Talks
 
-Till now I have published 26 blog articles in English and 42 articles in Russian, they are mostly on technical topics and the first posts were just my emotions to share. In the [[Blog]] folder you may find all them. I also gave a dozen of tech [[Talks]]. Here is the list of some the articles I am proud of:
+Till now I have published 26 blog articles in English and 42 articles in Russian, they are mostly on technical topics and the first posts were just my emotions to share. In the [[Blog]] folder you may find all them. I also gave a dozen of tech [[Talks]]. Here is the list of some the articles I am kinda proud of:
 
 * [[Blog/blog-en/2014-09-06-generating-functional-parsers]]
 * [[Blog/blog-en/2017-04-07-modern-binary-reverse-engineering-with-node-js-for-elm]]
@@ -82,3 +89,5 @@ And yesterday, by searching something for #PureScript or #Haskell, I discovered 
 [Emanote author]: https://srid.ca/cv
 [Notion]: <https://notion.com>
 [Obsidian]: https://obsidian.md/
+
+[^1]: It's under no discussion that I am on Ukraine's side in the current events, I moved out of Russia partly because I didn't agree with its current politics and most of the best people I met are from Ukraine and I traveled all over Ukraine while I was there, it was friendly and welcoming everywhere. For me it started in 2014, when I was already in Munich...
