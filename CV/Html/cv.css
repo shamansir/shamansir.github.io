@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+:root {
+  --dl-items-vspace: 5px; /* 8px; */
+  --positions-border-width: 28px; /* 4px */
+  --dl-margin: 30%;
+  --list-item-lheight: 1.5em; /* 1.4em */
+}
+
+
+body {
+  font-family: "Avenir Next", Avenir, Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+  color: #333;
+  width: 60%;
+  margin: 75px 80px;
+  /* font-size: 16px */ }
+
+h1 {
+  font-family: "Gill Sans", "Lucia Grande", Futura, "Trebuchet MS", sans-serif;
+  font-size: 2.8em;
+  color: #333;
+  margin-bottom: 2px; }
+
+#subtitle {
+  color: #666;
+  display: block;
+  font-weight: bold;
+  margin: 0 0 1em 0;
+  font-size: 1.17em; }
+
+h2 {
+  color: #333;
+  font-size: 1em;
+  margin-top: 41px;
+  margin-bottom: 13px; }
+
+h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.1em; }
+
+h4 {
+  margin-top: 60px;
+  color: #666; }
+
+hr {
+  height: 0;
+  border-width: 1px;
+  border-style: solid;
+  color: #aaa; }
+
+h2 + dl
+  { margin-top: -6px; }
+
+/* dl dt, dl dd
+  { margin-top : 10px; } */
+
+dl dt {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  font-style: italic;
+  color: #666; }
+
+dt, dd {
+  /* border-top: 1px solid #eee; */
+  line-height: var(--list-item-lheight);
+  min-height: var(--list-item-lheight); }
+
+dd ul {
+  padding-left: 0;
+  /* padding-left: 7px; */ }
+
+#timeline > dl {
+  margin-left : 25px;
+  margin-bottom: 64px; /* 32px; */
+  margin-top: 8px; }
+
+#timeline {
+  margin-bottom: 62px; }
+
+.workpace-period {
+  font-size: 13px;
+  font-weight: bold;
+  color: #777;
+  margin-top: -14px;
+  display: block;
+}
+
+.positions {
+  /* margin-left: 25px; */
+  margin-left: 10px;
+  /* border-left: 4px solid #aaa; */
+  /* border-left: var(--positions-border-width) solid #eee; */
+  padding-left: 1em;
+  margin-bottom: 32px; }
+
+.positions > div {
+  border-left: var(--positions-border-width) solid #eee;
+  padding-left: 10px;
+  margin-bottom: 64px; }
+
+.positions dl {
+  margin-bottom: 25px;
+  margin-left: 25px; }
+
+.positions dl dd {
+  margin-left: 35%;
+}
+
+#talks ul li {
+  line-height: var(--list-item-lheight); }
+
+dl#experience > dt, dl#education > dt {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 30px;
+  color: #666; }
+dl#experience > dt:after, dl#education > dt:after,
+#timeline h3:after, .positions h4:after {
+  content: "⇣";
+  margin: 4px;
+  position: relative;
+  top: 4px;
+  color: #ccc; }
+dl#experience > dd, dl#education > dd {
+  padding-left: 25px;
+  border-left: 2px solid #eee; }
+
+dl#personal-info > dd > ul {
+  padding-left: 16px; }
+
+#recommendations {
+  list-style-type: none; }
+  #recommendations li {
+    margin-bottom: 30px;
+    border-left: 2px solid #ccc; }
+    #recommendations li > blockquote {
+      margin-left: 25px; }
+    #recommendations li p:first-child:first-letter {
+      font-size: 1.2em; }
+
+#favorite-books .author {
+  font-style: italic; }
+
+#contacts dl > dt {
+  margin: 0 2px;
+  float: left;
+  clear: left;
+  text-align: right; }
+#contacts dl > dt:after {
+  content: ":"; }
+#contacts dl > dd {
+  margin: 2px 2px 2px 25%; }
+
+#footer {
+  margin-top: 14em;
+  text-align: center;
+  font-size: 0.8em; }
+  #footer hr {
+    display: none; }
+  #footer p:last-child {
+    border-top: 1px solid #aaa;
+    padding-top: 7px;
+    margin-bottom: 5em;
+    margin-right: 25%;
+    margin-left: 25%; }
+  #footer:after {
+    content: "— ※ —";
+    color: #aaa; }
+
+@media screen and (max-width: 840px), print {
+  body {
+    width: 80%;
+    margin: 40px;
+    font-size: 14px; }
+
+  ul, dl {
+    margin: 0; }
+
+  h4 {
+    clear: left;
+    margin-top: 24px;
+    margin-bottom: 6px; }
+
+  dl {
+    clear: both; }
+    dl dt {
+      margin: 0px 6px var(--dl-items-vspace) 0px;
+      float: left;
+      clear: left;
+      overflow: hidden; }
+    dl dd {
+      margin: 1px 0px var(--dl-items-vspace) var(--dl-margin); }
+
+  dl#experience > dt, dl#education > dt {
+    margin-top: 10px;
+    margin-bottom: 4px; }
+
+  dl#experience > dd, dl#education > dd,
+  #recommendations > ul {
+    margin-left: 10px;
+    padding-left: 15px;
+    border-left: none;
+    margin-bottom: 10px; }
+
+  #skills dd {
+    margin-left: 45%; } }
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 12px; } }
+@media screen and (max-width: 560px) {
+  body {
+    font-size: 10px; } }
+@media screen and (min-width: 1110px) {
+  body {
+    width: 50%; } }
+@media print {
+  body {
+    width: 85%;
+    margin: 20px 10px;
+    font-size: 12px; } }
