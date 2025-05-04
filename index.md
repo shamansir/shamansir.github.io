@@ -8,6 +8,8 @@ pandoc:
 
 # Elektrokiłka
 
+![[ProjectsGrid]]
+
 ## About
 
 computer graphics, m○stly generated. ⸬ any λanguage, but ƒunctional ones are preferred. punk of a progr⭑mming. made nice stuff. still doing nice stuff. /coding/ blogging gℝaphics music vj writing interactive-UIs generative-∀rt. look for the links here.
