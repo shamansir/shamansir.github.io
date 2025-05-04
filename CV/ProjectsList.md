@@ -14,8 +14,6 @@ Started: more than ten years ago
 
 Tags: #javascript, #svg, #visual-programming, #generative-art, #reactive-programming, #kefir-js, #comp-arts
 
-
-
 #### Tron GUI
 
 Innovative approach for generative art User Interfaces: now grid-based
@@ -27,8 +25,6 @@ Started: around two-three years ago
 ([GH:tron-gui](https://github.com/shamansir/tron-gui), [Tron Constructor @ CAI](https://tron.labs.jb.gg/), [Computational Arts Initiative](https://cai.jetbrains.com/), [Tiler @ CAI usage example](https://tiler.labs.jb.gg/), [Neobeam @ CAI usage example](https://neobeam.labs.jb.gg/), [Plasmatic @ CAI usage example](https://plasmatic.labs.jb.gg/))
 
 Tags: #elm, #gui, #user-interface, #functional-programming, #dhall, #javascript, #generative-art, #comp-arts, #graphs
-
-
 
 #### iElm
 
@@ -42,8 +38,6 @@ Started: around four-five years ago
 
 Tags: #elm, #repl, #functional-programming
 
-
-
 #### node-elm-repl
 
 CLI client for iElm to get the information about the type of the entered expression
@@ -56,11 +50,7 @@ Started: around four-five years ago
 
 Tags: #elm, #javascript, #binary, #repl, #functional-programming
 
-
-
 #### JS Player for Animatron
-
-
 
 Status: Finished (to some point)
 
@@ -70,11 +60,7 @@ Started: more than five years ago
 
 Tags: #javascript, #html5-canvas, #animation
 
-
-
 #### JetBrains Splash Screen Generator, with RPD
-
-
 
 Status: Finished (to some point)
 
@@ -83,8 +69,6 @@ Started: more than five years ago
 ([GH:jb-rpd-splash](https://github.com/shamansir/jb-rpd-splash), [SETI Generator in Action @ CAI](https://seti.labs.jb.gg/), [Computational Arts Initiative](https://cai.jetbrains.com/))
 
 Tags: #javascript, #visual-programming, #comp-arts, #glsl, #glsl-shaders
-
-
 
 #### sametimed
 
@@ -98,8 +82,6 @@ Started: more than ten years ago
 
 Tags: #java, #google-wave
 
-
-
 #### nijiato
 
 Finger-recognition in LISP with OpenCV
@@ -111,8 +93,6 @@ Started: more than ten years ago
 ([GH:nijiato](https://github.com/shamansir/nijiato))
 
 Tags: #lisp, #camera-tracking, #open-cv
-
-
 
 #### Open Radiant
 
@@ -126,8 +106,6 @@ Started: around four-five years ago
 
 Tags: #elm, #functional-programming, #comp-arts, #generative-art
 
-
-
 #### Open Elmsfeuer
 
 Another one of the first art generators for JetBrains
@@ -139,8 +117,6 @@ Started: around four-five years ago
 ([GH:open-elmsfeuer](https://github.com/shamansir/open-elmsfeuer), [Origami Generator in Action @ CAI](https://origami.labs.jb.gg/))
 
 Tags: #elm, #functional-programming, #comp-arts, #generative-art
-
-
 
 #### PegJS - FN
 
@@ -154,8 +130,6 @@ Started: more than five years ago
 
 Tags: #javascript, #functional-programming, #parsing, #parsers, #grammars
 
-
-
 #### How to LiveCode (PDF / EPUB version)
 
 The markup for the 1st version of "howto_co34pt_liveCode" book by coï¿¥ï¾¡pt
@@ -165,8 +139,6 @@ Status: Finished (to some point)
 Started: around four-five years ago
 
 ([1st Edition compiled](https://github.com/theseanco/howto_co34pt_liveCode/tree/master/Documents/FirstEdition))
-
-
 
 #### JavaScript Gardern
 
@@ -180,8 +152,6 @@ Started: more than ten years ago
 
 Tags: #javascript, #translations
 
-
-
 #### Japanese Language Reference in Russian
 
 (PDF, 300+ pages)
@@ -190,11 +160,7 @@ Status: Finished (to some point)
 
 Started: more than 20 years ago
 
-
-
 Tags: #japanese, #pdf, #translations
-
-
 
 #### Python 3.5 (RU)
 
@@ -204,11 +170,7 @@ Status: Finished (to some point)
 
 Started: more than 15 years ago
 
-
-
 Tags: #python, #translations
-
-
 
 #### PDF version for how-to-livecode Book
 
@@ -218,11 +180,7 @@ Status: Finished (to some point)
 
 Started: more than five years ago
 
-
-
 Tags: #pdf, #generative-audio
-
-
 
 #### Finite State Machine engine+example for PureScript
 
@@ -236,11 +194,7 @@ Started: around two-three years ago
 
 Tags: #functional-programming, #purescript, #gui, #user-interface
 
-
-
 #### purescript-yoga-tree-utils
-
-
 
 Status: Finished (to some point) (Library)
 
@@ -249,8 +203,6 @@ Started: during last year
 ([GH:purescript-yoga-tree-utils](https://github.com/shamansir/purescript-yoga-tree-utils))
 
 Tags: #functional-programming, #purescript
-
-
 
 #### Elm Goose Driven Tutorial
 
@@ -264,8 +216,6 @@ Started: around four-five years ago
 
 Tags: #elm, #tutorial, #html5-canvas, #graphics
 
-
-
 #### Showdown Blog
 
 Blog engine driven by JavaScript + XSLT
@@ -277,8 +227,6 @@ Started: more than 15 years ago
 ([GH:showdown-blog](https://github.com/shamansir/showdown-blog))
 
 Tags: #xml, #xslt
-
-
 
 #### München-Flu
 
@@ -292,8 +240,6 @@ Started: more than five years ago
 
 Tags: #telegram
 
-
-
 #### GWT-mvp4-layouting-demo
 
 A demo for the GWT+mvp4 Talk
@@ -305,7 +251,6 @@ Started: more than 15 years ago
 ([GH:gwt-mvp4-layouting-demo](https://github.com/shamansir/gwt-mvp4-layouting-demo))
 
 Tags: #example, #demo, #gwt, #mvp4g
-
 
 ### Finished (but expect to continue developing)
 
@@ -321,12 +266,11 @@ Started: around two-three years ago
 
 Tags: #functional-programming, #purescript, #svg
 
-
 ### Almost Finished (at least looks like it)
 
 #### Noodle
 
-Visual Programming for producing Generative Art and more, with CLI & Web & VR (planned) frot-ends, written in PureScript
+Visual Programming for producing Generative Art and more, with CLI & Web & VR (planned) front-ends, written in PureScript
 
 Status: Almost Finished (at least looks like it)
 
@@ -335,8 +279,6 @@ Started: more than five years ago
 ([GH:noodle](https://github.com/shamansir/noodle), [Last working Noodle Demo](https://noodle.labs.jb.gg/))
 
 Tags: #purescript, #visual-programming, #functional-programming, #generative-art
-
-
 
 #### purescript-blessed
 
@@ -350,8 +292,6 @@ Started: during last year
 
 Tags: #cli, #functional-programming, #purescript, #gui, #user-interface, #components
 
-
-
 #### purescript-doc
 
 The generic documents definition for PureScript inspired by Doc in LEAN (but it turned out PureScript has Dodo library which has the same purpose)
@@ -363,8 +303,6 @@ Started: during last year
 ([GH:purescript-doc](https://github.com/shamansir/purescript-doc))
 
 Tags: #functional-programming, #purescript, #org-mode, #markdown
-
-
 
 #### purescript-text-formatting
 
@@ -378,8 +316,6 @@ Started: during last year
 
 Tags: #functional-programming, #purescript, #org-mode, #markdown
 
-
-
 #### purescript-grammar
 
 Reinventing PEG grammars and parsing in PureScript with ability to keep parsing on any error and keeping all the places of failure in the Syntax Tree, inspired by Lingo IDE by Pete Vilter
@@ -392,12 +328,9 @@ Started: during last year
 
 Tags: #functional-programming, #purescript, #grammars, #parsing, #parsers, #datalog
 
-
 ### Managed (has no finished state and always actual in some sense)
 
 #### My TouchDesigner VJing sources
-
-
 
 Status: Managed (has no finished state and always actual in some sense)
 
@@ -406,8 +339,6 @@ Started: around two-three years ago
 ([GH:touchdesigner](https://github.com/shamansir/touchdesigner))
 
 Tags: #touchdesigner, #visuals
-
-
 
 #### Exercism
 
@@ -420,7 +351,6 @@ Started: more than five years ago
 ([GH:exercism](https://github.com/shamansir/exercism))
 
 Tags: #training, #elm, #haskell
-
 
 ### In progress
 
@@ -436,8 +366,6 @@ Started: during last year
 
 Tags: #functional-programming, #purescript, #org-mode
 
-
-
 #### purescript-flex-layout
 
 Bin Packing algorithm for PureScript UIs
@@ -449,7 +377,6 @@ Started: around two-three years ago
 ([GH:purescript-flex-layout](https://github.com/shamansir/purescript-flex-layout))
 
 Tags: #functional-programming, #purescript, #bin-packing, #gui, #user-interface
-
 
 ### Stagnated (started, may be accomplished smth, but wasn't finished for a long time)
 
@@ -465,8 +392,6 @@ Started: around four-five years ago
 
 Tags: #wfc, #elm, #gui, #user-interface, #generative-art, #functional-programming, #comp-arts
 
-
-
 #### GEN UI Lang
 
 On storing UI components definitions for Generative Art in JSON or D-Hall format, for Tron GUI mostly
@@ -478,8 +403,6 @@ Started: around two-three years ago
 ([GH:gen-ui](https://github.com/shamansir/gen-ui))
 
 Tags: #elm, #dhall, #gui, #user-interface, #functional-programming, #comp-arts
-
-
 
 #### Web PD: PureData for Web
 
@@ -493,8 +416,6 @@ Started: more than five years ago
 
 Tags: #javascript, #pure-data, #svg, #generative-audio, #visual-programming
 
-
-
 #### Elm Symbolic Logic Game
 
 Symbolic Logic Playground, inspired by books of Lewis Carrol
@@ -506,8 +427,6 @@ Started: around two-three years ago
 ([GH:elm-symbolic-logic](https://github.com/shamansir/elm-symbolic-logic))
 
 Tags: #elm, #logic, #game
-
-
 
 #### Cayley Rust
 
@@ -521,8 +440,6 @@ Started: more than ten years ago
 
 Tags: #rust, #graphs, #databases
 
-
-
 #### Vimeoid
 
 A client for Vimeo video service for HTC Hero (Android)
@@ -534,8 +451,6 @@ Started: more than ten years ago
 ([GH:vimeoid](https://github.com/shamansir/vimeoid))
 
 Tags: #android, #java, #app
-
-
 
 #### LeBanal
 
@@ -549,8 +464,6 @@ Started: around four-five years ago
 
 Tags: #telegram
 
-
-
 #### elm-bin-pack
 
 Bin-Packing algorithm written in Elm
@@ -562,7 +475,6 @@ Started: around two-three years ago
 ([GH:elm-bin-pack](https://github.com/shamansir/elm-bin-pack))
 
 Tags: #elm, #bin-packing
-
 
 ### Just Started
 
@@ -578,7 +490,6 @@ Started: during last year
 
 Tags: #functional-programming, #purescript, #org-mode, #peg, #grammars, #parsing, #parsers, #datalog
 
-
 ### Draft
 
 #### &ndORG
@@ -593,8 +504,6 @@ Started: during last year
 
 Tags: #functional-programming, #purescript, #org-mode, #grammars, #parsing, #parsers, #todos
 
-
-
 #### purescript-optics-interactive
 
 An attempt to demonstrate visually and interactively how Profunctor Optics work in Functional Languages like PureScript (mostly for my own self)
@@ -606,8 +515,6 @@ Started: around two-three years ago
 ([GH:purescript-optics-interactive](https://github.com/shamansir/purescript-optics-interactive))
 
 Tags: #functional-programming, #purescript
-
-
 
 #### purescript-mahjong
 
@@ -621,11 +528,7 @@ Started: around one-two years ago
 
 Tags: #functional-programming, #purescript, #mahjong, #game
 
-
-
 #### PrimCivile
-
-
 
 Status: Draft
 
@@ -634,8 +537,6 @@ Started: around two-three years ago
 ([GH:primcivile](https://github.com/shamansir/primcivile))
 
 Tags: #purescript, #functional-programming, #game
-
-
 
 #### Elm Fluxus
 
@@ -649,11 +550,7 @@ Started: more than five years ago
 
 Tags: #elm, #fluxus, #racket, #scheme
 
-
-
 #### Dat Org Editor
-
-
 
 Status: Draft
 
@@ -663,11 +560,7 @@ Started: more than five years ago
 
 Tags: #org-mode, #todos
 
-
-
 #### Elm-Friendly-Parser
-
-
 
 Status: Draft
 
@@ -675,20 +568,15 @@ Status: Draft
 
 Tags: #elm, #parsing, #parsers, #grammars
 
-
 ### Unknown
 
 #### NodeJS Binary Parser
-
-
 
 Started: more than ten years ago
 
 ([GH:nodejs-binary-parser](https://github.com/shamansir/nodejs-binary-parser))
 
 Tags: #binary, #javascript, #parsing, #parsers
-
-
 
 #### Transit Maps
 
@@ -700,8 +588,6 @@ Started: more than five years ago
 
 Tags: #transit
 
-
-
 #### LEAN Train
 
 Reimplementing examples from LEAN book
@@ -711,8 +597,6 @@ Started: during last year
 ([GH:lean-train](https://github.com/shamansir/lean-train))
 
 Tags: #lean, #training
-
-
 
 #### Elm Graph Render
 
@@ -724,11 +608,7 @@ Started: around two-three years ago
 
 Tags: #elm, #graphs, #svg
 
-
-
 #### Forster
-
-
 
 Started: more than five years ago
 
@@ -736,41 +616,25 @@ Started: more than five years ago
 
 Tags: #game
 
-
-
 #### Track-Me-I-Am-Famous
-
-
 
 ([GH:track-me-i-am-famous](https://github.com/shamansir/track-me-i-am-famous))
 
 Tags: #camera-tracking
 
-
-
 #### Elm-Ohm-Grammar
-
-
 
 ([GH:elm-ohm-grammar](https://github.com/shamansir/elm-ohm-grammar))
 
 Tags: #elm, #parsing, #parsers, #grammars
 
-
-
 #### RPD-P5-Particle-System
-
-
 
 ([GH:rpd-p5-particle-system](https://github.com/shamansir/rpd-p5-particle-system))
 
 Tags: #p5-js, #processing, #javascript, #visual-programming
 
-
-
 #### RPD-PureData
-
-
 
 Started: more than five years ago
 
@@ -778,45 +642,28 @@ Started: more than five years ago
 
 Tags: #pure-data, #javascript, #visual-programming
 
-
-
 #### Mdown-Parse-PegJS
-
-
 
 ([GH:mdown-parse-pegjs](https://github.com/shamansir/mdown-parse-pegjs))
 
 Tags: #markdown, #parsing, #parsers, #grammars, #peg, #javascript
 
-
-
 #### XTD (forall-TD)
-
-
 
 ([GH:xtd](https://github.com/shamansir/xtd))
 
 Tags: #todos
 
-
-
 #### Fluxus-music-demo-addconf
-
-
 
 ([GH:fluxus-music-demo-addconf](https://github.com/shamansir/fluxus-music-demo-addconf))
 
 Tags: #example, #demo, #fluxus, #racket, #scheme
 
-
-
 #### Cometd-Demo
-
-
 
 Started: more than 15 years ago
 
 ([GH:cometd-demo](https://github.com/shamansir/cometd-demo))
 
 Tags: #java, #ajax
-

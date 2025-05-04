@@ -10,17 +10,9 @@ pandoc:
 
 ## About
 
-My real name is **Anton Kotenko**.
+computer graphics, m○stly generated. ⸬ any λanguage, but ƒunctional ones are preferred. punk of a progr⭑mming. made nice stuff. still doing nice stuff. /coding/ blogging gℝaphics music vj writing interactive-UIs generative-∀rt. look for the links here.
 
-Definitely a geek and kind of musician and kind of VJ. I was born in _Saint-Petersburg, Russia_ in March of 1984 :snowflake:, at my age of 24 I moved to _Odessa, Ukraine_ :ukraine: and after living there for a few years (lovely city and people[^1]), I moved to _Munich, Germany_ :mountain_bicyclist: in 2012, which turned out to be just a perfect city for living. For work and leisure.
-
-I am a software/frontend developer starting from 2003 which makes me 20+ years being in this shit and I still really love it! :). You can find my complete [[Lebenslauf]] here, which is the German word for _'How my life runs'_ or _'The story of my life'_ or _'How my life was ruined'_ as well. Also below is the list of my other passions, I mean, other than programming.
-
-I prefer to mix these passions together sometimes, so that even some of my latest work responsibilities included something artistic: like, writing JS Player for [Animatron](https://www.animatron.com/) project, which is now called Animatron Studio. And, in [JetBrains](http://jetbrains.com) we formed a team of [Computational Arts](https://cai.jetbrains.com/) where I worked for five years.
-
-In 2020, with the band _The Unriders_ we also have recorded a hip-hop album about Munich, called [Мюнхен](https://www.youtube.com/watch?v=_9fTO_KBt6A) (you can find it on Spotify / Apple Music / ... as well).
-
-I am in the Internet for a long time, a really scoofy being, so I change my nicknames periodically, so you may happen to know me under one of my other nicknames:
+I am in the Internet for a long time, a really scoofy being, so I change my nicknames periodically just to pretend to be a mysterious person, this way you may happen to know me under one of my other nicknames:
 
 * Ulric Wilfred
 * `shamansir` or `shaman_sir`
@@ -29,6 +21,10 @@ I am in the Internet for a long time, a really scoofy being, so I change my nick
 * Gordey Nudo
 * `zokotuhaFly`
 * `Kor@viy`
+
+I you've found one somewhere and got to this page, you are definitely at the right place.
+
+If you would like to get acquainted with my CV, it could look much more friendly in its HTML version, which is located here: [CV][local-cv-html].
 
 ## Social Links
 
@@ -50,11 +46,12 @@ I am in the Internet for a long time, a really scoofy being, so I change my nick
 * Performing [[Music]] ( [YouTube](https://www.youtube.com/playlist?list=PL4PKtHFA6sG_GHmMwlpAbiIwpgJ6AZ7Za) );
 * Programming Music;
 * Being a VJ (TouchDesigner, vvvv, hydra) ( [Latest Demo](https://www.youtube.com/playlist?list=PL4PKtHFA6sG_GHmMwlpAbiIwpgJ6AZ7Za) );
+* Writing my [[Blog]]
 * [[Travels|Travelling]];
 
 ## Blog Articles & Talks
 
-Till now I have published 26 blog articles in English and 42 articles in Russian, they are mostly on technical topics and the first posts were just my emotions to share. In the [[Blog]] folder you may find all them. I also gave a dozen of tech [[Talks]]. Here is the list of some the articles I am kinda proud of:
+Till now I have published **26** blog articles in English and **42** articles in Russian, they are mostly on technical topics and the first posts were just my emotions to share. In the ⟶ [[Blog/blog-en]] ⟵ and ⟶ [[Blog/blog-ru]] ⟵ folders you may find all them. I also gave a dozen of tech ⟶ [[Talks]] ⟵. Here is the list of some the articles I am kinda proud of:
 
 * [[Blog/blog-en/2014-09-06-generating-functional-parsers]]
 * [[Blog/blog-en/2017-04-07-modern-binary-reverse-engineering-with-node-js-for-elm]]
@@ -75,31 +72,9 @@ Also you may find the list of [[Skills]] here.
 
 ## Technology behind this page
 
-If you are wondering, this page is built by [Emanote].
+[[BehindThisPage]] tells in details how this page is page is coded. In short, look for [Emanote] engine.
 
-Since I have started as a programmer, I loved to update my homepage design manually, there is the track of the last version at Webarchive: [2014-2021](https://web.archive.org/web/20210214045457/http://shamansir.github.io/) and also I have screenshots of every of five-or-six versions though time somewhere, I hope to include here some day.
-
-Lastly I almost had no wish to do it, since I really got obsessed with the idea of keeping all my data organized in [Org-mode](https://orgmode.org/) and I was bothered with collecting and processing it. While I did it, [Obsidian] became very popular thing, but it is still built on #Markdown. For me, #org over #Markdown has tons of advantages:
-
-* It supports different kinds of tasks out of the box and also showing progress for groups of them;
-* It shows you your agenda as a calendar right in the editor; And it's a very useful agenda and it is rendered in text format in CLI;
-* It treats all the `.org` files on your drive or in some folder, depends on your configuration, as one source of data, and so all the TODOs and tasks are there;
-* It did all the things [Obsidian] does even before the Big Bang, and very probably was the inspiration for all the [Notion] and [Obsidian] etc.
-* Its syntax is much more powerful and supports LaTeX and many things #Markdown lacks even nowadays;
-* And many more...
-
-_Still I currently write this page is in Markdown :)_. I was looking for some `orgmode`-based data/blog/site engine for _truly_ a lot. #Emacs and especially #Spacemacs are awesome and, as said, it is one of the advantages of `org` to have all these things close to your code, but I am still very bad in using #emacs or #vim and through my career I used mostly lightweight visual IDEs, while being a fan of text-mode. Anyway, I probably don't have to explain myself at my own homepage, yet I try using/learning #spacemacs every three months so once I could succeed.
-
-My friend introduced me to his friend, who is a fan of #Nix and all functional stuff, like me, and that friend showed me #Logseq, which supports `org` files quite good, being written in Clojure. I was very happy and use it everyday now, it has its own issues, but now I can fill in my thoughs/tasks in `org` both on mobile and notebook and anywhere. I prefer it to #Obsidian, it also is free and open-source...
-
-So I was trying [Hugo] first. It has nice themes, it is also written in Clojure, it supports `org` in some way. But its configuration and theming turned out not to be easy for me and while I really liked several themes but haven't found the matching one.
-
-And yesterday, by searching something for #PureScript or #Haskell, I discovered the blog of [Emanote author]: [This one](https://srid.ca/generics-sop-intro). And both its' structure and look has triggered very pleasing emotions in me. And then I discovered that its engine [Ema] is written in #Haskell!! In background, I was already representing my data like [[Library]] or [[CV]] or a [[Talks|list of my Talks]] in ADTs in #PureScript to generate `org` or `json` or `CSV` from it, and it turned out that the idea of #Ema is the very same! The same day was the day I was learning #Nix, installing #Emanote works in #Nix as a single command, and #Emanote has GitHub Pages support from the box, and it supports `org`!!! It turned out Sridhar has similar passions to me and also started to love FP when it wasn't so hippie yet :). And so here we are!
-
-[Ema]: https://ema.srid.ca/
 [Emanote]: https://emanote.srid.ca/
-[Emanote author]: https://srid.ca/cv
-[Notion]: <https://notion.com>
-[Obsidian]: https://obsidian.md/
-
-[^1]: It's under no discussion that I am on Ukraine's side in the current events, I moved out of Russia partly because I didn't agree with its current politics, I didn't feel along with them and most of the best people I met after are from Ukraine. I traveled all over Ukraine while I was living there, it always was friendly and welcoming everywhere and now it can't be anymore.
+<!-- [local-cv-html]: /CV/assets/html/cv.html -->
+<!-- [local-cv-prev-html]: /CV/assets/html/prev.cv.html -->
+[local-cv-html]: https://shamansir.github.io/CV/Html/cv.html
