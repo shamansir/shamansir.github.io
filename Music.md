@@ -25,6 +25,7 @@
   - <img src="./Music/assets/radical/the-chemical-sisters.cover.jpg" width="60" height="60" alt="" style="display:inline-block"/>{.align-middle .mr-2} **The Chemical Sisters** 05:11 /2023/ ([SC](https://soundcloud.com/shamansir/the-chemical-sisters?in=shamansir/sets/radical), [SP](https://open.spotify.com/track/04pmSgblIOSpg6IOxipL7N))
   - <img src="./Music/assets/radical/pfin-freaks.cover.jpg" width="60" height="60" alt="" style="display:inline-block"/>{.align-middle .mr-2} **Pfin Freaks** 02:30 /2023/ ([SC](https://soundcloud.com/shamansir/pfin-freaks?in=shamansir/sets/radical), [SP](https://open.spotify.com/track/6QmsJucvpDwQD1Mc6rAh3h))
   - <img src="./Music/assets/radical/atomic-neverland.cover.jpg" width="60" height="60" alt="" style="display:inline-block"/>{.align-middle .mr-2} **Atomic Neverland** 09:33 /2020/ ([SC](https://soundcloud.com/shamansir/atomic-neverland?in=shamansir/sets/radical), [SP](https://open.spotify.com/track/0cRPTx0Pfgiy3n5K5rSgdK), [SP](https://open.spotify.com/track/2CR0ZGO7OKPzQ1JNHvj3Pj))
+
 ### München {#muenchen}
 
 ([SC](https://soundcloud.com/shamansir/sets/muenchen), [SP](https://open.spotify.com/album/6gecLMZQiCCLVZ0kMWUt12))
