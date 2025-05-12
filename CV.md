@@ -1,12 +1,14 @@
 # CV: Anton Kotenko
 
+**>>** [HTML Version][local-cv-html] **<<**
+
 <img src="CV/assets/my_photo.jpeg" width="120" height="120" alt="Me"/>
 
-  - E-mail: shaman.sir@gmail.com
-  - Location: Munich, Germany
-  - Phone: +49 176 84181188
-  - [Website](https://shamansir.github.io): https://shamansir.github.io
-  - Birthday: 4 March 1984
+- E-mail: <shaman.sir@gmail.com>
+- Location: Munich, Germany
+- Phone: +49 176 84181188
+- [Website](https://shamansir.github.io): <https://shamansir.github.io>
+- Birthday: 4 March 1984
 
 [GitHub](https://github.com/shamansir) -- [LinkedIn](https://www.linkedin.com/in/shamansir/) -- [CodeWars](https://codewars.com/users/shamansir) -- [Exercism](https://exercism.org/profiles/shamansir) -- [StackOverflow](https://stackoverflow.com/users/167262/shaman-sir) -- [Spotify (Listener)](https://open.spotify.com/user/11125039766) -- [meetup.com](https://www.meetup.com/members/95695422/) -- [npmjs](https://www.npmjs.com/~shamansir) -- [GoodReads](https://www.goodreads.com/user/show/29823581-anton-kotenko) -- [Twitter (X)](https://x.com/shaman_sir) -- [YouTube](https://youtube.com/@UlricWilfred) -- [Instagram](https://instagram.com/shamansir) -- [SoundCloud](https://soundcloud.com/shamansir) -- [Vimeo](https://vimeo.com/shamansir) -- [Bandcamp (Artist)](https://shamansir.bandcamp.com/shamansir) -- [Bandcamp (Fan)](https://bandcamp.com/shamansir) -- [Last.fm](https://last.fm/shamansir) -- [LiveJournal](https://livejournal.com/tungusso) -- [Spotify (Artist)](https://open.spotify.com/artist/3p5XmmBfQLQkEScwpVdEwU) -- [Stepik](https://stepik.org/users/43031759/certificates) -- [Lanyrd](https://lanyrd.com/shaman_sir) -- [Telegram](https://telegram.com/shaman_sir) -- [Backloggery](https://backloggery.com/shamansir) -- [InfiniteBacklog](https://infinitebacklog.com/users/shamansir) -- [Steam](https://steamcommunity.com/id/shamansir/) -- [Discord](https://discord.com/shaman.sir) -- [Duolingo](https://duolingo.com/profile/shamansir) -- [dev.to](https://dev.to/shamansir)
 
@@ -23,7 +25,6 @@ From all this it could look like I loved mathematics all the way, but at the sta
 
 Of course, there were Java EE or GWT or React-driven application, and even Python was among my skills.
 
-
 ## Skills
 
 Java, JavaScript, React, Python, Animation, Elm, PureScript, Functional Programming
@@ -31,13 +32,14 @@ Java, JavaScript, React, Python, Animation, Elm, PureScript, Functional Programm
 ## Timeline
 
 ### JetBrains GmbH {#jetbrains}
+
 **FrontEnd & Software Developer**
 
 May 2016 — August 2024
 
-  - [jetbrains.com](https://jetbrains.com)
-  - [Computational Arts Initiative @ JetBrains](https://cai.jetbrains.com)
-  - [Developers Survey @ JetBrains](https://www.jetbrains.com/lp/devecosystem-2023/)
+- [jetbrains.com](https://jetbrains.com)
+- [Computational Arts Initiative @ JetBrains](https://cai.jetbrains.com)
+- [Developers Survey @ JetBrains](https://www.jetbrains.com/lp/devecosystem-2023/)
 
 In JetBrains, I mostly worked in Computational Arts Initiative, which is the team we formed by accident with the designer Serg Golovachev, with whom we've met while working in Animatron.
 
@@ -47,8 +49,7 @@ You can visit and try web versions of the generators yourself if you follow the 
 
 Aside from that, I was doing FrontEnd development for jetbrains.com website, some landing pages, or for example, some years of Developers Survey (2017 & 2018) are produced by yours FrontEnd Team representative in collaboration with designers.
 
-
-  - *Munich*, *Germany* 
+- *Munich*, *Germany*
 
 Technologies:
 :  JavaScript, React, Elm, HTML5 Canvas, GLSL Shaders, d3.js, Kotlin JS, Kotlin, DHall, PureScript
@@ -56,28 +57,27 @@ Technologies:
 Tags:
 :  #generative-art, #react, #redux, #elm, #glsl, #glsl-shaders, #html5-canvas, #animation, #dhall, #kotlin-js, #gui, #user-interface
 
-
 Talks:
 :  [The Basics of Generating Everything](CV.md#basics-of-genart), [Generative Animation in Elm](CV.md#elm-gen-art), [Tron : Minimalist UI for Generative Art](CV.md#tron-jb), [Noodle : Animation as Ramen](CV.md#noodle-jb), [RPD: Reactive Patch Development](CV.md#rpd-patch-dev-1), [RPD: Reactive Patch Development v2.0](CV.md#rpd-patch-dev-2), [iElm @ JetBrains](CV.md#ielm-jb), [About Git. That's easy](CV.md#pro-git)
-
 
 Projects:
 :  [Open Elmsfeuer](CV.md#open-elmsfeuer), [Open Radiant](CV.md#open-radiant), [Tron GUI](CV.md#tron-gui), [Kvant](CV.md#kvant), [GEN UI Lang](CV.md#gen-ui), [Noodle](CV.md#noodle)
 
 ### Animatron LLC {#animatron}
+
 **GWT/JS Developer**
 
 July 2011 — May 2016
 
-  - [Animatron Web Editor](https://animatron.com)
-  - [Animatron JS Player @ GitHub](https://github.com/Animatron/player)
-  - [Animatron JS Player Docs & Sandbox](https://animatron.github.io/player/)
+- [Animatron Web Editor](https://animatron.com)
+- [Animatron JS Player @ GitHub](https://github.com/Animatron/player)
+- [Animatron JS Player Docs & Sandbox](https://animatron.github.io/player/)
 
 At Animatron, I mostly developed the Web Player based on HTML5 Canvas technology, in pure vanilla JavaScript. Designing a friendly API was one of my tasks, bit not as important as integrating the player into the main GWT-Based Application so that it would reproduce properly and perfectly every feature that the Animation Editor had. That required some GWT coding too. Still, the player also could be used standalone and be embedded into websites, and has a sandbox with the code editor to provide user with an easy way to develop scenes.
 
-  - *Munich*, *Germany* 2012 — 2016 *(JetBrains GmbH)*
-  - *Odessa*, *Ukraine* 2011 — 2012
-  - *Boston*, *United States, MA* 
+- *Munich*, *Germany* 2012 — 2016 *(JetBrains GmbH)*
+- *Odessa*, *Ukraine* 2011 — 2012
+- *Boston*, *United States, MA*
 
 Technologies:
 :  Java, GWT (Google Web Toolkit), JavaScript, HTML5 Canvas
@@ -85,24 +85,23 @@ Technologies:
 Tags:
 :  #html5-canvas, #javascript, #animation, #gwt, #svg, #graphics
 
-
 Talks:
 :  [Animatron Player API in Details](CV.md#animatron-api), [How to Grasp the Functional Way of Writing JavaScript](CV.md#func-js)
-
 
 Projects:
 :  [JS Player for Animatron](CV.md#animatron-player)
 
 ### iPark Ventures {#ipark}
+
 **GWT Developer**
 
 April 2010 — June 2011
 
-  - [Experika](https://experika.com)
+- [Experika](https://experika.com)
 
 Programming and Architecture with GWT ﴾with mvp4g﴿, writing custom components. We developed two web portals: one for job-searchers and HRs, and another one is for pet-owners searching for the medical care or shelter or just to discuss general topics regarding their domestic animals. I am fortunate that the Team-Leads and folks from the company convinced my to give my first public talk on my knowledge which further really helped me in finding next places to work and led to Animatron & JetBrains in the end.
 
-  - *Odessa*, *Ukraine* 
+- *Odessa*, *Ukraine*
 
 Technologies:
 :  Java, GWT (Google Web Toolkit), mvp4g GWT Framework, JavaScript, Python
@@ -110,18 +109,18 @@ Technologies:
 Tags:
 :  #java, #gwt, #mvp4g, #javascript, #python
 
-
 Talks:
 :  [Web-development with GWT & mvp4g](CV.md#gwt-mvp4g), [The Real JavaScript](CV.md#real-js)
 
 ### Exectum LLC {#exectum}
+
 **Java EE / Web Developer**
 
 October 2009 — February 2010
 
 The ExtJS-based FrontEnd for the Administration of a Billing Engine, which communicated to the server using Java-RPC.
 
-  - *St. Petersburg*, *Russia* 
+- *St. Petersburg*, *Russia*
 
 Technologies:
 :  Java, Java RPC, Spring for Java EE, JavaScript, Ext JS
@@ -130,25 +129,25 @@ Tags:
 :  #java, #spring, #java-rpc, #ext-js
 
 ### FotoNation / Piclinq {#fotonation}
+
 **Java EE Developer**
 **JavaScript Web UI Developer**
 
 June 2007 — June 2009
 
-  - [myPictureTown](https://mypicturetown.com)
+- [myPictureTown](https://mypicturetown.com)
 
 In FotoNation, we developed photo sharing service for Nikon, one of the very first of its kind. At that time, Nikon had released their first Photo Cameras with Wi-Fi support. I worked in the UI Team, responsible both for Java & JavaScript on the FrontEnd, the hardest were the Gallery page and the individual Photo viewer, like including Drag & Drop of images from the file system while there were almost no solutions for it at the time, beating Time Zones and other challenges.
 
 Action System for the UI was the idea and implementation of ours since technologies we used provided no friendly and easy approach. // Development with Apache Wicket + JavaScript ‐ complex native‐JS+Java components and layouting scripts + action system, UI prototypes using JQuery. Components/Layouts are dynamically communicate with server‐side/Database.
 
-  - *St. Petersburg*, *Russia* 
+- *St. Petersburg*, *Russia*
 
 Technologies:
 :  Java, Apache Wicket, JSP (Java Server Pages), JavaScript
 
 Tags:
 :  #java, #apache-wicket, #javascript, #ajax, #java-jsp
-
 
 Recommendations:
 :  > Anton is a very talented developer who developed a lot
@@ -160,13 +159,14 @@ I recommend him without reservations. -- Boris Berkman
 > I know Anton as a brilliant Javascript programmer with strong understanding of the most advanced concepts of this language. His Java skills are also allow him to write good Java code. It is a pleasure to work with such talented professional. -- Sergey Kusnetsov
 
 ### FK LTD {#fk-ltd}
+
 **Web Developer**
 
 November 2006 — June 2007
 
 CMS Project Development in PHP-JS-CSS for Real Estate Industry; Several small AJAX‐related projects.
 
-  - *St. Petersburg*, *Russia* 
+- *St. Petersburg*, *Russia*
 
 Technologies:
 :  PHP, JavaScript, AJAX, XML
@@ -175,12 +175,13 @@ Tags:
 :  #ajax, #javascript, #php
 
 ### EmDev LLC {#emdev-llc}
+
 **Software / Web Developer**
 
 March 2005 — October 2006
 
-  - [UnlockAustin](https://unlockaustin.com)
-  - [EmForge](https://emforge.org)
+- [UnlockAustin](https://unlockaustin.com)
+- [EmForge](https://emforge.org)
 
 Mostly driven by outsourcing, in this company I participated in J2EE Projects ﴾Spring, Hibernate﴿ from the scratch, writing components, usually trying out and using new technologies
 ﴾Ajax, JSF, Spring/Hibernate﴿, what used to do before, and keep doing till today. One of the main projects was UnlockAustin, which was a platform for introducing people the musical and theatrical events (but not only those) happening in Austin, Texas.
@@ -188,7 +189,7 @@ Could be that Austin is a popular city nowadays due to this web portal :D.
 I also developed Delphi Visual Component for Stock monitoring (with realtime/dynamic data visualization support) using TreeMap Algorithm to be integrated into the client desktop application;
 Dealing with threads concurrency and a high rate of updates;
 
-  - *St. Petersburg*, *Russia* 
+- *St. Petersburg*, *Russia*
 
 Technologies:
 :  Java, Java EE, EJB (Enterprise Java Beans), JSP (Java Server Pages), JSF (Java Server Faces), Spring for Java EE, Spring + Hibernate, Borland Delphi, Python
@@ -197,6 +198,7 @@ Tags:
 :  #java, #java-ee, #java-jsp, #java-ejb, #java-jsf, #borland-delphi, #python
 
 ### FSBI VNII Okeangeologia {#vniio}
+
 **Software Developer**
 **Animation Creator for Conferences**
 **Scientific Researcher**
@@ -204,18 +206,17 @@ Tags:
 
 March 2003 — March 2005
 
-  - [VNIIO : Science Department](https://vniio.ru/about/science_dept/)
-  - [The University Website](https://www.вниио.рф)
+- [VNIIO : Science Department](https://vniio.ru/about/science_dept/)
+- [The University Website](https://www.вниио.рф)
 
 By chance, I got to work at the GeoPhysics University at my age of 19, thanks to the friend. Among the work at the site, we did several travels with camping and monitoring seismic waves in real-time.
 The purpose was to predict earthquakes so that people would be aware in advance or would know if it is safe to build bridges at place.
 I developed the UI for calculating and configuring Fast Fourier Transform of the raw signal so that significant peaks would be easily noticable on the graphics. At the time I didn't know how significant this algorithm is in almost every technology (like breaking audio into harmonics, actually the same we did here, or converting digital pictures to their vector counterpart keeping almost the perfect representation of the form), but now I do.
 Also, it happend that someone noticed I know how to use Macromedia Flash and our Head of Science asked me to provide a friendly and descriptive animation of the tectonic plates colliding for his talks. After all, he invited me to be a guest of his talk with this animation in Arkhangelsk and hired the professional Animator to teach me further.
-        
 
-  - *St. Petersburg*, *Russia* 
-  - *Xiao Nang Hai*, *China* 
-  - *Privetnoye*, *Ukraine* 
+- *St. Petersburg*, *Russia*
+- *Xiao Nang Hai*, *China*
+- *Privetnoye*, *Ukraine*
 
 Technologies:
 :  Borland Delphi, Object Pascal, C++, Assembly Language, Macromedia Flash
@@ -227,17 +228,15 @@ Tags:
 
 ### The Basics of Generating Everything {#basics-of-genart}
 
-
 in 2023
 
 @ [Lambda Meetup @ JetBrains ('tail 23)](https://www.meetup.com/munich-lambda/events/296915834/). Munich, Germany
 
 How we can use waves a base for generating both audio or static graphics or video or something else, on the example of oscillators, how generic its concept is, and how in the end everything is a wave (and a monad!).
 
-  - [Video](https://youtu.be/e9urkjHSgXY)  (EN)
+- [Video](https://youtu.be/e9urkjHSgXY)  (EN)
 
 ### PureScript with a chance of Free Monads {#purs-free-monads}
-
 
 in 2023
 
@@ -245,10 +244,9 @@ in 2023
 
 This talk describes the use of Free Monad concept in the core of Noodle project of mine. The pros and cons of Free Monads are yet discussed a lot, but in my case they really helped in abstracting concepts while keeping the code user-friendly.
 
-  - [Video](https://www.youtube.com/watch?v=oSZMB9f6v4c)  (EN)
+- [Video](https://www.youtube.com/watch?v=oSZMB9f6v4c)  (EN)
 
 ### Noodle : Animation as Ramen {#noodle-jb}
-
 
 in 2022
 
@@ -256,10 +254,9 @@ in 2022
 
 This talk was recorded during Covid and is about my project Noodle, for visual programming, which is the next version of RPD and now is in the development. The talk was a part of the next iteration of design talks from our company, and company helped a lot in its recording, but its production was finished later and its public promotion was cancelled due to the world-turning event such as declaring war by my own country, so we had no emotional/moral resources as well as reasons to proceed with it.
 
-  - [Video](https://www.youtube.com/watch?v=FSzMBKYgvCE&list=PLQ176FUIyIUZ3DvECf0NkkOpYwE0JECFn&index=9)  (EN)
+- [Video](https://www.youtube.com/watch?v=FSzMBKYgvCE&list=PLQ176FUIyIUZ3DvECf0NkkOpYwE0JECFn&index=9)  (EN)
 
 ### Tron : Minimalist UI for Generative Art {#tron-jb}
-
 
 in 2020
 
@@ -267,10 +264,9 @@ in 2020
 
 Tron, the grid-based UI we use for generators, developed by me and designed by Egor Alexeev from JB, given its structure could be defined both in JSON or Dhall, and iterpreted and rendered in Elm.
 
-  - [Video](https://www.youtube.com/watch?v=5mOT5q8SKDM)  (EN)
+- [Video](https://www.youtube.com/watch?v=5mOT5q8SKDM)  (EN)
 
 ### Generative Animation in Elm {#elm-gen-art}
-
 
 w/Sergey Golovatschov
 
@@ -280,12 +276,11 @@ in 2019
 
 How we developed one of our splash screen generators for JetBrains in Elm language by making it manipulate WebGL shaders.
 
-  - [Slides](https://speakerdeck.com/shamansir/generating-animation-with-elm)  (EN)
+- [Slides](https://speakerdeck.com/shamansir/generating-animation-with-elm)  (EN)
 
-  - [Video](https://www.youtube.com/watch?v=he1t3uXvl7o)  (EN)
+- [Video](https://www.youtube.com/watch?v=he1t3uXvl7o)  (EN)
 
 ### The Future of Web UI Development. {#future-web}
-
 
 September 2018
 
@@ -293,10 +288,9 @@ September 2018
 
 Nothing less, nothing more, how I think we are going in the direction of using pure functional programming in the web.
 
-  - [Slides](https://speakerdeck.com/shamansir/the-future-of-web-ui-development)  (EN)
+- [Slides](https://speakerdeck.com/shamansir/the-future-of-web-ui-development)  (EN)
 
 ### iElm @ JetBrains {#ielm-jb}
-
 
 January 2017
 
@@ -306,12 +300,11 @@ JetBrains GmbH
 
 The technology behind the notebook REPL iElm (see the previous talk), mostly regarding reverse binary engineering I had to perform to dig out type information from Elm internals.
 
-  - [Slides](https://speakerdeck.com/shamansir/ielm-tech-jb)  (EN)
+- [Slides](https://speakerdeck.com/shamansir/ielm-tech-jb)  (EN)
 
-  - [iElm in action](https://vimeo.com/242822314)  (EN)
+- [iElm in action](https://vimeo.com/242822314)  (EN)
 
 ### iElm {#ielm}
-
 
 December 2017
 
@@ -319,12 +312,11 @@ Munich, Germany
 
 iElm is a web notebook-like REPL I developed for the Elm language so that it would be easier to learn it with having visual help of both its type system and values show even when they have complex visual representation like canvas graphics. The talk is a poem though.
 
-  - [Slides](https://speakerdeck.com/shamansir/ielm)  (EN)
+- [Slides](https://speakerdeck.com/shamansir/ielm)  (EN)
 
-  - [iElm in action](https://vimeo.com/242822314)  (EN)
+- [iElm in action](https://vimeo.com/242822314)  (EN)
 
 ### Elm. The language itself and how it brings functional programming into web {#elm-lang-func-web}
-
 
 September 2017
 
@@ -332,11 +324,12 @@ September 2017
 
 The syntax of Elm language, its benefits and downfalls. Not the talk I am proud of.
 
-  - [Slides](https://speakerdeck.com/shamansir/elm-revolution)  (EN)
+- [Slides](https://speakerdeck.com/shamansir/elm-revolution)  (EN)
 
-  - [Video](https://www.youtube.com/watch?v=-3OL8V7Lk-Y)  (EN)
+- [Video](https://www.youtube.com/watch?v=-3OL8V7Lk-Y)  (EN)
 
 ### About Git. That's easy {#pro-git}
+
 (Про Гит. Вот так просто)
 
 in 2017
@@ -347,10 +340,9 @@ JetBrains GmbH
 
 The details of how the Git command line interface works with the interactive example of rebasing, as well describing other merging techniques.
 
-  - [Slides (ru)](https://speakerdeck.com/shamansir/pro-git)  (RU)
+- [Slides (ru)](https://speakerdeck.com/shamansir/pro-git)  (RU)
 
 ### Elm: 2D & 3D Graphics. {#elm-2d-3d-graphics}
-
 
 June 2017
 
@@ -358,12 +350,11 @@ June 2017
 
 How the new, and easy-to-learn, functional language for web, named Elm, brings the simple matchematical ways to do both 2D and 3D graphics in Web.
 
-  - [Slides](https://speakerdeck.com/shamansir/elm-2d-and-3d-graphics)  (EN)
+- [Slides](https://speakerdeck.com/shamansir/elm-2d-and-3d-graphics)  (EN)
 
-  - [Video](https://vimeo.com/manage/videos/222331979)  (EN)
+- [Video](https://vimeo.com/manage/videos/222331979)  (EN)
 
 ### RPD: Reactive Patch Development v2.0 {#rpd-patch-dev-2}
-
 
 February 2017
 
@@ -373,10 +364,9 @@ Google
 
 The slightly extended version of the talk about my visual programming project RPD
 
-  - [Slides @ Google Meetup 2017](https://speakerdeck.com/shamansir/rpd-reactive-patch-development-extended-cut)  (EN)
+- [Slides @ Google Meetup 2017](https://speakerdeck.com/shamansir/rpd-reactive-patch-development-extended-cut)  (EN)
 
 ### RPD: Reactive Patch Development {#rpd-patch-dev-1}
-
 
 in 2016
 
@@ -384,12 +374,11 @@ in 2016
 
 15-minute Lightning Talk about the visual programming project I developed in JavaScript, driven by reactive programming concepts (i.e. event streams).
 
-  - [Slides @ JS Kongress 2016](https://speakerdeck.com/shamansir/rpd-reactive-patch-development)  (EN)
+- [Slides @ JS Kongress 2016](https://speakerdeck.com/shamansir/rpd-reactive-patch-development)  (EN)
 
-  - [Video @ JS Kongress 2016](https://www.youtube.com/watch?v=K6KDDGlTGqc)  (EN)
+- [Video @ JS Kongress 2016](https://www.youtube.com/watch?v=K6KDDGlTGqc)  (EN)
 
 ### Animatron Player API in Details {#animatron-api}
-
 
 November 2013
 
@@ -399,11 +388,12 @@ Wayra GmbH
 
 The details of how API of the Animatron JS Player is desined, with history, examples and sandbox demonstration.
 
-  - [Slides, v.3](https://speakerdeck.com/shamansir/animatron-player-api-in-details-v3)  (EN)
+- [Slides, v.3](https://speakerdeck.com/shamansir/animatron-player-api-in-details-v3)  (EN)
 
-  - [Video](https://vimeo.com/manage/videos/79683081)  (EN)
+- [Video](https://vimeo.com/manage/videos/79683081)  (EN)
 
 ### How to Grasp the Functional Way of Writing JavaScript {#func-js}
+
 (Постигаем функциональный JavaScript)
 
 in 2012
@@ -412,10 +402,11 @@ in 2012
 
 Discover functional approach in JavaScript as opposed to trying to apply Object-Oriented approach in non-friendly circumstances.
 
-  - [Slides (ru)](https://speakerdeck.com/shamansir/postighaiem-funktsional-nyi-javascript)  (RU)
-  - [Slides (en)](https://speakerdeck.com/shamansir/mastering-functional-javascript)  (EN)
+- [Slides (ru)](https://speakerdeck.com/shamansir/postighaiem-funktsional-nyi-javascript)  (RU)
+- [Slides (en)](https://speakerdeck.com/shamansir/mastering-functional-javascript)  (EN)
 
 ### The Real JavaScript {#real-js}
+
 (Настоящий JavaScript)
 
 October 2011
@@ -424,12 +415,11 @@ October 2011
 
 Putting a stop in the discussion of prototype inheritance in JavaScript with the only best approach possible. Just kidding, it's not possible, but I wanted to share my findings. Be aware: contains octocats and penguidogs.
 
-  - [Slides](https://speakerdeck.com/shamansir/pravil-nyi-javascript)  (RU)
+- [Slides](https://speakerdeck.com/shamansir/pravil-nyi-javascript)  (RU)
 
-  - [Video](https://vimeo.com/33393795)  (RU)
+- [Video](https://vimeo.com/33393795)  (RU)
 
 ### Fluxus {#fluxus}
-
 
 April 2011
 
@@ -437,9 +427,10 @@ April 2011
 
 Fluxus is the visual tool for developing interactive three-dimensional visuals, for example to react on music. It uses Scheme / Racket stack over OpenGL backend. This talk shares my inspiration with it and demonstrates features of the engine. However, my Jack (not a person, but audio Linux driver) failed at the time of talk, so there was no audio to rely on.
 
-  - [Video](https://vimeo.com/23468113)  (RU)
+- [Video](https://vimeo.com/23468113)  (RU)
 
 ### Web-development with GWT & mvp4g {#gwt-mvp4g}
+
 (Веб-разработка на GWT и mvp4g)
 
 April 2011
@@ -448,11 +439,11 @@ April 2011
 
 The huge (but as fun as possible) talk in three parts on how you could architect your own GWT application using mvp4 framework which simplifies many process and routing. Contains a story of how we did it at iPark.
 
-  - [Slides](https://speakerdeck.com/shamansir/gwt-mvp4g)  (RU)
+- [Slides](https://speakerdeck.com/shamansir/gwt-mvp4g)  (RU)
 
-  - [Video, p.1/3](https://vimeo.com/26357352)  (RU)
-  - [Video, p.2/3](https://vimeo.com/26413549)  (RU)
-  - [Video, p.3/3](https://vimeo.com/26715073)  (RU)
+- [Video, p.1/3](https://vimeo.com/26357352)  (RU)
+- [Video, p.2/3](https://vimeo.com/26413549)  (RU)
+- [Video, p.3/3](https://vimeo.com/26715073)  (RU)
 
 ## Projects
 
@@ -470,8 +461,6 @@ Started: more than five years ago
 
 Tags: #purescript, #visual-programming, #functional-programming, #generative-art
 
-
-
 #### RPD
 
 Visual Programming for Generative Art, in JavaScript, driven by Reactive Streams Programming
@@ -483,8 +472,6 @@ Started: more than ten years ago
 ([GH:rpd](https://github.com/shamansir/rpd), [RPD Docs & Demos](https://shamansir.github.io/rpd))
 
 Tags: #javascript, #svg, #visual-programming, #generative-art, #reactive-programming, #kefir-js, #comp-arts
-
-
 
 #### Tron GUI
 
@@ -498,8 +485,6 @@ Started: around two-three years ago
 
 Tags: #elm, #gui, #user-interface, #functional-programming, #dhall, #javascript, #generative-art, #comp-arts, #graphs
 
-
-
 #### Kvant
 
 Translating Wave Function Collapse algorithm to Elm, and UI for it
@@ -511,8 +496,6 @@ Started: around four-five years ago
 ([GH:kvant](https://github.com/shamansir/kvant), [Kvant Demo @ CAI](https://kvant.labs.jb.gg/), [Computational Arts Initiative](https://cai.jetbrains.com/))
 
 Tags: #wfc, #elm, #gui, #user-interface, #generative-art, #functional-programming, #comp-arts
-
-
 
 #### iElm
 
@@ -526,8 +509,6 @@ Started: around four-five years ago
 
 Tags: #elm, #repl, #functional-programming
 
-
-
 #### node-elm-repl
 
 CLI client for iElm to get the information about the type of the entered expression
@@ -539,8 +520,6 @@ Started: around four-five years ago
 ([GH:node-elm-repl](https://github.com/shamansir/node-elm-repl))
 
 Tags: #elm, #javascript, #binary, #repl, #functional-programming
-
-
 
 #### GEN UI Lang
 
@@ -554,11 +533,7 @@ Started: around two-three years ago
 
 Tags: #elm, #dhall, #gui, #user-interface, #functional-programming, #comp-arts
 
-
-
 #### JS Player for Animatron
-
-
 
 Status: Finished (to some point)
 
@@ -567,8 +542,6 @@ Started: more than five years ago
 ([GH:animatron-player](https://github.com/shamansir/animatron-player))
 
 Tags: #javascript, #html5-canvas, #animation
-
-
 
 #### Web PD: PureData for Web
 
@@ -582,11 +555,7 @@ Started: more than five years ago
 
 Tags: #javascript, #pure-data, #svg, #generative-audio, #visual-programming
 
-
-
 #### JetBrains Splash Screen Generator, with RPD
-
-
 
 Status: Finished (to some point)
 
@@ -595,8 +564,6 @@ Started: more than five years ago
 ([GH:jb-rpd-splash](https://github.com/shamansir/jb-rpd-splash), [SETI Generator in Action @ CAI](https://seti.labs.jb.gg/), [Computational Arts Initiative](https://cai.jetbrains.com/))
 
 Tags: #javascript, #visual-programming, #comp-arts, #glsl, #glsl-shaders
-
-
 
 #### sametimed
 
@@ -610,8 +577,6 @@ Started: more than ten years ago
 
 Tags: #java, #google-wave
 
-
-
 #### nijiato
 
 Finger-recognition in LISP with OpenCV
@@ -623,8 +588,6 @@ Started: more than ten years ago
 ([GH:nijiato](https://github.com/shamansir/nijiato))
 
 Tags: #lisp, #camera-tracking, #open-cv
-
-
 
 #### Open Radiant
 
@@ -638,8 +601,6 @@ Started: around four-five years ago
 
 Tags: #elm, #functional-programming, #comp-arts, #generative-art
 
-
-
 #### Open Elmsfeuer
 
 Another one of the first art generators for JetBrains
@@ -651,8 +612,6 @@ Started: around four-five years ago
 ([GH:open-elmsfeuer](https://github.com/shamansir/open-elmsfeuer), [Origami Generator in Action @ CAI](https://origami.labs.jb.gg/))
 
 Tags: #elm, #functional-programming, #comp-arts, #generative-art
-
-
 
 #### PegJS - FN
 
@@ -666,8 +625,6 @@ Started: more than five years ago
 
 Tags: #javascript, #functional-programming, #parsing, #parsers, #grammars
 
-
-
 #### Finite State Machine engine+example for PureScript
 
 The code for the examples from my posts at dev.to
@@ -679,8 +636,6 @@ Started: around two-three years ago
 ([GH:purescript-fsm](https://github.com/shamansir/purescript-fsm), [FSM Post @ dev.to, p. I](https://dev.to/shamansir/purescript-ui-driven-by-finite-state-machines-and-event-streams-994), [FSM Post @ dev.to, p. II](https://dev.to/shamansir/purescript-ui-driven-by-finite-state-machines-and-event-streams-part-ii-the-example-3m77))
 
 Tags: #functional-programming, #purescript, #gui, #user-interface
-
-
 
 #### Cayley Rust
 
@@ -694,8 +649,6 @@ Started: more than ten years ago
 
 Tags: #rust, #graphs, #databases
 
-
-
 #### Vimeoid
 
 A client for Vimeo video service for HTC Hero (Android)
@@ -707,8 +660,6 @@ Started: more than ten years ago
 ([GH:vimeoid](https://github.com/shamansir/vimeoid))
 
 Tags: #android, #java, #app
-
-
 
 #### Elm Goose Driven Tutorial
 
@@ -722,8 +673,6 @@ Started: around four-five years ago
 
 Tags: #elm, #tutorial, #html5-canvas, #graphics
 
-
-
 #### Showdown Blog
 
 Blog engine driven by JavaScript + XSLT
@@ -735,8 +684,6 @@ Started: more than 15 years ago
 ([GH:showdown-blog](https://github.com/shamansir/showdown-blog))
 
 Tags: #xml, #xslt
-
-
 
 #### elm-bin-pack
 
@@ -750,8 +697,6 @@ Started: around two-three years ago
 
 Tags: #elm, #bin-packing
 
-
-
 #### Exercism
 
 Solutions for some Exercism tasks
@@ -763,8 +708,6 @@ Started: more than five years ago
 ([GH:exercism](https://github.com/shamansir/exercism))
 
 Tags: #training, #elm, #haskell
-
-
 
 #### GWT-mvp4-layouting-demo
 
@@ -778,8 +721,8 @@ Started: more than 15 years ago
 
 Tags: #example, #demo, #gwt, #mvp4g
 
-
-
 ## Interests
 
 Generative Art, Visual Programming, Japanese Language, Functional Programming, Animation, Generative Music, Theorem Proving, LEAN
+
+[local-cv-html]: https://shamansir.github.io/CV/Html/cv.html
