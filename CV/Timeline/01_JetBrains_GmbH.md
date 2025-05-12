@@ -25,7 +25,7 @@ Tags:
 :  #generative-art, #react, #redux, #elm, #glsl, #glsl-shaders, #html5-canvas, #animation, #dhall, #kotlin-js, #gui, #user-interface
 
 Talks:
-:  [The Basics of Generating Everything](Talks.md#basics-of-genart), [Generative Animation in Elm](Talks.md#elm-gen-art), [Tron : Minimalist UI for Generative Art](Talks.md#tron-jb), [Noodle : Animation as Ramen](Talks.md#noodle-jb), [RPD: Reactive Patch Development](Talks.md#rpd-patch-dev-1), [RPD: Reactive Patch Development v2.0](Talks.md#rpd-patch-dev-2), [iElm @ JetBrains](Talks.md#ielm-jb), [About Git. That's easy](Talks.md#pro-git)
+:  [The Basics of Generating Everything](../Talks.md#basics-of-genart), [Generative Animation in Elm](../Talks.md#elm-gen-art), [Tron : Minimalist UI for Generative Art](../Talks.md#tron-jb), [Noodle : Animation as Ramen](../Talks.md#noodle-jb), [RPD: Reactive Patch Development](../Talks.md#rpd-patch-dev-1), [RPD: Reactive Patch Development v2.0](../Talks.md#rpd-patch-dev-2), [iElm @ JetBrains](../Talks.md#ielm-jb), [About Git. That's easy](../Talks.md#pro-git)
 
 Projects:
-:  [Open Elmsfeuer](ProjectsList.md#open-elmsfeuer), [Open Radiant](ProjectsList.md#open-radiant), [Tron GUI](ProjectsList.md#tron-gui), [Kvant](ProjectsList.md#kvant), [GEN UI Lang](ProjectsList.md#gen-ui), [Noodle](ProjectsList.md#noodle)
+:  [Open Elmsfeuer](../ProjectsList.md#open-elmsfeuer), [Open Radiant](../ProjectsList.md#open-radiant), [Tron GUI](../ProjectsList.md#tron-gui), [Kvant](../ProjectsList.md#kvant), [GEN UI Lang](../ProjectsList.md#gen-ui), [Noodle](../ProjectsList.md#noodle)

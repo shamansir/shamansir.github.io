@@ -21,7 +21,7 @@ Tags:
 :  #html5-canvas, #javascript, #animation, #gwt, #svg, #graphics
 
 Talks:
-:  [Animatron Player API in Details](Talks.md#animatron-api), [How to Grasp the Functional Way of Writing JavaScript](Talks.md#func-js)
+:  [Animatron Player API in Details](../Talks.md#animatron-api), [How to Grasp the Functional Way of Writing JavaScript](../Talks.md#func-js)
 
 Projects:
-:  [JS Player for Animatron](ProjectsList.md#animatron-player)
+:  [JS Player for Animatron](../ProjectsList.md#animatron-player)

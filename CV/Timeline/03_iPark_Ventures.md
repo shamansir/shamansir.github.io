@@ -17,4 +17,4 @@ Tags:
 :  #java, #gwt, #mvp4g, #javascript, #python
 
 Talks:
-:  [Web-development with GWT & mvp4g](Talks.md#gwt-mvp4g), [The Real JavaScript](Talks.md#real-js)
+:  [Web-development with GWT & mvp4g](../Talks.md#gwt-mvp4g), [The Real JavaScript](../Talks.md#real-js)
