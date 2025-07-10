@@ -1,3 +1,5 @@
+* Javader (Dec 2009)
+
 * Git и Subversion
 Всё суть хуета
 Не используй VCS
