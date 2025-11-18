@@ -3,8 +3,8 @@
     <span
       class="text-gray-400 hover:text-${theme}-500 dark:hover:text-${theme}-400 group-hover:opacity-100 opacity-0 cursor-pointer text-sm align-middle transition-opacity"
       aria-label="Copy link" title="Copy link to heading"><svg class="inline w-5 h-5" xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round">
+        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
         <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
         <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
       </svg></span>
@@ -16,7 +16,8 @@
   <clickable-icon />
 </bind>
 
-<bind tag="h2-class">group mt-12 mb-6 font-bold text-gray-900 dark:text-gray-50 pb-2 border-b-2 border-gray-200 dark:border-gray-800</bind>
+<bind tag="h2-class">group mt-12 mb-6 font-bold text-gray-900 dark:text-gray-50 pb-2 border-b-2 border-gray-200
+  dark:border-gray-800</bind>
 <bind tag="h3-class">group mt-10 mb-5 font-semibold text-gray-900 dark:text-gray-50</bind>
 <bind tag="h4-class">group mt-8 mb-4 font-semibold text-gray-900 dark:text-gray-50</bind>
 <bind tag="h5-class">group mt-6 mb-3 font-semibold text-gray-800 dark:text-gray-100</bind>
@@ -115,11 +116,13 @@
   </HorizontalRule>
   <!-- TODO: Expand the above kind of overriding (full DOM control) to other AST nodes (below) -->
   <PandocLink class="text-${theme}-600 dark:text-${theme}-400">
-    <Internal class="bg-${theme}-50 dark:bg-${theme}-950 px-1.5 py-0.5 rounded-md font-semibold no-underline hover:bg-${theme}-100 dark:hover:bg-${theme}-900" />
+    <Internal
+      class="bg-${theme}-50 dark:bg-${theme}-950 px-1.5 py-0.5 rounded-md font-semibold no-underline hover:bg-${theme}-100 dark:hover:bg-${theme}-900" />
     <External class="underline decoration-1 hover:decoration-2" target="_blank" rel="noopener" />
   </PandocLink>
   <CodeBlock class="py-4 pr-4 mb-6 text-sm font-mono rounded-lg overflow-x-auto" />
-  <Code class="py-1 px-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono rounded border border-gray-200 dark:border-gray-700 text-[0.9em]" />
+  <Code
+    class="py-1 px-2 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-mono rounded border border-gray-200 dark:border-gray-700 text-[0.9em]" />
 
   <Header:1>
     <h1 id="${header:id}" class="group mt-12 mb-8 font-bold text-gray-900 dark:text-gray-50 text-5xl">

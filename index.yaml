@@ -23,9 +23,10 @@ template:
 
   uptree:
     enable: true
+    nodeClass: text-gray-900 dark:text-gray-500 hover:bg-${theme}-500 dark:hover:bg-${theme}-950 hover:text-white dark:hover:text-gray-200 cursor-pointer forest-link
 
   base:
-    bodyClass: overflow-y-scroll bg-[#100F0F] # flexoki: bg-bg
+    bodyClass: overflow-y-scroll dark:bg-[#100F0F] dark:text-white text-sm # text-xs flexoki: bg-bg
     containerClass: container mx-auto max-w-screen-xxlg
 
   breadcrumbs:

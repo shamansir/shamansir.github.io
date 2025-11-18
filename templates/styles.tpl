@@ -1,13 +1,25 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+  rel="stylesheet">
+
+
 <style data-category="global-font">
   /* Refined typography with system font stack */
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'IBM Plex Mono', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.7;
     letter-spacing: 0.01em;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'IBM Plex Mono', Roboto, 'Helvetica Neue', Arial, sans-serif;
     letter-spacing: -0.02em;
     line-height: 1.3;
     font-weight: 700;
@@ -93,7 +105,8 @@
   }
 
   /* Focus states for accessibility */
-  a:focus-visible, button:focus-visible {
+  a:focus-visible,
+  button:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 2px;
     border-radius: 2px;
@@ -157,11 +170,11 @@
 
 <script>
   // Add copy buttons to code blocks
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     const copyIcon = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>';
     const checkIcon = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>';
 
-    document.querySelectorAll('pre code').forEach(function(codeBlock) {
+    document.querySelectorAll('pre code').forEach(function (codeBlock) {
       const pre = codeBlock.parentElement;
 
       // Create copy button
@@ -171,19 +184,19 @@
       button.setAttribute('aria-label', 'Copy code to clipboard');
       button.setAttribute('title', 'Copy code');
 
-      button.addEventListener('click', function() {
+      button.addEventListener('click', function () {
         const text = codeBlock.textContent;
-        navigator.clipboard.writeText(text).then(function() {
+        navigator.clipboard.writeText(text).then(function () {
           button.innerHTML = checkIcon;
           button.setAttribute('title', 'Copied!');
-          setTimeout(function() {
+          setTimeout(function () {
             button.innerHTML = copyIcon;
             button.setAttribute('title', 'Copy code');
           }, 2000);
-        }).catch(function(err) {
+        }).catch(function (err) {
           console.error('Copy failed:', err);
           button.setAttribute('title', 'Copy failed');
-          setTimeout(function() {
+          setTimeout(function () {
             button.innerHTML = copyIcon;
             button.setAttribute('title', 'Copy code');
           }, 2000);
