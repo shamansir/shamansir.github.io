@@ -25,8 +25,8 @@ template:
     enable: true
 
   base:
-    bodyClass: overflow-y-scroll bg-gray-700 # bg-[#100F0F] # flexoki: bg-bg
-    containerClass: container mx-auto max-w-screen-lg # bg-[#1C1B1A]
+    bodyClass: overflow-y-scroll bg-[#100F0F] # flexoki: bg-bg
+    containerClass: container mx-auto max-w-screen-xxlg
 
   breadcrumbs:
     enable: true

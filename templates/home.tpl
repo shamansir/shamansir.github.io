@@ -1,7 +1,7 @@
 <!-- https://github.com/srid/srid/tree/master/ -->
 <apply template="base">
     <bind tag="body-main">
-        <div class="container max-w-screen-md mx-auto mt-8 flex flex-col items-center justify-center">
+        <div class="container max-w-screen-xxlg mx-auto mt-8 flex flex-col items-center">
             <bind tag="cardClass">rounded-lg shadow-md m-4 bg-white </bind>
             <bind tag="cardSmallClass">rounded-lg hover:shadow-md m-4 hover:bg-white flex-shrink-0 </bind>
             <bind tag="linkClass">underline</bind>
@@ -12,6 +12,7 @@
                 <div class="w-32 flex-shrink-0">
                     <ema:metadata>
                         <with var="template">
+                            FOOBAR
                             <img src="${value:iconUrl}" class="rounded-full object-cover">
                         </with>
                     </ema:metadata>
@@ -19,7 +20,7 @@
             </div>
 
             <!-- Footer -->
-            <div class="flex flex-row justify-center">
+            <div class="flex flex-row">
                 <a href="https://x.com/sridca" class="${cardSmallClass} w-12 p-2" title="Twitter / X">
                     <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" viewBox="0 0 24 24">
                         <path

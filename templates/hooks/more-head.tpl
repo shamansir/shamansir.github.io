@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="/obsidian-snippets/headers.css">
+<!-- What goes in this file will appear on near the end of <head>-->
