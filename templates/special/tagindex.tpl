@@ -29,24 +29,25 @@
           </div>
         </div>
       </nav>
-      <div class="flex flex-col pl-2 my-4 ml-2 space-y-2">
+      <div class="flex flex-col pl-2 my-4 ml-2 space-y-2 overflow-hidden">
         <ema:childTags>
           <ema:each-childTag>
             <div>
-              <svg class="${iconSize} inline text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg class="${iconSize} inline text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
                 </path>
               </svg>
               <span class="">
-                <a href="${ema:childTag:url}" class="font-mono font-bold hover:text-${theme}-700 dark:text-white dark:hover:text-${theme}-300">
+                <a href="${ema:childTag:url}"
+                  class="font-mono font-bold hover:text-${theme}-700 dark:text-white dark:hover:text-${theme}-300">
                   <ema:childTag:title />
                 </a>
                 <span class="font-mono text-sm text-gray-400 dark:text-gray-500">
                   <!-- DoNotFormat -->
-                      (<ema:childTag:count-tag />+<ema:childTag:count-note />)
-                      <!-- DoNotFormat -->
+                  (<ema:childTag:count-tag />+<ema:childTag:count-note />)
+                  <!-- DoNotFormat -->
                 </span>
               </span>
             </div>
@@ -55,17 +56,20 @@
         <ema:notes>
           <ema:each-note>
             <div>
-              <svg class="${iconSize} inline text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg class="${iconSize} inline-block text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z">
                 </path>
               </svg>
 
               <!-- TODO: DRY -->
-              <a class="text-${theme}-600 dark:text-${theme}-400 hover:underline truncate" href="${ema:note:url}">
-                <ema:note:title />
-              </a>
+              <span class="overflow-hidden">
+                <a class="text-${theme}-600 py-2 dark:text-${theme}-400 hover:underline leading-4"
+                  href="${ema:note:url}">
+                  <ema:note:title />
+                </a>
+              </span>
             </div>
           </ema:each-note>
         </ema:notes>
