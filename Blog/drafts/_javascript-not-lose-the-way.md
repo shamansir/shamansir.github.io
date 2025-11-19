@@ -1184,8 +1184,8 @@ factorial(5);
 * ["Learning JavaScript Design Patterns"][13]
 * [Examples of beautiful Javascript @ SO][15]
 
-[1]: ../blog-ru/2012-02-22-the-way-of-the-asynchronous-samurai.md
-[2]: ../blog-ru/2011-10-07-javascript-the-right-one-announce.md
+[1]: ../blog-ru/ad-2012-02-22-the-way-of-the-asynchronous-samurai.md
+[2]: ../blog-ru/af-2011-10-07-javascript-the-right-one-announce.md
 [3]: http://nodejs.org
 [4]: http://habrahabr.ru/post/116827/
      <http://javascriptweblog.wordpress.com/2011/04/04/the-javascript-comma-operator/>
