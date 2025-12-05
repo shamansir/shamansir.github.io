@@ -53,7 +53,7 @@ PureScript allows you to define any operator you want, so I decided to have `*~`
 let menuLayout
 ```
 
-`Play a` contains all the layout definitions, which side of the container / cell is fixed in sizs or grows or if it fits its children (more on that later), but they are not layed out yet (don't lay off, lay out!).
+`Play a` contains all the layout definitions, which side of the container / cell is fixed in size, or grows, or if it fits its children (more on that later), but they are not layed out yet (don't lay off, better lay out!).
 
 There is also `Layout a`, which, as you may suggest, contains all the items layed out strictly following your definitions, having their positions and dimensions calculated.
 
@@ -63,6 +63,14 @@ There is also `Layout a`, which, as you may suggest, contains all the items laye
 data Play a = ...
 data Layout a = ...
 ```
+
+So the `a` can be anything, for example in case of Noodle node layout I have `Play NodePart` where `NodePart` is defined this way:
+
+```
+TODO
+```
+
+More examples are in the last part of the post.
 
 Here's how you can convert a definition into the layout:
 
@@ -79,14 +87,54 @@ Then, either width or height of any cell can either be:
 * _FitGrow_ — fit its children and only then grow to the right / to the bottom: TODO;
 * _FitMin_ — fit the children but no less than given value in pixels, so if children take less requested space, the side will have this size anyway, otherwise it will fit them into a larger size;
 
-## Kanji Examples
+Notice there are no percentation values, because at some level we need the exact value to fit children in.
 
-You could've been bored enough to this point, so I decided to give you more examples and illustrate them with Kanji structure.
+Both of them are functors and applicatives:
 
-Kanji are japanese hieroglyphs and they can be recursive in a sense: they can contain other hierogliphs, but there are only few certain ways to lay them out:
+```
+TODO
+```
+
+So, when you have defined your layout, call the `layout` function, which is a verb in this case, and you'll have the calculated rectangles in place.
+
+You may unwrap the tree in any way you like, for example make it into an array. The calculations are already made, so the order is not important anymore, as well as parent-child relations (if you need it for something else, I recommend to prefer to use `Play a` structure over `Layout a`):
+
+```
+TODO
+```
+
+## The Constructor
+
+Together with Claude, we've made you a constructor which can ease creating the layouts by making it visual instead of just code:
 
 TODO
 
-## Constructor
+By enabling encoded sizing labels, you may get visual help on how your layout is structured:
+
+## Examples
+
+You could've been bored enough to this point, so I decided to give you more examples and illustrate them with Kanji structure.
+
+Kanji are japanese hieroglyphs and they can be recursive in a sense: they can contain other hieroglyphs and be treated as a whole, but there are only few certain ways to lay them out and the recursion doesn't go deeper than one level.
+
+The element that can be reused inside other characters is called _radical_.
+
+### Kanji
+
+#### Kanji. A single sole character / radical:
+
+#### Kanji. Two (or more) characters aside:
+
+#### Kanji. Two (or more) characters above each other:
+
+#### Kanji. The enclosure:
+
+#### Kanji. Other variations
+
+### The chess board with pieces
+
+### The Riichi mahjong table
+
+### SVG Tree Viewer
 
 TODO
