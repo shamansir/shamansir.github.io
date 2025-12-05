@@ -55,7 +55,7 @@ Class.extend = function(def) {
 
 ```
 
-The complete examples of usage are too huge for this article, so I'll pass them to [the next article](./2007-08-19-javascript-oop.md), and now we'll proceed further. You may notice two simple examples in the points _[2](#sol-2)_, _[5](#sol-5)_ and _[15](#sol-15)_.
+The complete examples of usage are too huge for this article, so I'll pass them to [the next article](./as-2007-08-19-javascript-oop.md), and now we'll proceed further. You may notice two simple examples in the points _[2](#sol-2)_, _[5](#sol-5)_ and _[15](#sol-15)_.
 
 <a name="sol-2"></a> _2._ Next function -- a simple but elegant one -- is useful in combination with previous set -- it **creates a function reference for the method**:
 
@@ -827,4 +827,4 @@ function removeFromArray(arr, element) { // removes only one item!
 
 ### Epilogue
 
-That's all, seems, for now. The article is ready for corrections (if they will appear :) ), I can pass to the next ones :). In the [next-article](./2007-08-19-javascript-oop.md) I want to tell about OOP in JavaScript and make a few simple but useful examples of classes. I hope this article saved some of your man-hours that you may potentially had spent in the fighting with variable browsers quirks.
+That's all, seems, for now. The article is ready for corrections (if they will appear :) ), I can pass to the next ones :). In the [next-article](./as-2007-08-19-javascript-oop.md) I want to tell about OOP in JavaScript and make a few simple but useful examples of classes. I hope this article saved some of your man-hours that you may potentially had spent in the fighting with variable browsers quirks.

@@ -55,20 +55,20 @@ If you would like to get acquainted with my CV, it could look much more friendly
 
 Till now I have published **26** blog articles in English and **42** articles in Russian, they are mostly on technical topics and the first posts were just my emotions to share. In the ⟶ [[Blog/blog-en]] ⟵ and ⟶ [[Blog/blog-ru]] ⟵ folders you may find all them. I also gave a dozen of tech ⟶ [[Talks]] ⟵. Here is the list of some the articles I am kinda proud of:
 
-* [[Blog/blog-en/2014-09-06-generating-functional-parsers]]
-* [[Blog/blog-en/2017-04-07-modern-binary-reverse-engineering-with-node-js-for-elm]]
-* [[Blog/blog-en/2020-04-23-purescript-ui-driven-by-finite-state-machines-and-event-streams-part-i]]
-* [[Blog/blog-en/2020-04-23-purescript-ui-driven-by-finite-state-machines-and-event-streams-part-ii]]
-* [[Blog/blog-en/2010-08-12-nijiato-detection-of-fingers-motion-algorithm]]
-* [[Blog/blog-en/2010-07-10-post-about-fluxus]], [[Blog/blog-en/2010-12-06-fluxus-solar-system]]
-* [[Blog/blog-en/2009-10-13-sametimed-google-wave-client]]
-* [[Blog/blog-en/2010-01-09-10-useful-solutions-for-android-developer]]
-* [[Blog/blog-en/2007-08-12-16-useful-solutions-for-javascript]]
-* [[Blog/blog-ru/2010-08-12-nijiato-detection-of-fingers-motion-algorithm]]
-* [[Blog/blog-ru/2018-02-11-category-theory-senseless-and-merciless]]
-* [[Blog/blog-ru/2012-02-22-the-way-of-the-asynchronous-samurai]]
-* [[Blog/blog-ru/2011-02-11-android-renderscript-example-translation]]
-* [[Blog/blog-ru/2011-11-16-monkey-patching-or-extending-native-types-religious-or-not]]
+* [[Blog/blog-en/ad-2014-09-06-generating-functional-parsers]]
+* [[Blog/blog-en/ac-2017-04-07-modern-binary-reverse-engineering-with-node-js-for-elm]]
+* [[Blog/blog-en/aa-2020-04-23-purescript-ui-driven-by-finite-state-machines-and-event-streams-part-i]]
+* [[Blog/blog-en/ab-2020-04-23-purescript-ui-driven-by-finite-state-machines-and-event-streams-part-ii]]
+* [[Blog/blog-en/al-2010-08-12-nijiato-detection-of-fingers-motion-algorithm]]
+* [[Blog/blog-en/am-2010-07-10-post-about-fluxus]], [[Blog/blog-en/ai-2010-12-06-fluxus-solar-system]]
+* [[Blog/blog-en/ap-2009-10-13-sametimed-google-wave-client]]
+* [[Blog/blog-en/ao-2010-01-09-10-useful-solutions-for-android-developer]]
+* [[Blog/blog-en/at-2007-08-12-16-useful-solutions-for-javascript]]
+* [[Blog/blog-ru/au-2010-08-12-nijiato-detection-of-fingers-motion-algorithm]]
+* [[Blog/blog-ru/aa-2018-02-11-category-theory-senseless-and-merciless]]
+* [[Blog/blog-ru/ad-2012-02-22-the-way-of-the-asynchronous-samurai]]
+* [[Blog/blog-ru/am-2011-02-11-android-renderscript-example-translation]]
+* [[Blog/blog-ru/ae-2011-11-16-monkey-patching-or-extending-native-types-religious-or-not]]
 
 Also you may find the list of [[Skills]] here.
 
