@@ -70,7 +70,7 @@ So the `a` can be anything, for example in case of Noodle node layout I have `Pl
 TODO
 ```
 
-More examples are in the last part of the post.
+You may find more examples later in the post.
 
 Here's how you can convert a definition into the layout:
 
@@ -97,7 +97,7 @@ TODO
 
 So, when you have defined your layout, call the `layout` function, which is a verb in this case, and you'll have the calculated rectangles in place.
 
-You may unwrap the tree in any way you like, for example make it into an array. The calculations are already made, so the order is not important anymore, as well as parent-child relations (if you need it for something else, I recommend to prefer to use `Play a` structure over `Layout a`):
+You may unwrap the tree in any way you like, for example make it into an array. The calculations are already made, so the order is not important anymore, as well as parent-child relations (if you need the order for something else, I recommend to prefer to use `Play a` structure over `Layout a`):
 
 ```
 TODO
@@ -111,17 +111,33 @@ TODO
 
 By enabling encoded sizing labels, you may get visual help on how your layout is structured:
 
+TODO
+
+Start with the _Blank UI_ example if you would like to experiment from scratch.
+
+You can click blocks on the visual preview to edit their properties. Or, especially for the cases when the block is zero-size or hidden below being compltely covered by its children, you can  navigate using the Properties panel. For every child there is _Go_ button to switch to this child, and whene you're there, there are _Parent_ (which allows you to switch to the parent of this particular child) and _Root_ (which allows you to switch to the only one parent for all this layout) buttons. If they are both disabled, you're already at root. If _Parent_ is disabled, then you're on the top level.
+
+There's another, third way, to navigate: If you open the _Code & Tree_ panel on the bottom side of the screen, there's a tab with fully navigatable tree. Just click on any leaf and there you have switched to it.
+
+The first tab on this panel, _Code_,  contains the generated code for current layout. 
+
+Both tree view and code are instantly updated whenever you change something in the layout. Same way as the visual preview, obviously :).
+
+TODO JSON
+
 ## Examples
 
 You could've been bored enough to this point, so I decided to give you more examples and illustrate them with Kanji structure.
 
-Kanji are japanese hieroglyphs and they can be recursive in a sense: they can contain other hieroglyphs and be treated as a whole, but there are only few certain ways to lay them out and the recursion doesn't go deeper than one level.
+Kanji are japanese hieroglyphs and they can be recursive in a sense: they can contain other hieroglyphs and be treated as a whole, but there are only few certain ways to lay them out and the recursion doesn't go deeper than one level. (Could it be called a recursion this way though?)
 
 The element that can be reused inside other characters is called _radical_.
 
 ### Kanji
 
 #### Kanji. A single sole character / radical:
+
+
 
 #### Kanji. Two (or more) characters aside:
 
