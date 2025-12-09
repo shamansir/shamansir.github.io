@@ -129,11 +129,36 @@ TODO JSON
 
 You could've been bored enough to this point, so I decided to give you more examples and illustrate them with Kanji structure.
 
-Kanji are japanese hieroglyphs and they can be recursive in a sense: they can contain other hieroglyphs and be treated as a whole, but there are only few certain ways to lay them out and the recursion doesn't go deeper than one level. (Could it be called a recursion this way though?)
-
-The element that can be reused inside other characters is called _radical_.
-
 ### Kanji
+
+Kanji are japanese hieroglyphs and they can be recursive in a sense: they can be treated as a single whole characters or contain other kanji characters inside and still be treated as a whole. But there are only few certain ways to lay them out: 
+
+* single character;
+* top to bottom;  no matter if there are two or three elements, the above element could be smaller than the element below it or vise versa; may be the middle element is in most cases larger than the others, because other way it wouldn't be beautiful and would be weird, and kanji are nothing about weird; 
+* left to right; the left element could be smaller than the right one or vise versa, the same statements as for vertical axis could apply here;
+* enclosing: where one larger element contains another smaller one and either wraps it around completely or wraps it at least from two connected sides;
+
+It could be quite easy to implement, but languages and writing systems are a bit more natural than mathematical, so they tend to be unpredictable and suprising more often than solving an equation or proving a theorem. But always beatiful. As how leaves are disordered on the tree. Or may be there's pure order we aren't aware about. That's why we developed fractals...
+
+So the laying out process of the kanji could repeat some times, there could be enclosing of one element inside another and then this enclosing could be attached to the left of other two elements.
+
+The element of kanji that can be reused inside other characters is called _radical_. Not all of dozens of thousands kanji can be radicals, but only around 214. If we follow the book, then the number is exactly 214.
+
+Becase Unicode tries to cover all the writing systems and tries to optimize the rendering algorithms whenever possible by finding the patterns of possible combinations of characters, they developed the system called IDS: https://en.wikipedia.org/wiki/Ideographic_Description_Characters.
+
+It defines all the possible known ways of combining radicals by doing what we love to do in functional programming: binary or ternary operators/functions are applied to the results of the calls of another operators/functions, and the arguments of these functions are the forementioned radicals.
+
+TODO image
+
+Since we plan to stretch radicals in different ways and not always proportionally, fir rendering we'll use the slabby font instead of a caligraphic one, or the one with the serifs, or else the beauty will be completely broken.
+
+So lets finally define what we know with the code, our implementation would mirror the IDS machine:
+
+```
+TODO
+```
+
+The difference is that we also remember the rate — the proportion between how much more one radical takes than its pair in a space of `1.0`. To represent triplets, we'll just add a pair to an element, again like in pure FP. Oh wait...
 
 #### Kanji. A single sole character / radical:
 
