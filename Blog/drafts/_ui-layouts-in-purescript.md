@@ -82,14 +82,20 @@ Any cell can have its orientation either:
 Then, either width or height of any cell can either be:
 
 * _Fixed_ to some exact pixel size;
-* _Fit_ its children by this side: pack them and resize to the sum of their width;
-* _Grow_, unless it meets the next child or its parent can not expand more on the right / to the bttom;
+* _Fit_ its children by this side: pack them and resize to the sum of their width or height;
+* _Percentage_ amount of the corresponding side of its parent, overflow is allowed and cut by the rectangle of the parent;
+* _Grow_, unless it meets the next child or its parent can not expand more on the right / to the bottom;
 * _FitGrow_ — fit its children and only then grow to the right / to the bottom: TODO;
 * _FitMin_ — fit the children but no less than given value in pixels, so if children take less requested space, the side will have this size anyway, otherwise it will fit them into a larger size;
+* _FitMax_ — same, but no more than given value in pixels;
+* _FitMinMax_ — if the children fit between the given range, use the actual value, or restrict it with the given bounds;
 
-Notice there are no percentation values, because at some level we need the exact value to fit children in.
+There is an additional configuration possible for any cell:
 
-Both of them are functors and applicatives:
+* _Children Gap_ — constant space inserted between children;
+* _Padding_ — padding on the inner sides of the cell, so that there is a space between the border and its children, can be a specific value for each side;
+
+Both of `Play` and `Layout` are functors and applicatives:
 
 ```
 TODO
@@ -138,6 +144,8 @@ Kanji are japanese hieroglyphs and they can be recursive in a sense: they can be
 * left to right; the left element could be smaller than the right one or vise versa, the same statements as for vertical axis could apply here;
 * enclosing: where one larger element contains another smaller one and either wraps it around completely or wraps it at least from two connected sides;
 
+TODO image
+
 It could be quite easy to implement, but languages and writing systems are a bit more natural than mathematical, so they tend to be unpredictable and suprising more often than solving an equation or proving a theorem. But always beatiful. As how leaves are disordered on the tree. Or may be there's pure order we aren't aware about. That's why we developed fractals...
 
 So the laying out process of the kanji could repeat some times, there could be enclosing of one element inside another and then this enclosing could be attached to the left of other two elements.
@@ -150,7 +158,7 @@ It defines all the possible known ways of combining radicals by doing what we lo
 
 TODO image
 
-Since we plan to stretch radicals in different ways and not always proportionally, fir rendering we'll use the slabby font instead of a caligraphic one, or the one with the serifs, or else the beauty will be completely broken.
+Since we plan to stretch radicals in different ways and not always proportionally, for rendering we'll use the slabby font instead of a caligraphic one, or else the beauty will be completely broken.
 
 So lets finally define what we know with the code, our implementation would mirror the IDS machine:
 
