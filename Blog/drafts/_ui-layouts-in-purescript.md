@@ -2,15 +2,15 @@
 
 ## Introduction
 
-My way to pure functional programming was quite long, but now here I am. Definitely not knowing everything yet and still, so the (seemingly?) unreachable end of the way of learning excites me even more. Thank you, Elm, for seducing me with your friendly syntax and error messages, and leading me hand-in-hand to these greater depths.
+Now that most of my latest projects are written in PureScript[fn-1], I already developed a bunch of web apps with user interfaces of different complexity:
 
-Now most of my latest projects are written in PureScript, which is not to be confused with you-know-which-language, but rather a non-lazy Haskell for web development. So no unhandled errors in your code, at all. Logical errors are possible still.
+TODO (image?)
 
-All the UI approaches are there, as in many other languages, but usually I use Halogen library which provides its own set of functions both for HTML and SVG, no DSL needed, and it has a clear approach for writing components, including complex parent-child communication. 
+For today, in [Pursuit](TODO), the PureScript package library, there are several UI approaches inplemented, for example there is a React version rethought in pure FP, but usually I use Halogen library which provides its own set of functions both for HTML and SVG, no DSL needed, and it has a clear approach for writing components, including complex parent-child communication. I didn't get used to hooks concept yet, and I feel comfortable in Halogen native approach.
 
-> Though it doesn't matter which framework you use, if any, for the layouting system.
+> Though it doesn't matter which framework you use, if any at all, for this layouting system.
 
-However, already a few of my projects are complex web-apps with unique UI structure and yet there's no UI composer in PureScript, at least as far as I know. The examples are:
+A few of my projects are complex web-apps with unique UI structure and yet there's no helping UI composer implemented  in PureScript, at least as far as I know. The examples are:
 
 * Noodle — visual programming platform, where:
 	* it is possible to open many side panels: documentation, action history, log, and so on;
@@ -111,9 +111,11 @@ TODO
 
 ## The Constructor
 
-Together with Claude, we've made you a constructor which can ease creating the layouts by making it visual instead of just code:
+Together with Claude, we've developed for you a constructor which can ease creating the layouts by making it visual instead of just code:
 
 TODO
+
+It can be not that easy to use though, however at least  we tried! :). There are several useful features we implemented:
 
 By enabling encoded sizing labels, you may get visual help on how your layout is structured:
 
@@ -170,13 +172,27 @@ The difference is that we also remember the rate — the proportion between how 
 
 #### Kanji. A single sole character / radical:
 
+The definition for a single character is as easy as this:
 
+```
+
+```
 
 #### Kanji. Two (or more) characters aside:
 
+When we need to position two sub-parts together, we need to decide how they share the space, usually one dominates over the other:
+
+```
+
+```
+
 #### Kanji. Two (or more) characters above each other:
 
+It's the same as with horizontal axis, but vertical:
+
 #### Kanji. The enclosure:
+
+Here come several variations of enclosures:
 
 #### Kanji. Other variations
 
@@ -184,6 +200,12 @@ The difference is that we also remember the rate — the proportion between how 
 
 ### The Riichi mahjong table
 
+
+
 ### SVG Tree Viewer
 
 TODO
+
+-----
+
+1. which is (I please you) not to be confused with TypeScript, but rather be confused with a kind of non-lazy Haskell for web development;
