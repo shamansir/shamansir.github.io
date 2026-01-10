@@ -6,11 +6,7 @@ Now that most of my latest projects are written in PureScript[fn-1], I already h
 
 TODO (image?)
 
-For today, in [Pursuit](TODO), the PureScript package library, there are several UI approaches inplemented, for example there is a React version rethought in pure FP, but usually I use Halogen library which provides its own set of functions both for HTML and SVG, no DSL needed, and it has a clear approach for writing components, including complex parent-child communication. I didn't get used to hooks concept yet, and I feel comfortable in Halogen native approach.
-
-> Though it doesn't matter which framework you use, if any at all, for this layouting system.
-
-So, back to the topic, a few of my projects are complex web-apps with unique (I believe in it!) UI structure and yet there's no helping UI composer implemented  in PureScript, at least as far as I know. The examples are:
+Let me list some of the details from these examples:
 
 * Noodle — visual programming platform, where:
 	* it is possible to open many side panels: documentation, action history, log, and so on;
@@ -170,8 +166,8 @@ Since we plan to stretch radicals in different ways and not always proportionall
 
 So lets finally define what we know with the code, our implementation would mirror the IDS machine:
 
-```
-TODO
+```haskell
+foo = 42 :: String
 ```
 
 The difference is that we also remember the rate — the proportion between how much more one radical takes than its pair in a space of `1.0`. To represent triplets, we'll just add a pair to an element, again like in pure FP. Oh wait...
