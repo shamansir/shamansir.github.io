@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Now that most of my latest projects are written in PureScript[fn-1], I already developed a bunch of web apps with user interfaces of different complexity:
+Now that most of my latest projects are written in PureScript[fn-1], I already have developed a bunch of web apps with user interfaces of different complexity:
 
 TODO (image?)
 
@@ -10,7 +10,7 @@ For today, in [Pursuit](TODO), the PureScript package library, there are several
 
 > Though it doesn't matter which framework you use, if any at all, for this layouting system.
 
-A few of my projects are complex web-apps with unique UI structure and yet there's no helping UI composer implemented  in PureScript, at least as far as I know. The examples are:
+So, back to the topic, a few of my projects are complex web-apps with unique (I believe in it!) UI structure and yet there's no helping UI composer implemented  in PureScript, at least as far as I know. The examples are:
 
 * Noodle — visual programming platform, where:
 	* it is possible to open many side panels: documentation, action history, log, and so on;
@@ -37,17 +37,19 @@ Almost in the same moments when this need was most desperate in my mind, YouTube
 
 So I decided to translate it to pure FP version, it is interesting thought-trainer by itself and, considering the problems I mentioned above, it tended to also be very helpful and useful for me.
 
-One of the core features of Clay is measuring text size in any font, so that it can be layed out correctly. In front-end web development we have our own tricks for that, like rendering the text block in some element that is hidden from user and measuring it, so I decided to omit this part, which is probably better to implement through JavaScript FFI.
+And, while C++ code is usually imperative, pure FP seems to require the completely perpendicular approach... but the author of Clay UI is so talented that his ideas are universal for almost any approach, so they could be layed out over FP concepts like one would think it was intended from the start.
 
-And I named the library Play, because no other word came to my mind in attempts to combine PureScript and Clay. ChatGPT, do you know any better?
+It is worth mentioning that one of the core features of Clay is measuring text size in any font, so that it can be layed out correctly. In C++ it is an uncommon but needed feature, but in front-end web development we have our own tricks for that, like rendering the text block in some element that is hidden from user and measuring it, so I decided to omit this part, which is probably better to implement through JavaScript FFI.
 
-Hey, and there is a layout constructor to play with: https://shamansir.github.io/purescript-play/constructor.html
+And I named the library Play, because no other word came to my mind in attempts to combine PureScript and Clay. ChatGPT, do you know any better? Picklay?...
+
+Hey, may you would like to have some fun already, so there is a layout constructor for you to _play_ with: https://shamansir.github.io/purescript-play/constructor.html
 
 ## Play API
 
-As it is common to do in FP, I decided to let user put in a polymorphic parameter `a` any type they want: `Play a` can be `Play Int`, `Play String`, `Play Color`, `Play UIPart`,`Play Key`, `Play Character`, `Play (Play Whatever)`...
+As it is common to do in FP, I decided to let user put in a polymorphic parameter `a` any type they want: `Play a` can be `Play Int`, `Play String`, `Play Color`, `Play UIPart`,`Play Key`, `Play Character`,  `Play Sonet`, `Play (Play Whatever)`...
 
-PureScript allows you to define any operator you want, so I decided to have `*~`for chaining, which is actually just an alias for `#`, so you can use any you prefer, just don't mix them in the same code. Here's the example of a defintion:
+PureScript allows you to define almost any operator you want, so I decided to have `*~`for chaining, which is actually just an alias for `#`, so you can use any you prefer, just don't mix them in the same code. Here's the example of a defintion:
 
 ```
 let menuLayout
@@ -132,6 +134,10 @@ The first tab on this panel, _Code_,  contains the generated code for current la
 Both tree view and code are instantly updated whenever you change something in the layout. Same way as the visual preview, obviously :).
 
 TODO JSON
+
+# The Algorithm
+
+TODO
 
 ## Examples
 
