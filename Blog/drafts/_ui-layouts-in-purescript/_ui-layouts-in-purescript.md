@@ -313,7 +313,7 @@ Both tree view and code are instantly updated whenever you change something in t
 
 ![row-6-inverted](assets/row-6-inverted.jpg)
 
-# The Algorithm
+## The Algorithm
 
 At first I wanted to explain here [the algorithm](https://github.com/shamansir/purescript-play/blob/main/src/Play/Layout.purs#L27) in the very detail, but I really tried to make it self-explanatory and I hope I succeeded, however it could still be the topic for another article.
 
