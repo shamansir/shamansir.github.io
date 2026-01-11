@@ -6,6 +6,8 @@ tags: [ purescript, functional-programming, kanji, mahjong, ui ]
 excerpt: Play UI is my PureScript package inspired by Nic Barker's C++ Clay UI videos about UI layouts. So I re-implemented the algorithm in the pure functional way, use it to for my projects and decided to share the detailes on how to use it with some weird examples.
 ---
 
+[ [`play` package in pursuit](https://pursuit.purescript.org/packages/purescript-play/) ] | [ [the article on dev.to](https://dev.to/shamansir/play-ui-layouts-in-purescript-1cb5) ]
+
 ![row-1-inverted](../assets/en/play-ui-layouts-in-purescript/row-1-inverted.jpg)
 
 ## Introduction
