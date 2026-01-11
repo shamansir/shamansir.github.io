@@ -99,7 +99,7 @@ The UI of the constructor is a bit bulky, there are many inline CSS styles there
 
 The idea is to let user fill in a polymorphic parameter `a` with any type they want: `Play a` can be `Play Int`, `Play String`, `Play Color`, `Play UIPart`, `Play Key`, `Play Character`,  `Play Sonet`, `Play HalfLife3UI`, `Play (Play Whatever)`...
 
-PureScript allows you to define almost any operator you want, so I decided to have `~*`for chaining, which is actually just an alias for `#`, so you can use any you prefer, just don't mix them in the same code. Here's the example of a defintion:
+PureScript allows you to define almost any operator you want, so I decided to have `~*` for chaining, which is actually just an alias for `#`, so you can use any you prefer, just don't mix them in the same code. Here's the example of a defintion:
 
 ```haskell
 data MenuItem
