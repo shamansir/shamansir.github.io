@@ -827,4 +827,4 @@ function removeFromArray(arr, element) { // removes only one item!
 
 ### Epilogue
 
-That's all, seems, for now. The article is ready for corrections (if they will appear :) ), I can pass to the next ones :). In the [next-article](./as-2007-08-19-javascript-oop.md) I want to tell about OOP in JavaScript and make a few simple but useful examples of classes. I hope this article saved some of your man-hours that you may potentially had spent in the fighting with variable browsers quirks.
+That's all, seems, for now. The article is ready for corrections (if they will appear :) ), I can pass to the next ones :). In the [next-article](./at-2007-08-19-javascript-oop.md) I want to tell about OOP in JavaScript and make a few simple but useful examples of classes. I hope this article saved some of your man-hours that you may potentially had spent in the fighting with variable browsers quirks.
