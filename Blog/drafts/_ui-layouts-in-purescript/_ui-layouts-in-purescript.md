@@ -123,9 +123,7 @@ menuItem itemTitle =
 
 
 menuDef :: Play ClayMenu
-menuDef =![row-3-inverted](assets/row-3-inverted.jpg)![row-3-inverted](assets/row-3-inverted.jpg)
-
-
+menuDef =
     Play.i Root
         ~* Play.width 250.0
         ~* Play.heightFit
