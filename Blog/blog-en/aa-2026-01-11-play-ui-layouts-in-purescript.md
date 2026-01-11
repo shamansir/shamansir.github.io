@@ -6,24 +6,6 @@ tags: [ purescript, functional-programming, kanji, mahjong, ui ]
 excerpt: Play UI is my PureScript package inspired by Nic Barker's C++ Clay UI videos about UI layouts. So I re-implemented the algorithm in the pure functional way, use it to for my projects and decided to share the detailes on how to use it with some weird examples.
 ---
 
-- Table of Contents
-  - [Introduction](#introduction)
-  - [Clay UI as an inspiration](#clay-ui-as-an-inspiration)
-  - [Play API](#play-api)
-    - [`Play` Types and Functions](#play-types-and-functions)
-    - [Layout definition](#layout-definition)
-  - [The Constructor](#the-constructor)
-  - [The Algorithm](#the-algorithm)
-  - [Examples](#examples)
-    - [Kanji](#kanji)
-      - [Kanji. A single sole character / radical:](#kanji-a-single-sole-character-radical)
-      - [Kanji. Two (or more) characters aside:](#kanji-two-or-more-characters-aside)
-      - [Kanji. Two (or more) characters above each other:](#kanji-two-or-more-characters-above-each-other)
-      - [Kanji. The enclosure:](#kanji-the-enclosure)
-    - [The Riichi mahjong table](#the-riichi-mahjong-table)
-    - [SVG Tree Viewer](#svg-tree-viewer)
-  - [Outro](#outro)
-
 ![row-1-inverted](../assets/en/play-ui-layouts-in-purescript/row-1-inverted.jpg)
 
 ## Introduction
