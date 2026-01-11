@@ -207,7 +207,7 @@ If you need to keep parent-child relations for something else, I recommend prefe
 
 So, once more, this `a` can be anything, for example in case of Noodle node inner layout I have `Play NodePart` where `NodePart` is defined this way:
 
-```
+```haskell
 data NodePart
     = Background
     ...
